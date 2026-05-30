@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const sorted = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout
+  title="Skin Health Articles · Diana Clinic"
+  description="Evidence-based articles on acne, acne scars, pigmentation, and skin health — written by the doctors at Klinik Dr Diana."
+  canonical="https://diana-clinic.vercel.app/blog"
+>
+  <main id="main">
+    <section class="blog-hero">
+      <div class="container">
+        <p class="label">Clinical Articles</p>
+        <h1>Skin knowledge, written by doctors.</h1>
+        <p class="sub">Evidence-based answers on acne, pigmentation, scars, and skin health — for patients who want to understand, not just treat.</p>
+      </div>
+    </section>
+
+    <section class="blog-grid">
+      <div class="container">
+        {sorted.length === 0 ? (
+          <p class="empty">Articles coming soon.</p>
+        ) : (
+          <div class="grid">
+            {sorted.map(post => (
+              <a href={`/blog/${post.slug}`} class="card">
+                {post.data.heroImage && (
+                  <img src={post.data.heroImage} alt={post.data.title} loading="lazy" width="800" height="450" />
+                )}
+                <div class="card-body">
+                  <div class="meta">
+                    <span class="date">{post.data.pubDate.toLocaleDateString('en-MY', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                    {post.data.tags.slice(0,2).map(tag => <span class="tag">{tag}</span>)}
+                  </div>
+                  <h2>{post.data.title}</h2>
+                  <p>{post.data.description}</p>
+                  <span class="read-more">Read article →</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .blog-hero {
+    padding: 5rem 0 3rem;
+    border-bottom: 1px solid var(--border, #e5e7e6);
+  }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  .label {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent, #5a7a6a);
+    margin-bottom: 0.75rem;
+  }
+  h1 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  .sub {
+    max-width: 600px;
+    color: var(--muted, #6b7280);
+    line-height: 1.6;
+  }
+  .blog-grid {
+    padding: 4rem 0;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border, #e5e7e6);
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; gap: 0.75rem; }
+  .meta { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+  .date { font-size: 0.8rem; color: var(--muted, #6b7280); }
+  .tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+    background: var(--surface, #f4f6f4);
+    border-radius: 999px;
+    color: var(--accent, #5a7a6a);
+  }
+  .card h2 { font-size: 1.1rem; font-weight: 500; line-height: 1.4; margin: 0; }
+  .card p { font-size: 0.9rem; color: var(--muted, #6b7280); line-height: 1.6; margin: 0; flex: 1; }
+  .read-more { font-size: 0.85rem; color: var(--accent, #5a7a6a); margin-top: auto; }
+  .empty { color: var(--muted, #6b7280); font-style: italic; }
+</style>
