@@ -404,7 +404,7 @@ const breadcrumbSchema = {
               <iframe
                 title={`Map of ${b.name}`}
                 loading="lazy"
-                src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE&q=place_id:${b.placeId}`}
+                src={`https://www.google.com/maps/embed/v1/place?key=${import.meta.env.PUBLIC_MAPS_EMBED_KEY}&q=place_id:${b.placeId}`}
                 allowfullscreen
               ></iframe>
             </div>
