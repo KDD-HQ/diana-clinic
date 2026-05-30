@@ -87,6 +87,7 @@ const siteSchema = {
           <span class="wordmark-primary">Diana Clinic</span>
           <span class="wordmark-secondary">Klinik Dr Diana · Seremban · Bandar Baru Bangi</span>
         </a>
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); document.querySelector('.nav-list').classList.toggle('open')">☰</button>
         <nav aria-label="Primary">
           <ul class="nav-list">
             <li><a href="#concerns">Concerns</a></li>
@@ -266,7 +267,42 @@ const siteSchema = {
         padding: 0;
         margin: 0;
         font-size: 0.92rem;
-      }
+      }/* Hamburger menu - mobile */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--color-anchor);
+    padding: 0.25rem 0.5rem;
+    line-height: 1;
+  }
+
+  @media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    .nav-list {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background: rgba(242, 235, 221, 0.98);
+      backdrop-filter: blur(10px);
+      padding: 1rem 1.5rem;
+      gap: 1rem;
+      border-bottom: 1px solid var(--color-layer);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .nav-list.open { display: flex; }
+    .site-header { position: relative; }
+    .cta--compact { display: none; }
+  }
+
+  @media (min-width: 769px) {
+    .nav-list { display: flex; }
+  }
       .nav-list a { text-decoration: none; color: var(--color-ink); }
       .nav-list a:hover { color: var(--color-anchor); }
       @media (min-width: 880px) {
