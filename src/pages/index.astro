@@ -1,0 +1,714 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const site = Astro.site?.toString().replace(/\/$/, '') ?? '';
+
+// — Branch records (single source of truth) —
+const branches = [
+  {
+    id: 'seremban',
+    name: 'Diana Clinic Seremban',
+    legalName: 'Klinik Dr Diana Senawang',
+    streetAddress: 'No 32-G-1, Jalan BPS 3, Bandar Prima Senawang',
+    addressLocality: 'Seremban',
+    addressRegion: 'Negeri Sembilan',
+    postalCode: '70450',
+    lat: 2.7015376,
+    lng: 101.9807122,
+    placeId: 'ChIJD8fhHinhzTERPVTvF7e8VRE',
+    hours: [
+      'Mo-Fr 09:30-18:00',
+      'Sa 10:00-18:00'
+    ],
+    hoursReadable: 'Mon–Fri 9:30am – 6:00pm · Sat 10:00am – 6:00pm · Sun closed',
+    waMessage:
+      "Hi Diana Clinic, I'd like to book a Clinical Assessment at the Seremban branch, and my concern is..."
+  },
+  {
+    id: 'bangi',
+    name: 'Diana Clinic Bandar Baru Bangi',
+    legalName: 'Klinik Dr Diana Bangi',
+    streetAddress: 'UG-3a, Gandaria Mall, Jalan Pusat Bandar 2, Sunway Gandaria, Seksyen 9',
+    addressLocality: 'Bandar Baru Bangi',
+    addressRegion: 'Selangor',
+    postalCode: '43650',
+    lat: 2.9617989,
+    lng: 101.7529975,
+    placeId: 'ChIJ23411NnLzTERaDnTAJXyTVA',
+    hours: [
+      'Mo 09:00-17:30',
+      'Tu 09:00-14:00',
+      'Th-Su 09:00-17:30'
+    ],
+    hoursReadable: 'Mon 9:00am – 5:30pm · Tue 9:00am – 2:00pm · Wed closed · Thu–Sun 9:00am – 5:30pm',
+    waMessage:
+      "Hi Diana Clinic, I'd like to book a Clinical Assessment at the Bangi branch, and my concern is..."
+  }
+];
+
+const waBase = 'https://wa.me/60183902910';
+const waGeneric = `${waBase}?text=${encodeURIComponent(
+  "Hi Diana Clinic, I'd like to book a Clinical Assessment, and my concern is..."
+)}`;
+
+const concerns = [
+  {
+    id: 'pigmentation',
+    title: 'Pigmentation & melasma',
+    body:
+      'Pigmentation is read at the layer it forms in. Treatment plans are calibrated to the depth and pattern of the pigment — not the surface alone. Melasma in particular is managed as a chronic condition: protocols, photoprotection, and supportive skincare, sustained over months.'
+  },
+  {
+    id: 'acne',
+    title: 'Acne',
+    body:
+      'Active acne is treated as a managed condition, not a one-off appointment. Protocols address inflammation, bacterial load, and the daily routine that follows — together. Most patients improve over a planned series rather than a single visit.'
+  },
+  {
+    id: 'acne-scars',
+    title: 'Acne scars',
+    body:
+      'Acne scars are textural memory. Restoration is gradual and matched to the scar type — ice-pick, rolling, boxcar, or post-inflammatory. Most patients work through a programme of protocols across several months.'
+  },
+  {
+    id: 'aging-skin',
+    title: 'Aging skin',
+    body:
+      'Aging skin is restored across structure, texture, and tone. Programmes are paced — restoration is steady, not dramatic. The intention is long-term skin health, not a single dramatic outcome.'
+  },
+  {
+    id: 'skin-quality',
+    title: 'Skin quality & restoration',
+    body:
+      'Skin quality is built from the inside out. Hydration, barrier function, and tone are restored protocol by protocol. This is the foundation that holds every other result in place.'
+  }
+];
+
+const doctors = [
+  {
+    name: 'Dr Diana Abd Razak',
+    role: 'Founder · Aesthetic Doctor',
+    mmc: 'MMC: __________',
+    bio: 'Founding doctor of Klinik Dr Diana. LCP-certified medical aesthetic practitioner.'
+  },
+  {
+    name: 'Dr Shahrill Effendy',
+    role: 'Aesthetic Doctor',
+    mmc: 'MMC: __________',
+    bio: 'Focus on acne, acne-scar restoration, and pigmentation. LCP-certified.'
+  },
+  {
+    name: 'Dr Husnina',
+    role: 'Aesthetic Doctor',
+    mmc: 'MMC: __________',
+    bio: 'LCP-certified medical aesthetic practitioner.'
+  },
+  {
+    name: 'Dr Husna Amalia',
+    role: 'Aesthetic Doctor',
+    mmc: 'MMC: __________',
+    bio: 'LCP-certified medical aesthetic practitioner.'
+  }
+];
+
+const technology = [
+  { name: 'Pico Laser — PicoLO',  note: 'Laser Optek · pigmentation, tone, tattoo' },
+  { name: 'Pico Laser — PicoPlus', note: 'Lutronic · pigmentation, melasma support' },
+  { name: 'Fractional CO2 Laser',  note: 'Resurfacing · acne-scar restoration' },
+  { name: 'LIFTERA HIFU',          note: 'Skin tightening · structural restoration' },
+  { name: 'OxyGeneo',              note: 'Hydration · skin quality protocols' },
+  { name: 'Additional platforms',  note: 'Selected by clinical indication and skin assessment' }
+];
+
+const faqs = [
+  {
+    q: 'Is the clinic licensed by the Ministry of Health?',
+    a: 'Yes. Klinik Dr Diana is fully licensed under the Ministry of Health Malaysia, and our doctors are LCP-certified medical aesthetic practitioners.'
+  },
+  {
+    q: 'What conditions do you treat most often?',
+    a: 'Our work is concentrated in four areas: acne and acne-scar management, melasma and pigmentation, aging skin, and overall skin quality and restoration. We have particular depth in acne-scar restoration, where most patients require a planned programme rather than a single protocol.'
+  },
+  {
+    q: 'How do I know which treatment is right for my skin?',
+    a: 'Every skin is read in person before a plan is suggested. The Clinical Assessment is a structured evaluation — concerns, history, and photography where useful — that leads to a tailored protocol or programme. We do not prescribe a treatment menu before we have read the skin.'
+  },
+  {
+    q: 'Will there be downtime after a protocol?',
+    a: 'Downtime depends on the protocol. Most of our work is minimal-downtime — mild redness or slight swelling that typically resolves within hours. More resurfacing protocols carry longer recovery, and this is discussed in full before any decision is made.'
+  },
+  {
+    q: 'How long do the results last?',
+    a: 'Longevity depends on the condition and the protocol. Pigmentation and melasma are managed conditions and benefit from ongoing care. Acne-scar restoration is durable once the texture is rebuilt. Aging is a process — programmes are paced to maintain, not to chase a single outcome. Individual results vary.'
+  },
+  {
+    q: 'Is pricing transparent?',
+    a: 'Yes. Pricing is itemised and discussed in full during the Clinical Assessment. There are no obligations following the assessment, and no programme is committed to without a full understanding of the cost.'
+  },
+  {
+    q: 'Where are you located?',
+    a: 'Two clinics. Seremban (Bandar Prima Senawang) and Bandar Baru Bangi (Gandaria Mall, Seksyen 9). Appointments at both clinics are arranged via WhatsApp.'
+  }
+];
+
+// — Page-specific JSON-LD —
+const branchSchemas = branches.map((b) => ({
+  '@context': 'https://schema.org',
+  '@type': ['MedicalClinic', 'LocalBusiness'],
+  '@id': `${site}/#${b.id}`,
+  name: b.name,
+  parentOrganization: { '@id': `${site}/#organization` },
+  url: site,
+  image: `${site}/og/diana-clinic-og.jpg`,
+  telephone: '+60183902910',
+  priceRange: '$$$',
+  medicalSpecialty: ['Dermatology', 'CosmeticDermatology'],
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: b.streetAddress,
+    addressLocality: b.addressLocality,
+    addressRegion: b.addressRegion,
+    postalCode: b.postalCode,
+    addressCountry: 'MY'
+  },
+  geo: { '@type': 'GeoCoordinates', latitude: b.lat, longitude: b.lng },
+  openingHours: b.hours,
+  areaServed: { '@type': 'Country', name: 'Malaysia' }
+}));
+
+const physicianSchemas = doctors.map((d) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Physician',
+  name: d.name,
+  worksFor: { '@id': `${site}/#organization` },
+  medicalSpecialty: 'CosmeticDermatology',
+  description: d.bio
+}));
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a }
+  }))
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: site + '/' }
+  ]
+};
+---
+
+<BaseLayout>
+  <Fragment slot="page-schema">
+    {branchSchemas.map((s) => (
+      <script type="application/ld+json" set:html={JSON.stringify(s)} />
+    ))}
+    {physicianSchemas.map((s) => (
+      <script type="application/ld+json" set:html={JSON.stringify(s)} />
+    ))}
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  </Fragment>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow">Medical Aesthetic Clinic · Since 2016</p>
+      <h1>Doctor-led skin care, tailored to your concern.</h1>
+      <p class="hero-sub">
+        Clinical assessment and evidence-based protocols for pigmentation, acne,
+        acne scars, aging skin, and overall skin restoration. Two clinics — Seremban and Bandar Baru Bangi.
+      </p>
+      <div class="hero-cta">
+        <a class="cta" href={waGeneric} target="_blank" rel="noopener">Book a Clinical Assessment</a>
+        <a class="cta cta--ghost" href="#how">How we work</a>
+      </div>
+      <ul class="trust-strip" aria-label="Clinic credentials">
+        <li>Since 2016</li>
+        <li>KKM-licensed</li>
+        <li>LCP-certified doctors</li>
+        <li>Seremban · Bandar Baru Bangi</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="problem">
+    <div class="container narrow">
+      <h2>Most skin concerns do not respond to general approaches.</h2>
+      <p>
+        Pigmentation deepens. Acne returns. Scars settle into texture. Skin ages.
+        The difference a clinical setting makes is not a stronger machine — it is a diagnosis.
+        Skin is read first, then treated, by a doctor, with a plan that belongs to one patient at a time.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONCERNS -->
+  <section id="concerns" class="concerns">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">What we work in</p>
+        <h2>Five concerns. One clinical approach.</h2>
+      </header>
+      <div class="concerns-grid">
+        {concerns.map((c) => (
+          <article id={c.id} class="concern-card">
+            <h3>{c.title}</h3>
+            <p>{c.body}</p>
+          </article>
+        ))}
+      </div>
+      <p class="note">
+        Every condition is read in person. Treatment plans are tailored, evidence-based, and explained in full before any protocol begins.
+      </p>
+    </div>
+  </section>
+
+  <!-- DOCTORS -->
+  <section id="doctors" class="doctors">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Your doctors</p>
+        <h2>Doctor-led, named, and on-site.</h2>
+      </header>
+      <div class="doctors-grid">
+        {doctors.map((d) => (
+          <article class="doctor-card">
+            <div class="doctor-portrait" aria-hidden="true">{d.name.split(' ').slice(1, 3).map(n => n[0]).join('')}</div>
+            <h3>{d.name}</h3>
+            <p class="doctor-role">{d.role}</p>
+            <p class="doctor-bio">{d.bio}</p>
+            <p class="doctor-mmc">{d.mmc}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section id="how" class="how">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">How we work</p>
+        <h2>Three steps, in sequence.</h2>
+      </header>
+      <ol class="how-steps">
+        <li>
+          <span class="how-step-num">01</span>
+          <h3>Clinical Assessment</h3>
+          <p>
+            A doctor reads your skin in person. We discuss concerns, history, and lifestyle, and photograph where useful.
+            Typically twenty to thirty minutes.
+          </p>
+        </li>
+        <li>
+          <span class="how-step-num">02</span>
+          <h3>Tailored Protocol or Programme</h3>
+          <p>
+            A plan is built around your concern, your skin, and your timeline. Protocols are single sessions. Programmes are planned series across weeks or months, with defined endpoints.
+          </p>
+        </li>
+        <li>
+          <span class="how-step-num">03</span>
+          <h3>Ongoing care</h3>
+          <p>
+            What you do between protocols matters as much as the protocols themselves. Aftercare, daily skincare, and review appointments are part of the plan.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- TECHNOLOGY -->
+  <section class="tech">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">The technology behind our protocols</p>
+        <h2>Validated devices, selected by indication.</h2>
+      </header>
+      <p class="tech-intro">
+        Devices are tools, not treatments. The diagnosis and the plan are what determine the outcome — the platform is chosen to fit.
+      </p>
+      <ul class="tech-grid">
+        {technology.map((t) => (
+          <li>
+            <p class="tech-name">{t.name}</p>
+            <p class="tech-note">{t.note}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">What our patients say</p>
+        <h2>Read patient reviews on Google.</h2>
+      </header>
+      <div class="reviews-grid">
+        <a class="review-card" href={`https://search.google.com/local/reviews?placeid=${branches[0].placeId}`} target="_blank" rel="noopener">
+          <p class="review-rating">4.9 ★ · 360+ reviews</p>
+          <p class="review-branch">Diana Clinic Seremban</p>
+          <p class="review-link">Read on Google →</p>
+        </a>
+        <a class="review-card" href={`https://search.google.com/local/reviews?placeid=${branches[1].placeId}`} target="_blank" rel="noopener">
+          <p class="review-rating">5.0 ★ · 180+ reviews</p>
+          <p class="review-branch">Diana Clinic Bandar Baru Bangi</p>
+          <p class="review-link">Read on Google →</p>
+        </a>
+      </div>
+      <p class="note">
+        Reviews are published independently by patients on Google. Individual experiences vary.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="container narrow">
+      <header class="section-head">
+        <p class="eyebrow">Frequently asked</p>
+        <h2>Common questions, answered.</h2>
+      </header>
+      <div class="faq-list">
+        {faqs.map((f) => (
+          <details class="faq-item">
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section id="visit" class="visit">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Visit a clinic</p>
+        <h2>Two locations. By appointment.</h2>
+      </header>
+      <div class="branch-grid">
+        {branches.map((b) => (
+          <article class="branch-card">
+            <div class="branch-map">
+              <iframe
+                title={`Map of ${b.name}`}
+                loading="lazy"
+                src={`https://www.google.com/maps/embed/v1/place?key=YOUR_MAPS_EMBED_KEY&q=place_id:${b.placeId}`}
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="branch-detail">
+              <h3>{b.name}</h3>
+              <p class="branch-address">{b.streetAddress}<br />{b.postalCode} {b.addressLocality}, {b.addressRegion}</p>
+              <p class="branch-hours">{b.hoursReadable}</p>
+              
+                class="cta"
+                href={`${waBase}?text=${encodeURIComponent(b.waMessage)}`}
+                target="_blank"
+                rel="noopener"
+              >
+                Book — {b.addressLocality}
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container narrow center">
+      <h2>Begin with a Clinical Assessment.</h2>
+      <p>
+        Skin concerns are read in person. The assessment is the starting point — calm, honest, and without obligation.
+      </p>
+      <a class="cta" href={waGeneric} target="_blank" rel="noopener">Book via WhatsApp</a>
+    </div>
+  </section>
+
+  <style>
+    /* ——— Hero ——— */
+    .hero {
+      padding: var(--space-6) 0 var(--space-5);
+      background:
+        radial-gradient(ellipse at 80% 0%, rgba(52, 32, 63, 0.06) 0%, transparent 60%),
+        var(--color-surface);
+    }
+    .hero-inner { max-width: 880px; }
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--color-anchor-soft);
+      margin: 0 0 var(--space-2);
+      font-weight: 500;
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+      color: var(--color-anchor);
+      margin: 0 0 var(--space-3);
+    }
+    .hero-sub {
+      font-size: 1.1rem;
+      line-height: 1.65;
+      max-width: 720px;
+      margin: 0 0 var(--space-4);
+    }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-4); }
+    .trust-strip {
+      list-style: none; padding: 0; margin: 0;
+      display: flex; flex-wrap: wrap; gap: var(--space-3);
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-anchor-soft);
+      border-top: 1px solid var(--color-layer);
+      padding-top: var(--space-3);
+    }
+
+    /* ——— Section heads ——— */
+    h2 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+      line-height: 1.15;
+      letter-spacing: -0.005em;
+      color: var(--color-anchor);
+      margin: 0 0 var(--space-3);
+    }
+    h3 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: 1.4rem;
+      color: var(--color-anchor);
+      margin: 0 0 var(--space-1);
+    }
+    .section-head { margin-bottom: var(--space-4); max-width: 700px; }
+    .narrow { max-width: 760px; }
+    .center { text-align: center; }
+    .note {
+      font-size: 0.88rem;
+      color: var(--color-anchor-soft);
+      margin-top: var(--space-4);
+      max-width: 720px;
+    }
+
+    /* ——— Problem ——— */
+    .problem { background: var(--color-surface-alt); }
+    .problem p { font-size: 1.05rem; max-width: 680px; }
+
+    /* ——— Concerns ——— */
+    .concerns-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-3);
+    }
+    @media (min-width: 720px) {
+      .concerns-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1040px) {
+      .concerns-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .concern-card {
+      background: var(--color-surface-alt);
+      border: 1px solid var(--color-layer);
+      padding: var(--space-3);
+    }
+    .concern-card p { margin: 0; font-size: 0.96rem; }
+
+    /* ——— Doctors ——— */
+    .doctors-grid {
+      display: grid;
+      gap: var(--space-3);
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 640px) { .doctors-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1040px) { .doctors-grid { grid-template-columns: repeat(4, 1fr); } }
+    .doctor-card {
+      text-align: center;
+      padding: var(--space-3) var(--space-2);
+      background: var(--color-surface-alt);
+      border: 1px solid var(--color-layer);
+    }
+    .doctor-portrait {
+      width: 96px; height: 96px; border-radius: 50%;
+      background: var(--color-layer);
+      margin: 0 auto var(--space-2);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      color: var(--color-anchor);
+    }
+    .doctor-role {
+      font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--color-anchor-soft);
+      margin: 0 0 var(--space-2);
+    }
+    .doctor-bio { font-size: 0.9rem; margin: 0 0 var(--space-2); }
+    .doctor-mmc { font-size: 0.74rem; color: var(--color-whisper); margin: 0; }
+
+    /* ——— How ——— */
+    .how-steps {
+      list-style: none; padding: 0; margin: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+    }
+    @media (min-width: 880px) {
+      .how-steps { grid-template-columns: repeat(3, 1fr); }
+    }
+    .how-step-num {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      color: var(--color-whisper);
+      display: block;
+      margin-bottom: var(--space-1);
+    }
+
+    /* ——— Tech ——— */
+    .tech-intro { max-width: 640px; margin-bottom: var(--space-4); }
+    .tech-grid {
+      list-style: none; padding: 0; margin: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+      border-top: 1px solid var(--color-layer);
+    }
+    @media (min-width: 720px) {
+      .tech-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .tech-grid li {
+      padding: var(--space-3) 0;
+      border-bottom: 1px solid var(--color-layer);
+    }
+    @media (min-width: 720px) {
+      .tech-grid li:nth-child(odd) { border-right: 1px solid var(--color-layer); padding-right: var(--space-3); }
+      .tech-grid li:nth-child(even) { padding-left: var(--space-3); }
+    }
+    .tech-name {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      color: var(--color-anchor);
+      margin: 0 0 0.2rem;
+    }
+    .tech-note {
+      font-size: 0.88rem;
+      color: var(--color-anchor-soft);
+      margin: 0;
+    }
+
+    /* ——— Reviews ——— */
+    .reviews-grid {
+      display: grid;
+      gap: var(--space-3);
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 720px) { .reviews-grid { grid-template-columns: repeat(2, 1fr); } }
+    .review-card {
+      background: var(--color-surface-alt);
+      border: 1px solid var(--color-layer);
+      padding: var(--space-3);
+      text-decoration: none;
+      transition: border-color 0.2s ease;
+    }
+    .review-card:hover { border-color: var(--color-anchor); }
+    .review-rating {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      color: var(--color-anchor);
+      margin: 0 0 0.3rem;
+    }
+    .review-branch {
+      font-size: 1rem;
+      margin: 0 0 var(--space-2);
+    }
+    .review-link {
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-anchor-soft);
+      margin: 0;
+    }
+
+    /* ——— FAQ ——— */
+    .faq-list { border-top: 1px solid var(--color-layer); }
+    .faq-item {
+      border-bottom: 1px solid var(--color-layer);
+      padding: var(--space-3) 0;
+    }
+    .faq-item summary {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      color: var(--color-anchor);
+      cursor: pointer;
+      list-style: none;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.4rem;
+      color: var(--color-anchor-soft);
+      margin-left: 1rem;
+    }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item p { margin: var(--space-2) 0 0; max-width: 720px; }
+
+    /* ——— Visit ——— */
+    .branch-grid {
+      display: grid;
+      gap: var(--space-4);
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 880px) { .branch-grid { grid-template-columns: repeat(2, 1fr); } }
+    .branch-card {
+      background: var(--color-surface-alt);
+      border: 1px solid var(--color-layer);
+    }
+    .branch-map {
+      aspect-ratio: 16 / 10;
+      background: var(--color-layer);
+    }
+    .branch-map iframe {
+      width: 100%; height: 100%;
+      border: 0;
+    }
+    .branch-detail { padding: var(--space-3); }
+    .branch-address { margin: 0 0 var(--space-2); font-size: 0.95rem; }
+    .branch-hours {
+      font-size: 0.82rem;
+      color: var(--color-anchor-soft);
+      margin: 0 0 var(--space-3);
+    }
+
+    /* ——— Final ——— */
+    .final-cta {
+      background: var(--color-anchor);
+      color: var(--color-surface);
+      padding: var(--space-6) 0;
+    }
+    .final-cta h2 { color: var(--color-surface); }
+    .final-cta .cta {
+      background: var(--color-surface);
+      color: var(--color-anchor);
+      border-color: var(--color-surface);
+      margin-top: var(--space-3);
+    }
+    .final-cta .cta:hover { background: var(--color-layer); }
+  </style>
+</BaseLayout>
