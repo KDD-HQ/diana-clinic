@@ -1,6 +1,6 @@
 ---
 const {
-  title = 'Diana Clinic · Doctor-led aesthetic care in Seremban & Bangi',
+  title = 'Dr Diana Clinic · Doctor-led aesthetic care in Seremban & Bangi',
   description = 'Clinical assessment and evidence-based protocols for pigmentation, acne, acne scars, and aging skin. Doctor-led aesthetic care since 2016.',
   ogImage = '/og/diana-clinic-og.jpg',
   canonical = Astro.url.href
@@ -13,7 +13,7 @@ const orgSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   '@id': `${site}/#organization`,
-  name: 'Diana Clinic',
+  name: 'Dr Diana Clinic',
   alternateName: 'Klinik Dr Diana',
   url: site,
   logo: `${site}/brand/diana-clinic-wordmark.svg`,
@@ -30,7 +30,7 @@ const siteSchema = {
   '@type': 'WebSite',
   '@id': `${site}/#website`,
   url: site,
-  name: 'Diana Clinic',
+  name: 'Dr Diana Clinic',
   publisher: { '@id': `${site}/#organization` },
   inLanguage: 'en-MY'
 };
@@ -83,9 +83,9 @@ const siteSchema = {
 
     <header class="site-header">
       <div class="container header-inner">
-        <a href="/" class="wordmark" aria-label="Diana Clinic, home">
-          <span class="wordmark-primary">Diana Clinic</span>
-          <span class="wordmark-secondary">Klinik Dr Diana · Seremban · Bandar Baru Bangi</span>
+        <a href="/" class="wordmark" aria-label="Dr Diana Clinic, home">
+          <span class="wordmark-primary">Dr Diana Clinic</span>
+         
         </a>
         <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); document.querySelector('.nav-list').classList.toggle('open')">☰</button>
         <nav aria-label="Primary">
@@ -116,9 +116,9 @@ const siteSchema = {
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <p class="wordmark-primary footer-mark">Diana Clinic</p>
+          <p class="wordmark-primary footer-mark">Dr Diana Clinic</p>
           <p class="footer-fineprint">
-            Klinik Dr Diana Sdn Bhd · SSM 1190890-D<br />
+            DEM Ventures Sdn Bhd · SSM 1190890-D<br />
             Licensed under the Ministry of Health Malaysia (LCP / KKM)
           </p>
         </div>
