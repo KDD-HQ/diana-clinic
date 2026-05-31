@@ -6,7 +6,7 @@ updatedDate: 2026-05-31
 author: "Dr Effendy, Aesthetic Doctor, Klinik Dr Diana"
 lang: "en"
 tags: ["acne scars", "acne scar treatment", "TCA CROSS", "subcision", "fractional laser", "rawatan parut jerawat", "Seremban", "Bandar Baru Bangi"]
-heroImage: "/images/blog/acne-scar-diagnosis-treatment.webp"
+heroImage: "/images/blog/acne-scar-diagnosis-treatment.jpg"
 draft: false
 ---
 
