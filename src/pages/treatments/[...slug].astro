@@ -1,0 +1,24 @@
+---
+// ============================================================
+// src/pages/treatments/[...slug].astro
+// Dynamic route — renders any treatment in the collection.
+// ============================================================
+
+import { getCollection } from 'astro:content';
+import TreatmentLayout from '../../layouts/TreatmentLayout.astro';
+
+export async function getStaticPaths() {
+  const treatments = await getCollection('treatments', ({ data }) => !data.draft);
+  return treatments.map((treatment) => ({
+    params: { slug: treatment.slug },
+    props: { treatment },
+  }));
+}
+
+const { treatment } = Astro.props;
+const { Content } = await treatment.render();
+---
+
+<TreatmentLayout treatment={treatment}>
+  <Content />
+</TreatmentLayout>

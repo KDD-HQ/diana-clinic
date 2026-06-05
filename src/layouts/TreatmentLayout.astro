@@ -1,0 +1,583 @@
+---
+// ============================================================
+// TreatmentLayout.astro (v2 — wrapped in BaseLayout)
+// Inherits header, nav, footer, sticky WhatsApp, fonts, colors
+// from BaseLayout. Adds treatment-specific hero, schemas,
+// FAQ block, and CTA.
+// ============================================================
+
+import BaseLayout from './BaseLayout.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  treatment: CollectionEntry<'treatments'>;
+}
+
+const { treatment } = Astro.props;
+const { data, slug } = treatment;
+
+// ── Site config ────────────────────────────────────────────
+const SITE = 'https://drdianaclinic.vercel.app';
+const WHATSAPP_NUMBER = '60183902910';
+
+// ── Derived values ─────────────────────────────────────────
+const canonical = `${SITE}/treatments/${slug}`;
+const heroImageUrl = `${SITE}${data.heroImage}`;
+const langTag = data.lang === 'ms' ? 'ms-MY' : 'en-MY';
+
+const ctaMessage =
+  data.ctaWhatsappMessage || `Hi KDD, I'd like to enquire about ${data.title}`;
+const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+  ctaMessage
+)}`;
+
+const formatISODate = (d: Date | string) =>
+  d instanceof Date ? d.toISOString().split('T')[0] : d;
+
+const reviewedDateDisplay = (d: Date | string) => {
+  const date = d instanceof Date ? d : new Date(d);
+  return date.toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+};
+
+const branchLabel =
+  data.branches.includes('bangi') && data.branches.includes('senawang')
+    ? 'Bangi & Senawang'
+    : data.branches.includes('bangi')
+    ? 'Bandar Baru Bangi'
+    : 'Senawang';
+
+// ── JSON-LD schemas ────────────────────────────────────────
+const medicalWebPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalWebPage',
+  name: data.title,
+  url: canonical,
+  inLanguage: langTag,
+  lastReviewed: formatISODate(data.lastReviewed),
+  datePublished: formatISODate(data.datePublished),
+  dateModified: formatISODate(data.dateModified),
+  reviewedBy: {
+    '@type': 'Physician',
+    name: data.medicallyReviewedBy.name,
+    medicalSpecialty: 'https://schema.org/Dermatologic',
+  },
+  about: { '@type': 'MedicalProcedure', name: data.title },
+  audience: { '@type': 'MedicalAudience', audienceType: 'Patient' },
+  specialty: 'https://schema.org/Dermatologic',
+};
+
+const medicalProcedureSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalProcedure',
+  name: data.title,
+  alternateName: data.alternateNames,
+  procedureType: 'https://schema.org/NoninvasiveProcedure',
+  bodyLocation: 'Face',
+  howPerformed: data.howPerformed,
+  ...(data.preparation && { preparation: data.preparation }),
+  ...(data.followup && { followup: data.followup }),
+  performer: {
+    '@type': 'MedicalOrganization',
+    name: 'Klinik Dr Diana',
+    url: SITE,
+    medicalSpecialty: 'https://schema.org/Dermatology',
+    location: [
+      {
+        '@type': 'Place',
+        name: 'Klinik Dr Diana — Bandar Baru Bangi',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'UG-3a (GF), Jalan Pusat Bandar 2, Sunway Gandaria, Seksyen 9',
+          addressLocality: 'Bandar Baru Bangi',
+          addressRegion: 'Selangor',
+          postalCode: '43650',
+          addressCountry: 'MY',
+        },
+      },
+      {
+        '@type': 'Place',
+        name: 'Klinik Dr Diana — Senawang',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'No 32-G-1, Jalan BPS 3, Bandar Prima Senawang',
+          addressLocality: 'Senawang',
+          addressRegion: 'Negeri Sembilan',
+          postalCode: '70450',
+          addressCountry: 'MY',
+        },
+      },
+    ],
+  },
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: data.faq.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Treatments',
+      item: `${SITE}/treatments`,
+    },
+    { '@type': 'ListItem', position: 3, name: data.title, item: canonical },
+  ],
+};
+
+const physicianSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Physician',
+  name: data.medicallyReviewedBy.name,
+  medicalSpecialty: 'https://schema.org/Dermatologic',
+  worksFor: {
+    '@type': 'MedicalOrganization',
+    name: 'Klinik Dr Diana',
+    url: SITE,
+  },
+};
+---
+
+<BaseLayout
+  title={`${data.title} | Klinik Dr Diana`}
+  description={data.description}
+  ogImage={data.heroImage}
+  canonical={canonical}
+>
+  <!-- Inject treatment-specific JSON-LD into BaseLayout's <head> -->
+  <Fragment slot="page-schema">
+    <script type="application/ld+json" set:html={JSON.stringify(medicalWebPageSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(medicalProcedureSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(physicianSchema)} />
+    {data.faq.length > 0 && (
+      <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    )}
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  </Fragment>
+
+  <!-- ============ TREATMENT HERO ============ -->
+  <section class="tx-hero">
+    <div class="container">
+      <div class="tx-eyebrow">Treatment · {data.category}</div>
+      <h1 class="tx-title">{data.title}</h1>
+      <p class="tx-lead">{data.description}</p>
+
+      <p class="tx-reviewed-by">
+        Medically reviewed by <strong>{data.medicallyReviewedBy.name}</strong>,
+        {' '}{data.medicallyReviewedBy.credentials} · Last updated {reviewedDateDisplay(data.lastReviewed)}
+      </p>
+
+      <div class="tx-meta">
+        <span><strong>{data.sessionDuration}</strong>Session duration</span>
+        <span><strong>{data.downtime}</strong>Recovery</span>
+        <span><strong>{data.interval}</strong>Recommended interval</span>
+        <span><strong>{branchLabel}</strong>Available at</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TREATMENT BODY ============ -->
+  <article class="tx-body">
+    <div class="container tx-container">
+      <!-- Featured hero image -->
+      <figure class="tx-fig tx-fig--hero">
+        <img
+          src={data.heroImage}
+          alt={data.heroImageAlt}
+          width="1200"
+          height="1500"
+          loading="eager"
+        />
+        {data.heroImageCaption && (
+          <figcaption>{data.heroImageCaption}</figcaption>
+        )}
+      </figure>
+
+      <!-- MDX body content -->
+      <slot />
+
+      <!-- Side effects -->
+      {data.sideEffects && (
+        <div class="tx-side-effects">
+          <h3>Possible side effects</h3>
+          <p>{data.sideEffects}</p>
+        </div>
+      )}
+
+      <!-- Disclaimer -->
+      {data.disclaimer && (
+        <p class="tx-disclaimer">{data.disclaimer}</p>
+      )}
+
+      <!-- Final CTA -->
+      <div class="tx-cta-box">
+        <p>{data.ctaText}</p>
+        <a href={whatsappUrl} class="cta cta--compact" target="_blank" rel="noopener">WhatsApp Us</a>
+      </div>
+
+      <!-- FAQ -->
+      {data.faq.length > 0 && (
+        <>
+          <h2 class="tx-faq-title">Frequently asked questions</h2>
+          <div class="tx-faq">
+            {data.faq.map((item) => (
+              <details>
+                <summary>{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </>
+      )}
+
+      <!-- Author / E-E-A-T box -->
+      <div class="tx-author">
+        <h3>About the clinic</h3>
+        <p>
+          <strong>Klinik Dr Diana</strong> is a KKM-licensed aesthetic medical
+          clinic operating since 2016, co-directed by
+          <strong> Dr Nur Diana</strong> and
+          <strong> Dr Mohd Shahrill Effendy</strong>. All treatments are
+          performed under direct doctor supervision. Our clinical focus is acne,
+          acne scars, pigmentation, and anti-aging — combining device-based
+          protocols with injectables and medical skincare.
+        </p>
+        <p>
+          Branches: Bandar Baru Bangi, Selangor · Senawang, Negeri Sembilan,
+          Malaysia.
+        </p>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style is:global>
+  /* ============================================================
+     Treatment page styles — use BaseLayout's CSS variables
+     for brand consistency.
+     ============================================================ */
+
+  /* Hero */
+  .tx-hero {
+    background: var(--color-surface-alt);
+    padding: var(--space-5) 0 var(--space-4);
+    border-bottom: 1px solid var(--color-layer);
+  }
+  .tx-eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-anchor-soft);
+    font-weight: 500;
+    margin-bottom: var(--space-2);
+  }
+  .tx-title {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    line-height: 1.1;
+    color: var(--color-anchor);
+    margin: 0 0 var(--space-2);
+    letter-spacing: 0.005em;
+  }
+  .tx-lead {
+    font-size: 1.1rem;
+    color: var(--color-ink);
+    max-width: 640px;
+    margin: 0;
+  }
+  .tx-reviewed-by {
+    margin-top: var(--space-2);
+    font-size: 0.85rem;
+    color: var(--color-anchor-soft);
+  }
+  .tx-reviewed-by strong { color: var(--color-anchor); }
+  .tx-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-3);
+    font-size: 0.85rem;
+    color: var(--color-anchor-soft);
+  }
+  .tx-meta span strong {
+    color: var(--color-anchor);
+    display: block;
+    font-size: 0.95rem;
+    font-family: var(--font-body);
+    font-weight: 500;
+  }
+
+  /* Body */
+  .tx-body {
+    padding: var(--space-5) 0;
+    border-top: none !important;
+  }
+  .tx-container { max-width: 760px; }
+
+  /* Typography inside MDX body */
+  .tx-body h2 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    line-height: 1.2;
+    color: var(--color-anchor);
+    margin: var(--space-5) 0 var(--space-2);
+    letter-spacing: 0.005em;
+  }
+  .tx-body h3 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: var(--color-anchor);
+    margin: var(--space-3) 0 var(--space-1);
+  }
+  .tx-body p {
+    margin-bottom: var(--space-2);
+    line-height: 1.7;
+  }
+  .tx-body a {
+    color: var(--color-anchor);
+    text-decoration: underline;
+    text-decoration-color: var(--color-layer);
+    text-underline-offset: 3px;
+  }
+  .tx-body a:hover { text-decoration-color: var(--color-anchor); }
+
+  /* Direct-answer box (used in MDX) */
+  .tx-body .answer {
+    background: #fff;
+    border-left: 3px solid var(--color-anchor);
+    padding: var(--space-2) var(--space-3);
+    margin: var(--space-2) 0 var(--space-3);
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  .tx-body .answer strong { color: var(--color-anchor); }
+  .tx-body .answer p { margin-bottom: 0; }
+
+  /* Comparison table */
+  .tx-body .compare {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-3) 0;
+    font-size: 0.95rem;
+  }
+  .tx-body .compare th,
+  .tx-body .compare td {
+    padding: var(--space-1) 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-layer);
+    vertical-align: top;
+  }
+  .tx-body .compare th {
+    background: var(--color-surface-alt);
+    font-weight: 600;
+    color: var(--color-anchor);
+    font-family: var(--font-body);
+  }
+  .tx-body .compare tr:last-child td { border-bottom: none; }
+
+  /* Clean list (ingredients, suitable-for) */
+  .tx-body ul.clean {
+    padding-left: var(--space-3);
+    margin-bottom: var(--space-2);
+  }
+  .tx-body ul.clean li { margin-bottom: 0.4rem; }
+
+  /* Hero figure (rendered by layout) */
+  .tx-fig { margin: var(--space-3) 0 var(--space-4); }
+  .tx-fig img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid var(--color-layer);
+    background: #fff;
+  }
+  .tx-fig figcaption {
+    margin-top: 0.65rem;
+    font-size: 0.85rem;
+    color: var(--color-anchor-soft);
+    text-align: center;
+    font-style: italic;
+    line-height: 1.5;
+  }
+  .tx-fig--hero { margin: 0 0 var(--space-4); }
+
+  /* MDX figures (inline, used inside body) */
+  .tx-body .fig { margin: var(--space-3) 0 var(--space-4); }
+  .tx-body .fig img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid var(--color-layer);
+    background: #fff;
+  }
+  .tx-body .fig figcaption {
+    margin-top: 0.65rem;
+    font-size: 0.85rem;
+    color: var(--color-anchor-soft);
+    text-align: center;
+    font-style: italic;
+    line-height: 1.5;
+  }
+  .tx-body .fig-step {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tx-body .fig-step img { background: var(--color-surface-alt); }
+
+  /* Press block */
+  .tx-body .press-block {
+    background: #fff;
+    border: 1px solid var(--color-layer);
+    border-radius: 8px;
+    padding: var(--space-3);
+    margin: var(--space-4) 0;
+  }
+  .tx-body .press-block .press-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-anchor-soft);
+    font-weight: 500;
+    margin-bottom: var(--space-2);
+  }
+  .tx-body .press-block img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: 1px solid var(--color-layer);
+    margin-bottom: var(--space-1);
+  }
+  .tx-body .press-block .press-note {
+    font-size: 0.85rem;
+    color: var(--color-anchor-soft);
+    margin: 0;
+  }
+
+  /* Inline CTA box (used inside MDX) */
+  .tx-body .cta-box {
+    background: #fff;
+    border: 1px solid var(--color-layer);
+    border-radius: 8px;
+    padding: var(--space-3);
+    margin: var(--space-4) 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+  }
+  .tx-body .cta-box p { margin: 0; font-weight: 500; }
+  .tx-body .btn,
+  .tx-body .btn-wa {
+    display: inline-block;
+    background: var(--color-anchor);
+    color: var(--color-surface);
+    padding: 0.7rem 1.3rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    border: 1px solid var(--color-anchor);
+  }
+  .tx-body .btn:hover,
+  .tx-body .btn-wa:hover { background: var(--color-anchor-soft); }
+
+  /* Side effects */
+  .tx-side-effects {
+    background: var(--color-surface-alt);
+    border-radius: 6px;
+    padding: var(--space-2) var(--space-3);
+    margin: var(--space-3) 0;
+    font-size: 0.95rem;
+  }
+  .tx-side-effects h3 { margin-top: 0; margin-bottom: var(--space-1); }
+  .tx-side-effects p { margin-bottom: 0; }
+
+  /* Disclaimer */
+  .tx-disclaimer {
+    font-size: 0.85rem;
+    color: var(--color-anchor-soft);
+    font-style: italic;
+    margin: var(--space-2) 0 var(--space-3);
+  }
+
+  /* Final CTA box */
+  .tx-cta-box {
+    background: #fff;
+    border: 1px solid var(--color-layer);
+    border-radius: 8px;
+    padding: var(--space-3);
+    margin: var(--space-4) 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+  }
+  .tx-cta-box p { margin: 0; font-weight: 500; }
+
+  /* FAQ */
+  .tx-faq-title { margin-top: var(--space-5) !important; }
+  .tx-faq details {
+    border-bottom: 1px solid var(--color-layer);
+    padding: var(--space-2) 0;
+    cursor: pointer;
+  }
+  .tx-faq details summary {
+    font-weight: 500;
+    font-size: 1.05rem;
+    color: var(--color-anchor);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .tx-faq details summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--color-anchor-soft);
+  }
+  .tx-faq details[open] summary::after { content: '−'; }
+  .tx-faq details p {
+    margin-top: var(--space-1);
+    color: var(--color-ink);
+  }
+
+  /* Author / E-E-A-T box */
+  .tx-author {
+    margin-top: var(--space-5);
+    padding: var(--space-3);
+    background: #fff;
+    border: 1px solid var(--color-layer);
+    border-radius: 8px;
+  }
+  .tx-author h3 { margin-top: 0; margin-bottom: var(--space-1); }
+  .tx-author p {
+    font-size: 0.92rem;
+    color: var(--color-ink);
+    margin-bottom: var(--space-1);
+  }
+</style>
