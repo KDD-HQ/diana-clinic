@@ -55,30 +55,35 @@ const concerns = [
   {
     id: 'pigmentation',
     title: 'Pigmentation & melasma',
+    lead: 'Dark spots, melasma, uneven tone — read at the layer they form in.',
     body:
       'Pigmentation is read at the layer it forms in. Treatment plans are calibrated to the depth and pattern of the pigment — not the surface alone. Melasma in particular is managed as a chronic condition: protocols, photoprotection, and supportive skincare, sustained over months.'
   },
   {
     id: 'acne',
     title: 'Acne',
+    lead: 'Active acne or recurring breakouts — managed over a planned series, not a single visit.',
     body:
       'Active acne is treated as a managed condition, not a one-off appointment. Protocols address inflammation, bacterial load, and the daily routine that follows — together. Most patients improve over a planned series rather than a single visit.'
   },
   {
     id: 'acne-scars',
     title: 'Acne scars',
+    lead: 'Ice-pick, rolling, boxcar, post-inflammatory — restored over a planned programme.',
     body:
       'Acne scars are textural memory. Restoration is gradual and matched to the scar type — ice-pick, rolling, boxcar, or post-inflammatory. Most patients work through a programme of protocols across several months.'
   },
   {
     id: 'aging-skin',
     title: 'Aging skin',
+    lead: 'Structure, texture, and tone — paced restoration over weeks and months.',
     body:
       'Aging skin is restored across structure, texture, and tone. Programmes are paced — restoration is steady, not dramatic. The intention is long-term skin health, not a single dramatic outcome.'
   },
   {
     id: 'skin-quality',
     title: 'Skin quality & restoration',
+    lead: 'Hydration, barrier, and tone — the foundation other results sit on.',
     body:
       'Skin quality is built from the inside out. Hydration, barrier function, and tone are restored protocol by protocol. This is the foundation that holds every other result in place.'
   }
@@ -241,6 +246,25 @@ const breadcrumbSchema = {
     </div>
   </section>
 
+  <!-- CONCERN TILES -->
+  <section class="concern-tiles">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Start here</p>
+        <h2>Which concern brings you in?</h2>
+      </header>
+      <div class="tile-grid">
+        {concerns.map((c) => (
+          <a href={`#${c.id}`} class="tile">
+            <h3>{c.title}</h3>
+            <p>{c.lead}</p>
+            <span class="tile-link">Read more →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+ 
   <!-- PROBLEM -->
   <section class="problem">
     <div class="container narrow">
@@ -415,7 +439,7 @@ const breadcrumbSchema = {
               <iframe
                 title={`Map of ${b.name}`}
                 loading="lazy"
-                src={`https://www.google.com/maps/embed/v1/place?key=${import.meta.env.PUBLIC_MAPS_EMBED_KEY}&q=place_id:${b.placeId}`}
+                src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE&q=place_id:${b.placeId}`}
                 allowfullscreen
               ></iframe>
             </div>
@@ -567,6 +591,281 @@ const breadcrumbSchema = {
       padding: var(--space-3);
     }
     .concern-card p { margin: 0; font-size: 0.96rem; }
+
+    /* ——— Concern tiles (above-the-fold self-identification) ——— */
+    .concern-tiles {
+      padding: var(--space-5) 0;
+      border-bottom: 1px solid var(--color-layer);
+    }
+    .tile-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-2);
+    }
+    @media (min-width: 640px) {
+      .tile-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 980px) {
+      .tile-grid { grid-template-columns: repeat(5, 1fr); }
+    }
+    .tile {
+      display: flex;
+      flex-direction: column;
+      padding: var(--space-3);
+      background: var(--color-surface);
+      border: 1px solid var(--color-layer);
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      min-height: 180px;
+    }
+    .tile:hover {
+      border-color: var(--color-anchor);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.05);
+    }
+    .tile h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--color-anchor);
+      margin: 0 0 var(--space-2);
+      line-height: 1.25;
+    }
+    .tile p {
+      font-size: 0.88rem;
+      color: var(--color-anchor-soft);
+      line-height: 1.55;
+      margin: 0 0 var(--space-2);
+      flex: 1;
+    }
+    .tile-link {
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-anchor);
+      margin-top: auto;
+    }
+
+    /* ——— Concern tiles (above-the-fold self-identification) ——— */
+    .concern-tiles {
+      padding: var(--space-5) 0;
+      border-bottom: 1px solid var(--color-layer);
+    }
+    .tile-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-2);
+    }
+    @media (min-width: 640px) {
+      .tile-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 980px) {
+      .tile-grid { grid-template-columns: repeat(5, 1fr); }
+    }
+    .tile {
+      display: flex;
+      flex-direction: column;
+      padding: var(--space-3);
+      background: var(--color-surface);
+      border: 1px solid var(--color-layer);
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      min-height: 180px;
+    }
+    .tile:hover {
+      border-color: var(--color-anchor);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.05);
+    }
+    .tile h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--color-anchor);
+      margin: 0 0 var(--space-2);
+      line-height: 1.25;
+    }
+    .tile p {
+      font-size: 0.88rem;
+      color: var(--color-anchor-soft);
+      line-height: 1.55;
+      margin: 0 0 var(--space-2);
+      flex: 1;
+    }
+    .tile-link {
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-anchor);
+      margin-top: auto;
+    }
+
+    /* ——— Concern tiles (above-the-fold self-identification) ——— */
+    .concern-tiles {
+      padding: var(--space-5) 0;
+      border-bottom: 1px solid var(--color-layer);
+    }
+    .tile-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-2);
+    }
+    @media (min-width: 640px) {
+      .tile-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 980px) {
+      .tile-grid { grid-template-columns: repeat(5, 1fr); }
+    }
+    .tile {
+      display: flex;
+      flex-direction: column;
+      padding: var(--space-3);
+      background: var(--color-surface);
+      border: 1px solid var(--color-layer);
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      min-height: 180px;
+    }
+    .tile:hover {
+      border-color: var(--color-anchor);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.05);
+    }
+    .tile h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--color-anchor);
+      margin: 0 0 var(--space-2);
+      line-height: 1.25;
+    }
+    .tile p {
+      font-size: 0.88rem;
+      color: var(--color-anchor-soft);
+      line-height: 1.55;
+      margin: 0 0 var(--space-2);
+      flex: 1;
+    }
+    .tile-link {
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-anchor);
+      margin-top: auto;
+    }
+
+    /* ——— Concern tiles (above-the-fold self-identification) ——— */
+    .concern-tiles {
+      padding: var(--space-5) 0;
+      border-bottom: 1px solid var(--color-layer);
+    }
+    .tile-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-2);
+    }
+    @media (min-width: 640px) {
+      .tile-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 980px) {
+      .tile-grid { grid-template-columns: repeat(5, 1fr); }
+    }
+    .tile {
+      display: flex;
+      flex-direction: column;
+      padding: var(--space-3);
+      background: var(--color-surface);
+      border: 1px solid var(--color-layer);
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      min-height: 180px;
+    }
+    .tile:hover {
+      border-color: var(--color-anchor);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.05);
+    }
+    .tile h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--color-anchor);
+      margin: 0 0 var(--space-2);
+      line-height: 1.25;
+    }
+    .tile p {
+      font-size: 0.88rem;
+      color: var(--color-anchor-soft);
+      line-height: 1.55;
+      margin: 0 0 var(--space-2);
+      flex: 1;
+    }
+    .tile-link {
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-anchor);
+      margin-top: auto;
+    }
+
+    /* ——— Concern tiles (above-the-fold self-identification) ——— */
+    .concern-tiles {
+      padding: var(--space-5) 0;
+      border-bottom: 1px solid var(--color-layer);
+    }
+    .tile-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-2);
+    }
+    @media (min-width: 640px) {
+      .tile-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 980px) {
+      .tile-grid { grid-template-columns: repeat(5, 1fr); }
+    }
+    .tile {
+      display: flex;
+      flex-direction: column;
+      padding: var(--space-3);
+      background: var(--color-surface);
+      border: 1px solid var(--color-layer);
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      min-height: 180px;
+    }
+    .tile:hover {
+      border-color: var(--color-anchor);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.05);
+    }
+    .tile h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--color-anchor);
+      margin: 0 0 var(--space-2);
+      line-height: 1.25;
+    }
+    .tile p {
+      font-size: 0.88rem;
+      color: var(--color-anchor-soft);
+      line-height: 1.55;
+      margin: 0 0 var(--space-2);
+      flex: 1;
+    }
+    .tile-link {
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-anchor);
+      margin-top: auto;
+    }
 
     /* ——— Doctors ——— */
     .doctors-grid {
