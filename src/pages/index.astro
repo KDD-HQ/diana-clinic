@@ -87,10 +87,20 @@ const concerns = [
 const doctors = [
   {
     name: 'Dr Diana Abd Razak',
-    role: 'Founder · Aesthetic Doctor',
-    mmc: 'MMC: __________',
+    role: 'Founder · Lead Aesthetic Doctor',
+    photo: '/images/doctors/dr-diana-abd-razak.jpg',
+    practising: 'Medical doctor since 2009 · in aesthetic medicine since 2015',
+    focus: 'Pigmentation & melasma, skin restoration, anti-aging programmes',
     bio: 'Founding doctor of Klinik Dr Diana. LCP-certified medical aesthetic practitioner.'
   },
+  {
+    name: 'Dr Shahrill Effendy',
+    role: 'Aesthetic Doctor',
+    photo: '/images/doctors/dr-effendy.jpg',
+    practising: 'Medical doctor since 2009 · in aesthetic medicine since 2018',
+    focus: 'Acne & acne-scar restoration, anti-aging, skin quality',
+    bio: 'LCP-certified medical aesthetic practitioner at Klinik Dr Diana.'
+  }
 ];
 
 const technology = [
@@ -269,16 +279,24 @@ const breadcrumbSchema = {
     <div class="container">
       <header class="section-head">
         <p class="eyebrow">Your doctors</p>
-        <h2>Lead doctor , Dr Diana Clinic.</h2>
+        <h2>The doctors behind Klinik Dr Diana.</h2>
       </header>
       <div class="doctors-grid">
         {doctors.map((d) => (
           <article class="doctor-card">
-            <div class="doctor-portrait" aria-hidden="true">{d.name.split(' ').slice(1, 3).map(n => n[0]).join('')}</div>
+            <img
+              class="doctor-portrait"
+              src={d.photo}
+              alt={`Portrait of ${d.name}, ${d.role}, at Klinik Dr Diana.`}
+              width="320"
+              height="320"
+              loading="lazy"
+            />
             <h3>{d.name}</h3>
             <p class="doctor-role">{d.role}</p>
+            <p class="doctor-practising">{d.practising}</p>
+            <p class="doctor-focus"><span>Clinical focus</span>{d.focus}</p>
             <p class="doctor-bio">{d.bio}</p>
-            <p class="doctor-mmc">{d.mmc}</p>
           </article>
         ))}
       </div>
@@ -553,33 +571,61 @@ const breadcrumbSchema = {
     /* ——— Doctors ——— */
     .doctors-grid {
       display: grid;
-      gap: var(--space-3);
+      gap: var(--space-4);
       grid-template-columns: 1fr;
+      max-width: 880px;
+      margin: 0 auto;
     }
-    @media (min-width: 640px) { .doctors-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 1040px) { .doctors-grid { grid-template-columns: repeat(4, 1fr); } }
+    @media (min-width: 720px) {
+      .doctors-grid { grid-template-columns: repeat(2, 1fr); }
+    }
     .doctor-card {
       text-align: center;
-      padding: var(--space-3) var(--space-2);
+      padding: var(--space-4) var(--space-3);
       background: var(--color-surface-alt);
       border: 1px solid var(--color-layer);
     }
     .doctor-portrait {
-      width: 96px; height: 96px; border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      margin: 0 auto var(--space-3);
+      filter: saturate(0.95);
       background: var(--color-layer);
-      margin: 0 auto var(--space-2);
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--font-display);
-      font-size: 1.6rem;
-      color: var(--color-anchor);
     }
     .doctor-role {
       font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase;
       color: var(--color-anchor-soft);
       margin: 0 0 var(--space-2);
     }
-    .doctor-bio { font-size: 0.9rem; margin: 0 0 var(--space-2); }
-    .doctor-mmc { font-size: 0.74rem; color: var(--color-whisper); margin: 0; }
+    .doctor-practising {
+      font-size: 0.85rem;
+      color: var(--color-anchor-soft);
+      margin: 0 0 var(--space-3);
+      font-style: italic;
+    }
+    .doctor-focus {
+      font-size: 0.9rem;
+      margin: 0 0 var(--space-3);
+      color: var(--color-anchor);
+    }
+    .doctor-focus span {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--color-anchor-soft);
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+    }
+    .doctor-bio {
+      font-size: 0.9rem;
+      margin: 0;
+      color: var(--color-anchor-soft);
+    }
 
     /* ——— How ——— */
     .how-steps {
