@@ -201,22 +201,33 @@ const breadcrumbSchema = {
   <!-- HERO -->
   <section class="hero">
     <div class="container hero-inner">
-      <p class="eyebrow">Medical Aesthetic Clinic · Since 2016</p>
-      <h1>Doctor-led skin care, tailored to your concern.</h1>
-      <p class="hero-sub">
-        Clinical assessment and evidence-based protocols for pigmentation, acne,
-        acne scars, aging skin, and overall skin restoration. Two clinics — Seremban and Bandar Baru Bangi.
-      </p>
-      <div class="hero-cta">
-        <a class="cta" href={waGeneric} target="_blank" rel="noopener">Book a Clinical Assessment</a>
-        <a class="cta cta--ghost" href="#how">How we work</a>
+      <div class="hero-text">
+        <p class="eyebrow">Medical Aesthetic Clinic · Since 2016</p>
+        <h1>Acne, pigmentation, scars, and aging skin — read by a doctor first.</h1>
+        <p class="hero-sub">
+          Clinical assessment and evidence-based protocols at Klinik Dr Diana. Two clinics — Seremban and Bandar Baru Bangi — doctor-led since 2016.
+        </p>
+        <div class="hero-cta">
+          <a class="cta" href={waGeneric} target="_blank" rel="noopener">Book a Clinical Assessment</a>
+          <a class="cta cta--ghost" href="#how">How we work</a>
+        </div>
+        <ul class="trust-strip" aria-label="Clinic credentials">
+          <li><strong>4.9 ★</strong> · 540+ Google reviews</li>
+          <li>KKM-licensed</li>
+          <li>LCP-certified doctors</li>
+          <li>Since 2016</li>
+        </ul>
       </div>
-      <ul class="trust-strip" aria-label="Clinic credentials">
-        <li>Since 2016</li>
-        <li>KKM-licensed</li>
-        <li>LCP-certified doctors</li>
-        <li>Seremban · Bandar Baru Bangi</li>
-      </ul>
+      <div class="hero-media">
+        <img
+          src="/images/hero/hero-treatment-room-seremban.jpg"
+          alt="Treatment room at Klinik Dr Diana — calm, doctor-led aesthetic care in Seremban and Bandar Baru Bangi."
+          width="1200"
+          height="1600"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
     </div>
   </section>
 
@@ -428,7 +439,32 @@ const breadcrumbSchema = {
         radial-gradient(ellipse at 80% 0%, rgba(52, 32, 63, 0.06) 0%, transparent 60%),
         var(--color-surface);
     }
-    .hero-inner { max-width: 880px; }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+      align-items: center;
+    }
+    @media (min-width: 880px) {
+      .hero-inner {
+        grid-template-columns: 1.15fr 1fr;
+        gap: var(--space-5);
+      }
+    }
+    .hero-text { max-width: 640px; }
+    .hero-media img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 4px;
+      filter: saturate(0.92);
+      display: block;
+    }
+    .trust-strip li strong {
+      font-weight: 600;
+      color: var(--color-anchor);
+    }
     .eyebrow {
       font-size: 0.72rem;
       letter-spacing: 0.24em;
