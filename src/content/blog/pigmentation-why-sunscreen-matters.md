@@ -6,7 +6,7 @@ updatedDate: 2026-06-01
 author: "Dr Effendy, Medical Aesthetic Doctor, Klinik Dr Diana"
 lang: "en"
 tags: ["sunscreen", "pigmentation", "melasma", "PIH", "sun protection", "photoprotection", "Asian skin", "darker skin", "Bangi", "Senawang", "Seremban"]
-heroImage: "/images/blog/pigmentation-dark-patches-guide.jpg"
+heroImage: "/images/blog/pigmentation-why-sunscreen-matters.jpg"
 draft: false
 ---
 ## Executive Summary

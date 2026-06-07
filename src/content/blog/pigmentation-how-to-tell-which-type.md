@@ -6,7 +6,7 @@ updatedDate: 2026-06-01
 author: "Dr Effendy, Medical Aesthetic Doctor, Klinik Dr Diana"
 lang: "en"
 tags: ["pigmentation", "melasma", "PIH", "sun spots", "freckles", "mixed pigmentation", "dark patches", "Asian skin", "Bangi", "Senawang", "Seremban"]
-heroImage: "/images/blog/pigmentation-dark-patches-guide.jpg"
+heroImage: "/images/blog/pigmentation-how-to-tell-which-type.jpg"
 draft: false
 ---
 ## Executive Summary

@@ -6,7 +6,7 @@ updatedDate: 2026-06-01
 author: "Dr Effendy, Medical Aesthetic Doctor, Klinik Dr Diana"
 lang: "en"
 tags: ["pigmentation results", "pigmentation treatment", "melasma", "PIH", "realistic results", "dark patches", "Asian skin", "Bangi", "Senawang", "Seremban"]
-heroImage: "/images/blog/pigmentation-dark-patches-guide.jpg"
+heroImage: "/images/blog/pigmentation-realistic-results.jpg"
 draft: false
 ---
 ## Executive Summary

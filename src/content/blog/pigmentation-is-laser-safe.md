@@ -6,7 +6,7 @@ updatedDate: 2026-06-01
 author: "Dr Effendy, Medical Aesthetic Doctor, Klinik Dr Diana"
 lang: "en"
 tags: ["laser pigmentation", "laser safety", "Asian skin", "darker skin", "melasma", "PIH", "pigmentation treatment", "Bangi", "Senawang", "Seremban"]
-heroImage: "/images/blog/pigmentation-dark-patches-guide.jpg"
+heroImage: "/images/blog/pigmentation-is-laser-safe.jpg"
 draft: false
 ---
 ## Executive Summary

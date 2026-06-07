@@ -6,7 +6,7 @@ updatedDate: 2026-06-01
 author: "Dr Effendy, Medical Aesthetic Doctor, Klinik Dr Diana"
 lang: "en"
 tags: ["pigmentation assessment", "doctor for pigmentation", "dark patches", "melasma", "PIH", "sun spots", "skin check", "Bangi", "Senawang", "Seremban"]
-heroImage: "/images/blog/pigmentation-dark-patches-guide.jpg"
+heroImage: "/images/blog/pigmentation-when-to-see-doctor.jpg"
 draft: false
 ---
 ## Executive Summary

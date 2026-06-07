@@ -6,7 +6,7 @@ updatedDate: 2026-06-01
 author: "Dr Effendy, Medical Aesthetic Doctor, Klinik Dr Diana"
 lang: "en"
 tags: ["pigmentation assessment", "Klinik Dr Diana", "melasma", "PIH", "sun spots", "freckles", "Bangi", "Senawang", "Seremban", "aesthetic clinic"]
-heroImage: "/images/blog/pigmentation-dark-patches-guide.jpg"
+heroImage: "/images/blog/pigmentation-how-kdd-assesses.jpg"
 draft: false
 ---
 ## Executive Summary

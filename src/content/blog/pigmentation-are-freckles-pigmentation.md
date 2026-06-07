@@ -6,7 +6,7 @@ updatedDate: 2026-06-01
 author: "Dr Effendy, Medical Aesthetic Doctor, Klinik Dr Diana"
 lang: "en"
 tags: ["freckles", "ephelides", "pigmentation", "sun spots", "melasma", "brown spots", "Asian skin", "Bangi", "Senawang", "Seremban"]
-heroImage: "/images/blog/pigmentation-dark-patches-guide.jpg"
+heroImage: "/images/blog/pigmentation-are-freckles-pigmentation.jpg"
 draft: false
 ---
 ## Executive Summary

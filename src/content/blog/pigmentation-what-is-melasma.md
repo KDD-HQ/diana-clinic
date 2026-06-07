@@ -6,7 +6,7 @@ updatedDate: 2026-06-01
 author: "Dr Effendy, Medical Aesthetic Doctor, Klinik Dr Diana"
 lang: "en"
 tags: ["melasma", "pigmentation", "dark patches", "facial pigmentation", "Asian skin", "Malaysian skin", "Bangi", "Bandar Baru Bangi", "Senawang", "Seremban"]
-heroImage: "/images/blog/pigmentation-dark-patches-guide.jpg"
+heroImage: "/images/blog/pigmentation-what-is-melasma.jpg"
 draft: false
 ---
 ## Executive Summary

@@ -6,7 +6,7 @@ updatedDate: 2026-06-01
 author: "Dr Effendy, Medical Aesthetic Doctor, Klinik Dr Diana"
 lang: "en"
 tags: ["pigmentation recurrence", "melasma recurrence", "pigmentation", "melasma", "PIH", "dark patches", "sunscreen", "Asian skin", "Bangi", "Senawang", "Seremban"]
-heroImage: "/images/blog/pigmentation-dark-patches-guide.jpg"
+heroImage: "/images/blog/pigmentation-why-it-returns.jpg"
 draft: false
 ---
 ## Executive Summary

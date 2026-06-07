@@ -6,7 +6,7 @@ updatedDate: 2026-06-01
 author: "Dr Effendy, Medical Aesthetic Doctor, Klinik Dr Diana"
 lang: "en"
 tags: ["sun spots", "solar lentigines", "age spots", "pigmentation", "melasma", "freckles", "brown spots", "Asian skin", "Bangi", "Senawang", "Seremban"]
-heroImage: "/images/blog/pigmentation-dark-patches-guide.jpg"
+heroImage: "/images/blog/pigmentation-what-are-sun-spots.jpg"
 draft: false
 ---
 ## Executive Summary

@@ -6,7 +6,7 @@ updatedDate: 2026-06-01
 author: "Dr Effendy, Medical Aesthetic Doctor, Klinik Dr Diana"
 lang: "en"
 tags: ["PIH", "post-inflammatory hyperpigmentation", "acne marks", "acne scars", "dark marks after acne", "pigmentation", "Asian skin", "Bangi", "Senawang", "Seremban"]
-heroImage: "/images/blog/pigmentation-dark-patches-guide.jpg"
+heroImage: "/images/blog/pigmentation-what-is-pih.jpg"
 draft: false
 ---
 ## Executive Summary
