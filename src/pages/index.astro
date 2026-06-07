@@ -54,38 +54,103 @@ const waGeneric = `${waBase}?text=${encodeURIComponent(
 const concerns = [
   {
     id: 'pigmentation',
-    title: 'Pigmentation & melasma',
-    lead: 'Dark spots, melasma, uneven tone — read at the layer they form in.',
+    title: 'Pigmentation & Melasma',
     body:
-      'Pigmentation is read at the layer it forms in. Treatment plans are calibrated to the depth and pattern of the pigment — not the surface alone. Melasma in particular is managed as a chronic condition: protocols, photoprotection, and supportive skincare, sustained over months.'
+      'Dark patches can be melasma, PIH, sun spots, freckles, or a mixed pattern. Assessment focuses on identifying the type, trigger, depth, and skin risk before choosing creams, peels, lasers, or maintenance care.',
+    articles: [
+      {
+        title: 'What Causes Dark Patches and Uneven Skin Tone?',
+        href: '/blog/pigmentation-dark-patches-guide/'
+      },
+      {  
+        title: 'How to Tell Which Pigmentation Type You Have',
+        href: '/blog/pigmentation-how-to-tell-which-type/'
+      },
+      {
+        title: 'Melasma, PIH, Sun Spots or Freckles?',
+        href: '/blog/pigmentation-types-melasma-pih-sun-spots-freckles/'
+      },
+      {
+        title: 'What Is Melasma?',
+        href: '/blog/pigmentation-what-is-melasma/'
+      },
+      {
+        title: 'What Is PIH?',
+        href: '/blog/pigmentation-what-is-pih/'
+      },
+      {
+        title: 'What Are Sun Spots?',
+        href: '/blog/pigmentation-what-are-sun-spots/'
+      },
+      {
+        title: 'Pigmentation in Asian and Darker Skin',
+        href: '/blog/pigmentation-asian-darker-skin/'
+      },
+      { 
+        title: 'Are Freckles a Pigmentation Problem?',
+        href: '/blog/pigmentation-are-freckles-pigmentation/'
+      },
+      {
+        title: 'Is Laser Safe for Pigmentation?',
+        href: '/blog/pigmentation-is-laser-safe/'
+      },
+      {
+        title: 'Why Wrong Treatment Can Make Pigmentation Worse',
+        href: '/blog/pigmentation-wrong-treatment-worse/'
+      },
+      {
+        title: 'Why Pigmentation Keeps Coming Back',
+        href: '/blog/pigmentation-why-it-returns/'
+      },
+      {
+        title: 'Why Sunscreen Matters for Pigmentation',
+        href: '/blog/pigmentation-why-sunscreen-matters/'
+      },
+      {
+        title: 'Realistic Results From Pigmentation Treatment',
+        href: '/blog/pigmentation-realistic-results/'
+      },
+      {
+        title: 'When Should Pigmentation Be Assessed by a Doctor?',
+        href: '/blog/pigmentation-when-to-see-doctor/'
+      },
+      {
+        title: 'How Klinik Dr Diana Assesses Pigmentation',
+        href: '/blog/pigmentation-how-kdd-assesses/'
+      }
+    ]
   },
   {
     id: 'acne',
     title: 'Acne',
     lead: 'Active acne or recurring breakouts — managed over a planned series, not a single visit.',
     body:
-      'Active acne is treated as a managed condition, not a one-off appointment. Protocols address inflammation, bacterial load, and the daily routine that follows — together. Most patients improve over a planned series rather than a single visit.'
+      'Active acne is treated as a managed condition, not a one-off appointment. Protocols address inflammation, bacterial load, and the daily routine that follows — together. Most patients improve over a planned series rather than a single visit.',
+    articles: []
   },
   {
     id: 'acne-scars',
     title: 'Acne scars',
     lead: 'Ice-pick, rolling, boxcar, post-inflammatory — restored over a planned programme.',
     body:
-      'Acne scars are textural memory. Restoration is gradual and matched to the scar type — ice-pick, rolling, boxcar, or post-inflammatory. Most patients work through a programme of protocols across several months.'
+      'Acne scars are textural memory. Restoration is gradual and matched to the scar type — ice-pick, rolling, boxcar, or post-inflammatory. Most patients work through a programme of protocols across several months.',
+    articles: []
   },
   {
     id: 'aging-skin',
     title: 'Aging skin',
     lead: 'Structure, texture, and tone — paced restoration over weeks and months.',
     body:
-      'Aging skin is restored across structure, texture, and tone. Programmes are paced — restoration is steady, not dramatic. The intention is long-term skin health, not a single dramatic outcome.'
+      'Aging skin is restored across structure, texture, and tone. Programmes are paced — restoration is steady, not dramatic. The intention is long-term skin health, not a single dramatic outcome.',
+    articles: []
   },
   {
     id: 'skin-quality',
     title: 'Skin quality & restoration',
     lead: 'Hydration, barrier, and tone — the foundation other results sit on.',
     body:
-      'Skin quality is built from the inside out. Hydration, barrier function, and tone are restored protocol by protocol. This is the foundation that holds every other result in place.'
+      'Skin quality is built from the inside out. Hydration, barrier function, and tone are restored protocol by protocol. This is the foundation that holds every other result in place.',
+    articles: []
   }
 ];
 
@@ -288,11 +353,34 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
       </header>
       <div class="concerns-grid">
         {concerns.map((c) => (
-          <article id={c.id} class="concern-card">
-            <h3>{c.title}</h3>
-            <p>{c.body}</p>
-          </article>
-        ))}
+  <article id={c.id} class="concern-card">
+    <h3>
+      {c.articles.length > 0 ? (
+        <a class="concern-title-link" href={c.articles[0].href}>
+          {c.title}
+        </a>
+      ) : (
+        c.title
+      )}
+    </h3>
+
+    <p>{c.body}</p>
+
+    {c.articles.length > 0 && (
+      <div class="concern-articles">
+        <span class="concern-articles-label">Related guides</span>
+
+        <ul>
+          {c.articles.map((article) => (
+            <li>
+              <a href={article.href}>{article.title}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </article>
+))}
       </div>
       <p class="note">
         Every condition is read in person. Treatment plans are tailored, evidence-based, and explained in full before any protocol begins.
@@ -648,6 +736,54 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
       padding: var(--space-3);
     }
     .concern-card p { margin: 0; font-size: 0.96rem; }
+
+    .concern-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.concern-title-link:hover {
+  color: #b58a3b;
+  text-decoration: underline;
+}
+
+    .concern-articles {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-layer);
+}
+
+.concern-articles-label {
+  display: block;
+  margin-bottom: 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #b58a3b;
+}
+
+.concern-articles ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.concern-articles li + li {
+  margin-top: 0.55rem;
+}
+
+.concern-articles a {
+  color: inherit;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.concern-articles a:hover {
+  color: #b58a3b;
+  text-decoration: underline;
+}
 
     /* ——— Doctors ——— */
     .doctors-grid {
