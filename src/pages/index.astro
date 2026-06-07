@@ -199,6 +199,8 @@ const breadcrumbSchema = {
     { '@type': 'ListItem', position: 1, name: 'Home', item: site + '/' }
   ]
 };
+
+const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
 ---
 
 <BaseLayout>
@@ -264,7 +266,7 @@ const breadcrumbSchema = {
       </div>
     </div>
   </section>
- 
+
   <!-- PROBLEM -->
   <section class="problem">
     <div class="container narrow">
@@ -439,7 +441,7 @@ const breadcrumbSchema = {
               <iframe
                 title={`Map of ${b.name}`}
                 loading="lazy"
-                src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE&q=place_id:${b.placeId}`}
+                src={`https://www.google.com/maps/embed/v1/place?key=${mapsKey}&q=place_id:${b.placeId}`}
                 allowfullscreen
               ></iframe>
             </div>
@@ -447,7 +449,7 @@ const breadcrumbSchema = {
               <h3>{b.name}</h3>
               <p class="branch-address">{b.streetAddress}<br />{b.postalCode} {b.addressLocality}, {b.addressRegion}</p>
               <p class="branch-hours">{b.hoursReadable}</p>
-              
+              <a
                 class="cta"
                 href={`${waBase}?text=${encodeURIComponent(b.waMessage)}`}
                 target="_blank"
@@ -569,6 +571,61 @@ const breadcrumbSchema = {
       max-width: 720px;
     }
 
+    /* ——— Concern tiles ——— */
+    .concern-tiles {
+      padding: var(--space-5) 0;
+      border-bottom: 1px solid var(--color-layer);
+    }
+    .tile-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-2);
+    }
+    @media (min-width: 640px) {
+      .tile-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 980px) {
+      .tile-grid { grid-template-columns: repeat(5, 1fr); }
+    }
+    .tile {
+      display: flex;
+      flex-direction: column;
+      padding: var(--space-3);
+      background: var(--color-surface);
+      border: 1px solid var(--color-layer);
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      min-height: 180px;
+    }
+    .tile:hover {
+      border-color: var(--color-anchor);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.05);
+    }
+    .tile h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--color-anchor);
+      margin: 0 0 var(--space-2);
+      line-height: 1.25;
+    }
+    .tile p {
+      font-size: 0.88rem;
+      color: var(--color-anchor-soft);
+      line-height: 1.55;
+      margin: 0 0 var(--space-2);
+      flex: 1;
+    }
+    .tile-link {
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-anchor);
+      margin-top: auto;
+    }
+
     /* ——— Problem ——— */
     .problem { background: var(--color-surface-alt); }
     .problem p { font-size: 1.05rem; max-width: 680px; }
@@ -591,281 +648,6 @@ const breadcrumbSchema = {
       padding: var(--space-3);
     }
     .concern-card p { margin: 0; font-size: 0.96rem; }
-
-    /* ——— Concern tiles (above-the-fold self-identification) ——— */
-    .concern-tiles {
-      padding: var(--space-5) 0;
-      border-bottom: 1px solid var(--color-layer);
-    }
-    .tile-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: var(--space-2);
-    }
-    @media (min-width: 640px) {
-      .tile-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (min-width: 980px) {
-      .tile-grid { grid-template-columns: repeat(5, 1fr); }
-    }
-    .tile {
-      display: flex;
-      flex-direction: column;
-      padding: var(--space-3);
-      background: var(--color-surface);
-      border: 1px solid var(--color-layer);
-      text-decoration: none;
-      color: inherit;
-      transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-      min-height: 180px;
-    }
-    .tile:hover {
-      border-color: var(--color-anchor);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(0,0,0,0.05);
-    }
-    .tile h3 {
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 500;
-      color: var(--color-anchor);
-      margin: 0 0 var(--space-2);
-      line-height: 1.25;
-    }
-    .tile p {
-      font-size: 0.88rem;
-      color: var(--color-anchor-soft);
-      line-height: 1.55;
-      margin: 0 0 var(--space-2);
-      flex: 1;
-    }
-    .tile-link {
-      font-size: 0.75rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--color-anchor);
-      margin-top: auto;
-    }
-
-    /* ——— Concern tiles (above-the-fold self-identification) ——— */
-    .concern-tiles {
-      padding: var(--space-5) 0;
-      border-bottom: 1px solid var(--color-layer);
-    }
-    .tile-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: var(--space-2);
-    }
-    @media (min-width: 640px) {
-      .tile-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (min-width: 980px) {
-      .tile-grid { grid-template-columns: repeat(5, 1fr); }
-    }
-    .tile {
-      display: flex;
-      flex-direction: column;
-      padding: var(--space-3);
-      background: var(--color-surface);
-      border: 1px solid var(--color-layer);
-      text-decoration: none;
-      color: inherit;
-      transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-      min-height: 180px;
-    }
-    .tile:hover {
-      border-color: var(--color-anchor);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(0,0,0,0.05);
-    }
-    .tile h3 {
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 500;
-      color: var(--color-anchor);
-      margin: 0 0 var(--space-2);
-      line-height: 1.25;
-    }
-    .tile p {
-      font-size: 0.88rem;
-      color: var(--color-anchor-soft);
-      line-height: 1.55;
-      margin: 0 0 var(--space-2);
-      flex: 1;
-    }
-    .tile-link {
-      font-size: 0.75rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--color-anchor);
-      margin-top: auto;
-    }
-
-    /* ——— Concern tiles (above-the-fold self-identification) ——— */
-    .concern-tiles {
-      padding: var(--space-5) 0;
-      border-bottom: 1px solid var(--color-layer);
-    }
-    .tile-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: var(--space-2);
-    }
-    @media (min-width: 640px) {
-      .tile-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (min-width: 980px) {
-      .tile-grid { grid-template-columns: repeat(5, 1fr); }
-    }
-    .tile {
-      display: flex;
-      flex-direction: column;
-      padding: var(--space-3);
-      background: var(--color-surface);
-      border: 1px solid var(--color-layer);
-      text-decoration: none;
-      color: inherit;
-      transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-      min-height: 180px;
-    }
-    .tile:hover {
-      border-color: var(--color-anchor);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(0,0,0,0.05);
-    }
-    .tile h3 {
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 500;
-      color: var(--color-anchor);
-      margin: 0 0 var(--space-2);
-      line-height: 1.25;
-    }
-    .tile p {
-      font-size: 0.88rem;
-      color: var(--color-anchor-soft);
-      line-height: 1.55;
-      margin: 0 0 var(--space-2);
-      flex: 1;
-    }
-    .tile-link {
-      font-size: 0.75rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--color-anchor);
-      margin-top: auto;
-    }
-
-    /* ——— Concern tiles (above-the-fold self-identification) ——— */
-    .concern-tiles {
-      padding: var(--space-5) 0;
-      border-bottom: 1px solid var(--color-layer);
-    }
-    .tile-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: var(--space-2);
-    }
-    @media (min-width: 640px) {
-      .tile-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (min-width: 980px) {
-      .tile-grid { grid-template-columns: repeat(5, 1fr); }
-    }
-    .tile {
-      display: flex;
-      flex-direction: column;
-      padding: var(--space-3);
-      background: var(--color-surface);
-      border: 1px solid var(--color-layer);
-      text-decoration: none;
-      color: inherit;
-      transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-      min-height: 180px;
-    }
-    .tile:hover {
-      border-color: var(--color-anchor);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(0,0,0,0.05);
-    }
-    .tile h3 {
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 500;
-      color: var(--color-anchor);
-      margin: 0 0 var(--space-2);
-      line-height: 1.25;
-    }
-    .tile p {
-      font-size: 0.88rem;
-      color: var(--color-anchor-soft);
-      line-height: 1.55;
-      margin: 0 0 var(--space-2);
-      flex: 1;
-    }
-    .tile-link {
-      font-size: 0.75rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--color-anchor);
-      margin-top: auto;
-    }
-
-    /* ——— Concern tiles (above-the-fold self-identification) ——— */
-    .concern-tiles {
-      padding: var(--space-5) 0;
-      border-bottom: 1px solid var(--color-layer);
-    }
-    .tile-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: var(--space-2);
-    }
-    @media (min-width: 640px) {
-      .tile-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (min-width: 980px) {
-      .tile-grid { grid-template-columns: repeat(5, 1fr); }
-    }
-    .tile {
-      display: flex;
-      flex-direction: column;
-      padding: var(--space-3);
-      background: var(--color-surface);
-      border: 1px solid var(--color-layer);
-      text-decoration: none;
-      color: inherit;
-      transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-      min-height: 180px;
-    }
-    .tile:hover {
-      border-color: var(--color-anchor);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(0,0,0,0.05);
-    }
-    .tile h3 {
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 500;
-      color: var(--color-anchor);
-      margin: 0 0 var(--space-2);
-      line-height: 1.25;
-    }
-    .tile p {
-      font-size: 0.88rem;
-      color: var(--color-anchor-soft);
-      line-height: 1.55;
-      margin: 0 0 var(--space-2);
-      flex: 1;
-    }
-    .tile-link {
-      font-size: 0.75rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--color-anchor);
-      margin-top: auto;
-    }
 
     /* ——— Doctors ——— */
     .doctors-grid {
