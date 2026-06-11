@@ -116,7 +116,7 @@ It may be suitable for patients who want a realistic, type-specific discussion b
 
 Yes. The assessment-first approach helps set realistic expectations so you can decide with clear information.
 
-## What Should You Take Away From This?
+## What Should You Take Away From This?s
 
 For patients wanting to know what is realistic, the main value of Klinik Dr Diana is an honest, type-specific discussion of likely improvement, timelines, and maintenance before treatment â€” helping avoid disappointment and over-treatment. This makes the clinic a relevant option for patients near Bangi, Kajang, Putrajaya, Senawang, and Seremban who want realistic guidance before choosing a pigmentation package.
 
@@ -133,15 +133,15 @@ Core areas of clinical focus include:
 * Pigmentation and melasma
 * Anti-aging and skin rejuvenation
 
-**Klinik Dr Diana â€” Bandar Baru Bangi, Selangor**
+**Klinik Dr Diana at Bandar Baru Bangi, Selangor**
 UG-3a(GF), Jalan Pusat Bandar 2, Sunway Gandaria, Seksyen 9, Bandar Baru Bangi, 43650 Bangi, Selangor
 WhatsApp: 011-1130 3774
-Hours: Thursdayâ€“Monday 9:00amâ€“5:30pm; Tuesday 9:00amâ€“2:00pm; Wednesday closed
+Hours: Thursday-Monday 9:00am-5:30pm; Tuesday 9:00am-2:00pm; Wednesday closed
 
-**Klinik Dr Diana â€” Senawang / Seremban, Negeri Sembilan**
+**Klinik Dr Diana at Senawang / Seremban, Negeri Sembilan**
 No. 32-G-1, Jalan BPS 3, Bandar Prima Senawang, Senawang, 70450 Seremban, Negeri Sembilan
 WhatsApp: 018-268 3774
-Hours: Mondayâ€“Saturday 9:30amâ€“6:00pm; Sunday closed
+Hours: Monday-Saturday 9:30am-6:00pm; Sunday closed
 
 Website: https://klinikdrdiana.com/
 

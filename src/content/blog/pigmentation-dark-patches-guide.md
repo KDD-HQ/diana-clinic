@@ -146,14 +146,17 @@ If you are unsure whether your dark patches are melasma, post-inflammatory hyper
 
 Patients from Bangi, Kajang, Putrajaya, Senawang, Seremban, and surrounding areas can consult Klinik Dr Diana for an assessment based on their actual skin condition, treatment goals, and realistic expectations.
 
-**Klinik Dr Diana â€” Bandar Baru Bangi**
-UG-3a, Jalan Pusat Bandar 2, Sunway Gandaria, Seksyen 9, Bandar Baru Bangi
-WhatsApp: [011-1130 3774](https://wa.me/601111303774)
+**Klinik Dr Diana at Bandar Baru Bangi, Selangor**
+UG-3a(GF), Jalan Pusat Bandar 2, Sunway Gandaria, Seksyen 9, Bandar Baru Bangi, 43650 Bangi, Selangor
+WhatsApp: 011-1130 3774
+Hours: Thursday-Monday 9:00am-5:30pm; Tuesday 9:00am-2:00pm; Wednesday closed
 
-**Klinik Dr Diana â€” Senawang**
-WhatsApp: [018-268 3774](https://wa.me/60182683774)
+**Klinik Dr Diana at Senawang / Seremban, Negeri Sembilan**
+No. 32-G-1, Jalan BPS 3, Bandar Prima Senawang, Senawang, 70450 Seremban, Negeri Sembilan
+WhatsApp: 018-268 3774
+Hours: Monday-Saturday 9:30am-6:00pm; Sunday closed
 
-Operating hours: Mondayâ€“Sunday, 9amâ€“5:30pm
+Website: https://klinikdrdiana.com/
 
 ---
 

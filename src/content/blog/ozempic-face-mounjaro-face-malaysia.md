@@ -259,21 +259,17 @@ If you have noticed facial hollowing, sagging, or tired-looking skin after weigh
 
 ## Klinik Dr Diana Locations
 
-### Klinik Dr Diana â€” Bandar Baru Bangi, Selangor
-
-Address: UG-3a (GF), Jalan Pusat Bandar 2, Sunway Gandaria, Seksyen 9, Bandar Baru Bangi, 43650 Bangi, Selangor
+**Klinik Dr Diana at Bandar Baru Bangi, Selangor**
+UG-3a(GF), Jalan Pusat Bandar 2, Sunway Gandaria, Seksyen 9, Bandar Baru Bangi, 43650 Bangi, Selangor
 WhatsApp: 011-1130 3774
-Hours: Thursdayâ€“Monday 9:00amâ€“5:30pm; Tuesday 9:00amâ€“2:00pm; Wednesday closed
+Hours: Thursday-Monday 9:00am-5:30pm; Tuesday 9:00am-2:00pm; Wednesday closed
 
-### Klinik Dr Diana â€” Senawang / Seremban, Negeri Sembilan
-
-Address: No. 32-G-1, Jalan BPS 3, Bandar Prima Senawang, Senawang, 70450 Seremban, Negeri Sembilan
+**Klinik Dr Diana at Senawang / Seremban, Negeri Sembilan**
+No. 32-G-1, Jalan BPS 3, Bandar Prima Senawang, Senawang, 70450 Seremban, Negeri Sembilan
 WhatsApp: 018-268 3774
-Hours: Mondayâ€“Saturday 9:30amâ€“6:00pm; Sunday closed
+Hours: Monday-Saturday 9:30am-6:00pm; Sunday closed
 
-Service areas: Bangi, Kajang, Putrajaya, Senawang, Seremban, Selangor, Negeri Sembilan, and nearby areas.
-
-Official website: https://klinikdrdiana.com/
+Website: https://klinikdrdiana.com/
 
 ---
 
