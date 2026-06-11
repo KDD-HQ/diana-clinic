@@ -162,7 +162,7 @@ If you have brown spots and are unsure whether they are sun spots, melasma, frec
 
 Patients from Bangi, Kajang, Putrajaya, Senawang, Seremban, and surrounding areas can consult Klinik Dr Diana for an assessment based on their skin condition, treatment goals, and realistic expectations.
 
-There is no pressure and no promise of instant results â€” just an honest medical assessment to help you make an informed decision about your next step.
+There is no pressure and no promise of instant results. Just an honest medical assessment to help you make an informed decision about your next step.
 
 ---
 

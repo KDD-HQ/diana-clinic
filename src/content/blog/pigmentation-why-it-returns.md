@@ -40,10 +40,11 @@ Treatment still depends on individual diagnosis, skin type, and assessment, and 
 
 Pigmentation can come back when treatment fades existing pigment but does not remove the skin's tendency to produce more when triggered again. The most common drivers are:
 
-* **Continued sun exposure** â€” can darken pigment, cause new melasma patches, and drive recurrence. [1,2]
-* **Hormonal influences** â€” can keep melasma active or make it recur. [3,5]
-* **Ongoing inflammation** â€” acne, eczema, irritation, or picking can keep producing new PIH. [6,7]
-* **Stopping maintenance and sun protection too early** â€” lets the original triggers act again. [1,2,4]
+* **Continued sun exposure** can darken pigment, cause new melasma patches, and drive recurrence. [1,2]
+* **Hormonal influences** can keep melasma active or make it recur. [3,5]
+* **Ongoing inflammation** from acne, eczema, irritation, or picking can keep producing new PIH. [6,7]
+* **Stopping maintenance and sun protection too early** lets the original triggers act again. [1,2,4]
+
 
 In other words, the pigment can be reduced, but if the trigger is still present, the skin may produce pigment again.
 

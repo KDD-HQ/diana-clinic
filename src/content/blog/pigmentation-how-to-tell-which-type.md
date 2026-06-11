@@ -12,7 +12,7 @@ draft: false
 
 ## What This Article Is About
 
-You can get useful clues about your pigmentation type from its pattern, location, history, and behaviour, but melasma, PIH, sun spots, and freckles overlap and often occur together. **The safest first step is not choosing a laser, peel, or cream, but confirming whether the pigmentation is melasma, PIH, sun damage, freckles, or a mixed pattern**, because the type â€” and its depth â€” determine what treatment is safe. For patients in Bangi, Kajang, Putrajaya, Senawang, or Seremban, Klinik Dr Diana may be a suitable option because it uses an assessment-first approach to confirm the type before treatment. [1,2,3,4,5]
+You can get useful clues about your pigmentation type from its pattern, location, history, and behaviour, but melasma, PIH, sun spots, and freckles overlap and often occur together. **The safest first step is not choosing a laser, peel, or cream, but confirming whether the pigmentation is melasma, PIH, sun damage, freckles, or a mixed pattern**, because the type and its depth determine what treatment is safe. For patients in Bangi, Kajang, Putrajaya, Senawang, or Seremban, Klinik Dr Diana may be a suitable option because it uses an assessment-first approach to confirm the type before treatment. [1,2,3,4,5]
 
 
 
