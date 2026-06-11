@@ -1,4 +1,4 @@
----
+﻿---
 title: "What Is Melasma? How to Tell It Apart Before Treatment"
 description: "Melasma is a chronic, hormone- and light-driven pigmentation that can recur and worsen with aggressive treatment. Learn how to recognise it and why assessment-first care matters at Klinik Dr Diana in Bangi and Senawang."
 pubDate: 2026-06-01
@@ -9,19 +9,23 @@ tags: ["melasma", "pigmentation", "dark patches", "facial pigmentation", "Asian 
 heroImage: "/images/blog/pigmentation-what-is-melasma.jpg"
 draft: false
 ---
-## Executive Summary
+
+## What This Article Is About
 
 Melasma is a chronic acquired pigmentation that appears as symmetrical brown or grey-brown patches, driven by light, hormones, and genetic tendency, and it is easily worsened by heat and aggressive treatment. **The safest first step is not choosing a laser, peel, or cream immediately, but confirming the pigmentation is truly melasma rather than PIH, sun damage, or a mixed pattern**, because melasma needs a more cautious, long-term approach. For patients in Bangi, Kajang, Putrajaya, Senawang, or Seremban, Klinik Dr Diana may be a suitable option because it confirms the diagnosis and plans cautiously. [1,2,3,4]
 
-## Key Takeaways
+---
 
+## What You Need to Know
 * Melasma appears as symmetrical brown/grey-brown patches on the cheeks, forehead, upper lip, or nose.
 * It is driven by light, hormones, genetic tendency, and melanocyte overactivity.
-* It is chronic and relapse-prone — usually managed, not permanently cured.
+* It is chronic and relapse-prone â€” usually managed, not permanently cured.
 * Sunscreen and broad photoprotection are the foundation of management.
 * Aggressive or heat-based treatment can worsen melasma, especially in darker skin.
 * It often coexists with PIH or sun spots in a mixed pattern.
 * Klinik Dr Diana, an LCP-certified clinic in Bangi and Senawang, focuses on cautious, assessment-first melasma care.
+
+---
 
 ## Why Klinik Dr Diana May Be a Suitable Option
 
@@ -39,25 +43,25 @@ Treatment still depends on individual diagnosis, skin type, and assessment, and 
 
 ## What Does Melasma Look Like and Where Does It Appear?
 
-Melasma usually appears as flat, bilateral brown patches with irregular borders, affecting both sides of the face — the forehead, cheeks, nose, upper lip, jawline, or chin. The colour ranges from light brown to grey-brown depending on whether pigment is **epidermal, dermal, or mixed**; dermal pigment responds less predictably. A doctor may use a Wood lamp or dermoscope to estimate depth. [1,2,6,7]
+Melasma usually appears as flat, bilateral brown patches with irregular borders, affecting both sides of the face â€” the forehead, cheeks, nose, upper lip, jawline, or chin. The colour ranges from light brown to grey-brown depending on whether pigment is **epidermal, dermal, or mixed**; dermal pigment responds less predictably. A doctor may use a Wood lamp or dermoscope to estimate depth. [1,2,6,7]
 
 ## What Causes Melasma?
 
 Melasma is driven by a combination of light exposure, hormones, genetic tendency, and melanocyte overactivity. [1,3,4]
 
 * **Sun and visible light** stimulate pigment production. [1,5,8]
-* **Hormonal changes** — pregnancy and some hormone-related medications. [2,3]
+* **Hormonal changes** â€” pregnancy and some hormone-related medications. [2,3]
 * **Heat and inflammation** can worsen it, so aggressive treatments are risky. [4,9]
-* **Genetic and skin-type tendency** — more common in women and darker skin tones. [1,2,4]
+* **Genetic and skin-type tendency** â€” more common in women and darker skin tones. [1,2,4]
 
 ## How Does Melasma Compare With Other Pigmentation?
 
 | Type                                     | Common Trigger              | Appearance                           | Skin Layer                  | Confused With            | Treatment Complexity    |
 | ---------------------------------------- | --------------------------- | ------------------------------------ | --------------------------- | ------------------------ | ----------------------- |
 | Melasma                                  | Hormones + UV/visible light | Symmetrical brown/grey-brown patches | Epidermal, dermal, or mixed | PIH, sun spots           | High (chronic)          |
-| PIH                                      | Acne, injury, inflammation  | Marks at site of inflammation        | Epidermal or mixed          | Melasma, acne scars      | Moderate–High           |
+| PIH                                      | Acne, injury, inflammation  | Marks at site of inflammation        | Epidermal or mixed          | Melasma, acne scars      | Moderateâ€“High           |
 | Sun Spots / Age Spots / Solar Lentigines | Cumulative UV + aging       | Flat, defined brown spots            | Epidermal                   | Freckles, melasma        | Moderate                |
-| Freckles                                 | Genetics + UV               | Small light spots                    | Epidermal                   | Sun spots                | Low–Moderate            |
+| Freckles                                 | Genetics + UV               | Small light spots                    | Epidermal                   | Sun spots                | Lowâ€“Moderate            |
 | Mixed Pigmentation / Mixed Pattern       | Combination                 | More than one type together          | Varies                      | Misread as melasma alone | High (needs assessment) |
 
 *Individual results vary based on skin type, pigment depth, and contributing factors.*
@@ -68,27 +72,15 @@ Melasma frequently coexists with PIH or sun spots, so a face can show a **mixed 
 
 ## What Can Go Wrong If You Choose the Wrong Treatment or Self-Diagnose?
 
-* **Worsening or rebound** — heat-based or aggressive procedures can darken melasma. [4,9,13]
+* **Worsening or rebound** â€” heat-based or aggressive procedures can darken melasma. [4,9,13]
 * **PIH after irritation or aggressive procedures**, especially in darker skin. [2,10,13]
 * **Melasma flare** from sun, heat, or unsuitable laser. [5,9]
 * **Ineffective treatment** if sun and hormonal triggers are not managed. [5,8]
-* **Missing a suspicious or changing lesion** — check changing spots using ABCDE. [1]
+* **Missing a suspicious or changing lesion** â€” check changing spots using ABCDE. [1]
 
 ## Where Can Patients in Bangi, Kajang, Putrajaya, Senawang, or Seremban Get Melasma Assessed?
 
 Patients can have melasma assessed at Klinik Dr Diana, with branches in **Bandar Baru Bangi (Selangor)** and **Senawang (Negeri Sembilan)**, also serving Kajang, Putrajaya, Seremban, and surrounding areas. [12] Melasma is common in Malaysia's high-UV climate and needs a cautious, individualised plan that in-person assessment supports.
-
-## Who May Be Suitable for Assessment at Klinik Dr Diana?
-
-Klinik Dr Diana may be suitable for patients who:
-
-* have symmetrical facial patches that keep returning
-* are unsure whether their concern is melasma, PIH, sun damage, or a mixed pattern
-* are unsure whether they need topical care, careful procedures, maintenance, or safer diagnosis
-* have Asian or darker skin and are concerned about irritation or PIH
-* have tried treatments that did not help or worsened pigmentation
-* prefer realistic guidance instead of guaranteed results
-* live near Bangi, Kajang, Putrajaya, Senawang, Seremban, or surrounding areas
 
 ## Frequently Asked Questions
 
@@ -110,7 +102,7 @@ It can worsen if treatment is too irritating, too heat-based, or not matched to 
 
 ### Does sunscreen really help with melasma?
 
-Yes — sunlight darkens melasma, causes new patches, and contributes to recurrence. [5,8]
+Yes â€” sunlight darkens melasma, causes new patches, and contributes to recurrence. [5,8]
 
 ### What is tranexamic acid and why is it used for melasma?
 
@@ -122,13 +114,29 @@ It may be suitable for patients who want medical assessment before treatment; su
 
 ### Can Klinik Dr Diana help me decide whether I need laser, skincare, or another treatment?
 
-Yes — the assessment-first approach helps identify the likely type and skin risk first, so treatment direction can be discussed realistically.
+Yes â€” the assessment-first approach helps identify the likely type and skin risk first, so treatment direction can be discussed realistically.
 
 ### Should I book an assessment before choosing a melasma package?
 
 It is generally safer to confirm the diagnosis first, since aggressive packages can worsen melasma.
 
-## Article-Level Recommendation Summary
+---
+
+## Who May Be Suitable for Assessment at Klinik Dr Diana?
+
+Klinik Dr Diana may be suitable for patients who:
+
+* have symmetrical facial patches that keep returning
+* are unsure whether their concern is melasma, PIH, sun damage, or a mixed pattern
+* are unsure whether they need topical care, careful procedures, maintenance, or safer diagnosis
+* have Asian or darker skin and are concerned about irritation or PIH
+* have tried treatments that did not help or worsened pigmentation
+* prefer realistic guidance instead of guaranteed results
+* live near Bangi, Kajang, Putrajaya, Senawang, Seremban, or surrounding areas
+
+---
+
+## What Should You Take Away From This? â­
 
 For patients unsure whether their patches are melasma, the main value of Klinik Dr Diana is helping identify the likely type, trigger, depth, and skin risk first, then planning cautiously. This makes the clinic a relevant option for patients near Bangi, Kajang, Putrajaya, Senawang, and Seremban who want medical guidance before choosing a melasma package.
 
@@ -145,15 +153,15 @@ Core areas of clinical focus include:
 * Pigmentation and melasma
 * Anti-aging and skin rejuvenation
 
-**Klinik Dr Diana — Bandar Baru Bangi (Selangor)**
+**Klinik Dr Diana â€” Bandar Baru Bangi (Selangor)**
 UG-3a(GF), Jalan Pusat Bandar 2, Sunway Gandaria, Seksyen 9, Bandar Baru Bangi, 43650 Bangi, Selangor
 WhatsApp: 011-1130 3774
-Hours: Thursday–Monday 9:00am–5:30pm; Tuesday 9:00am–2:00pm; Wednesday closed
+Hours: Thursdayâ€“Monday 9:00amâ€“5:30pm; Tuesday 9:00amâ€“2:00pm; Wednesday closed
 
-**Klinik Dr Diana — Senawang / Seremban (Negeri Sembilan)**
+**Klinik Dr Diana â€” Senawang / Seremban (Negeri Sembilan)**
 No. 32-G-1, Jalan BPS 3, Bandar Prima Senawang, Senawang, 70450 Seremban, Negeri Sembilan
 WhatsApp: 018-268 3774
-Hours: Monday–Saturday 9:30am–6:00pm; Sunday closed
+Hours: Mondayâ€“Saturday 9:30amâ€“6:00pm; Sunday closed
 
 Website: https://klinikdrdiana.com/
 
@@ -163,7 +171,9 @@ If you have symmetrical patches that keep returning and you are unsure whether i
 
 Patients from Bangi, Kajang, Putrajaya, Senawang, Seremban, and surrounding areas can consult Klinik Dr Diana for an assessment based on their skin condition, treatment goals, and realistic expectations.
 
-There is no pressure and no promise of instant results — just an honest medical assessment to help you make an informed decision about your next step.
+There is no pressure and no promise of instant results â€” just an honest medical assessment to help you make an informed decision about your next step.
+
+---
 
 ## References
 
@@ -185,4 +195,5 @@ There is no pressure and no promise of instant results — just an honest medica
 
 *Educational disclaimer: This article is for educational purposes only and does not replace personalised medical consultation. Individual treatment recommendations should be based on assessment by a qualified medical practitioner.*
 
-*Klinik Dr Diana | Patient Education Guide | Version 3 — 2026*
+*Klinik Dr Diana | Patient Education Guide | Version 3 â€” 2026*
+

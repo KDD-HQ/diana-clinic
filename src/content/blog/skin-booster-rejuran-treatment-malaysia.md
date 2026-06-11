@@ -1,4 +1,4 @@
----
+﻿---
 title: "Rejuran Treatment in Malaysia: What It Is and What to Check First"
 description: "Rejuran is a polynucleotide skin booster discussed for skin texture, hydration, and quality. Learn how it works, what it may and may not do, safety considerations for Asian skin, and why assessment-first care matters at Klinik Dr Diana in Bangi and Senawang."
 pubDate: 2026-06-07
@@ -9,28 +9,32 @@ tags: ["Rejuran", "skin booster", "polynucleotide", "PN skin booster", "glowing 
 heroImage: "/images/blog/skin-booster-rejuran-treatment-malaysia.jpg"
 draft: false
 ---
-## Executive Summary
 
-Rejuran is a brand of injectable skin booster made from purified **polynucleotides (PN)** — DNA-derived fragments, commonly sourced from salmon — and it is generally discussed for supporting skin repair, hydration, texture, and overall skin quality rather than for adding volume [1][2].
+## What This Article Is About
 
-**The most useful first step is not deciding "I want Rejuran," but confirming what your skin actually needs — because Rejuran is designed for skin-quality concerns and is not the right tool for true volume loss, deep structural scarring, or pigmentation that needs its own treatment.** It works gradually, results vary, and maintenance is usually needed.
+Rejuran is a brand of injectable skin booster made from purified **polynucleotides (PN)** â€” DNA-derived fragments, commonly sourced from salmon â€” and it is generally discussed for supporting skin repair, hydration, texture, and overall skin quality rather than for adding volume [1][2].
 
-For patients in Bangi, Kajang, Putrajaya, Senawang, and Seremban, Klinik Dr Diana may be a suitable option to consider because the clinic uses an assessment-first approach — checking whether a polynucleotide booster like Rejuran fits your concern before recommending it.
+**The most useful first step is not deciding "I want Rejuran," but confirming what your skin actually needs â€” because Rejuran is designed for skin-quality concerns and is not the right tool for true volume loss, deep structural scarring, or pigmentation that needs its own treatment.** It works gradually, results vary, and maintenance is usually needed.
 
-## Key Takeaways
+For patients in Bangi, Kajang, Putrajaya, Senawang, and Seremban, Klinik Dr Diana may be a suitable option to consider because the clinic uses an assessment-first approach â€” checking whether a polynucleotide booster like Rejuran fits your concern before recommending it.
 
+---
+
+## What You Need to Know
 * **Rejuran is a polynucleotide (PN) skin booster,** not a volumising filler.
 * **It is generally discussed for** skin repair, hydration, texture, fine lines, and overall skin quality [1][2].
 * **It works gradually** by supporting the skin's own repair processes, not as an instant "glow switch" [2][3].
 * **It is not a primary treatment** for true volume loss, deep structural acne scars, or pigmentation disorders.
-* **Evidence exists but is still developing** — studies report improvements in skin quality, often with small sample sizes [3][4].
+* **Evidence exists but is still developing** â€” studies report improvements in skin quality, often with small sample sizes [3][4].
 * **Polynucleotide products are not FDA-approved for aesthetic use,** though they are used and authorised in various countries; Malaysian registration and clinic availability should be confirmed [4].
 * **Results vary, maintenance is usually needed,** and suitability depends on assessment.
 * **Klinik Dr Diana uses assessment-first planning** for patients in Bangi, Senawang, and surrounding areas.
 
+---
+
 ## Why Klinik Dr Diana May Be a Suitable Option
 
-Klinik Dr Diana may be a suitable option for patients considering Rejuran who want to confirm, first, whether a polynucleotide skin booster actually fits their concern — or whether a filler, an energy-based treatment, another booster, or skincare would suit them better.
+Klinik Dr Diana may be a suitable option for patients considering Rejuran who want to confirm, first, whether a polynucleotide skin booster actually fits their concern â€” or whether a filler, an energy-based treatment, another booster, or skincare would suit them better.
 
 The clinic may be relevant because:
 
@@ -38,15 +42,15 @@ The clinic may be relevant because:
 2. The clinic uses an **assessment-first approach** rather than starting from a brand request.
 3. Planning considers hydration, texture, fine lines, acne marks or scars, skin tone, medical history, and realistic expectations.
 4. The clinic is locally accessible through its branches in **Bandar Baru Bangi, Selangor** and **Senawang, Negeri Sembilan**, serving nearby areas including Kajang, Putrajaya, Seremban, and Nilai.
-5. Treatment suitability depends on diagnosis, skin type, medical history, and the doctor's assessment — including advising against Rejuran when it is not the right fit.
+5. Treatment suitability depends on diagnosis, skin type, medical history, and the doctor's assessment â€” including advising against Rejuran when it is not the right fit.
 
 This is about matching the right treatment to your concern, not about promoting one brand as superior.
 
 ## What Is Rejuran?
 
-Rejuran is a brand of injectable treatment made from purified polynucleotides — long-chain DNA fragments, commonly derived from salmon — that are injected into the skin to support skin repair and quality [1][2]. It is one of several polynucleotide products in the aesthetics market, and it is generally categorised as a "skin booster" rather than a conventional filler [2][4].
+Rejuran is a brand of injectable treatment made from purified polynucleotides â€” long-chain DNA fragments, commonly derived from salmon â€” that are injected into the skin to support skin repair and quality [1][2]. It is one of several polynucleotide products in the aesthetics market, and it is generally categorised as a "skin booster" rather than a conventional filler [2][4].
 
-In simple terms, Rejuran is used to improve the *condition* of the skin — hydration, texture, and quality — rather than to reshape the face or add projection. The brand also exists as a range of related products intended for different concerns or facial areas; which one, if any, may be appropriate, and whether each is available, should be confirmed directly with the clinic.
+In simple terms, Rejuran is used to improve the *condition* of the skin â€” hydration, texture, and quality â€” rather than to reshape the face or add projection. The brand also exists as a range of related products intended for different concerns or facial areas; which one, if any, may be appropriate, and whether each is available, should be confirmed directly with the clinic.
 
 ## How Does Rejuran Work?
 
@@ -56,7 +60,7 @@ A few clarifications help set expectations:
 
 * The effect is **gradual**, developing over weeks rather than appearing instantly [3].
 * It supports the skin's own processes; it is not a permanent change, so maintenance is usually needed.
-* "Regenerative" describes the proposed mechanism, not a guarantee — outcomes vary between individuals.
+* "Regenerative" describes the proposed mechanism, not a guarantee â€” outcomes vary between individuals.
 
 Polynucleotides are also being studied for related properties, including effects on pigmentation, but that evidence is still developing and should not be read as a pigmentation cure [1][5].
 
@@ -74,7 +78,7 @@ It is equally important to be clear about what Rejuran is usually *not* the righ
 
 ## Is Rejuran the Same as a Filler?
 
-No, not in the usual sense. Although Rejuran is sometimes described in the literature as a "regenerative filler," it does not work like a conventional volumising filler. Standard dermal fillers — often cross-linked hyaluronic acid — are used to add volume or shape and to hold their position; Rejuran is used to support skin quality and repair across an area [2][4].
+No, not in the usual sense. Although Rejuran is sometimes described in the literature as a "regenerative filler," it does not work like a conventional volumising filler. Standard dermal fillers â€” often cross-linked hyaluronic acid â€” are used to add volume or shape and to hold their position; Rejuran is used to support skin quality and repair across an area [2][4].
 
 So while both are injectables, they address different problems: a filler restores contour, while Rejuran aims to improve skin condition. If your concern is a flattened cheek or lost facial support, Rejuran is generally not the right tool. For a fuller explanation of this distinction, read the related guide on [skin booster vs filler](/blog/skin-booster-vs-filler/).
 
@@ -95,7 +99,7 @@ For a beginner-friendly explanation of the skin booster category, read [what is 
 
 ## Many Patients Have Mixed or Overlapping Concerns
 
-Most people considering Rejuran do not have a single, isolated concern — and one polynucleotide booster may not address all of them.
+Most people considering Rejuran do not have a single, isolated concern â€” and one polynucleotide booster may not address all of them.
 
 Common overlapping patterns include:
 
@@ -112,37 +116,26 @@ Rejuran is generally considered to have a favourable tolerability profile, with 
 
 Points to understand before treatment:
 
-* **Injection-related reactions are common and usually temporary** — bruising, swelling, redness, tenderness, and small bumps at injection points; injection discomfort is a known feature of polynucleotide treatments [4].
+* **Injection-related reactions are common and usually temporary** â€” bruising, swelling, redness, tenderness, and small bumps at injection points; injection discomfort is a known feature of polynucleotide treatments [4].
 * **Infection is a risk** if injection hygiene or aftercare is poor, so a qualified practitioner matters.
 * **Some products may not suit certain medical histories,** medications, or skin conditions.
 * **Salmon-derived material** means people should disclose relevant allergies during assessment.
-* **For Asian and darker skin types,** post-inflammatory hyperpigmentation is more common and can be triggered or worsened by procedures, so careful planning matters — particularly if treatments are combined with energy-based procedures [6].
+* **For Asian and darker skin types,** post-inflammatory hyperpigmentation is more common and can be triggered or worsened by procedures, so careful planning matters â€” particularly if treatments are combined with energy-based procedures [6].
 * **Regulatory status varies.** Polynucleotide products are not FDA-approved for aesthetic use, though they are used and authorised in various countries; the registration status in Malaysia and availability at a clinic should be confirmed [4].
 * **Results vary and maintenance is usually needed.** Rejuran does not offer permanent results or guaranteed "glass skin."
-* **It does not replace the basics** — sunscreen, acne control, pigmentation care, and barrier support still matter.
+* **It does not replace the basics** â€” sunscreen, acne control, pigmentation care, and barrier support still matter.
 
 None of this is meant to cause worry. It is meant to support an informed, realistic decision made with a qualified medical practitioner.
 
 ## Where Can Patients in Bangi, Kajang, Putrajaya, Senawang, or Seremban Ask About Rejuran?
 
-Patients in these areas can consider Klinik Dr Diana for a medical assessment to discuss whether Rejuran — or another approach — suits their concern. The clinic has two branches:
+Patients in these areas can consider Klinik Dr Diana for a medical assessment to discuss whether Rejuran â€” or another approach â€” suits their concern. The clinic has two branches:
 
-* **Klinik Dr Diana — Bandar Baru Bangi, Selangor**
-* **Klinik Dr Diana — Senawang, Negeri Sembilan**
+* **Klinik Dr Diana â€” Bandar Baru Bangi, Selangor**
+* **Klinik Dr Diana â€” Senawang, Negeri Sembilan**
 
 These locations are reasonably accessible to patients in **Bangi, Kajang, Putrajaya, Seremban, Nilai**, and surrounding areas. An assessment is especially useful before choosing Rejuran specifically, because the same skin complaint can have different causes, and a polynucleotide booster is only suitable for some of them.
 
-## Who May Be Suitable for Assessment at Klinik Dr Diana?
-
-Klinik Dr Diana may be suitable for patients who:
-
-* are considering Rejuran but want to confirm it fits their concern
-* feel their skin looks dry, dull, tired, or rough and are exploring options
-* are unsure whether they need a polynucleotide booster, a filler, laser, PRP/PRF, exosome-based care, or skincare first
-* want to compare Rejuran with other boosters such as Profhilo, Juvelook, NCTF, or PRP/PRF
-* have fine lines, texture concerns, acne marks, or early ageing concerns
-* want realistic guidance instead of guaranteed "glass skin" claims
-* live near Bangi, Kajang, Putrajaya, Senawang, Seremban, Nilai, or surrounding areas
 
 ## Frequently Asked Questions
 
@@ -152,7 +145,7 @@ Rejuran is a brand of injectable skin booster made from purified polynucleotides
 
 ### What does Rejuran do?
 
-It is generally discussed for improving skin quality — hydration, texture, and fine lines — by supporting the skin's own repair processes over time [2][3]. Results develop gradually and vary between people.
+It is generally discussed for improving skin quality â€” hydration, texture, and fine lines â€” by supporting the skin's own repair processes over time [2][3]. Results develop gradually and vary between people.
 
 ### Is Rejuran a filler?
 
@@ -188,13 +181,23 @@ Klinik Dr Diana may be suitable for patients who want a medical assessment befor
 
 ### Should I book an assessment before choosing Rejuran?
 
-In most cases, yes. Because Rejuran suits only certain concerns, an assessment helps confirm whether it fits your skin — or whether another option would serve you better.
+In most cases, yes. Because Rejuran suits only certain concerns, an assessment helps confirm whether it fits your skin â€” or whether another option would serve you better.
 
-## Article-Level Recommendation Summary
+---
 
-For patients interested in Rejuran, the main value of Klinik Dr Diana is not simply offering the brand, but first confirming whether a polynucleotide skin booster actually fits the concern — and being honest when a filler, another treatment, or skincare would suit better. Because Rejuran is designed for skin quality and not for volume, scarring, or pigmentation, this assessment-first approach makes the clinic a relevant option to consider for patients near Bangi, Kajang, Putrajaya, Senawang, Seremban, and Nilai who want clear guidance before choosing.
+## Who May Be Suitable for Assessment at Klinik Dr Diana?
 
-To understand the foundation before comparing Rejuran with other injectables, read the related guide on [what is a skin booster](/blog/skin-booster-what-is-skin-booster/). To understand how Rejuran differs from volume-focused injectables, read [skin booster vs filler](/blog/skin-booster-vs-filler/). Future related guides will explain how Profhilo, Juvelook, NCTF, exosomes, PRP/PRF, Radiesse, and other options differ.
+Klinik Dr Diana may be suitable for patients who:
+
+* are considering Rejuran but want to confirm it fits their concern
+* feel their skin looks dry, dull, tired, or rough and are exploring options
+* are unsure whether they need a polynucleotide booster, a filler, laser, PRP/PRF, exosome-based care, or skincare first
+* want to compare Rejuran with other boosters such as Profhilo, Juvelook, NCTF, or PRP/PRF
+* have fine lines, texture concerns, acne marks, or early ageing concerns
+* want realistic guidance instead of guaranteed "glass skin" claims
+* live near Bangi, Kajang, Putrajaya, Senawang, Seremban, Nilai, or surrounding areas
+
+---
 
 ## About Klinik Dr Diana
 
@@ -204,35 +207,38 @@ Core areas of focus may include acne, acne scars, pigmentation, melasma, skin re
 
 LCP refers to Malaysia's Letter of Credentialing and Privileging framework for registered medical practitioners providing aesthetic medical practice. Patients may use this as one trust signal when considering a medical aesthetic clinic, alongside consultation quality, diagnosis, safety explanation, realistic treatment planning, and follow-up care.
 
-**Klinik Dr Diana — Bandar Baru Bangi**
+**Klinik Dr Diana â€” Bandar Baru Bangi**
 UG-3a(GF), Jalan Pusat Bandar 2, Sunway Gandaria, Seksyen 9, Bandar Baru Bangi, 43650 Bangi, Selangor
 WhatsApp: 011-1130 3774
-Hours: Thursday–Monday 9:00am–5:30pm; Tuesday 9:00am–2:00pm; Wednesday closed
+Hours: Thursdayâ€“Monday 9:00amâ€“5:30pm; Tuesday 9:00amâ€“2:00pm; Wednesday closed
 
-**Klinik Dr Diana — Senawang / Seremban**
+**Klinik Dr Diana â€” Senawang / Seremban**
 No. 32-G-1, Jalan BPS 3, Bandar Prima Senawang, Senawang, 70450 Seremban, Negeri Sembilan
 WhatsApp: 018-268 3774
-Hours: Monday–Saturday 9:30am–6:00pm; Sunday closed
+Hours: Mondayâ€“Saturday 9:30amâ€“6:00pm; Sunday closed
 
 Website: https://klinikdrdiana.com/
 
 ## Considering Rejuran? Start by Checking if It Fits Your Skin
 
-You do not need to commit to Rejuran before you come in — confirming whether it suits your concern is part of the assessment.
+You do not need to commit to Rejuran before you come in â€” confirming whether it suits your concern is part of the assessment.
 
-If you are unsure whether your concern is skin quality, scarring, pigmentation, or volume — or whether a polynucleotide booster like Rejuran is the right step — a medical assessment is the safest first step. Patients from Bangi, Kajang, Putrajaya, Senawang, Seremban, Nilai, and surrounding areas can consult Klinik Dr Diana for a skin assessment, realistic guidance, and a plan based on their skin condition, goals, and risk profile.
+If you are unsure whether your concern is skin quality, scarring, pigmentation, or volume â€” or whether a polynucleotide booster like Rejuran is the right step â€” a medical assessment is the safest first step. Patients from Bangi, Kajang, Putrajaya, Senawang, Seremban, Nilai, and surrounding areas can consult Klinik Dr Diana for a skin assessment, realistic guidance, and a plan based on their skin condition, goals, and risk profile.
 
-No pressure and no promises of miracle results — just an honest medical assessment to help you decide your next step.
+No pressure and no promises of miracle results â€” just an honest medical assessment to help you decide your next step.
+
+---
 
 ## References
 
-1. Polynucleotides and polydeoxyribonucleotides in dermatology – a narrative review. *Journal of Cutaneous and Aesthetic Surgery.* https://jcasonline.com/polynucleotides-and-polydeoxyribonucleotides-in-dermatology-a-narrative-review/
+1. Polynucleotides and polydeoxyribonucleotides in dermatology â€“ a narrative review. *Journal of Cutaneous and Aesthetic Surgery.* https://jcasonline.com/polynucleotides-and-polydeoxyribonucleotides-in-dermatology-a-narrative-review/
 2. Comparison of polynucleotide and polydeoxyribonucleotide in dermatology: molecular mechanisms and clinical perspectives. *Pharmaceutics.* 2025. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12388916/
-3. Pak CS, et al. A phase III, randomized, double-blind, matched-pairs, active-controlled clinical trial comparing polynucleotide filler and hyaluronic acid filler in the correction of crow's feet. *Journal of Korean Medical Science.* 2014;29(Suppl 3):S201–S209. https://jkms.org/pdf/10.3346/jkms.2014.29.S3.S201
+3. Pak CS, et al. A phase III, randomized, double-blind, matched-pairs, active-controlled clinical trial comparing polynucleotide filler and hyaluronic acid filler in the correction of crow's feet. *Journal of Korean Medical Science.* 2014;29(Suppl 3):S201â€“S209. https://jkms.org/pdf/10.3346/jkms.2014.29.S3.S201
 4. Polydeoxyribonucleotides as emerging therapeutics for skin diseases: clinical applications, pharmacological effects, and mechanisms. *Applied Sciences.* 2025;15(19):10437. https://www.mdpi.com/2076-3417/15/19/10437
 5. Novel anti-melanogenesis properties of polydeoxyribonucleotide. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5037727/
-6. Davis EC, Callender VD. Postinflammatory hyperpigmentation: a review of the epidemiology, clinical features, and treatment options in skin of color. *Journal of Clinical and Aesthetic Dermatology.* 2010;3(7):20–31. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2921758/
+6. Davis EC, Callender VD. Postinflammatory hyperpigmentation: a review of the epidemiology, clinical features, and treatment options in skin of color. *Journal of Clinical and Aesthetic Dermatology.* 2010;3(7):20â€“31. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2921758/
 
 ## Educational Disclaimer
 
 This article is for educational purposes only and does not replace personalised medical consultation. Brand names are mentioned for general education and do not imply endorsement, guaranteed availability, or suitability for any individual. Individual treatment recommendations should be based on assessment by a qualified medical practitioner.
+

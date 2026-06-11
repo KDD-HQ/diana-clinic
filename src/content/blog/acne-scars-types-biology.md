@@ -1,4 +1,4 @@
----
+﻿---
 title: "Acne Scars: Types, Biology, and Why Treatment Differs"
 description: "Rolling, ice pick, boxcar, hypertrophic, and PIH scars each form differently and need different treatments. A clinical guide by Klinik Dr Diana."
 pubDate: 2026-05-31
@@ -10,15 +10,15 @@ heroImage: "/images/blog/acne-scars-types-biology.webp"
 draft: false
 ---
 
-Acne scars are structural changes in the skin caused by inflammation that damages the dermis — the deeper support layer beneath the skin surface. They are not all the same: rolling, ice pick, boxcar, hypertrophic, and keloid scars each form through different biological mechanisms and each requires a different treatment approach. Understanding which type of scar you have is the first step toward meaningful improvement.
+Acne scars are structural changes in the skin caused by inflammation that damages the dermis â€” the deeper support layer beneath the skin surface. They are not all the same: rolling, ice pick, boxcar, hypertrophic, and keloid scars each form through different biological mechanisms and each requires a different treatment approach. Understanding which type of scar you have is the first step toward meaningful improvement.
 
 ---
 
 ## What Are Acne Scars and How Do They Form?
 
-Acne scars develop when inflammatory acne — particularly deep nodules or cysts — disrupts dermal tissue and triggers a collagen remodelling response that goes wrong in one of two directions.
+Acne scars develop when inflammatory acne â€” particularly deep nodules or cysts â€” disrupts dermal tissue and triggers a collagen remodelling response that goes wrong in one of two directions.
 
-If the healing process produces insufficient organised collagen to replace lost dermal support, the result is a **depressed (atrophic) scar** — the skin sinks inward. If healing produces excessive collagen, the result is a **raised scar** such as a hypertrophic scar or keloid. This distinction matters clinically: a procedure designed to treat depressed atrophic scars may be entirely inappropriate — and potentially harmful — in a patient who tends to form keloids.
+If the healing process produces insufficient organised collagen to replace lost dermal support, the result is a **depressed (atrophic) scar** â€” the skin sinks inward. If healing produces excessive collagen, the result is a **raised scar** such as a hypertrophic scar or keloid. This distinction matters clinically: a procedure designed to treat depressed atrophic scars may be entirely inappropriate â€” and potentially harmful â€” in a patient who tends to form keloids.
 
 Post-inflammatory hyperpigmentation (PIH) is frequently mistaken for a scar. It is flat skin discolouration, not a structural change to the dermis, and is treated through an entirely different pathway.
 
@@ -35,22 +35,22 @@ There are five main categories of acne scars, each with a distinct clinical prof
 | Boxcar | Round or oval depressions with defined edges | Depth and width determine approach | Resurfacing for shallow; combination for deep |
 | Hypertrophic | Raised, within the original wound boundary | Excess collagen deposition | Intralesional steroids, silicone, vascular laser |
 | Keloid | Raised, extends beyond original wound | May continue to grow; keloid risk must be assessed pre-procedure | Requires specialist assessment before any skin procedure |
-| PIH | Flat dark discolouration, no texture change | Not a structural scar — pigmentation, not collagen loss | Tyrosinase inhibitors, sun protection, targeted laser |
+| PIH | Flat dark discolouration, no texture change | Not a structural scar â€” pigmentation, not collagen loss | Tyrosinase inhibitors, sun protection, targeted laser |
 | PIE | Flat pink or red discolouration | Residual vascular change, not pigmentation | Vascular laser; not the same as PIH management |
 
 ---
 
 ## Why Do Rolling Scars Often Resist Surface Treatments?
 
-Rolling scars respond poorly to surface-only treatment because their defining feature is tethering — fibrous bands of scar tissue beneath the skin pull the dermis downward, creating depressions even when the surface looks relatively smooth.
+Rolling scars respond poorly to surface-only treatment because their defining feature is tethering â€” fibrous bands of scar tissue beneath the skin pull the dermis downward, creating depressions even when the surface looks relatively smooth.
 
-A laser or chemical peel may improve overall skin texture, but it cannot release fibrous bands anchoring the skin from below. In many cases, **subcision** — a procedure that physically severs those bands beneath the skin using a fine needle — is needed before resurfacing can achieve meaningful improvement. If your scars are mainly rolling and tethered, repeated resurfacing without addressing the underlying tethering may produce limited visible change. Ask your doctor to assess for tethering before any treatment is selected.
+A laser or chemical peel may improve overall skin texture, but it cannot release fibrous bands anchoring the skin from below. In many cases, **subcision** â€” a procedure that physically severs those bands beneath the skin using a fine needle â€” is needed before resurfacing can achieve meaningful improvement. If your scars are mainly rolling and tethered, repeated resurfacing without addressing the underlying tethering may produce limited visible change. Ask your doctor to assess for tethering before any treatment is selected.
 
 ---
 
 ## Why Is TCA CROSS Used for Ice Pick Scars?
 
-Ice pick scars are the most difficult type to treat because they are narrow, deep channels extending far into the dermis — beyond the effective reach of broad resurfacing treatments.
+Ice pick scars are the most difficult type to treat because they are narrow, deep channels extending far into the dermis â€” beyond the effective reach of broad resurfacing treatments.
 
 TCA CROSS (chemical reconstruction of skin scars) applies high-concentration trichloroacetic acid precisely into the scar opening. This creates a controlled healing response inside the scar channel, stimulating new collagen formation from within. The technique requires precision: acid placed outside the scar can irritate surrounding skin and increase the risk of post-inflammatory hyperpigmentation, particularly in darker skin tones. TCA CROSS is not appropriate for all scar types and is not a general resurfacing treatment.
 
@@ -58,13 +58,13 @@ TCA CROSS (chemical reconstruction of skin scars) applies high-concentration tri
 
 ## How Is Boxcar Scar Treatment Decided?
 
-Boxcar scar treatment is largely determined by depth. Shallow boxcar scars — with their round or oval depressions and defined edges — often respond to resurfacing treatments such as fractional laser or chemical peels. Deeper boxcar scars are more challenging and may benefit from a combination approach: resurfacing to improve overall texture, combined with more targeted interventions for the deeper components. A clinical assessment is needed to determine the appropriate approach for each individual.
+Boxcar scar treatment is largely determined by depth. Shallow boxcar scars â€” with their round or oval depressions and defined edges â€” often respond to resurfacing treatments such as fractional laser or chemical peels. Deeper boxcar scars are more challenging and may benefit from a combination approach: resurfacing to improve overall texture, combined with more targeted interventions for the deeper components. A clinical assessment is needed to determine the appropriate approach for each individual.
 
 ---
 
 ## How Are Hypertrophic Scars and Keloids Different From Atrophic Scars?
 
-Hypertrophic and keloid scars result from excess collagen production — the opposite problem to atrophic scars. A hypertrophic scar is raised but stays within the boundary of the original injury. A keloid extends beyond the original wound margin and may continue to grow over time.
+Hypertrophic and keloid scars result from excess collagen production â€” the opposite problem to atrophic scars. A hypertrophic scar is raised but stays within the boundary of the original injury. A keloid extends beyond the original wound margin and may continue to grow over time.
 
 Management for raised scars includes intralesional corticosteroid injections, silicone gel or sheeting, and vascular laser in selected cases. These are fundamentally different from atrophic scar treatments and must not be conflated. **Keloid risk should be assessed before any skin procedure is planned.** Keloids may be more common among individuals of African, Asian, and Latin American descent, although individual history and personal risk factors are more clinically relevant than ethnicity alone.
 
@@ -72,15 +72,15 @@ Management for raised scars includes intralesional corticosteroid injections, si
 
 ## Is PIH the Same as an Acne Scar?
 
-Post-inflammatory hyperpigmentation (PIH) is not a structural scar — it is flat skin discolouration caused by excess melanin production after inflammation, with no depression, no elevation, and no textural change.
+Post-inflammatory hyperpigmentation (PIH) is not a structural scar â€” it is flat skin discolouration caused by excess melanin production after inflammation, with no depression, no elevation, and no textural change.
 
-A practical distinction: if the mark is dark but the skin surface feels smooth when touched, it is more likely PIH than a structural scar. If there is a visible dip, indentation, raised area, or uneven texture, scarring is also likely present. PIH can be addressed with topical depigmenting agents (tranexamic acid, niacinamide, azelaic acid), targeted laser modalities, and rigorous sun protection. Post-inflammatory erythema (PIE) — which appears pink or red from residual vascular change rather than pigmentation — is treated differently again, typically with vascular laser.
+A practical distinction: if the mark is dark but the skin surface feels smooth when touched, it is more likely PIH than a structural scar. If there is a visible dip, indentation, raised area, or uneven texture, scarring is also likely present. PIH can be addressed with topical depigmenting agents (tranexamic acid, niacinamide, azelaic acid), targeted laser modalities, and rigorous sun protection. Post-inflammatory erythema (PIE) â€” which appears pink or red from residual vascular change rather than pigmentation â€” is treated differently again, typically with vascular laser.
 
 ---
 
 ## Why Do Acne Scars Look Worse in Certain Lighting?
 
-Depressed acne scars are three-dimensional structures, and their visibility is affected by the angle and intensity of light. When light hits the skin from a low or oblique angle — such as side sunlight, car mirrors, or window light — it casts shadows inside the depressions and makes them appear more pronounced.
+Depressed acne scars are three-dimensional structures, and their visibility is affected by the angle and intensity of light. When light hits the skin from a low or oblique angle â€” such as side sunlight, car mirrors, or window light â€” it casts shadows inside the depressions and makes them appear more pronounced.
 
 This is not an illusion; it is geometry. Consistent lighting, distance, and camera angle are important when tracking treatment progress over time.
 
@@ -100,7 +100,7 @@ Before beginning any treatment programme, it is worth clarifying:
 ## Frequently Asked Questions
 
 **Can acne scars go away on their own without treatment?**
-True structural atrophic scars — rolling, ice pick, and boxcar — do not go away on their own. They represent permanent changes in the dermal architecture. PIH can fade over time, particularly with consistent sun protection, but may take many months to a year or longer, especially in darker skin tones. PIE can also improve spontaneously but may persist without targeted treatment.
+True structural atrophic scars â€” rolling, ice pick, and boxcar â€” do not go away on their own. They represent permanent changes in the dermal architecture. PIH can fade over time, particularly with consistent sun protection, but may take many months to a year or longer, especially in darker skin tones. PIE can also improve spontaneously but may persist without targeted treatment.
 
 **Why is it important to control active acne before treating scars?**
 Active inflamed acne lesions can continue to damage the dermis and create new scars. Treating existing scars while new ones are being formed is counterproductive. Most clinical guidelines recommend that active acne be adequately controlled before scar treatment is initiated.
@@ -109,22 +109,22 @@ Active inflamed acne lesions can continue to damage the dermis and create new sc
 Subcision is a minimally invasive procedure in which a fine needle is inserted beneath the scar to physically release fibrous bands that tether the skin downward. It is most commonly indicated for rolling scars where tethering is present. Releasing the tethering before resurfacing allows subsequent treatments to achieve better correction of the depression.
 
 **What is TCA CROSS and is it suitable for all scar types?**
-TCA CROSS (chemical reconstruction of skin scars) involves applying high-concentration trichloroacetic acid precisely into the base of a suitable scar to stimulate localised collagen formation. It is particularly useful for ice pick scars and some narrow boxcar scars. It is not a broad resurfacing treatment and is not appropriate for all scar types. Precise application is important — acid placed outside the scar can worsen surrounding skin pigmentation.
+TCA CROSS (chemical reconstruction of skin scars) involves applying high-concentration trichloroacetic acid precisely into the base of a suitable scar to stimulate localised collagen formation. It is particularly useful for ice pick scars and some narrow boxcar scars. It is not a broad resurfacing treatment and is not appropriate for all scar types. Precise application is important â€” acid placed outside the scar can worsen surrounding skin pigmentation.
 
 **How many treatment sessions are typically needed?**
-There is no fixed number. Most patients with moderate atrophic acne scars require multiple sessions — often between three and six or more, depending on scar type, severity, treatments used, and the individual's healing response. ⚠️ COMPLIANCE CHECK — *The following claim cites published literature and should be verified by the publishing doctor before going live:* Realistic improvement is typically described as a 40–70% reduction in scar appearance over a planned treatment course, not complete elimination.
+There is no fixed number. Most patients with moderate atrophic acne scars require multiple sessions â€” often between three and six or more, depending on scar type, severity, treatments used, and the individual's healing response. âš ï¸ COMPLIANCE CHECK â€” *The following claim cites published literature and should be verified by the publishing doctor before going live:* Realistic improvement is typically described as a 40â€“70% reduction in scar appearance over a planned treatment course, not complete elimination.
 
 **Is PIH the same as an acne scar?**
 No. Post-inflammatory hyperpigmentation (PIH) is flat skin discolouration caused by excess melanin production after inflammation. It does not involve structural changes to the dermis. PIH is treated with topical depigmenting agents and rigorous sun protection, and is not managed the same way as atrophic or raised scars.
 
 **Can I treat acne scars if I have a history of keloids?**
-A personal or family history of keloid formation is an important factor that must be disclosed before any skin procedure. Certain treatments — particularly ablative lasers, deep chemical peels, and needling procedures — carry a higher risk of triggering keloid formation in susceptible individuals. Your doctor will assess this risk as part of the pre-treatment evaluation and may modify the treatment plan accordingly.
+A personal or family history of keloid formation is an important factor that must be disclosed before any skin procedure. Certain treatments â€” particularly ablative lasers, deep chemical peels, and needling procedures â€” carry a higher risk of triggering keloid formation in susceptible individuals. Your doctor will assess this risk as part of the pre-treatment evaluation and may modify the treatment plan accordingly.
 
 **Why do my scars look worse in some lighting than others?**
-Depressed acne scars are three-dimensional. When light falls at a low or oblique angle — such as side sunlight, car mirrors, or window light — it casts shadows inside the depressions, making them appear more pronounced. For accurate tracking of treatment progress, photographs should be taken under consistent lighting conditions at the same angle and distance each time.
+Depressed acne scars are three-dimensional. When light falls at a low or oblique angle â€” such as side sunlight, car mirrors, or window light â€” it casts shadows inside the depressions, making them appear more pronounced. For accurate tracking of treatment progress, photographs should be taken under consistent lighting conditions at the same angle and distance each time.
 
 **Do Malaysian patients need to consider anything specific about acne scar treatment?**
-Yes. Malaysia's high UV index year-round significantly increases the risk of post-inflammatory hyperpigmentation after any skin procedure. Patients with Fitzpatrick skin types III–V — common among Malaysian patients — have a higher baseline risk for PIH following laser, needling, or chemical peel treatments. Strict sun protection before and after treatment is essential, and treatment settings may need to be adjusted compared to protocols used in lower-UV or lighter-skin populations.
+Yes. Malaysia's high UV index year-round significantly increases the risk of post-inflammatory hyperpigmentation after any skin procedure. Patients with Fitzpatrick skin types IIIâ€“V â€” common among Malaysian patients â€” have a higher baseline risk for PIH following laser, needling, or chemical peel treatments. Strict sun protection before and after treatment is essential, and treatment settings may need to be adjusted compared to protocols used in lower-UV or lighter-skin populations.
 
 ---
 

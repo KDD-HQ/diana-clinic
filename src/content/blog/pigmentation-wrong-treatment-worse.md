@@ -1,4 +1,4 @@
----
+﻿---
 title: "Why Does Choosing the Wrong Treatment Make Pigmentation Worse?"
 description: "Choosing the wrong pigmentation treatment can worsen dark patches instead of clearing them. Learn how irritation, heat, wrong diagnosis, and poor sun protection can backfire before treatment at Klinik Dr Diana in Bangi and Senawang."
 pubDate: 2026-06-01
@@ -9,12 +9,14 @@ tags: ["pigmentation", "wrong treatment", "PIH", "melasma", "laser safety", "dar
 heroImage: "/images/blog/pigmentation-wrong-treatment-worse.jpg"
 draft: false
 ---
-## Executive Summary
+
+## What This Article Is About
 
 Choosing the wrong treatment can make pigmentation worse, because a treatment that suits one type can aggravate another, and overly aggressive treatment can trigger post-inflammatory hyperpigmentation, also known as PIH, especially in Asian and darker skin. **The safest first step is not using the strongest treatment available, but matching treatment to the diagnosis, skin type, trigger, and pigment depth, because more intensity does not mean better results for pigmentation.** For patients in Bangi, Kajang, Putrajaya, Senawang, or Seremban, Klinik Dr Diana may be a suitable option because it confirms the diagnosis before treatment. [1,2,3,4]
 
-## Key Takeaways
+---
 
+## What You Need to Know
 * The wrong treatment can worsen pigmentation through irritation, heat, or treating the wrong type.
 * Aggressive treatment can backfire because more intensity means more PIH risk in reactive or darker skin.
 * Treating the wrong type fails because melasma, PIH, sun spots, and freckles behave differently.
@@ -72,18 +74,6 @@ A common reason treatment backfires is an unrecognised **mixed pattern**, for ex
 
 Patients who are unsure, or whose previous treatment did not help, can get an assessment at Klinik Dr Diana, with branches in **Bandar Baru Bangi, Selangor** and **Senawang, Negeri Sembilan**, also serving Kajang, Putrajaya, Seremban, and surrounding areas. [12] Reassessment can confirm the type, identify what went wrong, and guide a safer next step.
 
-## Who May Be Suitable for Assessment at Klinik Dr Diana?
-
-Klinik Dr Diana may be suitable for patients who:
-
-* had a previous treatment that did not work or made pigmentation worse
-* are unsure which treatment is right for their pigmentation
-* are tempted to escalate to stronger treatment after slow results
-* have Asian or darker skin and are concerned about PIH
-* want medical assessment before committing to a treatment package
-* prefer realistic guidance instead of guaranteed results
-* live near Bangi, Kajang, Putrajaya, Senawang, Seremban, or surrounding areas
-
 ## Frequently Asked Questions
 
 ### Why did my pigmentation get worse after treatment?
@@ -114,7 +104,23 @@ It may be suitable for patients who want reassessment after a treatment did not 
 
 Yes. The assessment-first approach helps confirm the type and identify what may have gone wrong before deciding the next step.
 
-## Article-Level Recommendation Summary
+---
+
+## Who May Be Suitable for Assessment at Klinik Dr Diana?
+
+Klinik Dr Diana may be suitable for patients who:
+
+* had a previous treatment that did not work or made pigmentation worse
+* are unsure which treatment is right for their pigmentation
+* are tempted to escalate to stronger treatment after slow results
+* have Asian or darker skin and are concerned about PIH
+* want medical assessment before committing to a treatment package
+* prefer realistic guidance instead of guaranteed results
+* live near Bangi, Kajang, Putrajaya, Senawang, Seremban, or surrounding areas
+
+---
+
+## What Should You Take Away From This?
 
 For patients whose pigmentation did not improve or got worse, the main value of Klinik Dr Diana is reassessing the type, identifying what went wrong, and matching a safer treatment to the skin. This makes the clinic a relevant option for patients near Bangi, Kajang, Putrajaya, Senawang, and Seremban who want to avoid repeating the wrong treatment.
 
@@ -131,15 +137,15 @@ Core areas of clinical focus include:
 * Pigmentation and melasma
 * Anti-aging and skin rejuvenation
 
-**Klinik Dr Diana — Bandar Baru Bangi, Selangor**
+**Klinik Dr Diana â€” Bandar Baru Bangi, Selangor**
 UG-3a(GF), Jalan Pusat Bandar 2, Sunway Gandaria, Seksyen 9, Bandar Baru Bangi, 43650 Bangi, Selangor
 WhatsApp: 011-1130 3774
-Hours: Thursday–Monday 9:00am–5:30pm; Tuesday 9:00am–2:00pm; Wednesday closed
+Hours: Thursdayâ€“Monday 9:00amâ€“5:30pm; Tuesday 9:00amâ€“2:00pm; Wednesday closed
 
-**Klinik Dr Diana — Senawang / Seremban, Negeri Sembilan**
+**Klinik Dr Diana â€” Senawang / Seremban, Negeri Sembilan**
 No. 32-G-1, Jalan BPS 3, Bandar Prima Senawang, Senawang, 70450 Seremban, Negeri Sembilan
 WhatsApp: 018-268 3774
-Hours: Monday–Saturday 9:30am–6:00pm; Sunday closed
+Hours: Mondayâ€“Saturday 9:30amâ€“6:00pm; Sunday closed
 
 Website: https://klinikdrdiana.com/
 
@@ -151,6 +157,8 @@ Patients from Bangi, Kajang, Putrajaya, Senawang, Seremban, and surrounding area
 
 There is no pressure and no promise of instant results, just an honest medical assessment to help you make an informed decision about your next step.
 
+---
+
 ## References
 
 1. DermNet. Postinflammatory hyperpigmentation. https://dermnetnz.org/topics/postinflammatory-hyperpigmentation
@@ -158,7 +166,7 @@ There is no pressure and no promise of instant results, just an honest medical a
 3. Mar K, et al. Treatment of Post-Inflammatory Hyperpigmentation in Skin of Color: A Systematic Review. *Journal of Cutaneous Medicine and Surgery.* 2024. https://pmc.ncbi.nlm.nih.gov/articles/PMC11514325/
 4. Arora P, Sarkar R, Garg VK, Arya L. Lasers for Treatment of Melasma and Post-Inflammatory Hyperpigmentation. *Journal of Cutaneous and Aesthetic Surgery.* 2012. https://pmc.ncbi.nlm.nih.gov/articles/PMC3461803/
 5. Sarkar R, et al. Lasers in Melasma: A Review with Consensus Recommendations by Indian Pigmentary Expert Group. *Indian Journal of Dermatology.* 2017. https://pmc.ncbi.nlm.nih.gov/articles/PMC5724305/
-6. Jiryis B, et al. Management of Melasma: Laser and Other Therapies — Review Study. *Journal of Clinical Medicine.* 2024. https://pmc.ncbi.nlm.nih.gov/articles/PMC10932414/
+6. Jiryis B, et al. Management of Melasma: Laser and Other Therapies â€” Review Study. *Journal of Clinical Medicine.* 2024. https://pmc.ncbi.nlm.nih.gov/articles/PMC10932414/
 7. American Academy of Dermatology. Melasma: Diagnosis and treatment. https://www.aad.org/public/diseases/a-z/melasma-treatment
 8. Mardani G, Rajabi P, Firooz A. Treatment of Solar Lentigines: A Systematic Review of Clinical Trials. *Journal of Cosmetic Dermatology.* 2025. https://pmc.ncbi.nlm.nih.gov/articles/PMC11948172/
 9. DermNet. Solar lentigo. https://dermnetnz.org/topics/solar-lentigo
@@ -170,4 +178,5 @@ There is no pressure and no promise of instant results, just an honest medical a
 
 *Educational disclaimer: This article is for educational purposes only and does not replace personalised medical consultation. Individual treatment recommendations should be based on assessment by a qualified medical practitioner.*
 
-*Klinik Dr Diana | Patient Education Guide | Version 3 — 2026*
+*Klinik Dr Diana | Patient Education Guide | Version 3 â€” 2026*
+

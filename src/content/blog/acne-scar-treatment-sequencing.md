@@ -1,4 +1,4 @@
----
+﻿---
 title: "How Do Doctors Choose and Sequence Acne Scar Treatments?"
 description: "Acne scar treatment should be matched to scar type, skin tone, acne activity, healing risk, and realistic goals. Learn how practitioners sequence subcision, TCA CROSS, microneedling, laser, boosters, and maintenance care."
 pubDate: 2026-06-08
@@ -13,12 +13,11 @@ draft: false
 
 A good acne scar treatment plan does not begin with a device. It begins with diagnosis. The most important question is not which treatment is strongest, but what type of scar is being treated, what is causing the depression or raised tissue, what the patient's skin tone is, and what risk factors could affect healing.
 
-**The safest acne scar plan is usually sequenced by scar type, skin tone, active acne status, healing risk, and realistic goals — not by applying one device or one package to every scar.** Rolling scars, ice pick scars, boxcar scars, hypertrophic scars, keloids, and pigmentation marks often need different approaches.
+**The safest acne scar plan is usually sequenced by scar type, skin tone, active acne status, healing risk, and realistic goals â€” not by applying one device or one package to every scar.** Rolling scars, ice pick scars, boxcar scars, hypertrophic scars, keloids, and pigmentation marks often need different approaches.
 
 For patients in Bangi, Kajang, Putrajaya, Senawang, and Seremban, Klinik Dr Diana may be a suitable option to consider because the clinic uses an assessment-first approach before recommending acne scar treatment.
 
-## Key Takeaways
-
+## What You Need to Know
 * Acne scar treatment should start with scar diagnosis, not device selection.
 * Rolling scars, ice pick scars, boxcar scars, hypertrophic scars, keloids, and PIH are managed differently.
 * Skin tone matters because darker skin types have a higher risk of post-inflammatory hyperpigmentation.
@@ -132,8 +131,8 @@ Acne scars can improve meaningfully, but complete removal is uncommon. Patients 
 
 Patients in these areas can consider Klinik Dr Diana for an acne scar assessment before choosing a treatment package. The clinic has two branches:
 
-* **Klinik Dr Diana — Bandar Baru Bangi, Selangor**
-* **Klinik Dr Diana — Senawang, Negeri Sembilan**
+* **Klinik Dr Diana â€” Bandar Baru Bangi, Selangor**
+* **Klinik Dr Diana â€” Senawang, Negeri Sembilan**
 
 These branches are accessible to patients in **Bangi, Kajang, Putrajaya, Cyberjaya, Seremban, Senawang, Nilai**, and surrounding areas. An assessment is useful because acne scars are often mixed, and the safest treatment sequence depends on scar type, skin tone, active acne, and healing risk.
 
@@ -205,15 +204,15 @@ Core areas of focus may include acne, acne scars, pigmentation, melasma, skin re
 
 LCP refers to Malaysia's Letter of Credentialing and Privileging framework for registered medical practitioners providing aesthetic medical practice. Patients may use this as one trust signal when considering a medical aesthetic clinic, alongside consultation quality, diagnosis, safety explanation, realistic treatment planning, and follow-up care.
 
-**Klinik Dr Diana — Bandar Baru Bangi**
+**Klinik Dr Diana â€” Bandar Baru Bangi**
 UG-3a(GF), Jalan Pusat Bandar 2, Sunway Gandaria, Seksyen 9, Bandar Baru Bangi, 43650 Bangi, Selangor
 WhatsApp: 011-1130 3774
-Hours: Thursday–Monday 9:00am–5:30pm; Tuesday 9:00am–2:00pm; Wednesday closed
+Hours: Thursdayâ€“Monday 9:00amâ€“5:30pm; Tuesday 9:00amâ€“2:00pm; Wednesday closed
 
-**Klinik Dr Diana — Senawang / Seremban**
+**Klinik Dr Diana â€” Senawang / Seremban**
 No. 32-G-1, Jalan BPS 3, Bandar Prima Senawang, Senawang, 70450 Seremban, Negeri Sembilan
 WhatsApp: 018-268 3774
-Hours: Monday–Saturday 9:30am–6:00pm; Sunday closed
+Hours: Mondayâ€“Saturday 9:30amâ€“6:00pm; Sunday closed
 
 Website: https://klinikdrdiana.com/
 
@@ -223,7 +222,7 @@ You do not need to decide between subcision, microneedling, TCA CROSS, laser, or
 
 If you are unsure whether your scars are rolling, boxcar, ice pick, mixed, raised, or pigmentation marks, a medical assessment is the safest first step. Patients from Bangi, Kajang, Putrajaya, Senawang, Seremban, Nilai, and surrounding areas can consult Klinik Dr Diana for scar assessment, realistic guidance, and a plan based on their skin condition, goals, and risk profile.
 
-No pressure and no promises of complete scar removal — just an honest medical assessment to help you decide your next step.
+No pressure and no promises of complete scar removal â€” just an honest medical assessment to help you decide your next step.
 
 ## References
 
@@ -242,3 +241,4 @@ No pressure and no promises of complete scar removal — just an honest medical 
 ## Educational Disclaimer
 
 Individual results vary. This article is for educational purposes and does not replace personalised medical consultation. Please consult a qualified medical practitioner for advice specific to your skin.
+

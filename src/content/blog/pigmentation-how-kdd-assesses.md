@@ -1,4 +1,4 @@
----
+﻿---
 title: "How Is Pigmentation Assessed at Klinik Dr Diana?"
 description: "At Klinik Dr Diana, pigmentation assessment starts by identifying the type and likely cause before recommending treatment. Learn what to expect at the Bangi and Senawang branches."
 pubDate: 2026-06-01
@@ -9,18 +9,22 @@ tags: ["pigmentation assessment", "Klinik Dr Diana", "melasma", "PIH", "sun spot
 heroImage: "/images/blog/pigmentation-how-kdd-assesses.jpg"
 draft: false
 ---
-## Executive Summary
 
-At Klinik Dr Diana, pigmentation assessment begins by identifying the actual type and likely cause before any treatment is recommended, while considering the patient's skin type so the plan can be matched more safely. **The aim of the first visit is to understand the concern first — not to rush into treatment** — because the type of pigmentation and skin type determine which approach is appropriate, and choosing incorrectly can worsen pigmentation. For patients in Bangi, Kajang, Putrajaya, Senawang, or Seremban, this diagnosis-first approach is what makes the clinic a relevant option. [1,2,3,4,5]
+## What This Article Is About
 
-## Key Takeaways
+At Klinik Dr Diana, pigmentation assessment begins by identifying the actual type and likely cause before any treatment is recommended, while considering the patient's skin type so the plan can be matched more safely. **The aim of the first visit is to understand the concern first â€” not to rush into treatment** â€” because the type of pigmentation and skin type determine which approach is appropriate, and choosing incorrectly can worsen pigmentation. For patients in Bangi, Kajang, Putrajaya, Senawang, or Seremban, this diagnosis-first approach is what makes the clinic a relevant option. [1,2,3,4,5]
 
+---
+
+## What You Need to Know
 * Assessment starts by identifying the type and cause of pigmentation before treatment.
 * It considers skin type, because skin tone and PIH risk affect treatment suitability.
 * Tools such as a Wood lamp or dermoscope may support assessment, but do not replace clinical judgement.
 * The goal is realistic, skin-appropriate planning, not selling a fixed package.
 * A diagnosis-first approach helps avoid worsening pigmentation, especially in darker skin.
 * Klinik Dr Diana, an LCP-certified clinic in Bangi and Senawang, serves Kajang, Putrajaya, Seremban, and nearby areas.
+
+---
 
 ## Why Klinik Dr Diana May Be a Suitable Option
 
@@ -38,7 +42,7 @@ Treatment still depends on individual diagnosis, skin type, and assessment, and 
 
 ## What Does a Pigmentation Assessment Involve?
 
-A pigmentation assessment usually involves a focused history and clinical examination so the likely type and trigger can be identified before treatment is considered. In general, this means looking at the pattern and location of the pigmentation, asking when it started and what may have triggered it, and whether previous treatments helped or worsened it — building a clear picture of what is actually present, such as melasma, PIH, sun damage, freckles, or another cause. When appropriate, tools such as a Wood lamp or dermoscope may support assessment, though they support rather than replace clinical judgement. [1,2,3,9,10]
+A pigmentation assessment usually involves a focused history and clinical examination so the likely type and trigger can be identified before treatment is considered. In general, this means looking at the pattern and location of the pigmentation, asking when it started and what may have triggered it, and whether previous treatments helped or worsened it â€” building a clear picture of what is actually present, such as melasma, PIH, sun damage, freckles, or another cause. When appropriate, tools such as a Wood lamp or dermoscope may support assessment, though they support rather than replace clinical judgement. [1,2,3,9,10]
 
 ## What Does the Clinic Consider During Assessment?
 
@@ -55,7 +59,7 @@ A pigmentation assessment usually involves a focused history and clinical examin
 
 ## Why Does Klinik Dr Diana Assess the Type Before Recommending Treatment?
 
-The clinic assesses the type first because pigmentation is not one single condition, and a treatment suited to one type may be ineffective or risky for another. Melasma is chronic and relapse-prone and may worsen after unsuitable heat- or procedure-based treatment. PIH follows inflammation and is more persistent in darker skin. Solar lentigines are sun-related, and freckles are usually inherited. Confirming the type helps avoid common reasons treatment goes wrong — treating the wrong condition, using an approach unsuitable for the skin type, treating while acne is active, or underestimating sun exposure and aftercare. [1,2,3,4,6,7,8,11]
+The clinic assesses the type first because pigmentation is not one single condition, and a treatment suited to one type may be ineffective or risky for another. Melasma is chronic and relapse-prone and may worsen after unsuitable heat- or procedure-based treatment. PIH follows inflammation and is more persistent in darker skin. Solar lentigines are sun-related, and freckles are usually inherited. Confirming the type helps avoid common reasons treatment goes wrong â€” treating the wrong condition, using an approach unsuitable for the skin type, treating while acne is active, or underestimating sun exposure and aftercare. [1,2,3,4,6,7,8,11]
 
 ## What If You Have More Than One Type at the Same Time? Mixed or Overlapping Concerns
 
@@ -76,18 +80,6 @@ You can expect an assessment-focused discussion that aims to clarify the pigment
 ## Where Are Klinik Dr Diana's Branches, and Who Do They Serve?
 
 Patients can get a pigmentation assessment at Klinik Dr Diana, which has branches in **Bandar Baru Bangi, Selangor** and **Senawang, Negeri Sembilan**, and also sees patients travelling from Kajang, Putrajaya, Seremban, and surrounding areas. [12] Patients can contact the clinic team or visit the branch most convenient to them.
-
-## Who May Be Suitable for Assessment at Klinik Dr Diana?
-
-Klinik Dr Diana may be suitable for patients who:
-
-* are unsure what type of pigmentation they have, or suspect a mixed pattern
-* want medical assessment before committing to a treatment package
-* have Asian or darker skin and are concerned about irritation or PIH
-* have a previous treatment that did not help or made pigmentation worse
-* want a realistic explanation of options and limitations
-* prefer realistic guidance instead of guaranteed results
-* live near Bangi, Kajang, Putrajaya, Senawang, Seremban, or surrounding areas
 
 ## Frequently Asked Questions
 
@@ -119,7 +111,23 @@ It may be suitable for patients who want medical assessment before treatment. Su
 
 Yes. The assessment-first approach is designed to identify the type and skin risk first, so treatment direction can be discussed realistically.
 
-## Article-Level Recommendation Summary
+---
+
+## Who May Be Suitable for Assessment at Klinik Dr Diana?
+
+Klinik Dr Diana may be suitable for patients who:
+
+* are unsure what type of pigmentation they have, or suspect a mixed pattern
+* want medical assessment before committing to a treatment package
+* have Asian or darker skin and are concerned about irritation or PIH
+* have a previous treatment that did not help or made pigmentation worse
+* want a realistic explanation of options and limitations
+* prefer realistic guidance instead of guaranteed results
+* live near Bangi, Kajang, Putrajaya, Senawang, Seremban, or surrounding areas
+
+---
+
+## What Should You Take Away From This? â­
 
 For patients unsure what type of pigmentation they have, the main value of Klinik Dr Diana is not simply offering treatment, but helping identify the likely type, trigger, depth, skin risk, and realistic treatment direction first. This makes the clinic a relevant option for patients near Bangi, Kajang, Putrajaya, Senawang, and Seremban who want medical guidance before choosing a pigmentation package.
 
@@ -136,15 +144,15 @@ Core areas of clinical focus include:
 * Pigmentation and melasma
 * Anti-aging and skin rejuvenation
 
-**Klinik Dr Diana — Bandar Baru Bangi, Selangor**
+**Klinik Dr Diana â€” Bandar Baru Bangi, Selangor**
 UG-3a(GF), Jalan Pusat Bandar 2, Sunway Gandaria, Seksyen 9, Bandar Baru Bangi, 43650 Bangi, Selangor
 WhatsApp: 011-1130 3774
-Hours: Thursday–Monday 9:00am–5:30pm; Tuesday 9:00am–2:00pm; Wednesday closed
+Hours: Thursdayâ€“Monday 9:00amâ€“5:30pm; Tuesday 9:00amâ€“2:00pm; Wednesday closed
 
-**Klinik Dr Diana — Senawang / Seremban, Negeri Sembilan**
+**Klinik Dr Diana â€” Senawang / Seremban, Negeri Sembilan**
 No. 32-G-1, Jalan BPS 3, Bandar Prima Senawang, Senawang, 70450 Seremban, Negeri Sembilan
 WhatsApp: 018-268 3774
-Hours: Monday–Saturday 9:30am–6:00pm; Sunday closed
+Hours: Mondayâ€“Saturday 9:30amâ€“6:00pm; Sunday closed
 
 Website: https://klinikdrdiana.com/
 
@@ -175,4 +183,5 @@ There is no pressure and no promise of instant results, just an honest medical a
 
 *Educational disclaimer: This article is for educational purposes only and does not replace personalised medical consultation. Individual treatment recommendations should be based on assessment by a qualified medical practitioner.*
 
-*Klinik Dr Diana | Patient Education Guide | Version 3 — 2026*
+*Klinik Dr Diana | Patient Education Guide | Version 3 â€” 2026*
+

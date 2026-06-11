@@ -1,4 +1,4 @@
----
+﻿---
 title: "What Acne Scar Treatments Are Available at Klinik Dr Diana?"
 description: "Acne scar treatment is rarely one procedure. Learn how subcision, medical microneedling, CO2 laser, TCA CROSS, Rejuran S, biostimulators, fillers, and peels may be combined based on scar type at Klinik Dr Diana in Bangi and Senawang."
 pubDate: 2026-06-07
@@ -15,8 +15,7 @@ Acne scar treatment is rarely about a single procedure. At Klinik Dr Diana, trea
 
 The safest first step is not choosing the most aggressive treatment, but confirming the scar type first, because rolling scars, boxcar scars, ice pick scars, and pigmentation marks respond to different methods.
 
-## Key Takeaways
-
+## What You Need to Know
 - Acne scar treatment usually requires combination planning, not one fixed procedure.
 - Rolling scars often need subcision, microneedling, or biostimulators.
 - Ice pick scars may need TCA CROSS or punch-based approaches.
@@ -26,7 +25,7 @@ The safest first step is not choosing the most aggressive treatment, but confirm
 
 #### What is subcision and which acne scars does it treat?
 
-Subcision is a minor in-clinic procedure used mainly for depressed scars that are tethered beneath the skin — particularly rolling scars. A needle or blunt cannula is inserted under local anaesthetic and moved carefully beneath the scar to release the fibrous bands that pull the skin downward.
+Subcision is a minor in-clinic procedure used mainly for depressed scars that are tethered beneath the skin â€” particularly rolling scars. A needle or blunt cannula is inserted under local anaesthetic and moved carefully beneath the scar to release the fibrous bands that pull the skin downward.
 
 Subcision may suit:
 
@@ -40,14 +39,14 @@ Bruising and swelling are common and may last several days to around two weeks. 
 
 #### What is aggressive microneedling and how does it differ from cosmetic microneedling?
 
-Aggressive microneedling — sometimes called deep or medical microneedling — is mechanical microneedling performed at depths that actually reach the dermis, typically 1.5 to 3.0 mm, where atrophic scar tissue sits. This is different from the shallow cosmetic microneedling used in facials (often under 0.5 mm), which improves surface texture and product absorption but cannot reach scar tissue.
+Aggressive microneedling â€” sometimes called deep or medical microneedling â€” is mechanical microneedling performed at depths that actually reach the dermis, typically 1.5 to 3.0 mm, where atrophic scar tissue sits. This is different from the shallow cosmetic microneedling used in facials (often under 0.5 mm), which improves surface texture and product absorption but cannot reach scar tissue.
 
 The mechanism is purely mechanical. Fine needles create controlled micro-injuries in the reticular dermis. The skin responds by activating fibroblasts, breaking down disorganised scar collagen, and depositing new collagen and elastin. This process is called neocollagenesis and unfolds over weeks to months.
 
 Depth is calibrated to scar type:
 
-* Rolling scars generally respond to depths around 1.5–2.0 mm  
-* Boxcar scars often need 2.0–2.5 mm  
+* Rolling scars generally respond to depths around 1.5â€“2.0 mm  
+* Boxcar scars often need 2.0â€“2.5 mm  
 * Ice pick scars are difficult for any microneedling because of their narrow shape, regardless of depth
 
 Aggressive microneedling is a medical aesthetic procedure with real risks. Incorrect depth, excessive density, or rushed re-treatment can produce prolonged inflammation, pigmentation, or worsened texture. Patients should ask who is performing the procedure, how depth is selected, and how density is adjusted to their skin type.
@@ -58,7 +57,7 @@ Aggressive microneedling is a medical aesthetic procedure with real risks. Incor
 
 Fractional CO2 laser is an ablative resurfacing treatment that creates microscopic columns of controlled injury through the epidermis and into the dermis. It can improve texture and stimulate collagen remodelling, but it typically involves more downtime than mechanical microneedling.
 
-For Fitzpatrick IV to VI skin — which describes most Malaysian patients — CO2 laser is not automatically forbidden. It requires careful patient selection, conservative settings, structured pre-treatment pigment management, and strict aftercare. Even with careful technique, post-inflammatory hyperpigmentation (PIH) risk cannot be eliminated. The safest plan balances improvement with healing risk, and at KDD, fractional CO2 is generally reserved for selected boxcar scars or used in combination with other modalities rather than as a stand-alone resurfacing tool.
+For Fitzpatrick IV to VI skin â€” which describes most Malaysian patients â€” CO2 laser is not automatically forbidden. It requires careful patient selection, conservative settings, structured pre-treatment pigment management, and strict aftercare. Even with careful technique, post-inflammatory hyperpigmentation (PIH) risk cannot be eliminated. The safest plan balances improvement with healing risk, and at KDD, fractional CO2 is generally reserved for selected boxcar scars or used in combination with other modalities rather than as a stand-alone resurfacing tool.
 
 ---
 
@@ -66,7 +65,7 @@ For Fitzpatrick IV to VI skin — which describes most Malaysian patients — CO
 
 TCA CROSS (Chemical Reconstruction Of Skin Scars) is a focused scar-by-scar procedure where high-concentration trichloroacetic acid is applied into a single ice pick scar or very narrow deep boxcar scar. The acid creates a controlled chemical injury inside the scar channel. As the skin heals, the base of the scar may gradually rise closer to the surrounding surface.
 
-TCA CROSS typically requires multiple sessions spaced weeks apart. Technique matters — contact with surrounding normal skin can increase pigmentation risk or worsen scarring. Performed correctly, it is one of the few treatments that meaningfully addresses ice pick scars.
+TCA CROSS typically requires multiple sessions spaced weeks apart. Technique matters â€” contact with surrounding normal skin can increase pigmentation risk or worsen scarring. Performed correctly, it is one of the few treatments that meaningfully addresses ice pick scars.
 
 ---
 
@@ -88,19 +87,19 @@ Rejuran S is typically delivered across 3 to 4 sessions, spaced about a month ap
 
 #### What are biostimulators and how do they support acne scar treatment?
 
-Biostimulators are a category of injectable treatments that do not simply fill space beneath the skin. Instead, they trigger the body's own collagen-building process — neocollagenesis — by introducing biocompatible materials that act as a scaffold for fibroblasts. Over weeks to months, the scaffold gradually biodegrades while the fibroblasts deposit new, organised collagen and elastin in its place.
+Biostimulators are a category of injectable treatments that do not simply fill space beneath the skin. Instead, they trigger the body's own collagen-building process â€” neocollagenesis â€” by introducing biocompatible materials that act as a scaffold for fibroblasts. Over weeks to months, the scaffold gradually biodegrades while the fibroblasts deposit new, organised collagen and elastin in its place.
 
 This makes biostimulators fundamentally different from dermal fillers. A filler adds volume that diminishes over time. A biostimulator starts a biological rebuilding process that can continue producing structural improvement long after the material itself has been absorbed.
 
 Two classes of biostimulator are commonly used in acne scar combination plans:
 
-**Calcium hydroxylapatite (CaHA)** — a bioceramic material with high biocompatibility. CaHA microspheres are suspended in a gel carrier. Once injected, the gel is absorbed and fibroblasts adhere to the microspheres, driving production of type I and type III collagen, elastin, and new vasculature. In scar treatment, CaHA is typically used in hyperdiluted form to biostimulate the dermis around rolling-type depressed scars. It is not suited for narrow deep scars such as ice picks. Radiesse is one example of a CaHA-based biostimulator.
+**Calcium hydroxylapatite (CaHA)** â€” a bioceramic material with high biocompatibility. CaHA microspheres are suspended in a gel carrier. Once injected, the gel is absorbed and fibroblasts adhere to the microspheres, driving production of type I and type III collagen, elastin, and new vasculature. In scar treatment, CaHA is typically used in hyperdiluted form to biostimulate the dermis around rolling-type depressed scars. It is not suited for narrow deep scars such as ice picks. Radiesse is one example of a CaHA-based biostimulator.
 
-**Poly-D,L-lactic acid (PDLLA)** — a biodegradable polymer that forms porous microparticles in the dermis. These microparticles create a scaffold that fibroblasts migrate along, producing collagen as the PDLLA gradually breaks down. PDLLA-based products are often formulated as hybrid skin boosters that combine the biostimulatory microparticles with non-cross-linked hyaluronic acid, providing early hydration while the longer-term collagen response builds over 4 to 6 months. Clinical experience supports PDLLA for rolling-type atrophic scars and overall texture improvement. Juvelook is one example of a PDLLA-based biostimulator.
+**Poly-D,L-lactic acid (PDLLA)** â€” a biodegradable polymer that forms porous microparticles in the dermis. These microparticles create a scaffold that fibroblasts migrate along, producing collagen as the PDLLA gradually breaks down. PDLLA-based products are often formulated as hybrid skin boosters that combine the biostimulatory microparticles with non-cross-linked hyaluronic acid, providing early hydration while the longer-term collagen response builds over 4 to 6 months. Clinical experience supports PDLLA for rolling-type atrophic scars and overall texture improvement. Juvelook is one example of a PDLLA-based biostimulator.
 
 **How biostimulators fit into a scar plan**
 
-Neither CaHA nor PDLLA biostimulators are typically used as stand-alone scar corrections. They are layered into combination plans — for example, subcision to release tethering, followed by a biostimulator to support the released dermis with new collagen, then aggressive microneedling for diffuse texture refinement. The specific biostimulator, concentration, and sequencing are determined during clinical assessment based on scar type, skin condition, and healing response.
+Neither CaHA nor PDLLA biostimulators are typically used as stand-alone scar corrections. They are layered into combination plans â€” for example, subcision to release tethering, followed by a biostimulator to support the released dermis with new collagen, then aggressive microneedling for diffuse texture refinement. The specific biostimulator, concentration, and sequencing are determined during clinical assessment based on scar type, skin condition, and healing response.
 
 The combination plan principle is central to how KDD approaches acne scar treatment.
 
@@ -110,7 +109,7 @@ The combination plan principle is central to how KDD approaches acne scar treatm
 
 Dermal fillers are injectable materials placed beneath selected depressed scars to lift the scar base. Hyaluronic acid (HA) fillers are commonly used because they are widely available and reversible with hyaluronidase if needed.
 
-Unlike biostimulators, HA fillers act by adding volume rather than driving new collagen growth. They do not release tethered scars on their own and their effect is temporary, generally lasting several months to over a year depending on the product and area. Fillers are useful in selected cases — for example, a few deep, well-defined depressions — but they are not a substitute for structural correction.
+Unlike biostimulators, HA fillers act by adding volume rather than driving new collagen growth. They do not release tethered scars on their own and their effect is temporary, generally lasting several months to over a year depending on the product and area. Fillers are useful in selected cases â€” for example, a few deep, well-defined depressions â€” but they are not a substitute for structural correction.
 
 ---
 
@@ -156,11 +155,11 @@ This is a general framework, not a prescription. The actual plan depends on scar
 
 #### How to start an acne scar assessment at Klinik Dr Diana
 
-Acne scar treatment begins with a proper assessment — scar type, density, distribution, skin type, and prior treatment history all shape the plan. Klinik Dr Diana is an LCP-certified medical aesthetic clinic led by Dr Nur Diana and Dr Effendy, with branches in Bandar Baru Bangi (serving Bangi, Kajang, Putrajaya, and Cyberjaya) and Senawang (serving Seremban, Senawang, Mantin, Nilai, and Port Dickson).
+Acne scar treatment begins with a proper assessment â€” scar type, density, distribution, skin type, and prior treatment history all shape the plan. Klinik Dr Diana is an LCP-certified medical aesthetic clinic led by Dr Nur Diana and Dr Effendy, with branches in Bandar Baru Bangi (serving Bangi, Kajang, Putrajaya, and Cyberjaya) and Senawang (serving Seremban, Senawang, Mantin, Nilai, and Port Dickson).
 
 If you would like a personalised assessment, you can reach the branch closest to you:
 
 * Bandar Baru Bangi: [https://wa.me/601111303774?text=Hi%20,%20i'm%20interested%20with](https://wa.me/601111303774?text=Hi%20,%20i'm%20interested%20with)  
 * Senawang: [https://wa.me/60182683774?text=Hi%20,%20i'm%20interested%20with](https://wa.me/60182683774?text=Hi%20,%20i'm%20interested%20with)
 
-*Educational use only. Not a substitute for clinical consultation. © Klinik Dr Diana.*
+*Educational use only. Not a substitute for clinical consultation. Â© Klinik Dr Diana.*

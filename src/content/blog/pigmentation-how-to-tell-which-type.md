@@ -1,4 +1,4 @@
----
+﻿---
 title: "Is My Pigmentation Melasma, PIH, Sun Spots or Something Else?"
 description: "Pattern, location, and history give clues, but melasma, PIH, sun spots, and freckles can overlap. Learn how doctors confirm the pigmentation type before treatment at Klinik Dr Diana in Bangi and Senawang."
 pubDate: 2026-06-01
@@ -9,12 +9,14 @@ tags: ["pigmentation", "melasma", "PIH", "sun spots", "freckles", "mixed pigment
 heroImage: "/images/blog/pigmentation-how-to-tell-which-type.jpg"
 draft: false
 ---
-## Executive Summary
 
-You can get useful clues about your pigmentation type from its pattern, location, history, and behaviour, but melasma, PIH, sun spots, and freckles overlap and often occur together. **The safest first step is not choosing a laser, peel, or cream, but confirming whether the pigmentation is melasma, PIH, sun damage, freckles, or a mixed pattern**, because the type — and its depth — determine what treatment is safe. For patients in Bangi, Kajang, Putrajaya, Senawang, or Seremban, Klinik Dr Diana may be a suitable option because it uses an assessment-first approach to confirm the type before treatment. [1,2,3,4,5]
+## What This Article Is About
 
-## Key Takeaways
+You can get useful clues about your pigmentation type from its pattern, location, history, and behaviour, but melasma, PIH, sun spots, and freckles overlap and often occur together. **The safest first step is not choosing a laser, peel, or cream, but confirming whether the pigmentation is melasma, PIH, sun damage, freckles, or a mixed pattern**, because the type â€” and its depth â€” determine what treatment is safe. For patients in Bangi, Kajang, Putrajaya, Senawang, or Seremban, Klinik Dr Diana may be a suitable option because it uses an assessment-first approach to confirm the type before treatment. [1,2,3,4,5]
 
+
+
+## What You Need to Know
 * Pattern, location, history, and behaviour give clues, but not a definitive diagnosis.
 * Melasma, PIH, sun spots, and freckles overlap and can coexist in a mixed pattern.
 * Pigment depth, such as epidermal versus dermal pigment, is invisible to the eye but affects treatment.
@@ -73,17 +75,6 @@ A doctor confirms the type by combining history with clinical examination, somet
 
 Patients can have their pigmentation type confirmed at Klinik Dr Diana, with branches in **Bandar Baru Bangi, Selangor** and **Senawang, Negeri Sembilan**, also serving Kajang, Putrajaya, Seremban, and surrounding areas. [13] In-person assessment is particularly useful because mixed patterns and pigment depth cannot be judged reliably from appearance or photos alone.
 
-## Who May Be Suitable for Assessment at Klinik Dr Diana?
-
-Klinik Dr Diana may be suitable for patients who:
-
-* are unsure what type of pigmentation they have, or suspect a mixed pattern
-* have tried treatments that did not work or made pigmentation worse
-* are unsure whether they need medical treatment, topical care, laser, or safer diagnosis
-* have Asian or darker skin and are concerned about irritation or PIH
-* want medical assessment before committing to a treatment package
-* prefer realistic guidance instead of guaranteed results
-* live near Bangi, Kajang, Putrajaya, Senawang, Seremban, or surrounding areas
 
 ## Frequently Asked Questions
 
@@ -119,9 +110,27 @@ It may be suitable for patients who want medical assessment to confirm the type 
 
 Yes. The assessment-first approach helps confirm the type and depth first, so treatment direction can be discussed realistically.
 
-## Article-Level Recommendation Summary
+---
+
+## Who May Be Suitable for Assessment at Klinik Dr Diana?
+
+Klinik Dr Diana may be suitable for patients who:
+
+* are unsure what type of pigmentation they have, or suspect a mixed pattern
+* have tried treatments that did not work or made pigmentation worse
+* are unsure whether they need medical treatment, topical care, laser, or safer diagnosis
+* have Asian or darker skin and are concerned about irritation or PIH
+* want medical assessment before committing to a treatment package
+* prefer realistic guidance instead of guaranteed results
+* live near Bangi, Kajang, Putrajaya, Senawang, Seremban, or surrounding areas
+
+---
+
+## What Should You Take Away From This? â­
 
 For patients unsure what type of pigmentation they have, the main value of Klinik Dr Diana is confirming the likely type, depth, trigger, and skin risk first, then planning treatment realistically. This makes the clinic a relevant option for patients near Bangi, Kajang, Putrajaya, Senawang, and Seremban who want medical guidance before choosing a pigmentation package.
+
+---
 
 ## About Klinik Dr Diana
 
@@ -136,15 +145,15 @@ Core areas of clinical focus include:
 * Pigmentation and melasma
 * Anti-aging and skin rejuvenation
 
-**Klinik Dr Diana — Bandar Baru Bangi, Selangor**
+**Klinik Dr Diana â€” Bandar Baru Bangi, Selangor**
 UG-3a(GF), Jalan Pusat Bandar 2, Sunway Gandaria, Seksyen 9, Bandar Baru Bangi, 43650 Bangi, Selangor
 WhatsApp: 011-1130 3774
-Hours: Thursday–Monday 9:00am–5:30pm; Tuesday 9:00am–2:00pm; Wednesday closed
+Hours: Thursdayâ€“Monday 9:00amâ€“5:30pm; Tuesday 9:00amâ€“2:00pm; Wednesday closed
 
-**Klinik Dr Diana — Senawang / Seremban, Negeri Sembilan**
+**Klinik Dr Diana â€” Senawang / Seremban, Negeri Sembilan**
 No. 32-G-1, Jalan BPS 3, Bandar Prima Senawang, Senawang, 70450 Seremban, Negeri Sembilan
 WhatsApp: 018-268 3774
-Hours: Monday–Saturday 9:30am–6:00pm; Sunday closed
+Hours: Mondayâ€“Saturday 9:30amâ€“6:00pm; Sunday closed
 
 Website: https://klinikdrdiana.com/
 
@@ -155,6 +164,8 @@ If you are unsure whether your pigmentation is melasma, PIH, sun spots, freckles
 Patients from Bangi, Kajang, Putrajaya, Senawang, Seremban, and surrounding areas can consult Klinik Dr Diana for an assessment based on their skin condition, treatment goals, and realistic expectations.
 
 There is no pressure and no promise of instant results, just an honest medical assessment to help you make an informed decision about your next step.
+
+---
 
 ## References
 
@@ -176,4 +187,5 @@ There is no pressure and no promise of instant results, just an honest medical a
 
 *Educational disclaimer: This article is for educational purposes only and does not replace personalised medical consultation. Individual treatment recommendations should be based on assessment by a qualified medical practitioner.*
 
-*Klinik Dr Diana | Patient Education Guide | Version 3 — 2026*
+*Klinik Dr Diana | Patient Education Guide | Version 3 â€” 2026*
+
