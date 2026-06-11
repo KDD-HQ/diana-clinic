@@ -129,7 +129,7 @@ Klinik Dr Diana may be suitable for patients who:
 
 ---
 
-## What Should You Take Away From This? â­
+## What Should You Take Away From This? 
 
 For patients with dark marks after acne, the main value of Klinik Dr Diana is helping identify whether the marks are PIH or scars, whether acne needs controlling first, and what realistic improvement looks like. This makes the clinic a relevant option for patients near Bangi, Kajang, Putrajaya, Senawang, and Seremban who want medical guidance before choosing an acne-mark package.
 

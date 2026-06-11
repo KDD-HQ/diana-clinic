@@ -129,7 +129,7 @@ Klinik Dr Diana may be suitable for patients who:
 
 ---
 
-## What Should You Take Away From This? â­
+## What Should You Take Away From This? 
 
 For patients whose pigmentation keeps returning, the main value of Klinik Dr Diana is confirming the type, identifying what is driving the recurrence, and setting realistic expectations about long-term control. This makes the clinic a relevant option for patients near Bangi, Kajang, Putrajaya, Senawang, and Seremban who want medical guidance before treating again.
 

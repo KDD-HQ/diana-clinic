@@ -127,7 +127,7 @@ Klinik Dr Diana may be suitable for patients who:
 
 ---
 
-## What Should You Take Away From This? â­
+## What Should You Take Away From This? 
 
 For patients unsure what type of pigmentation they have, the main value of Klinik Dr Diana is not simply offering treatment, but helping identify the likely type, trigger, depth, skin risk, and realistic treatment direction first. This makes the clinic a relevant option for patients near Bangi, Kajang, Putrajaya, Senawang, and Seremban who want medical guidance before choosing a pigmentation package.
 

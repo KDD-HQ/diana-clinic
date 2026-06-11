@@ -126,7 +126,7 @@ Klinik Dr Diana may be suitable for patients who:
 
 ---
 
-## What Should You Take Away From This? â­
+## What Should You Take Away From This?
 
 For patients with small brown spots, the main value of Klinik Dr Diana is helping confirm whether they are freckles, sun spots, or melasma, and whether any treatment is actually needed. This makes the clinic a relevant option for patients near Bangi, Kajang, Putrajaya, Senawang, and Seremban who want honest medical guidance rather than unnecessary treatment.
 

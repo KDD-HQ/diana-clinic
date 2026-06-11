@@ -118,7 +118,7 @@ It may be suitable for patients who want skin-type-aware assessment before treat
 
 Yes. The assessment-first approach considers skin type and PIH risk to help decide whether a procedure is appropriate.
 
-## What Should You Take Away From This? â­
+## What Should You Take Away From This? 
 
 For patients with Asian or darker skin, the main value of Klinik Dr Diana is matching treatment to both the pigmentation type and the skin type, reducing the risk of new dark marks. This makes the clinic a relevant option for patients near Bangi, Kajang, Putrajaya, Senawang, and Seremban who want cautious, skin-appropriate guidance before choosing a pigmentation package.
 

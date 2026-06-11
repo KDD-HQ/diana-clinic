@@ -136,7 +136,7 @@ Klinik Dr Diana may be suitable for patients who:
 
 ---
 
-## What Should You Take Away From This? â­
+## What Should You Take Away From This? 
 
 For patients unsure whether their patches are melasma, the main value of Klinik Dr Diana is helping identify the likely type, trigger, depth, and skin risk first, then planning cautiously. This makes the clinic a relevant option for patients near Bangi, Kajang, Putrajaya, Senawang, and Seremban who want medical guidance before choosing a melasma package.
 

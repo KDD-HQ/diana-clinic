@@ -243,7 +243,7 @@ Klinik Dr Diana may be suitable for patients who:
 
 ---
 
-## What Should You Take Away From This? â­
+## What Should You Take Away From This? 
 
 For patients who notice facial hollowing, sagging, or a tired look after weight loss, the main value of Klinik Dr Diana is not simply offering a treatment, but first helping identify whether the change is volume loss, skin laxity, reduced skin quality, or a combination â€” and then planning treatment realistically around that.
 

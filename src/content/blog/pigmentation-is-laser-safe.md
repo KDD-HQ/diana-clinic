@@ -118,7 +118,7 @@ It may be suitable for patients who want to confirm the diagnosis and skin risk 
 
 Yes. The assessment-first approach helps confirm the type and skin risk first, so laser and non-laser options can be discussed realistically.
 
-## What Should You Take Away From This? â­
+## What Should You Take Away From This?
 
 For patients considering laser, the main value of Klinik Dr Diana is confirming whether laser is appropriate for their pigmentation type and skin type first, and considering it only as part of a cautious plan. This makes the clinic a relevant option for patients near Bangi, Kajang, Putrajaya, Senawang, and Seremban who want medical guidance before booking laser.
 

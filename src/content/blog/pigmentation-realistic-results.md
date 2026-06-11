@@ -116,7 +116,7 @@ It may be suitable for patients who want a realistic, type-specific discussion b
 
 Yes. The assessment-first approach helps set realistic expectations so you can decide with clear information.
 
-## What Should You Take Away From This? â­
+## What Should You Take Away From This?
 
 For patients wanting to know what is realistic, the main value of Klinik Dr Diana is an honest, type-specific discussion of likely improvement, timelines, and maintenance before treatment â€” helping avoid disappointment and over-treatment. This makes the clinic a relevant option for patients near Bangi, Kajang, Putrajaya, Senawang, and Seremban who want realistic guidance before choosing a pigmentation package.
 

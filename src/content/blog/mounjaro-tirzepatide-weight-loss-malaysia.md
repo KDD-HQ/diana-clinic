@@ -246,7 +246,7 @@ Klinik Dr Diana may be suitable for patients who:
 
 ---
 
-## What Should You Take Away From This? â­
+## What Should You Take Away From This? 
 
 For patients in Malaysia who are curious about Mounjaro, the main value of a clinic like Klinik Dr Diana is not selling an injection, but giving honest information, checking whether the treatment is even worth exploring, explaining the real benefits and risks, and guiding you toward the right medical care.
 

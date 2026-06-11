@@ -232,7 +232,7 @@ Klinik Dr Diana may be suitable for patients who:
 
 ---
 
-## What Should You Take Away From This? â­
+## What Should You Take Away From This?
 
 For patients who are unsure what is causing their dark eye circles, the main value of Klinik Dr Diana is not simply offering a laser or injection, but first identifying whether the darkness is pigment, vessels, shadow, or a mix â€” and then matching treatment, such as advanced pico laser, polynucleotides, or a succinic acid booster, to that cause.
 
