@@ -1,0 +1,115 @@
+---
+// ============================================================
+// BeforeAfterGallery.astro
+// Horizontal scroll-snap carousel for before/after result
+// photos. Pure CSS (no client JS) — works in Astro's
+// zero-JS-by-default model.
+// ============================================================
+
+interface GalleryItem {
+  src: string;
+  alt: string;
+  caption: string;
+}
+
+interface Props {
+  items: GalleryItem[];
+  disclaimer?: string;
+  heading?: string;
+}
+
+const { items, disclaimer, heading } = Astro.props;
+---
+
+<section class="ba-gallery">
+  {heading && <h2 class="ba-heading">{heading}</h2>}
+
+  <div class="ba-track" role="list">
+    {items.map((item) => (
+      <figure class="ba-item" role="listitem">
+        <img
+          src={item.src}
+          alt={item.alt}
+          width="500"
+          height="375"
+          loading="lazy"
+        />
+        <figcaption>{item.caption}</figcaption>
+      </figure>
+    ))}
+  </div>
+
+  {disclaimer && <p class="ba-disclaimer">{disclaimer}</p>}
+</section>
+
+<style>
+  .ba-gallery {
+    margin: var(--space-4) 0;
+  }
+
+  .ba-heading {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    line-height: 1.2;
+    color: var(--color-anchor);
+    margin: var(--space-5) 0 var(--space-2);
+    letter-spacing: 0.005em;
+  }
+
+  .ba-track {
+    display: flex;
+    gap: var(--space-2);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: var(--space-1);
+    margin: 0 calc(var(--space-2) * -1);
+    padding-left: var(--space-2);
+    padding-right: var(--space-2);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .ba-track::-webkit-scrollbar {
+    height: 6px;
+  }
+  .ba-track::-webkit-scrollbar-thumb {
+    background: var(--color-layer);
+    border-radius: 999px;
+  }
+
+  .ba-item {
+    flex: 0 0 auto;
+    width: min(78vw, 360px);
+    scroll-snap-align: start;
+    margin: 0;
+    background: #fff;
+    border: 1px solid var(--color-layer);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .ba-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: var(--color-surface-alt);
+  }
+
+  .ba-item figcaption {
+    padding: 0.6rem 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-anchor);
+    border-top: 1px solid var(--color-layer);
+  }
+
+  .ba-disclaimer {
+    font-size: 0.85rem;
+    color: var(--color-anchor-soft);
+    font-style: italic;
+    margin: var(--space-2) 0 0;
+  }
+</style>
