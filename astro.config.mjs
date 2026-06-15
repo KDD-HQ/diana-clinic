@@ -5,7 +5,7 @@ import vercel from '@astrojs/vercel/static';
 
 export default defineConfig({
   // SWAP this to https://www.drdianaclinic.com once domain is migrated off EasyStore
-  site: 'https://diana-clinic.vercel.app',
+  site: 'https://www.drdianaclinic.com',
   output: 'static',
   adapter: vercel(),
   integrations: [
