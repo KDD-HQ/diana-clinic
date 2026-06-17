@@ -597,6 +597,34 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
   </section>
 
   <!-- FINAL CTA -->
+   <script is:inline>
+    const revealItems = document.querySelectorAll(
+      '.hero .eyebrow, .hero h1, .hero-sub, .hero-cta, .trust-strip, .hero-media, .section-head, .tile, .problem .narrow, .concern-card, .doctor-card, .how-steps li, .tech-intro, .tech-grid li, .review-card, .faq-item, .branch-card, .final-cta .narrow'
+    );
+
+    revealItems.forEach((item, index) => {
+      item.classList.add('reveal-soft');
+      item.style.setProperty('--reveal-delay', `${Math.min(index * 40, 240)}ms`);
+    });
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px',
+      }
+    );
+
+    revealItems.forEach((item) => revealObserver.observe(item));
+  </script>
+
   <section class="final-cta">
     <div class="container narrow center">
       <h2>Begin with a Clinical Assessment.</h2>
@@ -606,6 +634,53 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
       <a class="cta" href={waGeneric} target="_blank" rel="noopener">Book via WhatsApp</a>
     </div>
   </section>
+<script is:inline>
+  const heroInner = document.querySelector('.hero-inner');
+
+  function updateHeroFade() {
+    if (!heroInner) return;
+
+    const fadeDistance = Math.min(window.innerHeight * 0.65, 520);
+    const progress = Math.min(window.scrollY / fadeDistance, 1);
+
+    heroInner.style.setProperty('--hero-opacity', `${1 - progress}`);
+    heroInner.style.setProperty('--hero-lift', `${progress * -18}px`);
+  }
+
+  updateHeroFade();
+  window.addEventListener('scroll', updateHeroFade, { passive: true });
+</script>
+<script is:inline>
+  const fadeSections = document.querySelectorAll(
+    '.hero, .concern-tiles, .problem, .concerns, .doctors, .how, .tech, .reviews, .faq, .visit, .final-cta'
+  );
+
+  function updateSectionFade() {
+    const viewportHeight = window.innerHeight;
+
+    fadeSections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      const sectionCenter = rect.top + rect.height / 2;
+      const viewportCenter = viewportHeight / 2;
+      const distance = Math.abs(sectionCenter - viewportCenter);
+
+      const fadeStart = viewportHeight * 0.25;
+      const fadeEnd = viewportHeight * 0.85;
+
+      let opacity = 1 - (distance - fadeStart) / (fadeEnd - fadeStart);
+      opacity = Math.max(0.28, Math.min(1, opacity));
+
+      const lift = (1 - opacity) * 18;
+
+      section.style.setProperty('--section-opacity', opacity.toFixed(3));
+      section.style.setProperty('--section-lift', `${lift}px`);
+    });
+  }
+
+  updateSectionFade();
+  window.addEventListener('scroll', updateSectionFade, { passive: true });
+  window.addEventListener('resize', updateSectionFade);
+</script>
 
   <style>
     /* ——— Hero ——— */
@@ -675,6 +750,39 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
       border-top: 1px solid var(--color-layer);
       padding-top: var(--space-3);
     }
+    /* ——— Section Scroll Fade ——— */
+.hero,
+.concern-tiles,
+.concerns,
+.doctors,
+.how,
+.tech,
+.reviews,
+.faq,
+.visit,
+.final-cta {
+  opacity: var(--section-opacity, 1);
+  transform: translateY(var(--section-lift, 0));
+  transition: opacity 0.18s linear, transform 0.18s linear;
+  will-change: opacity, transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero,
+  .concern-tiles,
+  .concerns,
+  .doctors,
+  .how,
+  .tech,
+  .reviews,
+  .faq,
+  .visit,
+  .final-cta {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
 
     /* ——— Section heads ——— */
     h2 {
@@ -759,8 +867,19 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
     }
 
     /* ——— Problem ——— */
-    .problem { background: var(--color-surface-alt); }
-    .problem p { font-size: 1.05rem; max-width: 680px; }
+.problem {
+  background: linear-gradient(135deg, #3b2418 0%, #4a2f1f 45%, #6a4630 100%);
+}
+
+.problem h2 {
+  color: #fff7ed;
+}
+
+.problem p {
+  font-size: 1.05rem;
+  max-width: 680px;
+  color: #f3e6d8;
+}
 
     /* ——— Concerns ——— */
     .concerns-grid {
@@ -830,63 +949,101 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
 }
 
     /* ——— Doctors ——— */
-    .doctors-grid {
-      display: grid;
-      gap: var(--space-4);
-      grid-template-columns: 1fr;
-      max-width: 880px;
-      margin: 0 auto;
-    }
-    @media (min-width: 720px) {
-      .doctors-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    .doctor-card {
-      text-align: center;
-      padding: var(--space-4) var(--space-3);
-      background: var(--color-surface-alt);
-      border: 1px solid var(--color-layer);
-    }
-    .doctor-portrait {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center top;
-      display: block;
-      margin: 0 auto var(--space-3);
-      filter: saturate(0.95);
-      background: var(--color-layer);
-    }
-    .doctor-role {
-      font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase;
-      color: var(--color-anchor-soft);
-      margin: 0 0 var(--space-2);
-    }
-    .doctor-practising {
-      font-size: 0.85rem;
-      color: var(--color-anchor-soft);
-      margin: 0 0 var(--space-3);
-      font-style: italic;
-    }
-    .doctor-focus {
-      font-size: 0.9rem;
-      margin: 0 0 var(--space-3);
-      color: var(--color-anchor);
-    }
-    .doctor-focus span {
-      display: block;
-      font-size: 0.7rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--color-anchor-soft);
-      margin-bottom: 0.3rem;
-      font-weight: 600;
-    }
-    .doctor-bio {
-      font-size: 0.9rem;
-      margin: 0;
-      color: var(--color-anchor-soft);
-    }
+.doctors {
+  background: linear-gradient(135deg, #3b2418 0%, #4a2f1f 45%, #6a4630 100%);
+}
+
+.doctors .section-head .eyebrow {
+  color: #d8b47c;
+}
+
+.doctors .section-head h2 {
+  color: #fff7ed;
+}
+
+.doctors-grid {
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+@media (min-width: 720px) {
+  .doctors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.doctor-card {
+  text-align: center;
+  padding: var(--space-4) var(--space-3);
+  background: rgba(255, 248, 239, 0.95);
+  border: 1px solid rgba(216, 180, 124, 0.35);
+  border-radius: 20px;
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.18);
+}
+
+.doctor-portrait {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  margin: 0 auto var(--space-3);
+  filter: saturate(0.98) contrast(1.02);
+  background: #ead8c4;
+  border: 4px solid #3b2418;
+  box-shadow: 0 14px 32px rgba(59, 36, 24, 0.22);
+}
+
+.doctor-card h3 {
+  color: #3b2418;
+}
+
+.doctor-role {
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #9a6a3d;
+  margin: 0 0 var(--space-2);
+  font-weight: 700;
+}
+
+.doctor-practising {
+  font-size: 0.85rem;
+  color: #6b5547;
+  margin: 0 0 var(--space-3);
+  font-style: italic;
+}
+
+.doctor-focus {
+  font-size: 0.9rem;
+  margin: 0 0 var(--space-3);
+  color: #4a2f1f;
+  background: #f7eadb;
+  border: 1px solid rgba(184, 137, 85, 0.3);
+  border-left: 4px solid #b88955;
+  border-radius: 14px;
+  padding: 0.85rem 0.9rem;
+}
+
+.doctor-focus span {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #9a6a3d;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+.doctor-bio {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #6b5547;
+}
 
     /* ——— How ——— */
     .how-steps {
@@ -939,37 +1096,71 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
     }
 
     /* ——— Reviews ——— */
-    .reviews-grid {
-      display: grid;
-      gap: var(--space-3);
-      grid-template-columns: 1fr;
-    }
-    @media (min-width: 720px) { .reviews-grid { grid-template-columns: repeat(2, 1fr); } }
-    .review-card {
-      background: var(--color-surface-alt);
-      border: 1px solid var(--color-layer);
-      padding: var(--space-3);
-      text-decoration: none;
-      transition: border-color 0.2s ease;
-    }
-    .review-card:hover { border-color: var(--color-anchor); }
-    .review-rating {
-      font-family: var(--font-display);
-      font-size: 1.8rem;
-      color: var(--color-anchor);
-      margin: 0 0 0.3rem;
-    }
-    .review-branch {
-      font-size: 1rem;
-      margin: 0 0 var(--space-2);
-    }
-    .review-link {
-      font-size: 0.8rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--color-anchor-soft);
-      margin: 0;
-    }
+.reviews {
+  background: linear-gradient(135deg, #3b2418 0%, #4a2f1f 45%, #6a4630 100%);
+}
+
+.reviews .section-head .eyebrow {
+  color: #d8b47c;
+}
+
+.reviews .section-head h2 {
+  color: #fff7ed;
+}
+
+.reviews-grid {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.review-card {
+  background: rgba(255, 248, 239, 0.96);
+  border: 1px solid rgba(216, 180, 124, 0.35);
+  border-radius: 20px;
+  padding: var(--space-4);
+  text-decoration: none;
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(216, 180, 124, 0.7);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.24);
+}
+
+.review-rating {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: #3b2418;
+  margin: 0 0 var(--space-2);
+}
+
+.review-branch {
+  font-size: 1rem;
+  color: #6b5547;
+  margin: 0 0 var(--space-3);
+}
+
+.review-link {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8a5a35;
+  font-weight: 700;
+  margin: 0;
+}
+
+.reviews .note {
+  color: rgba(255, 247, 237, 0.76);
+}
 
     /* ——— FAQ ——— */
     .faq-list { border-top: 1px solid var(--color-layer); }
@@ -1035,5 +1226,44 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
       margin-top: var(--space-3);
     }
     .final-cta .cta:hover { background: var(--color-layer); }
+
+    /* ——— Premium Reveal Animation ——— */
+.reveal-soft {
+  opacity: 0;
+  transform: translateY(14px);
+  filter: blur(4px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.5s ease;
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform, filter;
+}
+
+.reveal-soft.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+.hero-media.reveal-soft {
+  transform: translateY(18px) scale(0.985);
+}
+
+.hero-media.reveal-soft.is-visible {
+  transform: translateY(0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-soft,
+  .reveal-soft.is-visible,
+  .hero-media.reveal-soft,
+  .hero-media.reveal-soft.is-visible {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}
   </style>
 </BaseLayout>
