@@ -22,6 +22,7 @@ const treatments = defineCollection({
     title: z.string().max(70),
     description: z.string().max(165),
     category: z.enum([
+      'acne',
       'facial',
       'laser',
       'injectable',
