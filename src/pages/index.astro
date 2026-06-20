@@ -532,6 +532,28 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
         <p class="eyebrow">What our patients say</p>
         <h2>Read patient reviews on Google.</h2>
       </header>
+      <div class="quotes-grid">
+        <blockquote class="quote-card">
+          <p>"After a week I can see the acne is completely gone, skin is bright and glow. Very recommend for anyone who has breakout problems."</p>
+          <cite>— Izzati I.</cite>
+        </blockquote>
+        <blockquote class="quote-card">
+          <p>"I started the deep scar treatment for almost a year now. Scars improved a lot and I'm planning to renew the scar treatment package to get smoother skin!"</p>
+          <cite>— Muhammad Q.</cite>
+        </blockquote>
+        <blockquote class="quote-card">
+          <p>"First time here for deep scar treatment and I would say highly recommended for an aesthetic clinic. Surely I will come again for another treatment."</p>
+          <cite>— Nat N. · Senawang branch</cite>
+        </blockquote>
+        <blockquote class="quote-card">
+          <p>"After just a few sessions, my acne has improved significantly. They carefully assessed my skin and recommended treatments tailored to my needs."</p>
+          <cite>— Norliyana R.</cite>
+        </blockquote>
+        <blockquote class="quote-card">
+          <p>"They explained to me well on my skin problems, and I can see the difference on my skin just 2 to 3 weeks after the first treatment."</p>
+          <cite>— Nuruul Athira B.</cite>
+        </blockquote>
+      </div>
       <div class="reviews-grid">
         <a class="review-card" href={`https://search.google.com/local/reviews?placeid=${branches[0].placeId}`} target="_blank" rel="noopener">
           <p class="review-rating">4.9 ★ · 360+ reviews</p>
@@ -691,7 +713,7 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
   window.addEventListener('resize', updateSectionFade);
 </script>
 
-  <style>
+ <style >
     /* ——— Hero ——— */
     .hero {
       padding: var(--space-6) 0 var(--space-5);
@@ -1162,6 +1184,40 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
   .reviews-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+.quotes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+@media (min-width: 720px) {
+  .quotes-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1040px) {
+  .quotes-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.quote-card {
+  background: rgba(255, 248, 239, 0.96);
+  border: 1px solid rgba(216, 180, 124, 0.35);
+  border-radius: 20px;
+  padding: var(--space-3);
+  margin: 0;
+}
+.quote-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4a2f1f;
+  margin: 0 0 var(--space-2);
+  font-style: italic;
+}
+.quote-card cite {
+  font-size: 0.78rem;
+  font-style: normal;
+  font-weight: 600;
+  color: #9a6a3d;
+  letter-spacing: 0.04em;
 }
 
 .review-card {
