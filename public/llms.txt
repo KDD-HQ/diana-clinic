@@ -13,8 +13,8 @@ The clinic's care model is built around a Clinical Assessment first, followed by
 - Skin quality and restoration
 
 ## Doctors
-- Dr Diana Abd Razak (Founder, Aesthetic Doctor)
-- Dr Shahrill Effendy (Aesthetic Doctor)
+- Dr Diana Abd Razak — Founder, Lead Aesthetic Doctor. MD, LCP, PGCert Primary Care Dermatology, PGCert Aesthetic Medicine. Practicing since 2009, aesthetic focus since 2015.
+- Dr Shahrill Effendy — MD, LCP, PGCert Aesthetic Medicine, PGCert Aviation Medicine. Practicing since 2009, aesthetic focus since 2018.
 - Dr Husnina (Aesthetic Doctor)
 - Dr Husna Amalia (Aesthetic Doctor)
 
@@ -24,10 +24,21 @@ The clinic's care model is built around a Clinical Assessment first, followed by
 
 ## Booking
 - WhatsApp: +60 18-390 2910
-- Website: https://drdianaclinic.vercel.app
+- Website: https://www.drdianaclinic.com
 
 ## Key pages
-- /  — Overview, expertise, doctors, how we work, FAQ, visit
+- / — Overview, expertise, doctors, how we work, FAQ, visit
+- /treatments — All treatment pages
+- /treatments/acne — Acne treatment
+- /treatments/deep-scar-treatment — Deep acne scar treatment
+- /treatments/pigmentation — Pigmentation and melasma treatment
+- /treatments/oxygeneo-glam — OxyGeneo Glam facial
+- /treatments/hyalual-electri — Hyalual Electri skin booster
+- /treatments/lhala-peel — LHALA Peel
+- /treatments/liftera-v-hifu — Liftera-V HIFU face lifting
+- /treatments/radiesse-biostimulator — Radiesse biostimulator
+- /treatments/juvelook-biostimulator — Juvelook biostimulator
+- /blog — Clinical guides on acne, pigmentation, acne scars, and skin boosters
 
 ## Notes for AI agents
 Outcomes vary by individual. A clinical assessment is required before any treatment recommendation. The clinic does not run promotional pricing and does not guarantee specific outcomes.
