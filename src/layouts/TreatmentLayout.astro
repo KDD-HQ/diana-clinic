@@ -16,6 +16,13 @@ interface Props {
 const { treatment } = Astro.props;
 const { data, slug } = treatment;
 
+type FAQItem = {
+  question: string;
+  answer: string;
+};
+
+const faq = (data.faq ?? []) as FAQItem[];
+
 // ── Site config ────────────────────────────────────────────
 const SITE = 'https://www.drdianaclinic.com';
 const WHATSAPP_NUMBER = '60183902910';
@@ -117,7 +124,7 @@ const medicalProcedureSchema = {
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: data.faq.map((item) => ({
+  mainEntity: faq.map((item) => ({
     '@type': 'Question',
     name: item.question,
     acceptedAnswer: { '@type': 'Answer', text: item.answer },
@@ -163,9 +170,9 @@ const physicianSchema = {
     <script type="application/ld+json" set:html={JSON.stringify(medicalWebPageSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(medicalProcedureSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(physicianSchema)} />
-    {data.faq.length > 0 && (
-      <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
-    )}
+    {faq.length > 0 && (
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+)}
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   </Fragment>
 
@@ -230,19 +237,20 @@ const physicianSchema = {
       </div>
 
       <!-- FAQ -->
-      {data.faq.length > 0 && (
-        <>
-          <h2 class="tx-faq-title">Frequently asked questions</h2>
-          <div class="tx-faq">
-            {data.faq.map((item) => (
-              <details>
-                <summary>{item.question}</summary>
-                <p>{item.answer}</p>
-              </details>
-            ))}
-          </div>
-        </>
-      )}
+{faq.length > 0 && (
+  <>
+    <h2 class="tx-faq-title">Frequently asked questions</h2>
+
+    <div class="tx-faq">
+      {faq.map((item) => (
+        <details>
+          <summary>{item.question}</summary>
+          <p>{item.answer}</p>
+        </details>
+      ))}
+    </div>
+  </>
+)}
 
       <!-- Author / E-E-A-T box -->
       <div class="tx-author">
