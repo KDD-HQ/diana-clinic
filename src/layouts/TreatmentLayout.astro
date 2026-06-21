@@ -588,4 +588,65 @@ const physicianSchema = {
     color: var(--color-ink);
     margin-bottom: var(--space-1);
   }
+  /* ============================================================
+   Treatment page intro animation
+   Top treatment hero: fade + slide right
+   Other treatment content: fade only
+   Duration: 0.2s
+   ============================================================ */
+
+@keyframes txHeroSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes txFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.tx-hero .container {
+  animation: txHeroSlideRight 0.2s ease-out both;
+}
+
+.tx-body .tx-container > * {
+  animation: txFadeIn 0.2s ease-out both;
+}
+
+.tx-body .tx-container > *:nth-child(1) {
+  animation-delay: 0.03s;
+}
+
+.tx-body .tx-container > *:nth-child(2) {
+  animation-delay: 0.06s;
+}
+
+.tx-body .tx-container > *:nth-child(3) {
+  animation-delay: 0.09s;
+}
+
+.tx-body .tx-container > *:nth-child(n + 4) {
+  animation-delay: 0.12s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tx-hero .container,
+  .tx-body .tx-container > * {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
 </style>

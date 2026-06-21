@@ -22,7 +22,7 @@ draft: false
 
 ---
 
-## Executive Summary
+## What This Article Is About
 
 Profhilo Structura is a "bio-remodelling" injectable made from hyaluronic acid that works deeper than the original Profhilo, helping to support the facial fat compartments and improve firmness. This matters for Asian faces because Asian ageing tends to show up as volume loss and sagging more than fine wrinkles, so the treatment and technique should be planned around firmness and support rather than simply filling lines. [1,2]
 
