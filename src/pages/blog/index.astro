@@ -3,13 +3,81 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
 const allPosts = await getCollection('blog', ({ data }) => !data.draft);
-const sorted = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const sorted = allPosts.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+type BlogPost = (typeof sorted)[number];
+
+const formatDate = (date: Date) =>
+  date.toLocaleDateString('en-MY', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+
+const getPostTopic = (post: BlogPost) => {
+  const title = post.data.title.toLowerCase();
+  const tags = (post.data.tags ?? []).join(' ').toLowerCase();
+  const text = `${title} ${tags}`;
+
+  if (text.includes('pigmentation') || text.includes('melasma') || text.includes('pih') || text.includes('sun spot') || text.includes('freckle')) {
+    return 'Pigmentation & Melasma';
+  }
+
+  if (text.includes('acne scar') || text.includes('scar')) {
+    return 'Acne Scars';
+  }
+
+  if (text.includes('acne')) {
+    return 'Acne';
+  }
+
+  if (text.includes('profhilo') || text.includes('structura') || text.includes('radiesse') || text.includes('juvelook') || text.includes('biostimulator')) {
+    return 'Profhilo & Biostimulators';
+  }
+
+  if (text.includes('skin booster') || text.includes('rejuran') || text.includes('polynucleotide') || text.includes('glow')) {
+    return 'Skin Booster & Rejuvenation';
+  }
+
+  if (text.includes('mounjaro') || text.includes('ozempic') || text.includes('weight loss')) {
+    return 'Weight Loss & Facial Changes';
+  }
+
+  if (text.includes('dark eye') || text.includes('under eye')) {
+    return 'Dark Eye Circles';
+  }
+
+  return 'Other Skin Health Articles';
+};
+
+const topicOrder = [
+  'Pigmentation & Melasma',
+  'Acne Scars',
+  'Acne',
+  'Skin Booster & Rejuvenation',
+  'Profhilo & Biostimulators',
+  'Weight Loss & Facial Changes',
+  'Dark Eye Circles',
+  'Other Skin Health Articles',
+];
+
+const groupedPosts = topicOrder
+  .map((topic) => ({
+    topic,
+    posts: sorted.filter((post) => getPostTopic(post) === topic),
+  }))
+  .filter((group) => group.posts.length > 0);
+
+const featuredPost = sorted[0];
 ---
 
 <BaseLayout
   title="Skin Health Articles · Diana Clinic"
   description="Evidence-based articles on acne, acne scars, pigmentation, and skin health — written by the doctors at Klinik Dr Diana."
-  canonical="https://https://www.drdianaclinic.com/blog"
+  canonical="https://www.drdianaclinic.com/blog"
 >
   <main id="main">
     <section class="blog-hero">
@@ -20,36 +88,286 @@ const sorted = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate
       </div>
     </section>
 
-    <section class="blog-grid">
-      <div class="container">
-        {sorted.length === 0 ? (
-          <p class="empty">Articles coming soon.</p>
-        ) : (
-          <div class="grid">
-            {sorted.map(post => (
+    <section class="blog-topics">
+  <div class="container">
+    <div class="topic-intro">
+      <p class="label">Browse by concern</p>
+      <h2>Find articles based on what you want to understand.</h2>
+      <p>
+        Explore doctor-written guides by skin concern, treatment type and patient question.
+      </p>
+    </div>
+
+    <div class="topic-pills">
+      {groupedPosts.map((group) => (
+        <a href={`#${group.topic.toLowerCase().replaceAll(' ', '-').replaceAll('&', 'and')}`}>
+          {group.topic}
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+{featuredPost && (
+  <section class="featured-article">
+    <div class="container">
+      <p class="label">Featured article</p>
+
+      <a href={`/blog/${featuredPost.slug}`} class="featured-card">
+        {featuredPost.data.heroImage && (
+          <img
+            src={featuredPost.data.heroImage}
+            alt={featuredPost.data.title}
+            loading="lazy"
+            width="900"
+            height="520"
+          />
+        )}
+
+        <div class="featured-content">
+          <span class="date">{formatDate(featuredPost.data.pubDate)}</span>
+          <h2>{featuredPost.data.title}</h2>
+          <p>{featuredPost.data.description}</p>
+          <span class="read-more">Read featured article →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+)}
+
+<section class="blog-grid">
+  <div class="container">
+    {groupedPosts.map((group) => (
+      <section
+        class="topic-section"
+        id={group.topic.toLowerCase().replaceAll(' ', '-').replaceAll('&', 'and')}
+      >
+        <div class="topic-heading">
+          <p class="label">Article topic</p>
+          <h2>{group.topic}</h2>
+        </div>
+
+        <div class="grid">
+          {group.posts.map((post: BlogPost) => {
+            const tags = post.data.tags ?? [];
+
+            return (
               <a href={`/blog/${post.slug}`} class="card">
                 {post.data.heroImage && (
-                  <img src={post.data.heroImage} alt={post.data.title} loading="lazy" width="800" height="450" />
+                  <img
+                    src={post.data.heroImage}
+                    alt={post.data.title}
+                    loading="lazy"
+                    width="800"
+                    height="450"
+                  />
                 )}
+
                 <div class="card-body">
                   <div class="meta">
-                    <span class="date">{post.data.pubDate.toLocaleDateString('en-MY', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-                    {post.data.tags.slice(0,2).map(tag => <span class="tag">{tag}</span>)}
+                    <span class="date">{formatDate(post.data.pubDate)}</span>
+
+                    {tags.slice(0, 2).map((tag: string) => (
+                      <span class="tag">{tag}</span>
+                    ))}
                   </div>
+
                   <h2>{post.data.title}</h2>
                   <p>{post.data.description}</p>
                   <span class="read-more">Read article →</span>
                 </div>
               </a>
-            ))}
-          </div>
-        )}
-      </div>
-    </section>
+            );
+          })}
+        </div>
+      </section>
+    ))}
+  </div>
+</section>
   </main>
 </BaseLayout>
 
 <style>
+.blog-topics {
+  padding: 3rem 0 1rem;
+  background: #fbf8f4;
+}
+
+.topic-intro {
+  max-width: 700px;
+}
+
+.topic-intro h2,
+.topic-heading h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.topic-intro p {
+  color: var(--muted, #6b7280);
+  max-width: 620px;
+}
+
+.topic-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.topic-pills a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border, #e5e7e6);
+  background: #fff;
+  color: var(--accent, #5a7a6a);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.topic-pills a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.featured-article {
+  padding: 2rem 0 3rem;
+}
+
+.featured-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: 2rem;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--border, #e5e7e6);
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.featured-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+}
+
+.featured-content {
+  padding: 2rem;
+}
+
+.featured-content h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0.75rem 0;
+}
+
+.featured-content p {
+  color: var(--muted, #6b7280);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.topic-section {
+  padding: 3rem 0;
+  border-top: 1px solid var(--border, #e5e7e6);
+}
+
+.topic-heading {
+  margin-bottom: 1.5rem;
+}
+
+.blog-grid {
+  padding: 1rem 0 4rem;
+}
+
+/* Animation: same feel as treatments page */
+@keyframes blogHeroSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes blogFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.blog-hero .container {
+  animation: blogHeroSlideRight 0.2s ease-out both;
+}
+
+.topic-pills a,
+.featured-card,
+.topic-section {
+  animation: blogFadeIn 0.2s ease-out both;
+}
+
+.card {
+  animation: blogFadeIn 0.2s ease-out both;
+}
+
+.card:nth-child(1) {
+  animation-delay: 0.03s;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.06s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.09s;
+}
+
+.card:nth-child(n + 4) {
+  animation-delay: 0.12s;
+}
+
+@media (max-width: 760px) {
+  .featured-card {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-card img {
+    min-height: 220px;
+  }
+
+  .featured-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blog-hero .container,
+  .topic-pills a,
+  .featured-card,
+  .topic-section,
+  .card {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
   .blog-hero {
     padding: 5rem 0 3rem;
     border-bottom: 1px solid var(--border, #e5e7e6);
@@ -115,4 +433,137 @@ const sorted = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate
   .card p { font-size: 0.9rem; color: var(--muted, #6b7280); line-height: 1.6; margin: 0; flex: 1; }
   .read-more { font-size: 0.85rem; color: var(--accent, #5a7a6a); margin-top: auto; }
   .empty { color: var(--muted, #6b7280); font-style: italic; }
+
+  /* ============================================================
+   Blog page intro animation
+   Top blog hero: fade + slide right
+   Blog cards: fade only
+   Duration: 0.3s
+   ============================================================ */
+
+@keyframes blogHeroSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes blogCardFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Top blog section */
+.blog-hero .container {
+  animation: blogHeroSlideRight 0.3s ease-out both;
+}
+
+/* Blog article cards */
+.card {
+  animation: blogCardFadeIn 0.3s ease-out both;
+}
+
+.card:nth-child(1) {
+  animation-delay: 0.03s;
+}
+
+.card:nth-child(2) {
+  animation-delay: 0.06s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.09s;
+}
+
+.card:nth-child(n + 4) {
+  animation-delay: 0.12s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blog-hero .container,
+  .card {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+/* FORCE dark purple browse section */
+section.blog-topics {
+  background: linear-gradient(135deg, #2b1935 0%, #34203f 45%, #4a2b5a 100%) !important;
+  padding: 4rem 0 !important;
+  margin: 0 !important;
+  text-align: center !important;
+}
+
+section.blog-topics .container {
+  max-width: 980px !important;
+  margin: 0 auto !important;
+  padding: 0 1.5rem !important;
+}
+
+section.blog-topics .topic-intro {
+  max-width: 720px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+section.blog-topics .topic-intro .label {
+  color: rgba(255, 247, 237, 0.72) !important;
+}
+
+section.blog-topics .topic-intro h2 {
+  color: #fff7ed !important;
+  margin-bottom: 0.9rem !important;
+}
+
+section.blog-topics .topic-intro p {
+  color: rgba(255, 247, 237, 0.82) !important;
+  max-width: 620px !important;
+  margin: 0 auto !important;
+}
+
+section.blog-topics .topic-pills {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 0.85rem !important;
+  margin: 2rem auto 0 !important;
+  max-width: 860px !important;
+}
+
+section.blog-topics .topic-pills a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0.7rem 1.1rem !important;
+  border-radius: 999px !important;
+  border: 1px solid rgba(255, 247, 237, 0.24) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #fff7ed !important;
+  text-decoration: none !important;
+  font-size: 0.9rem !important;
+  backdrop-filter: blur(10px);
+}
+
+section.blog-topics .topic-pills a:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.16) !important;
+  border-color: rgba(255, 247, 237, 0.42) !important;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
+}
+
+/* spacing after browse section */
+.featured-article {
+  padding-top: 4rem !important;
+}
 </style>
