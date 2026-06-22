@@ -1,6 +1,6 @@
 ﻿---
 title: "Dark Eye Circle Treatment in Malaysia: Types, Causes & Options"
-description: "Dark eye circles have different causes â€” pigment, blood vessels, and shadows from volume loss. Learn what type you may have, why the cause matters, and the treatment options, in a clear guide for Malaysian patients."
+description: "Dark eye circles have different causes - pigment, blood vessels, and shadows from volume loss. Learn what type you may have, why the cause matters, and the treatment options, in a clear guide for Malaysian patients."
 pubDate: 2026-06-10
 updatedDate: 2026-06-10
 author: "Medical Team, Klinik Dr Diana"
@@ -21,7 +21,7 @@ draft: false
 
 ---
 
-## Executive Summary
+## What This Article Is About
 
 Dark eye circles are not all the same. They can come from extra pigment, visible blood vessels under thin skin, or shadows created when the area loses volume and becomes hollow. The safest first step is not to pick a laser or injection straight away, but to find out which type you have, because the right treatment depends entirely on the cause.
 
@@ -71,6 +71,18 @@ Because most people have a mix, treatment is often planned in steps, matching ea
 
 ## How Does Volume Loss Create a Shadow Under the Eyes?
 
+<figure class="blog-figure">
+  <img
+    class="blog-image"
+    src="/images/blog/dark-eye-circle-volume-loss-shadow.jpg"
+    alt="Illustration showing how under-eye hollowing creates a shadow that looks like dark circles"
+    loading="lazy"
+  />
+  <figcaption>
+    Hollowing under the eyes can create a shadow, making the area look darker even when there is no extra pigment.
+  </figcaption>
+</figure>
+
 A shadow forms when the under-eye area loses volume and becomes hollow, so light no longer falls evenly across it. As we age, the face slowly loses fat and the bone around the eye changes, which deepens the groove between the lower eyelid and the cheek, also known as the tear trough.
 
 When this happens, the hollow catches a shadow, a bit like how a dent in a wall looks darker than a flat surface. This kind of darkness is not caused by pigment at all, which is why creams and pigment lasers often do not help it.
@@ -90,6 +102,18 @@ Skin tone, skin thickness, age, genetics, sleep, sun exposure, allergies, and ru
 ## Can Dark Eye Circles Be Removed Completely?
 
 Usually not completely, but meaningful improvement is realistic for many people. Dark circles, especially the mixed type, are one of the harder aesthetic concerns to treat, and honest expectations matter.
+
+<figure class="blog-figure">
+  <img
+    class="blog-image"
+    src="/images/blog/dark-eye-circle-realistic-results.jpg"
+    alt="Realistic expectations for dark eye circle treatment results"
+    loading="lazy"
+  />
+  <figcaption>
+    Dark eye circle treatment can soften the appearance of under-eye darkness, but complete removal is not guaranteed because results depend on the cause and individual response.
+  </figcaption>
+</figure>
 
 The goal of treatment is to soften and improve the appearance, such as lightening pigment, strengthening thin skin, or reducing a shadow, rather than promising a perfect result.
 
@@ -124,6 +148,18 @@ The current evidence is promising with a favourable safety profile, although lar
 ## How Can a Succinic Acid Skin Booster Help?
 
 A succinic acid skin booster may help tired-looking, dehydrated under-eye skin by improving hydration and overall skin quality. One example made specifically for the eye area is Hyalual Electri, which combines non-cross-linked hyaluronic acid with succinic acid, also known as sodium succinate.
+
+<figure class="blog-figure">
+  <img
+    class="blog-image"
+    src="/images/blog/dark-eye-circle-succinic-acid-skin-booster.jpg"
+    alt="Succinic acid skin booster for tired-looking under-eye skin and hydration support"
+    loading="lazy"
+  />
+  <figcaption>
+    A succinic acid skin booster may help selected patients with tired-looking, dehydrated under-eye skin by supporting hydration and overall skin quality.
+  </figcaption>
+</figure>
 
 This type of booster is designed to hydrate the delicate under-eye skin, support microcirculation, and add an antioxidant effect, which can help the area look fresher and brighter.
 
@@ -165,6 +201,18 @@ Gentle, suitable settings, an experienced approach, and good sun protection all 
 
 *This table is for general understanding only. It does not promise results, and no treatment is guaranteed. The right option depends on individual assessment.*
 
+<figure class="blog-figure">
+  <img
+    class="blog-image"
+    src="/images/blog/dark-eye-circle-treatment-options-overview.jpg"
+    alt="Overview of treatment directions for pigment, vascular, structural and mixed dark eye circles"
+    loading="lazy"
+  />
+  <figcaption>
+    Treatment direction depends on the cause, which may include pigment, visible vessels, hollowing, thin skin or a mixed pattern.
+  </figcaption>
+</figure>
+
 ---
 
 ## What Are the Risks of Choosing the Wrong Treatment?
@@ -178,6 +226,18 @@ Choosing a clinic that assesses first and explains the limits honestly helps red
 ---
 
 ## Where Can Patients in Bangi, Kajang, Putrajaya, Senawang, or Seremban Get Assessed?
+
+<figure class="blog-figure">
+  <img
+    class="blog-image"
+    src="/images/blog/dark-eye-circle-assessment-klinik-dr-diana.jpg"
+    alt="Doctor-led under-eye assessment at Klinik Dr Diana for dark eye circle treatment planning"
+    loading="lazy"
+  />
+  <figcaption>
+    Klinik Dr Diana uses an assessment-first approach before recommending dark eye circle treatment options.
+  </figcaption>
+</figure>
 
 Patients in these areas can start with a proper under-eye assessment before choosing any treatment. The first step is identifying the type of dark circles you have, because that decides whether laser, regenerative injections, a skin booster, or a combination makes sense for you.
 

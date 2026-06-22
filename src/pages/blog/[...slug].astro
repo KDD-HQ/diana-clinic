@@ -23,16 +23,33 @@ const { Content } = await post.render();
       </nav>
 
       <header class="post-header">
-        <div class="post-meta">
-          <time>{post.data.pubDate.toLocaleDateString('en-MY', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
-          {post.data.tags.map(tag => <span class="tag">{tag}</span>)}
-        </div>
-        <h1>{post.data.title}</h1>
-        <p class="byline">By {post.data.author}</p>
-        {post.data.heroImage && (
-          <img src={post.data.heroImage} alt={post.data.title} class="hero-img" width="1200" height="630" />
-        )}
-      </header>
+  <div class="post-meta">
+    <time>
+      {post.data.pubDate.toLocaleDateString('en-MY', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      })}
+    </time>
+
+    {(post.data.tags ?? []).map((tag: string) => (
+      <span class="tag">{tag}</span>
+    ))}
+  </div>
+
+  <h1>{post.data.title}</h1>
+  <p class="byline">By {post.data.author}</p>
+
+  {post.data.heroImage && (
+    <img
+      src={post.data.heroImage}
+      alt={post.data.title}
+      class="hero-img"
+      width="1200"
+      height="630"
+    />
+  )}
+</header>
 
       <article class="post-body">
         <Content />
@@ -72,4 +89,28 @@ const { Content } = await post.render();
   .disclaimer { font-size: 0.8rem; color: var(--muted, #6b7280); line-height: 1.6; font-style: italic; }
   .cta { display: inline-block; padding: 0.85rem 1.5rem; background: var(--accent, #5a7a6a); color: white; text-decoration: none; border-radius: 6px; font-size: 0.9rem; }
   .back { font-size: 0.85rem; color: var(--accent, #5a7a6a); text-decoration: none; }
+.blog-figure {
+  margin: 2.5rem 0;
+}
+
+.blog-image {
+  width: 100%;
+  height: auto !important;
+  max-width: 100%;
+  max-height: 560px;
+  object-fit: contain !important;
+  display: block;
+  border-radius: 18px;
+  background: #f7f3ed;
+}
+
+.blog-figure figcaption {
+  max-width: 760px;
+  margin: 0.75rem auto 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--muted, #6b7280);
+  text-align: center;
+}
+
 </style>
