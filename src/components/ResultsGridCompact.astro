@@ -1,0 +1,167 @@
+---
+// ============================================================
+// ResultsGridCompact.astro
+// Compact before/after thumbnail grid for the homepage.
+// Shows 6–8 best results across all conditions with a
+// "View all results" link to /results.
+// Pure CSS — zero client JS.
+// ============================================================
+
+interface ResultItem {
+  src: string;
+  alt: string;
+  condition: string;
+}
+
+interface Props {
+  heading?: string;
+  items: ResultItem[];
+}
+
+const {
+  heading = "Real results from our patients",
+  items,
+} = Astro.props;
+---
+
+<section class="results-compact" aria-labelledby="results-compact-heading">
+  <div class="results-compact__inner">
+    <div class="results-compact__header">
+      <h2 id="results-compact-heading">{heading}</h2>
+      <p class="results-compact__subtitle">
+        Results vary depending on skin type, condition severity, and treatment adherence. 
+        All photos shown with written patient consent.
+      </p>
+    </div>
+
+    <div class="results-compact__grid">
+      {items.map((item) => (
+        <figure class="results-compact__card">
+          <img
+            src={item.src}
+            alt={item.alt}
+            loading="lazy"
+            width="400"
+            height="300"
+            decoding="async"
+          />
+          <figcaption>{item.condition}</figcaption>
+        </figure>
+      ))}
+    </div>
+
+    <div class="results-compact__cta">
+      <a href="/results" class="results-compact__link">
+        View all patient results →
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .results-compact {
+    padding: 4rem 1.5rem;
+    background: var(--color-bg-alt, #fafaf8);
+  }
+
+  .results-compact__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .results-compact__header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .results-compact__header h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--color-text-heading, #1a1a1a);
+    margin: 0 0 0.75rem;
+    letter-spacing: -0.01em;
+  }
+
+  .results-compact__subtitle {
+    font-size: 0.85rem;
+    color: var(--color-text-muted, #6b6b6b);
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  .results-compact__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+
+  .results-compact__card {
+    margin: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.2s ease;
+  }
+
+  .results-compact__card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .results-compact__card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .results-compact__card figcaption {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.8rem;
+    color: var(--color-text-muted, #6b6b6b);
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .results-compact__cta {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .results-compact__link {
+    display: inline-block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-accent, #2c6e5a);
+    text-decoration: none;
+    padding: 0.6rem 1.5rem;
+    border: 1.5px solid var(--color-accent, #2c6e5a);
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .results-compact__link:hover {
+    background: var(--color-accent, #2c6e5a);
+    color: #fff;
+  }
+
+  @media (max-width: 600px) {
+    .results-compact {
+      padding: 3rem 1rem;
+    }
+
+    .results-compact__header h2 {
+      font-size: 1.4rem;
+    }
+
+    .results-compact__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+
+    .results-compact__card img {
+      height: 150px;
+    }
+  }
+</style>

@@ -1,0 +1,103 @@
+---
+import ResultsLayout from '../../layouts/ResultsLayout.astro';
+
+const basePath = "/images/results/keratosis";
+
+const galleryItems = [
+  { src: `${basePath}/keratosis-result-01.jpg`, alt: "Before and after keratosis removal treatment at Klinik Dr Diana", caption: "Keratosis" },
+  { src: `${basePath}/keratosis-result-02.jpg`, alt: "Before and after keratosis removal treatment showing skin clearance", caption: "Keratosis" },
+  { src: `${basePath}/keratosis-result-03.jpg`, alt: "Before and after syringoma removal treatment at Klinik Dr Diana", caption: "Syringoma" },
+];
+
+const faqs = [
+  {
+    q: "How is keratosis removed?",
+    a: "Keratosis is typically removed using ablative methods such as CO2 laser, electrocautery, or cryotherapy depending on the type, size, and location. Dr Diana assesses each lesion individually to determine the most appropriate removal method with minimal scarring risk."
+  },
+  {
+    q: "Are these real before and after photos from your clinic?",
+    a: "Yes. Every photo on this page is from a real patient treated at Klinik Dr Diana. All photos are shown with written patient consent. We do not use stock images or digitally alter results."
+  },
+  {
+    q: "What is the difference between keratosis and syringoma?",
+    a: "Seborrheic keratosis is a common benign skin growth that appears as a waxy, raised lesion, often brown or black. Syringoma is a benign sweat duct tumour that typically appears as small, skin-coloured bumps around the eyes. Both are non-cancerous but can be removed for cosmetic reasons."
+  },
+  {
+    q: "Is there downtime after keratosis removal?",
+    a: "Downtime is minimal for most keratosis removals. The treated area may have mild redness and a small scab that heals within 5–10 days. Sun protection is essential during the healing period to prevent post-inflammatory pigmentation."
+  },
+  {
+    q: "Can keratosis or syringoma come back after removal?",
+    a: "Treated lesions typically do not recur in the same spot. However, new keratosis or syringoma lesions can develop in other areas over time as they are related to aging, genetics, and skin type. Periodic follow-up allows early treatment of any new lesions."
+  },
+];
+---
+
+<ResultsLayout
+  title="Keratosis & Syringoma Removal Results — Klinik Dr Diana"
+  description="Real before and after photos of keratosis and syringoma removal at Klinik Dr Diana, Bangi and Senawang. Results from CO2 laser and ablative treatments."
+  condition="Keratosis"
+  conditionBM="Keratosis"
+  slug="keratosis"
+  heroImage={galleryItems[0].src}
+  faqs={faqs}
+>
+
+  <header class="results-intro">
+    <h1>Keratosis and syringoma removal results</h1>
+    <p class="results-intro__answer">
+      These are real before and after photos from patients treated for keratosis and syringoma
+      at Klinik Dr Diana. Treatment method is selected based on lesion type, size, location,
+      and skin type, assessed individually by Dr Diana Abd Razak.
+    </p>
+    <p class="results-intro__note">
+      Rawatan keratosis dan syringoma di Klinik Dr Diana menggunakan kaedah yang disesuaikan
+      mengikut jenis, saiz, dan lokasi lesi kulit pesakit.
+    </p>
+  </header>
+
+  <section class="results-gallery" aria-label="Before and after keratosis and syringoma photos">
+    <div class="results-gallery__grid">
+      {galleryItems.map((item) => (
+        <figure class="results-gallery__item">
+          <img src={item.src} alt={item.alt} loading="lazy" width="500" height="375" decoding="async" />
+          <figcaption>{item.caption}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+
+  <section class="results-context" aria-label="About these results">
+    <h2>How were these results achieved?</h2>
+    <p>
+      Keratosis and syringoma removal at Klinik Dr Diana is performed using targeted ablative
+      methods. Dr Diana Abd Razak assesses each lesion to determine whether CO2 laser,
+      electrocautery, or other removal methods are most appropriate for the specific case.
+    </p>
+    <p>
+      The goal is complete removal with minimal scarring. Post-treatment care includes wound
+      care instructions and sun protection to ensure optimal healing and prevent
+      post-inflammatory hyperpigmentation.
+    </p>
+    <p>
+      Results vary depending on lesion type, size, depth, and individual healing response.
+      Most patients see full healing within 1–2 weeks after treatment.
+    </p>
+  </section>
+
+  <section class="results-faq" aria-label="Frequently asked questions">
+    <h2>Frequently asked questions about keratosis and syringoma removal</h2>
+    {faqs.map((faq) => (
+      <details class="results-faq__item">
+        <summary>{faq.q}</summary>
+        <p>{faq.a}</p>
+      </details>
+    ))}
+  </section>
+
+</ResultsLayout>
+
+<style>
+  .results-intro { margin-bottom: 3rem; }
+  .results-intro h1 { font-size: 2rem; font-weight: 600; color: var(--color-text-heading, #1a1a1a); margin: 0 0 1rem; letter-spacing: -0.01em; }
+  .results-intro__answer { font-size: 1rem; color: var(--color-text-body,

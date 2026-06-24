@@ -1,0 +1,295 @@
+---
+// ============================================================
+// src/pages/results/pigmentation.astro
+// URL: /results/pigmentation
+//
+// Dedicated results gallery for pigmentation & melasma.
+// Uses existing 9 processed B/A photos from the pigmentation
+// treatment page.
+//
+// Photo file structure:
+//   public/images/results/pigmentation/
+//     pigmentation-result-01.jpg
+//     pigmentation-result-02.jpg
+//     ... etc
+//
+// NOTE: Copy your existing processed photos from
+//   public/images/treatments/pigmentation/results/
+// into the new path above, OR update the src paths below
+// to point to the existing location.
+// ============================================================
+
+import ResultsLayout from '../../layouts/ResultsLayout.astro';
+import BeforeAfterGallery from '../../components/BeforeAfterGallery.astro';
+
+// ── Gallery items ────────────────────────────────────────────
+// Update these paths to match where your photos actually live.
+// If you keep them in the existing treatments folder, change
+// the base path accordingly.
+const basePath = "/images/treatments/pigmentation/results";
+
+const galleryItems = [
+  { src: `${basePath}/pigmentation-result-01.jpg`, alt: "Before and after pigmentation treatment showing melasma improvement on cheeks", caption: "Melasma" },
+  { src: `${basePath}/pigmentation-result-02.jpg`, alt: "Before and after pigmentation treatment showing solar lentigo removal", caption: "Solar Lentigo" },
+  { src: `${basePath}/pigmentation-result-03.jpg`, alt: "Before and after pigmentation treatment showing skin texture and pigmentation improvement", caption: "Pigmentation & Skin Texture" },
+  { src: `${basePath}/pigmentation-result-04.jpg`, alt: "Before and after pigmentation treatment showing melasma improvement", caption: "Melasma" },
+  { src: `${basePath}/pigmentation-result-05.jpg`, alt: "Before and after pigmentation treatment showing large pore and PIH improvement", caption: "Large Pores & PIH" },
+  { src: `${basePath}/pigmentation-result-06.jpg`, alt: "Before and after pigmentation treatment showing post-acne dark mark improvement", caption: "Post-Acne Dark Marks (PIH)" },
+  { src: `${basePath}/pigmentation-result-07.jpg`, alt: "Before and after pigmentation treatment showing age-related pigmentation improvement", caption: "Pigmentation & Aging Skin" },
+  { src: `${basePath}/pigmentation-result-08.jpg`, alt: "Before and after pigmentation treatment showing overall brightening improvement", caption: "Pigmentation & Brightening" },
+  { src: `${basePath}/pigmentation-result-09.jpg`, alt: "Before and after pigmentation treatment showing general pigmentation improvement", caption: "Pigmentation" },
+];
+
+// ── FAQs ─────────────────────────────────────────────────────
+const faqs = [
+  {
+    q: "How many sessions does pigmentation treatment take to see results?",
+    a: "Most patients begin to notice visible improvement after 2–4 sessions, depending on the type and depth of pigmentation. Superficial pigmentation like sunspots typically responds faster than deeper pigmentation like melasma, which may require 6–10 sessions with ongoing maintenance."
+  },
+  {
+    q: "Are these real before and after photos from your clinic?",
+    a: "Yes. Every photo on this page is from a real patient treated at Klinik Dr Diana. All photos are shown with written patient consent. We do not use stock images or digitally alter results."
+  },
+  {
+    q: "Why do results look different for each patient?",
+    a: "Pigmentation treatment outcomes depend on several factors including skin type (Fitzpatrick scale), the type and depth of pigmentation, sun exposure history, hormonal factors, and how closely the patient follows the aftercare and maintenance plan. This is why an in-person assessment is essential before starting treatment."
+  },
+  {
+    q: "Will my pigmentation come back after treatment?",
+    a: "Some types of pigmentation, particularly melasma, can recur because they are influenced by ongoing triggers like sun exposure and hormonal changes. A maintenance plan — including medical-grade sunscreen, topical agents, and periodic in-clinic sessions — helps sustain results long-term."
+  },
+  {
+    q: "What treatments were used to achieve these results?",
+    a: "Results shown on this page were achieved using various combinations of PICO laser, medical-grade chemical peels, prescription topical agents, and skin booster treatments. The specific protocol varies for each patient based on their skin assessment. Dr Diana designs an individualised treatment plan during the consultation."
+  },
+];
+---
+
+<ResultsLayout
+  title="Pigmentation Treatment Results — Klinik Dr Diana"
+  description="Real before and after photos of pigmentation and melasma treatment at Klinik Dr Diana, Bangi and Senawang. Results from PICO laser, peels, and combination therapy."
+  condition="Pigmentation"
+  conditionBM="Pigmentasi"
+  slug="pigmentation"
+  heroImage={galleryItems[0].src}
+  faqs={faqs}
+>
+
+  <!-- Intro -->
+  <header class="results-intro">
+    <h1>Pigmentation treatment results</h1>
+    <p class="results-intro__answer">
+      These are real before and after photos from patients treated for various types of pigmentation 
+      at Klinik Dr Diana, including melasma, solar lentigo, post-inflammatory hyperpigmentation (PIH), 
+      and age-related pigmentation. Treatment protocols are individualised based on pigmentation type, 
+      depth, and skin type.
+    </p>
+    <p class="results-intro__note">
+      Rawatan pigmentasi di Klinik Dr Diana merangkumi melasma, jeragat, PIH, dan pigmentasi berkaitan 
+      penuaan. Setiap pelan rawatan disesuaikan mengikut jenis dan kedalaman pigmentasi pesakit.
+    </p>
+  </header>
+
+  <!-- Gallery — full grid layout -->
+  <section class="results-gallery" aria-label="Before and after pigmentation photos">
+    <div class="results-gallery__grid">
+      {galleryItems.map((item) => (
+        <figure class="results-gallery__item">
+          <img
+            src={item.src}
+            alt={item.alt}
+            loading="lazy"
+            width="500"
+            height="375"
+            decoding="async"
+          />
+          <figcaption>{item.caption}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+
+  <!-- Clinical context -->
+  <section class="results-context" aria-label="About these results">
+    <h2>How were these results achieved?</h2>
+    <p>
+      Pigmentation treatment at Klinik Dr Diana uses a combination approach tailored to each patient's 
+      skin assessment. Dr Diana Abd Razak evaluates the pigmentation type, depth (epidermal vs dermal), 
+      skin type, and lifestyle factors before designing a treatment protocol.
+    </p>
+    <p>
+      Common treatment combinations used for the results shown on this page include PICO laser 
+      (for targeted pigment fragmentation), medical-grade chemical peels (for surface pigmentation 
+      and skin renewal), prescription topical agents (hydroquinone, retinoids, azelaic acid), 
+      and skin booster treatments for overall skin quality improvement.
+    </p>
+    <p>
+      Results vary depending on skin type, pigmentation severity, sun exposure habits, and adherence 
+      to the maintenance plan. Deeper pigmentation such as melasma typically requires more sessions 
+      and ongoing management compared to superficial sunspots.
+    </p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="results-faq" aria-label="Frequently asked questions">
+    <h2>Frequently asked questions about pigmentation results</h2>
+    {faqs.map((faq) => (
+      <details class="results-faq__item">
+        <summary>{faq.q}</summary>
+        <p>{faq.a}</p>
+      </details>
+    ))}
+  </section>
+
+</ResultsLayout>
+
+<style>
+  /* Intro */
+  .results-intro {
+    margin-bottom: 3rem;
+  }
+
+  .results-intro h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-text-heading, #1a1a1a);
+    margin: 0 0 1rem;
+    letter-spacing: -0.01em;
+  }
+
+  .results-intro__answer {
+    font-size: 1rem;
+    color: var(--color-text-body, #333);
+    line-height: 1.7;
+    max-width: 720px;
+    margin: 0 0 0.75rem;
+  }
+
+  .results-intro__note {
+    font-size: 0.85rem;
+    color: var(--color-text-muted, #6b6b6b);
+    line-height: 1.6;
+    font-style: italic;
+    max-width: 720px;
+    margin: 0;
+  }
+
+  /* Gallery grid */
+  .results-gallery {
+    margin-bottom: 3rem;
+  }
+
+  .results-gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+
+  .results-gallery__item {
+    margin: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+
+  .results-gallery__item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .results-gallery__item figcaption {
+    padding: 0.6rem 0.85rem;
+    font-size: 0.82rem;
+    color: var(--color-text-muted, #6b6b6b);
+    font-weight: 500;
+    text-align: center;
+  }
+
+  /* Clinical context */
+  .results-context {
+    margin-bottom: 3rem;
+  }
+
+  .results-context h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-text-heading, #1a1a1a);
+    margin: 0 0 1rem;
+  }
+
+  .results-context p {
+    font-size: 0.95rem;
+    color: var(--color-text-body, #333);
+    line-height: 1.7;
+    margin: 0 0 0.75rem;
+    max-width: 720px;
+  }
+
+  /* FAQ */
+  .results-faq {
+    margin-bottom: 2rem;
+  }
+
+  .results-faq h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-text-heading, #1a1a1a);
+    margin: 0 0 1.25rem;
+  }
+
+  .results-faq__item {
+    border-bottom: 1px solid var(--color-border, #e5e5e5);
+    padding: 1rem 0;
+  }
+
+  .results-faq__item:first-of-type {
+    border-top: 1px solid var(--color-border, #e5e5e5);
+  }
+
+  .results-faq__item summary {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-text-heading, #1a1a1a);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .results-faq__item summary::after {
+    content: "+";
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--color-text-muted, #6b6b6b);
+    transition: transform 0.2s ease;
+  }
+
+  .results-faq__item[open] summary::after {
+    content: "−";
+  }
+
+  .results-faq__item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .results-faq__item p {
+    font-size: 0.9rem;
+    color: var(--color-text-body, #333);
+    line-height: 1.7;
+    margin: 0.75rem 0 0;
+    max-width: 680px;
+  }
+
+  @media (max-width: 600px) {
+    .results-intro h1 {
+      font-size: 1.5rem;
+    }
+
+    .results-gallery__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

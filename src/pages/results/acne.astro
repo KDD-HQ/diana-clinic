@@ -1,0 +1,161 @@
+---
+// ============================================================
+// src/pages/results/acne.astro
+// URL: /results/acne
+//
+// TEMPLATE — Update photo paths once images are processed.
+//
+// Photo file structure:
+//   public/images/results/acne/
+//     acne-result-01.jpg
+//     acne-result-02.jpg
+//     ... etc
+// ============================================================
+
+import ResultsLayout from '../../layouts/ResultsLayout.astro';
+
+// ── Gallery items ────────────────────────────────────────────
+// UPDATE THESE once your photos are processed and placed in
+// public/images/results/acne/
+const basePath = "/images/results/acne";
+
+const galleryItems = [
+  { src: `${basePath}/acne-result-01.jpg`, alt: "Before and after acne treatment result at Klinik Dr Diana", caption: "Acne" },
+  { src: `${basePath}/acne-result-02.jpg`, alt: "Before and after acne treatment result showing skin clearance", caption: "Acne" },
+  { src: `${basePath}/acne-result-03.jpg`, alt: "Before and after acne treatment result showing inflammation reduction", caption: "Acne" },
+  { src: `${basePath}/acne-result-04.jpg`, alt: "Before and after acne treatment result at Klinik Dr Diana Bangi", caption: "Acne" },
+  { src: `${basePath}/acne-result-05.jpg`, alt: "Before and after acne treatment result showing overall improvement", caption: "Acne" },
+];
+
+// ── FAQs ─────────────────────────────────────────────────────
+const faqs = [
+  {
+    q: "How long does acne treatment take to show visible improvement?",
+    a: "Most patients begin to see noticeable improvement within 4–8 weeks of starting a medical acne treatment plan. However, the full results of a comprehensive acne treatment protocol typically become apparent after 3–6 months. Severe or cystic acne may take longer."
+  },
+  {
+    q: "Are these real before and after photos from your clinic?",
+    a: "Yes. Every photo on this page is from a real patient treated at Klinik Dr Diana. All photos are shown with written patient consent. We do not use stock images or digitally alter results."
+  },
+  {
+    q: "Will my acne come back after treatment?",
+    a: "Acne can recur, especially hormonal acne and acne triggered by lifestyle factors. A maintenance plan — including prescribed topical agents, consistent skincare, and periodic in-clinic sessions — helps prevent recurrence. Dr Diana discusses long-term maintenance during the treatment plan."
+  },
+  {
+    q: "What treatments were used to achieve these results?",
+    a: "Results shown on this page were achieved using individualised combinations of prescription oral and topical medications, medical-grade chemical peels, clinical facial extraction, LED blue light therapy, and in some cases fractional pico laser. The specific protocol depends on the patient's acne type, severity, and skin assessment."
+  },
+  {
+    q: "Is acne treatment suitable for all ages?",
+    a: "Yes, medical acne treatment can be tailored for teenagers and adults. The approach differs depending on age, acne type, and hormonal factors. Dr Diana assesses each patient individually to determine the most appropriate treatment plan."
+  },
+];
+---
+
+<ResultsLayout
+  title="Acne Treatment Results — Klinik Dr Diana"
+  description="Real before and after photos of acne treatment at Klinik Dr Diana, Bangi and Senawang. Medical acne treatment including prescription therapy, peels, and laser."
+  condition="Acne"
+  conditionBM="Jerawat"
+  slug="acne"
+  faqs={faqs}
+>
+
+  <!-- Intro -->
+  <header class="results-intro">
+    <h1>Acne treatment results</h1>
+    <p class="results-intro__answer">
+      These are real before and after photos from patients treated for acne at Klinik Dr Diana.
+      Treatment protocols are personalised based on acne type (comedonal, inflammatory, cystic, 
+      or hormonal), severity, and individual skin assessment by Dr Diana Abd Razak.
+    </p>
+    <p class="results-intro__note">
+      Rawatan jerawat di Klinik Dr Diana merangkumi jerawat jenis comedonal, radang, cystic, 
+      dan hormonal. Setiap rawatan disesuaikan mengikut penilaian kulit pesakit.
+    </p>
+  </header>
+
+  <!-- Gallery -->
+  <section class="results-gallery" aria-label="Before and after acne photos">
+    {galleryItems.length > 0 ? (
+      <div class="results-gallery__grid">
+        {galleryItems.map((item) => (
+          <figure class="results-gallery__item">
+            <img
+              src={item.src}
+              alt={item.alt}
+              loading="lazy"
+              width="500"
+              height="375"
+              decoding="async"
+            />
+            <figcaption>{item.caption}</figcaption>
+          </figure>
+        ))}
+      </div>
+    ) : (
+      <div class="results-gallery__placeholder">
+        <p>Acne treatment results photos are being prepared. Check back soon.</p>
+      </div>
+    )}
+  </section>
+
+  <!-- Clinical context -->
+  <section class="results-context" aria-label="About these results">
+    <h2>How were these acne results achieved?</h2>
+    <p>
+      Acne treatment at Klinik Dr Diana follows a structured medical approach. Dr Diana Abd Razak 
+      assesses each patient's acne type, severity, contributing factors (hormonal, dietary, skincare), 
+      and skin type before designing a treatment protocol.
+    </p>
+    <p>
+      Common treatment combinations include prescription oral and topical medications 
+      (antibiotics, retinoids, hormonal agents where indicated), medical-grade chemical peels 
+      (salicylic acid, glycolic acid), clinical facial extraction with sterile technique, 
+      LED blue light therapy, and in selected cases, fractional pico laser for acne and 
+      post-inflammatory marks.
+    </p>
+    <p>
+      Results vary depending on acne type, severity, skin type, and adherence to the treatment plan. 
+      Consistent follow-up and home skincare compliance are essential for sustained improvement.
+    </p>
+  </section>
+
+  <!-- FAQ -->
+  <section class="results-faq" aria-label="Frequently asked questions">
+    <h2>Frequently asked questions about acne treatment results</h2>
+    {faqs.map((faq) => (
+      <details class="results-faq__item">
+        <summary>{faq.q}</summary>
+        <p>{faq.a}</p>
+      </details>
+    ))}
+  </section>
+
+</ResultsLayout>
+
+<style>
+  .results-intro { margin-bottom: 3rem; }
+  .results-intro h1 { font-size: 2rem; font-weight: 600; color: var(--color-text-heading, #1a1a1a); margin: 0 0 1rem; letter-spacing: -0.01em; }
+  .results-intro__answer { font-size: 1rem; color: var(--color-text-body, #333); line-height: 1.7; max-width: 720px; margin: 0 0 0.75rem; }
+  .results-intro__note { font-size: 0.85rem; color: var(--color-text-muted, #6b6b6b); line-height: 1.6; font-style: italic; max-width: 720px; margin: 0; }
+  .results-gallery { margin-bottom: 3rem; }
+  .results-gallery__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+  .results-gallery__item { margin: 0; border-radius: 8px; overflow: hidden; background: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06); }
+  .results-gallery__item img { width: 100%; height: auto; display: block; }
+  .results-gallery__item figcaption { padding: 0.6rem 0.85rem; font-size: 0.82rem; color: var(--color-text-muted, #6b6b6b); font-weight: 500; text-align: center; }
+  .results-gallery__placeholder { padding: 3rem 1.5rem; text-align: center; background: var(--color-bg-alt, #fafaf8); border-radius: 8px; color: var(--color-text-muted, #6b6b6b); font-size: 0.9rem; }
+  .results-context { margin-bottom: 3rem; }
+  .results-context h2 { font-size: 1.3rem; font-weight: 600; color: var(--color-text-heading, #1a1a1a); margin: 0 0 1rem; }
+  .results-context p { font-size: 0.95rem; color: var(--color-text-body, #333); line-height: 1.7; margin: 0 0 0.75rem; max-width: 720px; }
+  .results-faq { margin-bottom: 2rem; }
+  .results-faq h2 { font-size: 1.3rem; font-weight: 600; color: var(--color-text-heading, #1a1a1a); margin: 0 0 1.25rem; }
+  .results-faq__item { border-bottom: 1px solid var(--color-border, #e5e5e5); padding: 1rem 0; }
+  .results-faq__item:first-of-type { border-top: 1px solid var(--color-border, #e5e5e5); }
+  .results-faq__item summary { font-size: 0.95rem; font-weight: 500; color: var(--color-text-heading, #1a1a1a); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  .results-faq__item summary::after { content: "+"; font-size: 1.2rem; font-weight: 300; color: var(--color-text-muted, #6b6b6b); }
+  .results-faq__item[open] summary::after { content: "−"; }
+  .results-faq__item summary::-webkit-details-marker { display: none; }
+  .results-faq__item p { font-size: 0.9rem; color: var(--color-text-body, #333); line-height: 1.7; margin: 0.75rem 0 0; max-width: 680px; }
+  @media (max-width: 600px) { .results-intro h1 { font-size: 1.5rem; } .results-gallery__grid { grid-template-columns: 1fr; } }
+</style>

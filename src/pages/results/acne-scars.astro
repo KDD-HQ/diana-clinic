@@ -1,0 +1,129 @@
+---
+import ResultsLayout from '../../layouts/ResultsLayout.astro';
+
+const basePath = "/images/results/acne-scars";
+
+const galleryItems = [
+  { src: `${basePath}/acne-scar-result-01.jpg`, alt: "Before and after acne scar treatment result at Klinik Dr Diana", caption: "Acne Scars" },
+  { src: `${basePath}/acne-scar-result-02.jpg`, alt: "Before and after acne scar treatment showing texture improvement", caption: "Acne Scars" },
+  { src: `${basePath}/acne-scar-result-03.jpg`, alt: "Before and after acne scar treatment showing rolling scar improvement", caption: "Acne Scars" },
+  { src: `${basePath}/acne-scar-result-04.jpg`, alt: "Before and after acne scar treatment at Klinik Dr Diana Bangi", caption: "Acne Scars" },
+  { src: `${basePath}/acne-scar-result-05.jpg`, alt: "Before and after acne scar treatment showing skin resurfacing result", caption: "Acne Scars" },
+  { src: `${basePath}/acne-scar-result-06.jpg`, alt: "Before and after acne scar treatment showing boxcar scar improvement", caption: "Acne Scars" },
+  { src: `${basePath}/acne-scar-result-07.jpg`, alt: "Before and after acne scar treatment showing overall scar reduction", caption: "Acne Scars" },
+  { src: `${basePath}/acne-scar-result-08.jpg`, alt: "Before and after acne scar treatment showing combined therapy result", caption: "Acne Scars" },
+];
+
+const faqs = [
+  {
+    q: "How many sessions does acne scar treatment take?",
+    a: "Most patients require 3–6 sessions depending on scar type and severity. Deep ice pick and boxcar scars typically need more sessions than shallow rolling scars. Dr Diana designs a treatment timeline during your consultation based on individual scar assessment."
+  },
+  {
+    q: "Are these real before and after photos from your clinic?",
+    a: "Yes. Every photo on this page is from a real patient treated at Klinik Dr Diana. All photos are shown with written patient consent. We do not use stock images or digitally alter results."
+  },
+  {
+    q: "Can all types of acne scars be treated?",
+    a: "Most acne scar types can be significantly improved with the right combination of treatments. Ice pick, boxcar, rolling, and atrophic scars each respond to different approaches. Some scars may not be fully eliminated, but visible improvement is achievable for most patients with a structured treatment plan."
+  },
+  {
+    q: "What treatments were used to achieve these results?",
+    a: "Results shown were achieved using individualised combinations of fractional CO2 laser, PICO laser, subcision, TCA CROSS, microneedling, and skin booster treatments. The specific protocol varies for each patient based on scar type, depth, and skin assessment by Dr Diana."
+  },
+  {
+    q: "Is there downtime after acne scar treatment?",
+    a: "Downtime varies by treatment type. Fractional CO2 laser typically requires 5–7 days of social downtime with redness and peeling. PICO laser has minimal downtime of 1–2 days. Subcision may cause bruising for 3–5 days. Dr Diana will explain the expected recovery for your specific treatment plan."
+  },
+];
+---
+
+<ResultsLayout
+  title="Acne Scar Treatment Results — Klinik Dr Diana"
+  description="Real before and after photos of acne scar treatment at Klinik Dr Diana, Bangi and Senawang. Results from fractional CO2, PICO laser, subcision, and combination therapy."
+  condition="Acne Scars"
+  conditionBM="Parut Jerawat"
+  slug="acne-scars"
+  heroImage={galleryItems[0].src}
+  faqs={faqs}
+>
+
+  <header class="results-intro">
+    <h1>Acne scar treatment results</h1>
+    <p class="results-intro__answer">
+      These are real before and after photos from patients treated for acne scars at Klinik Dr Diana.
+      Treatment protocols are personalised based on scar type (ice pick, boxcar, rolling, atrophic),
+      scar depth, and individual skin assessment by Dr Diana Abd Razak.
+    </p>
+    <p class="results-intro__note">
+      Rawatan parut jerawat di Klinik Dr Diana merangkumi parut jenis ice pick, boxcar, rolling,
+      dan atrophic. Setiap pelan rawatan disesuaikan mengikut penilaian kulit pesakit.
+    </p>
+  </header>
+
+  <section class="results-gallery" aria-label="Before and after acne scar photos">
+    <div class="results-gallery__grid">
+      {galleryItems.map((item) => (
+        <figure class="results-gallery__item">
+          <img src={item.src} alt={item.alt} loading="lazy" width="500" height="375" decoding="async" />
+          <figcaption>{item.caption}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+
+  <section class="results-context" aria-label="About these results">
+    <h2>How were these acne scar results achieved?</h2>
+    <p>
+      Acne scar treatment at Klinik Dr Diana uses a combination approach. Dr Diana Abd Razak
+      assesses each patient's scar types, depth, skin type, and active acne status before
+      designing a treatment protocol. Active acne must be controlled before scar treatment begins.
+    </p>
+    <p>
+      Common treatment combinations include fractional CO2 laser (for deep resurfacing),
+      PICO laser (for texture and pigmentation), subcision (for releasing tethered scars),
+      TCA CROSS (for deep ice pick scars), microneedling, and skin booster treatments
+      for overall skin quality improvement.
+    </p>
+    <p>
+      Results vary depending on scar type, severity, skin type, and adherence to the treatment plan.
+      Deep scars may require multiple sessions across several months for optimal improvement.
+    </p>
+  </section>
+
+  <section class="results-faq" aria-label="Frequently asked questions">
+    <h2>Frequently asked questions about acne scar results</h2>
+    {faqs.map((faq) => (
+      <details class="results-faq__item">
+        <summary>{faq.q}</summary>
+        <p>{faq.a}</p>
+      </details>
+    ))}
+  </section>
+
+</ResultsLayout>
+
+<style>
+  .results-intro { margin-bottom: 3rem; }
+  .results-intro h1 { font-size: 2rem; font-weight: 600; color: var(--color-text-heading, #1a1a1a); margin: 0 0 1rem; letter-spacing: -0.01em; }
+  .results-intro__answer { font-size: 1rem; color: var(--color-text-body, #333); line-height: 1.7; max-width: 720px; margin: 0 0 0.75rem; }
+  .results-intro__note { font-size: 0.85rem; color: var(--color-text-muted, #6b6b6b); line-height: 1.6; font-style: italic; max-width: 720px; margin: 0; }
+  .results-gallery { margin-bottom: 3rem; }
+  .results-gallery__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+  .results-gallery__item { margin: 0; border-radius: 8px; overflow: hidden; background: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06); }
+  .results-gallery__item img { width: 100%; height: auto; display: block; }
+  .results-gallery__item figcaption { padding: 0.6rem 0.85rem; font-size: 0.82rem; color: var(--color-text-muted, #6b6b6b); font-weight: 500; text-align: center; }
+  .results-context { margin-bottom: 3rem; }
+  .results-context h2 { font-size: 1.3rem; font-weight: 600; color: var(--color-text-heading, #1a1a1a); margin: 0 0 1rem; }
+  .results-context p { font-size: 0.95rem; color: var(--color-text-body, #333); line-height: 1.7; margin: 0 0 0.75rem; max-width: 720px; }
+  .results-faq { margin-bottom: 2rem; }
+  .results-faq h2 { font-size: 1.3rem; font-weight: 600; color: var(--color-text-heading, #1a1a1a); margin: 0 0 1.25rem; }
+  .results-faq__item { border-bottom: 1px solid var(--color-border, #e5e5e5); padding: 1rem 0; }
+  .results-faq__item:first-of-type { border-top: 1px solid var(--color-border, #e5e5e5); }
+  .results-faq__item summary { font-size: 0.95rem; font-weight: 500; color: var(--color-text-heading, #1a1a1a); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  .results-faq__item summary::after { content: "+"; font-size: 1.2rem; font-weight: 300; color: var(--color-text-muted, #6b6b6b); }
+  .results-faq__item[open] summary::after { content: "−"; }
+  .results-faq__item summary::-webkit-details-marker { display: none; }
+  .results-faq__item p { font-size: 0.9rem; color: var(--color-text-body, #333); line-height: 1.7; margin: 0.75rem 0 0; max-width: 680px; }
+  @media (max-width: 600px) { .results-intro h1 { font-size: 1.5rem; } .results-gallery__grid { grid-template-columns: 1fr; } }
+</style>

@@ -1,0 +1,365 @@
+---
+// ============================================================
+// src/pages/results/index.astro
+// Results hub — lists all condition galleries
+// URL: /results
+// ============================================================
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const siteUrl = 'https://drdianaclinic.com';
+
+// Define your condition galleries here.
+// Add new conditions as you build them.
+const conditions = [
+  {
+    name: "Pigmentation & Melasma",
+    nameBM: "Pigmentasi & Melasma",
+    slug: "pigmentation",
+    description: "Before and after results from PICO laser, chemical peels, and targeted pigmentation treatments.",
+    thumbnail: "/images/treatments/pigmentation/results/pigmentation-result-01.jpg",
+    count: 9,
+  },
+  {
+    name: "Acne",
+    nameBM: "Jerawat",
+    slug: "acne",
+    description: "Before and after results from medical acne treatment including prescription therapy, chemical peels, and laser.",
+    thumbnail: "/images/results/acne/acne-result-01.jpg",
+    count: 5,
+  },
+  {
+    name: "Acne Scars",
+    nameBM: "Parut Jerawat",
+    slug: "acne-scars",
+    description: "Before and after results from fractional CO2, PICO laser, subcision, and combination scar treatments.",
+    thumbnail: "/images/results/acne-scars/acne-scar-result-01.jpg",
+    count: 8,
+  },
+  {
+    name: "Keratosis",
+    nameBM: "Keratosis",
+    slug: "keratosis",
+    description: "Before and after results from keratosis removal treatments.",
+    thumbnail: "/images/results/keratosis/keratosis-result-01.jpg",
+    count: 3,
+  },
+];
+
+// Filter to only show conditions with photos ready
+const liveConditions = conditions.filter(c => c.count > 0);
+const comingSoon = conditions.filter(c => c.count === 0);
+
+const title = "Treatment Results — Klinik Dr Diana";
+const description = "Real before and after photos from patients at Klinik Dr Diana. Results for acne, pigmentation, acne scars, and more.";
+
+// JSON-LD
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl },
+    { "@type": "ListItem", "position": 2, "name": "Results", "item": `${siteUrl}/results` },
+  ]
+};
+
+const collectionPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": title,
+  "description": description,
+  "url": `${siteUrl}/results`,
+  "publisher": {
+    "@type": "MedicalBusiness",
+    "name": "Klinik Dr Diana",
+    "url": siteUrl
+  }
+};
+---
+
+<BaseLayout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(collectionPageSchema)} slot="head" />
+  <link rel="canonical" href={`${siteUrl}/results`} slot="head" />
+  <meta property="og:title" content={title} slot="head" />
+  <meta property="og:description" content={description} slot="head" />
+  <meta property="og:url" content={`${siteUrl}/results`} slot="head" />
+
+  <main class="results-hub">
+    <!-- Breadcrumb -->
+    <nav class="results-hub__breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li aria-current="page">Results</li>
+      </ol>
+    </nav>
+
+    <header class="results-hub__header">
+      <h1>Treatment results from our patients</h1>
+      <p>
+        Real before and after photos from patients treated at Klinik Dr Diana, 
+        Bandar Baru Bangi and Senawang. All photos are shown with written patient consent. 
+        Results vary depending on skin type, condition severity, and treatment adherence.
+      </p>
+    </header>
+
+    <!-- Live galleries -->
+    {liveConditions.length > 0 && (
+      <section class="results-hub__grid" aria-label="Condition galleries">
+        {liveConditions.map((condition) => (
+          <a href={`/results/${condition.slug}`} class="results-hub__card">
+            <div class="results-hub__card-image">
+              <img
+                src={condition.thumbnail}
+                alt={`Before and after ${condition.name.toLowerCase()} treatment results`}
+                loading="lazy"
+                width="600"
+                height="400"
+                decoding="async"
+              />
+            </div>
+            <div class="results-hub__card-body">
+              <h2>{condition.name}</h2>
+              {condition.nameBM && (
+                <span class="results-hub__card-bm">{condition.nameBM}</span>
+              )}
+              <p>{condition.description}</p>
+              <span class="results-hub__card-count">{condition.count} photos →</span>
+            </div>
+          </a>
+        ))}
+      </section>
+    )}
+
+    <!-- Coming soon -->
+    {comingSoon.length > 0 && (
+      <section class="results-hub__coming" aria-label="Coming soon">
+        <h2>More results coming soon</h2>
+        <div class="results-hub__coming-list">
+          {comingSoon.map((condition) => (
+            <div class="results-hub__coming-item">
+              <span class="results-hub__coming-name">{condition.name}</span>
+              {condition.nameBM && condition.nameBM !== condition.name && (
+                <span class="results-hub__coming-bm">({condition.nameBM})</span>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- CTA -->
+    <section class="results-hub__cta" aria-label="Book consultation">
+      <h2>Want to see what's possible for your skin?</h2>
+      <p>Every treatment journey begins with an honest assessment from our doctors.</p>
+      <a
+        href="https://wa.me/60183902910?text=Hi%2C%20I%20saw%20your%20results%20page%20and%20would%20like%20to%20book%20a%20consultation."
+        class="results-hub__cta-btn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Book a Consultation
+      </a>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .results-hub {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  /* Breadcrumb */
+  .results-hub__breadcrumb ol {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+    display: flex;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: var(--color-text-muted, #6b6b6b);
+  }
+
+  .results-hub__breadcrumb li:not(:last-child)::after {
+    content: "›";
+    margin-left: 0.4rem;
+  }
+
+  .results-hub__breadcrumb a {
+    color: var(--color-text-muted, #6b6b6b);
+    text-decoration: none;
+  }
+
+  .results-hub__breadcrumb a:hover {
+    color: var(--color-accent, #2c6e5a);
+  }
+
+  /* Header */
+  .results-hub__header {
+    margin-bottom: 3rem;
+  }
+
+  .results-hub__header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-text-heading, #1a1a1a);
+    margin: 0 0 1rem;
+    letter-spacing: -0.01em;
+  }
+
+  .results-hub__header p {
+    font-size: 0.95rem;
+    color: var(--color-text-body, #333);
+    max-width: 640px;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* Grid */
+  .results-hub__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .results-hub__card {
+    text-decoration: none;
+    color: inherit;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+
+  .results-hub__card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .results-hub__card-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .results-hub__card-body {
+    padding: 1rem 1.25rem 1.25rem;
+  }
+
+  .results-hub__card-body h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-text-heading, #1a1a1a);
+    margin: 0 0 0.15rem;
+  }
+
+  .results-hub__card-bm {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--color-text-muted, #6b6b6b);
+    margin-bottom: 0.5rem;
+  }
+
+  .results-hub__card-body p {
+    font-size: 0.85rem;
+    color: var(--color-text-body, #333);
+    line-height: 1.5;
+    margin: 0 0 0.75rem;
+  }
+
+  .results-hub__card-count {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-accent, #2c6e5a);
+  }
+
+  /* Coming soon */
+  .results-hub__coming {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background: var(--color-bg-alt, #fafaf8);
+    border-radius: 10px;
+  }
+
+  .results-hub__coming h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-heading, #1a1a1a);
+    margin: 0 0 1rem;
+  }
+
+  .results-hub__coming-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .results-hub__coming-item {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.85rem;
+    background: #fff;
+    border-radius: 20px;
+    color: var(--color-text-body, #333);
+  }
+
+  .results-hub__coming-bm {
+    color: var(--color-text-muted, #6b6b6b);
+    font-size: 0.8rem;
+  }
+
+  /* CTA */
+  .results-hub__cta {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background: var(--color-bg-alt, #fafaf8);
+    border-radius: 12px;
+  }
+
+  .results-hub__cta h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--color-text-heading, #1a1a1a);
+    margin: 0 0 0.5rem;
+  }
+
+  .results-hub__cta p {
+    font-size: 0.95rem;
+    color: var(--color-text-body, #333);
+    margin: 0 0 1.5rem;
+  }
+
+  .results-hub__cta-btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    background: var(--color-accent, #2c6e5a);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+  }
+
+  .results-hub__cta-btn:hover {
+    background: var(--color-accent-dark, #245a49);
+  }
+
+  @media (max-width: 600px) {
+    .results-hub {
+      padding: 1.5rem 1rem 3rem;
+    }
+
+    .results-hub__header h1 {
+      font-size: 1.5rem;
+    }
+
+    .results-hub__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
