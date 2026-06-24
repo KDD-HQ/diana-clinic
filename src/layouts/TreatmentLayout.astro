@@ -7,7 +7,7 @@
 // ============================================================
 
 import BaseLayout from './BaseLayout.astro';
-import type { CollectionEntry } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 
 interface Props {
   treatment: CollectionEntry<'treatments'>;
@@ -22,6 +22,23 @@ type FAQItem = {
 };
 
 const faq = (data.faq ?? []) as FAQItem[];
+const allBlogPosts = await getCollection('blog', ({ data }) => !data.draft);
+
+type BlogPost = (typeof allBlogPosts)[number];
+
+const relatedBlogSlugs =
+  ((data as { relatedBlogPosts?: string[] }).relatedBlogPosts ?? []);
+
+const relatedBlogs = relatedBlogSlugs
+  .map((blogSlug) => allBlogPosts.find((post) => post.slug === blogSlug))
+  .filter((post): post is BlogPost => Boolean(post));
+
+const formatBlogDate = (date: Date) =>
+  date.toLocaleDateString('en-MY', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
 
 // ── Site config ────────────────────────────────────────────
 const SITE = 'https://www.drdianaclinic.com';
@@ -251,7 +268,48 @@ const physicianSchema = {
     </div>
   </>
 )}
+<!-- Related blog posts -->
+{relatedBlogs.length > 0 && (
+  <section class="tx-related-blogs" aria-labelledby="related-reading-title">
+    <p class="tx-section-label">Further reading</p>
 
+    <h2 id="related-reading-title">
+      Related articles you may want to read
+    </h2>
+
+    <p class="tx-related-intro">
+      Learn more about the causes, treatment options, safety notes and realistic expectations before choosing a treatment plan.
+    </p>
+
+    <div class="tx-related-blog-grid">
+      {relatedBlogs.map((blog: BlogPost) => (
+        <a href={`/blog/${blog.slug}`} class="tx-related-blog-card">
+          {blog.data.heroImage && (
+            <img
+              src={blog.data.heroImage}
+              alt={blog.data.title}
+              loading="lazy"
+              width="800"
+              height="450"
+            />
+          )}
+
+          <div class="tx-related-blog-body">
+            <p class="tx-related-blog-date">
+              {formatBlogDate(blog.data.pubDate)}
+            </p>
+
+            <h3>{blog.data.title}</h3>
+
+            <p>{blog.data.description}</p>
+
+            <span>Read article →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+)}
       <!-- Author / E-E-A-T box -->
       <div class="tx-author">
         <h3>About the clinic</h3>
@@ -573,7 +631,121 @@ const physicianSchema = {
     margin-top: var(--space-1);
     color: var(--color-ink);
   }
+/* Related blog posts */
+.tx-related-blogs {
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-layer);
+}
 
+.tx-section-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-anchor-soft);
+  font-weight: 500;
+  margin-bottom: var(--space-1);
+}
+
+.tx-related-blogs h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.2;
+  color: var(--color-anchor);
+  margin: 0 0 var(--space-1);
+}
+
+.tx-related-intro {
+  color: var(--color-ink);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: var(--space-3);
+}
+
+.tx-related-blog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2);
+}
+
+.tx-related-blog-card {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: var(--space-2);
+  align-items: stretch;
+  background: #fff;
+  border: 1px solid var(--color-layer);
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none !important;
+  color: inherit;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.tx-related-blog-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-anchor-soft);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+.tx-related-blog-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 150px;
+  object-fit: cover;
+  display: block;
+  background: var(--color-surface-alt);
+}
+
+.tx-related-blog-body {
+  padding: var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.tx-related-blog-date {
+  font-size: 0.75rem;
+  color: var(--color-anchor-soft);
+  margin: 0;
+}
+
+.tx-related-blog-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  line-height: 1.35;
+  color: var(--color-anchor);
+  margin: 0;
+}
+
+.tx-related-blog-body p {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-ink);
+  margin: 0;
+}
+
+.tx-related-blog-body span {
+  margin-top: auto;
+  font-size: 0.85rem;
+  color: var(--color-anchor);
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .tx-related-blog-card {
+    grid-template-columns: 1fr;
+  }
+
+  .tx-related-blog-card img {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
   /* Author / E-E-A-T box */
   .tx-author {
     margin-top: var(--space-5);
@@ -588,4 +760,5 @@ const physicianSchema = {
     color: var(--color-ink);
     margin-bottom: var(--space-1);
   }
+  
 </style>
