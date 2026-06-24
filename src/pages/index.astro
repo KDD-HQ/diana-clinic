@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ResultsGridCompact from '../components/ResultsGridCompact.astro';
 
 const site = Astro.site?.toString().replace(/\/$/, '') ?? '';
 
@@ -572,6 +573,18 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
     </div>
   </section>
 
+  <!-- Results Grid -->
+  <ResultsGridCompact
+    heading="Real results from our patients"
+    items={[
+      { src: "/images/treatments/pigmentation/results/pigmentation-result-01.jpg", alt: "Before and after melasma treatment result", condition: "Melasma" },
+      { src: "/images/results/acne/acne-result-01.jpg", alt: "Before and after acne treatment result", condition: "Acne" },
+      { src: "/images/results/acne-scars/acne-scar-result-01.jpg", alt: "Before and after acne scar treatment result", condition: "Acne Scars" },
+      { src: "/images/treatments/pigmentation/results/pigmentation-result-04.jpg", alt: "Before and after pigmentation treatment result", condition: "Pigmentation" },
+      { src: "/images/results/keratosis/keratosis-result-01.jpg", alt: "Before and after keratosis removal result", condition: "Keratosis" },
+      { src: "/images/results/acne/acne-result-03.jpg", alt: "Before and after acne treatment showing improvement", condition: "Acne" },
+    ]}
+  />
   <!-- FAQ -->
   <section id="faq" class="faq">
     <div class="container narrow">
