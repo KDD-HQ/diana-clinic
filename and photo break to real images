@@ -1,0 +1,55 @@
+warning: in the working copy of 'src/pages/index.astro', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/src/pages/index.astro b/src/pages/index.astro[m
+[1mindex 388175a..cbaf321 100644[m
+[1m--- a/src/pages/index.astro[m
+[1m+++ b/src/pages/index.astro[m
+[36m@@ -52,35 +52,35 @@[m [mconst concerns = [[m
+     title: 'Pigmentation & Melasma',[m
+     short: 'Melasma · dark patches · uneven tone',[m
+     href: '/blog/pigmentation-dark-patches-guide/',[m
+[31m-    img: '/images/hero/hero-treatment-room-seremban.jpg'[m
+[32m+[m[32m    img: '/images/concerns/pigmentation.jpg'[m
+   },[m
+   {[m
+     id: 'acne',[m
+     title: 'Acne',[m
+     short: 'Active breakouts · recurring acne',[m
+     href: '/treatments/acne',[m
+[31m-    img: '/images/hero/hero-treatment-room-seremban.jpg'[m
+[32m+[m[32m    img: '/images/concerns/acne.jpg'[m
+   },[m
+   {[m
+     id: 'acne-scars',[m
+     title: 'Acne Scars',[m
+     short: 'Texture · depth · tethered scars',[m
+     href: '/treatments/deep-scar-treatment',[m
+[31m-    img: '/images/hero/hero-treatment-room-seremban.jpg'[m
+[32m+[m[32m    img: '/images/concerns/acne-scars.jpg'[m
+   },[m
+   {[m
+     id: 'aging-skin',[m
+     title: 'Aging Skin',[m
+     short: 'Lines · laxity · tone · firmness',[m
+     href: '#how',[m
+[31m-    img: '/images/hero/hero-treatment-room-seremban.jpg'[m
+[32m+[m[32m    img: '/images/concerns/aging-skin.jpg'[m
+   },[m
+   {[m
+     id: 'skin-booster',[m
+     title: 'Skin Booster & Glow',[m
+     short: 'Hydration · radiance · texture',[m
+     href: '/blog/skin-booster-what-is-skin-booster/',[m
+[31m-    img: '/images/hero/hero-treatment-room-seremban.jpg'[m
+[32m+[m[32m    img: '/images/concerns/skin-booster.jpg'[m
+   }[m
+ ];[m
+ [m
+[36m@@ -349,7 +349,7 @@[m [mconst mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';[m
+   <!-- ============================== -->[m
+   <div class="photo-break">[m
+     <img[m
+[31m-      src="/images/hero/hero-treatment-room-seremban.jpg"[m
+[32m+[m[32m      src="/images/hero/photo-break-consultation.jpg"[m
+       alt="Doctor consulting with patient at Klinik Dr Diana."[m
+       width="1200"[m
+       height="600"[m
