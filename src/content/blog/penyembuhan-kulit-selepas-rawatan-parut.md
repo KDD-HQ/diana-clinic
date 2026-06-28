@@ -6,7 +6,7 @@ updatedDate: 2026-06-26
 author: "Dr Effendy, Doktor Estetik Perubatan, Klinik Dr Diana"
 lang: "ms"
 tags: ["parut jerawat", "rawatan parut", "rawatan laser", "penyembuhan kulit", "TCA CROSS", "microneedling"]
-heroImage: "/images/blog/penyembuhan-kulit-selepas-rawatan-parut.jpg"
+heroImage: "/images/blog/penyembuhan-kulit-selepas-rawatan-parut.png"
 draft: false
 ---
 

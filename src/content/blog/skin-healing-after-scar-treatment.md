@@ -6,7 +6,7 @@ updatedDate: 2026-06-26
 author: "Dr Effendy, Medical Aesthetic Doctor, Klinik Dr Diana"
 lang: "en"
 tags: ["acne scars", "scar treatment", "laser treatment", "skin healing", "TCA CROSS", "microneedling", "parut jerawat"]
-heroImage: "/images/blog/skin-healing-after-scar-treatment.jpg"
+heroImage: "/images/blog/skin-healing-after-scar-treatment.png"
 draft: false
 ---
 

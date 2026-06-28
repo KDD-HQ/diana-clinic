@@ -6,7 +6,7 @@ updatedDate: 2026-06-26
 author: "Dr Effendy, Medical Aesthetic Doctor, Klinik Dr Diana"
 lang: "en"
 tags: ["CO2 laser", "laser aftercare", "acne scars", "PIH", "skin healing", "post-laser care", "parut jerawat"]
-heroImage: "/images/blog/co2-laser-aftercare-guide.jpg"
+heroImage: "/images/blog/co2-laser-aftercare-guide.png"
 draft: false
 ---
 
