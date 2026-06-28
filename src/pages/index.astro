@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ResultsGridCompact from '../components/ResultsGridCompact.astro';
 
 const site = Astro.site?.toString().replace(/\/$/, '') ?? '';
 
@@ -17,13 +16,9 @@ const branches = [
     lat: 2.7015376,
     lng: 101.9807122,
     placeId: 'ChIJD8fhHinhzTERPVTvF7e8VRE',
-    hours: [
-      'Mo-Fr 09:30-18:00',
-      'Sa 10:00-18:00'
-    ],
+    hours: ['Mo-Fr 09:30-18:00', 'Sa 10:00-18:00'],
     hoursReadable: 'Mon–Fri 9:30am – 6:00pm · Sat 10:00am – 6:00pm · Sun closed',
-    waMessage:
-      "Hi Diana Clinic, I'd like to book a Clinical Assessment at the Seremban branch, and my concern is..."
+    waMessage: "Hi Diana Clinic, I'd like to book a Clinical Assessment at the Seremban branch, and my concern is..."
   },
   {
     id: 'bangi',
@@ -36,14 +31,9 @@ const branches = [
     lat: 2.9617989,
     lng: 101.7529975,
     placeId: 'ChIJ23411NnLzTERaDnTAJXyTVA',
-    hours: [
-      'Mo 09:00-17:30',
-      'Tu 09:00-14:00',
-      'Th-Su 09:00-17:30'
-    ],
+    hours: ['Mo 09:00-17:30', 'Tu 09:00-14:00', 'Th-Su 09:00-17:30'],
     hoursReadable: 'Mon 9:00am – 5:30pm · Tue 9:00am – 2:00pm · Wed closed · Thu–Sun 9:00am – 5:30pm',
-    waMessage:
-      "Hi Diana Clinic, I'd like to book a Clinical Assessment at the Bangi branch, and my concern is..."
+    waMessage: "Hi Diana Clinic, I'd like to book a Clinical Assessment at the Bangi branch, and my concern is..."
   }
 ];
 
@@ -51,161 +41,76 @@ const waBase = 'https://wa.me/60183902910';
 const waGeneric = `${waBase}?text=${encodeURIComponent(
   "Hi Diana Clinic, I'd like to book a Clinical Assessment, and my concern is..."
 )}`;
+const waUnsure = `${waBase}?text=${encodeURIComponent(
+  "Hi Diana Clinic, I'm not sure what treatment I need — can I describe my skin concern?"
+)}`;
 
+// — Concerns (simplified for homepage tiles — full article lists live on pillar pages) —
 const concerns = [
   {
     id: 'pigmentation',
     title: 'Pigmentation & Melasma',
-    body:
-      'Dark patches can be melasma, PIH, sun spots, freckles, or a mixed pattern. Assessment focuses on identifying the type, trigger, depth, and skin risk before choosing creams, peels, lasers, or maintenance care.',
-    articles: [
-      {
-        title: 'What Causes Dark Patches and Uneven Skin Tone?',
-        href: '/blog/pigmentation-dark-patches-guide/'
-      },
-      {  
-        title: 'How to Tell Which Pigmentation Type You Have',
-        href: '/blog/pigmentation-how-to-tell-which-type/'
-      },
-      {
-        title: 'Melasma, PIH, Sun Spots or Freckles?',
-        href: '/blog/pigmentation-types-melasma-pih-sun-spots-freckles/'
-      },
-      {
-        title: 'What Is Melasma?',
-        href: '/blog/pigmentation-what-is-melasma/'
-      },
-      {
-        title: 'What Is PIH?',
-        href: '/blog/pigmentation-what-is-pih/'
-      },
-      {
-        title: 'What Are Sun Spots?',
-        href: '/blog/pigmentation-what-are-sun-spots/'
-      },
-      {
-        title: 'Pigmentation in Asian and Darker Skin',
-        href: '/blog/pigmentation-asian-darker-skin/'
-      },
-      { 
-        title: 'Are Freckles a Pigmentation Problem?',
-        href: '/blog/pigmentation-are-freckles-pigmentation/'
-      },
-      {
-        title: 'Is Laser Safe for Pigmentation?',
-        href: '/blog/pigmentation-is-laser-safe/'
-      },
-      {
-        title: 'Why Wrong Treatment Can Make Pigmentation Worse',
-        href: '/blog/pigmentation-wrong-treatment-worse/'
-      },
-      {
-        title: 'Why Pigmentation Keeps Coming Back',
-        href: '/blog/pigmentation-why-it-returns/'
-      },
-      {
-        title: 'Why Sunscreen Matters for Pigmentation',
-        href: '/blog/pigmentation-why-sunscreen-matters/'
-      },
-      {
-        title: 'Realistic Results From Pigmentation Treatment',
-        href: '/blog/pigmentation-realistic-results/'
-      },
-      {
-        title: 'When Should Pigmentation Be Assessed by a Doctor?',
-        href: '/blog/pigmentation-when-to-see-doctor/'
-      },
-      {
-        title: 'How Klinik Dr Diana Assesses Pigmentation',
-        href: '/blog/pigmentation-how-kdd-assesses/'
-      },
-      {
-        title: 'Dark Eye Circle Treatment in Malaysia',
-        href: '/blog/dark-eye-circle-treatment-malaysia/'
-      }
-    ]
+    short: 'Melasma · dark patches · uneven tone',
+    href: '/blog/pigmentation-dark-patches-guide/',
+    img: '/images/hero/hero-treatment-room-seremban.jpg'
   },
   {
     id: 'acne',
     title: 'Acne',
-    lead: 'Active acne or recurring breakouts — managed over a planned series, not a single visit.',
-    body:
-      'Active acne is treated as a managed condition, not a one-off appointment. Protocols address inflammation, bacterial load, and the daily routine that follows — together. Most patients improve over a planned series rather than a single visit.',
-    articles: [
-      {
-        title: 'Acne Treatment at Klinik Dr Diana',
-        href: '/treatments/acne'
-      }
-    ]
+    short: 'Active breakouts · recurring acne',
+    href: '/treatments/acne',
+    img: '/images/hero/hero-treatment-room-seremban.jpg'
   },
   {
     id: 'acne-scars',
-  title: 'Acne Scars',
-  body:
-    'Acne scars are treated by scar type, depth, tethering, texture, and skin healing risk. Plans may combine subcision, medical microneedling, TCA CROSS, fractional CO2 laser, Rejuran S, biostimulators, fillers, or peels depending on whether the scars are rolling, boxcar, ice pick, mixed, or mainly pigmentation marks.',
-  articles: [
-    {
-      title: 'Deep Acne Scar Treatment at Klinik Dr Diana',
-      href: '/treatments/deep-scar-treatment'
-    },
-    {
-      title: 'What Acne Scar Treatments Are Available at Klinik Dr Diana?',
-      href: '/blog/acne-scar-treatment-options-klinik-dr-diana/'
-    },
-    {
-      title: 'How Doctors Choose and Sequence Acne Scar Treatments',
-      href: '/blog/acne-scar-treatment-sequencing/'
-    },
-    { 
-      title: 'Acne Scar Treatment Comparison',
-      href: '/blog/acne-scar-treatment-comparison/'
-    }
-  ]
+    title: 'Acne Scars',
+    short: 'Texture · depth · tethered scars',
+    href: '/treatments/deep-scar-treatment',
+    img: '/images/hero/hero-treatment-room-seremban.jpg'
   },
   {
     id: 'aging-skin',
-    title: 'Aging skin',
-    lead: 'Structure, texture, and tone — paced restoration over weeks and months.',
-    body:
-      'Aging skin is restored across structure, texture, and tone. Programmes are paced — restoration is steady, not dramatic. The intention is long-term skin health, not a single dramatic outcome.',
-    articles: []
+    title: 'Aging Skin',
+    short: 'Lines · laxity · tone · firmness',
+    href: '#how',
+    img: '/images/hero/hero-treatment-room-seremban.jpg'
   },
   {
     id: 'skin-booster',
-  title: 'Skin Booster & Glowing Skin',
-  body:
-    'Skin booster treatments focus on improving hydration, glow, elasticity, texture, and overall skin quality. Assessment helps decide whether the concern is dryness, dullness, ageing-related skin laxity, acne-mark texture, acne marks, skin laxity, or volume loss before choosing Rejuran, Profhilo, NCTF, Juvelook, Radiesse, PRP/PRF, exosomes, or other options.',
-  articles: [
-    {
-      title: 'What Is a Skin Booster?',
-      href: '/blog/skin-booster-what-is-skin-booster/'
-    },
-    {
-      title: 'Skin Booster vs Filler',
-      href: '/blog/skin-booster-vs-filler/'
-    },
-    {
-      title: 'Rejuran Treatment in Malaysia',
-      href: '/blog/skin-booster-rejuran-treatment-malaysia/'
-    },
-    {
-      title: 'Profhilo vs Skin Booster',
-      href: '/blog/skin-booster-profhilo-vs-skin-booster/'
-    },
-    {
-      title: 'Ozempic Face & Mounjaro Face in Malaysia',
-      href: '/blog/ozempic-face-mounjaro-face-malaysia/'
-    },
-    {
-      title: "Profhilo Structura for Asian Faces in Malaysia",
-      href: "/blog/profhilo-structura-asian-faces-malaysia",
-    },
-    {
-      title: "Profhilo vs Profhilo Structura in Malaysia",
-      href: "/blog/profhilo-vs-profhilo-structura-malaysia",
-    }
-  ]
+    title: 'Skin Booster & Glow',
+    short: 'Hydration · radiance · texture',
+    href: '/blog/skin-booster-what-is-skin-booster/',
+    img: '/images/hero/hero-treatment-room-seremban.jpg'
   }
+];
+
+// — Star treatments (horizontal carousel) —
+const starTreatments = [
+  { name: 'Pico Laser', for: 'Pigmentation · tone', href: '/treatments', img: '/images/hero/hero-treatment-room-seremban.jpg' },
+  { name: 'Fractional CO2', for: 'Acne scars · resurfacing', href: '/treatments/deep-scar-treatment', img: '/images/hero/hero-treatment-room-seremban.jpg' },
+  { name: 'Subcision', for: 'Rolling · tethered scars', href: '/treatments/deep-scar-treatment', img: '/images/hero/hero-treatment-room-seremban.jpg' },
+  { name: 'Rejuran', for: 'Skin quality · healing', href: '/blog/skin-booster-rejuran-treatment-malaysia/', img: '/images/hero/hero-treatment-room-seremban.jpg' },
+  { name: 'Profhilo', for: 'Hydration · firmness', href: '/blog/skin-booster-profhilo-vs-skin-booster/', img: '/images/hero/hero-treatment-room-seremban.jpg' },
+  { name: 'OxyGeneo Facial', for: 'Glow · skin quality', href: '/treatments/oxygeneo-glam-facial', img: '/images/hero/hero-treatment-room-seremban.jpg' }
+];
+
+// — Google review quotes —
+const reviews = [
+  { text: "After a week I can see the acne is completely gone, skin is bright and glow. Very recommend for anyone who has breakout problems.", name: 'Izzati I.' },
+  { text: "I started the deep scar treatment for almost a year now. Scars improved a lot and I'm planning to renew the scar treatment package to get smoother skin!", name: 'Muhammad Q.' },
+  { text: "First time here for deep scar treatment and I would say highly recommended for an aesthetic clinic. Surely I will come again for another treatment.", name: 'Nat N. · Senawang' },
+  { text: "After just a few sessions, my acne has improved significantly. They carefully assessed my skin and recommended treatments tailored to my needs.", name: 'Norliyana R.' },
+  { text: "They explained to me well on my skin problems, and I can see the difference on my skin just 2 to 3 weeks after the first treatment.", name: 'Nuruul Athira B.' }
+];
+
+// — Results (horizontal carousel) —
+const results = [
+  { src: '/images/treatments/pigmentation/results/pigmentation-result-01.jpg', alt: 'Before and after melasma treatment result', condition: 'Melasma', detail: '4 sessions' },
+  { src: '/images/results/acne/acne-result-01.jpg', alt: 'Before and after acne treatment result', condition: 'Acne', detail: '3 months' },
+  { src: '/images/results/acne-scars/acne-scar-result-01.jpg', alt: 'Before and after acne scar treatment result', condition: 'Acne Scars', detail: '6 sessions' },
+  { src: '/images/treatments/pigmentation/results/pigmentation-result-04.jpg', alt: 'Before and after pigmentation treatment result', condition: 'Pigmentation', detail: '5 sessions' },
+  { src: '/images/results/acne/acne-result-03.jpg', alt: 'Before and after acne treatment showing improvement', condition: 'Acne', detail: '2 months' },
+  { src: '/images/results/keratosis/keratosis-result-01.jpg', alt: 'Before and after keratosis removal result', condition: 'Keratosis', detail: '1 session' }
 ];
 
 const doctors = [
@@ -227,44 +132,14 @@ const doctors = [
   }
 ];
 
-const technology = [
-  { name: 'Pico Laser — PicoLO',  note: 'Laser Optek · pigmentation, tone, tattoo' },
-  { name: 'Pico Laser — PicoPlus', note: 'Lutronic · pigmentation, melasma support' },
-  { name: 'Fractional CO2 Laser',  note: 'Resurfacing · acne-scar restoration' },
-  { name: 'LIFTERA HIFU',          note: 'Skin tightening · structural restoration' },
-  { name: 'OxyGeneo',              note: 'Hydration · skin quality protocols' },
-  { name: 'Additional platforms',  note: 'Selected by clinical indication and skin assessment' }
-];
-
 const faqs = [
-  {
-    q: 'Is the clinic licensed by the Ministry of Health?',
-    a: 'Yes. Klinik Dr Diana is fully licensed under the Ministry of Health Malaysia, and our doctors are LCP-certified medical aesthetic practitioners.'
-  },
-  {
-    q: 'What conditions do you treat most often?',
-    a: 'Our work is concentrated in four areas: acne and acne-scar management, melasma and pigmentation, aging skin, and overall skin quality and restoration. We have particular depth in acne-scar restoration, where most patients require a planned programme rather than a single protocol.'
-  },
-  {
-    q: 'How do I know which treatment is right for my skin?',
-    a: 'Every skin is read in person before a plan is suggested. The Clinical Assessment is a structured evaluation — concerns, history, and photography where useful — that leads to a tailored protocol or programme. We do not prescribe a treatment menu before we have read the skin.'
-  },
-  {
-    q: 'Will there be downtime after a protocol?',
-    a: 'Downtime depends on the protocol. Most of our work is minimal-downtime — mild redness or slight swelling that typically resolves within hours. More resurfacing protocols carry longer recovery, and this is discussed in full before any decision is made.'
-  },
-  {
-    q: 'How long do the results last?',
-    a: 'Longevity depends on the condition and the protocol. Pigmentation and melasma are managed conditions and benefit from ongoing care. Acne-scar restoration is durable once the texture is rebuilt. Aging is a process — programmes are paced to maintain, not to chase a single outcome. Individual results vary.'
-  },
-  {
-    q: 'Is pricing transparent?',
-    a: 'Yes. Pricing is itemised and discussed in full during the Clinical Assessment. There are no obligations following the assessment, and no programme is committed to without a full understanding of the cost.'
-  },
-  {
-    q: 'Where are you located?',
-    a: 'Two clinics. Seremban (Bandar Prima Senawang) and Bandar Baru Bangi (Gandaria Mall, Seksyen 9). Appointments at both clinics are arranged via WhatsApp.'
-  }
+  { q: 'Is the clinic licensed by the Ministry of Health?', a: 'Yes. Klinik Dr Diana is fully licensed under the Ministry of Health Malaysia, and our doctors are LCP-certified medical aesthetic practitioners.' },
+  { q: 'What conditions do you treat most often?', a: 'Our work is concentrated in four areas: acne and acne-scar management, melasma and pigmentation, aging skin, and overall skin quality and restoration. We have particular depth in acne-scar restoration, where most patients require a planned programme rather than a single protocol.' },
+  { q: 'How do I know which treatment is right for my skin?', a: 'Every skin is read in person before a plan is suggested. The Clinical Assessment is a structured evaluation — concerns, history, and photography where useful — that leads to a tailored protocol or programme. We do not prescribe a treatment menu before we have read the skin.' },
+  { q: 'Will there be downtime after a protocol?', a: 'Downtime depends on the protocol. Most of our work is minimal-downtime — mild redness or slight swelling that typically resolves within hours. More resurfacing protocols carry longer recovery, and this is discussed in full before any decision is made.' },
+  { q: 'How long do the results last?', a: 'Longevity depends on the condition and the protocol. Pigmentation and melasma are managed conditions and benefit from ongoing care. Acne-scar restoration is durable once the texture is rebuilt. Aging is a process — programmes are paced to maintain, not to chase a single outcome. Individual results vary.' },
+  { q: 'Is pricing transparent?', a: 'Yes. Pricing is itemised and discussed in full during the Clinical Assessment. There are no obligations following the assessment, and no programme is committed to without a full understanding of the cost.' },
+  { q: 'Where are you located?', a: 'Two clinics. Seremban (Bandar Prima Senawang) and Bandar Baru Bangi (Gandaria Mall, Seksyen 9). Appointments at both clinics are arranged via WhatsApp.' }
 ];
 
 // — Page-specific JSON-LD —
@@ -334,116 +209,187 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   </Fragment>
 
-  <!-- HERO -->
+  <!-- ============================== -->
+  <!-- 1. HERO — full-bleed, mobile-first -->
+  <!-- ============================== -->
   <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-text">
+    <div class="hero-bg">
+      <img
+        src="/images/hero/hero-treatment-room-seremban.jpg"
+        alt="Treatment room at Klinik Dr Diana — calm, doctor-led aesthetic care in Seremban and Bandar Baru Bangi."
+        width="1200"
+        height="1600"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </div>
+    <div class="hero-overlay">
+      <div class="container">
         <p class="eyebrow">Medical Aesthetic Clinic · Since 2016</p>
         <h1>Acne, pigmentation, scars, and aging skin — read by a doctor first.</h1>
         <p class="hero-sub">
-          Clinical assessment and evidence-based protocols at Klinik Dr Diana. Two clinics — Seremban and Bandar Baru Bangi — doctor-led since 2016.
+          Clinical assessment and evidence-based protocols at Klinik Dr Diana.
+          Two clinics — Seremban and Bandar Baru Bangi — doctor-led since 2016.
         </p>
+        <!-- CTA 1 -->
         <div class="hero-cta">
           <a class="cta" href={waGeneric} target="_blank" rel="noopener">Book a Clinical Assessment</a>
-          <a class="cta cta--ghost" href="#how">How we work</a>
+          <a class="cta cta--ghost-light" href="#how">How we work</a>
         </div>
-        <ul class="trust-strip" aria-label="Clinic credentials">
-          <li><strong>4.9 ★</strong> · 540+ Google reviews</li>
-          <li>KKM-licensed</li>
-          <li>LCP-certified doctors</li>
-          <li>Since 2016</li>
-        </ul>
-      </div>
-      <div class="hero-media">
-        <img
-          src="/images/hero/hero-treatment-room-seremban.jpg"
-          alt="Treatment room at Klinik Dr Diana — calm, doctor-led aesthetic care in Seremban and Bandar Baru Bangi."
-          width="1200"
-          height="1600"
-          loading="eager"
-          fetchpriority="high"
-        />
       </div>
     </div>
   </section>
 
-  <!-- CONCERN TILES -->
-  <section class="concern-tiles">
+  <!-- ============================== -->
+  <!-- 2. TRUST BAR -->
+  <!-- ============================== -->
+  <div class="trust-bar">
+    <div class="container">
+      <ul class="trust-bar-list" aria-label="Clinic credentials">
+        <li><strong>4.9 ★</strong> 540+ reviews</li>
+        <li><strong>KKM</strong> licensed</li>
+        <li><strong>LCP</strong> certified</li>
+        <li><strong>Since</strong> 2016</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ============================== -->
+  <!-- 3. GOOGLE REVIEWS CAROUSEL -->
+  <!-- ============================== -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">What patients say</p>
+        <h2>Real reviews from Google.</h2>
+      </header>
+    </div>
+    <div class="scroll-row reviews-scroll">
+      {reviews.map((r) => (
+        <blockquote class="review-quote-card">
+          <p class="review-stars" aria-label="5 out of 5 stars">★★★★★</p>
+          <p class="review-text">"{r.text}"</p>
+          <cite class="review-cite">— {r.name} · Google Review</cite>
+        </blockquote>
+      ))}
+    </div>
+    <!-- CTA 2 -->
+    <div class="container section-cta">
+      <div class="branch-reviews-row">
+        <a class="review-branch-link" href={`https://search.google.com/local/reviews?placeid=${branches[0].placeId}`} target="_blank" rel="noopener">
+          <strong>4.9 ★ · 360+</strong> Seremban reviews →
+        </a>
+        <a class="review-branch-link" href={`https://search.google.com/local/reviews?placeid=${branches[1].placeId}`} target="_blank" rel="noopener">
+          <strong>5.0 ★ · 180+</strong> Bangi reviews →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 4. CONCERN CARDS — visual tiles -->
+  <!-- ============================== -->
+  <section class="concerns" id="concerns">
     <div class="container">
       <header class="section-head">
         <p class="eyebrow">Start here</p>
         <h2>Which concern brings you in?</h2>
       </header>
-      <div class="tile-grid">
+      <div class="concern-grid">
         {concerns.map((c) => (
-          <a href={`#${c.id}`} class="tile">
-            <h3>{c.title}</h3>
-            <p>{c.lead}</p>
-            <span class="tile-link">Read more →</span>
+          <a href={c.href} class={`concern-tile ${c.id === 'skin-booster' ? 'concern-tile--wide' : ''}`}>
+            <div class="concern-tile-img">
+              <img src={c.img} alt={`${c.title} treatment concern`} width="400" height="300" loading="lazy" />
+            </div>
+            <div class="concern-tile-text">
+              <h3>{c.title}</h3>
+              <p>{c.short}</p>
+            </div>
           </a>
         ))}
       </div>
+      <!-- CTA 3 -->
+      <div class="section-cta center">
+        <a class="cta cta--whatsapp" href={waUnsure} target="_blank" rel="noopener">Not sure? Tell us your concern</a>
+      </div>
     </div>
   </section>
 
-  <!-- PROBLEM -->
-  <section class="problem">
-    <div class="container narrow">
-      <h2>Most skin concerns do not respond to general approaches.</h2>
-      <p>
-        Pigmentation deepens. Acne returns. Scars settle into texture. Skin ages.
-        The difference a clinical setting makes is not a stronger machine — it is a diagnosis.
-        Skin is read first, then treated, by a doctor, with a plan that belongs to one patient at a time.
-      </p>
-    </div>
-  </section>
-
-  <!-- CONCERNS -->
-  <section id="concerns" class="concerns">
+  <!-- ============================== -->
+  <!-- 5. STAR TREATMENTS CAROUSEL -->
+  <!-- ============================== -->
+  <section class="treatments-popular">
     <div class="container">
       <header class="section-head">
-        <p class="eyebrow">What we work in</p>
-        <h2>Five concerns. One clinical approach.</h2>
+        <p class="eyebrow">Popular treatments</p>
+        <h2>What patients come in for most.</h2>
       </header>
-      <div class="concerns-grid">
-        {concerns.map((c) => (
-  <article id={c.id} class="concern-card">
-    <h3>
-      {c.articles.length > 0 ? (
-        <a class="concern-title-link" href={c.articles[0].href}>
-          {c.title}
+    </div>
+    <div class="scroll-row treatments-scroll">
+      {starTreatments.map((t) => (
+        <a href={t.href} class="treatment-card">
+          <div class="treatment-card-img">
+            <img src={t.img} alt={`${t.name} treatment at Klinik Dr Diana`} width="320" height="240" loading="lazy" />
+          </div>
+          <div class="treatment-card-text">
+            <h3>{t.name}</h3>
+            <p>{t.for}</p>
+          </div>
         </a>
-      ) : (
-        c.title
-      )}
-    </h3>
-
-    <p>{c.body}</p>
-
-    {c.articles.length > 0 && (
-      <div class="concern-articles">
-        <span class="concern-articles-label">Related guides</span>
-
-        <ul>
-          {c.articles.map((article) => (
-            <li>
-              <a href={article.href}>{article.title}</a>
-            </li>
-          ))}
-        </ul>
-      </div>
-    )}
-  </article>
-))}
-      </div>
-      <p class="note">
-        Every condition is read in person. Treatment plans are tailored, evidence-based, and explained in full before any protocol begins.
-      </p>
+      ))}
+    </div>
+    <!-- CTA 4 -->
+    <div class="container section-cta center">
+      <a class="cta cta--outline" href="/treatments">View all treatments →</a>
     </div>
   </section>
 
-  <!-- DOCTORS -->
-  <section id="doctors" class="doctors">
+  <!-- ============================== -->
+  <!-- 6. PHOTO BREAK -->
+  <!-- ============================== -->
+  <div class="photo-break">
+    <img
+      src="/images/hero/hero-treatment-room-seremban.jpg"
+      alt="Doctor consulting with patient at Klinik Dr Diana."
+      width="1200"
+      height="600"
+      loading="lazy"
+    />
+  </div>
+
+  <!-- ============================== -->
+  <!-- 7. RESULTS CAROUSEL -->
+  <!-- ============================== -->
+  <section class="results" id="results">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Real results</p>
+        <h2>What improvement looks like.</h2>
+      </header>
+      <p class="note note--top">Results vary by individual. These photos show real patients treated at our clinics. Individual assessment is required.</p>
+    </div>
+    <div class="scroll-row results-scroll">
+      {results.map((r) => (
+        <div class="result-card">
+          <img src={r.src} alt={r.alt} width="400" height="300" loading="lazy" />
+          <div class="result-card-label">
+            <strong>{r.condition}</strong>
+            <span>{r.detail}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+    <!-- CTA 5 — peak conversion -->
+    <div class="container section-cta center">
+      <a class="cta cta--whatsapp" href={waGeneric} target="_blank" rel="noopener">Discuss your skin with our doctors</a>
+      <a class="cta cta--text" href="/results">See all patient results →</a>
+    </div>
+  </section>
+
+  <!-- ============================== -->
+  <!-- 8. DOCTORS -->
+  <!-- ============================== -->
+  <section class="doctors" id="doctors">
     <div class="container">
       <header class="section-head">
         <p class="eyebrow">Your doctors</p>
@@ -471,8 +417,10 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
     </div>
   </section>
 
-  <!-- HOW -->
-  <section id="how" class="how">
+  <!-- ============================== -->
+  <!-- 9. HOW WE WORK -->
+  <!-- ============================== -->
+  <section class="how" id="how">
     <div class="container">
       <header class="section-head">
         <p class="eyebrow">How we work</p>
@@ -482,111 +430,30 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
         <li>
           <span class="how-step-num">01</span>
           <h3>Clinical Assessment</h3>
-          <p>
-            A doctor reads your skin in person. We discuss concerns, history, and lifestyle, and photograph where useful.
-            Typically twenty to thirty minutes.
-          </p>
+          <p>A doctor reads your skin in person. We discuss concerns, history, and lifestyle, and photograph where useful. Typically twenty to thirty minutes.</p>
         </li>
         <li>
           <span class="how-step-num">02</span>
           <h3>Tailored Protocol or Programme</h3>
-          <p>
-            A plan is built around your concern, your skin, and your timeline. Protocols are single sessions. Programmes are planned series across weeks or months, with defined endpoints.
-          </p>
+          <p>A plan is built around your concern, your skin, and your timeline. Protocols are single sessions. Programmes are planned series across weeks or months, with defined endpoints.</p>
         </li>
         <li>
           <span class="how-step-num">03</span>
           <h3>Ongoing care</h3>
-          <p>
-            What you do between protocols matters as much as the protocols themselves. Aftercare, daily skincare, and review appointments are part of the plan.
-          </p>
+          <p>What you do between protocols matters as much as the protocols themselves. Aftercare, daily skincare, and review appointments are part of the plan.</p>
         </li>
       </ol>
-    </div>
-  </section>
-
-  <!-- TECHNOLOGY -->
-  <section class="tech">
-    <div class="container">
-      <header class="section-head">
-        <p class="eyebrow">The technology behind our protocols</p>
-        <h2>Validated devices, selected by indication.</h2>
-      </header>
-      <p class="tech-intro">
-        Devices are tools, not treatments. The diagnosis and the plan are what determine the outcome — the platform is chosen to fit.
-      </p>
-      <ul class="tech-grid">
-        {technology.map((t) => (
-          <li>
-            <p class="tech-name">{t.name}</p>
-            <p class="tech-note">{t.note}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </section>
-
-  <!-- REVIEWS -->
-  <section class="reviews">
-    <div class="container">
-      <header class="section-head">
-        <p class="eyebrow">What our patients say</p>
-        <h2>Read patient reviews on Google.</h2>
-      </header>
-      <div class="quotes-grid">
-        <blockquote class="quote-card">
-          <p>"After a week I can see the acne is completely gone, skin is bright and glow. Very recommend for anyone who has breakout problems."</p>
-          <cite>— Izzati I.</cite>
-        </blockquote>
-        <blockquote class="quote-card">
-          <p>"I started the deep scar treatment for almost a year now. Scars improved a lot and I'm planning to renew the scar treatment package to get smoother skin!"</p>
-          <cite>— Muhammad Q.</cite>
-        </blockquote>
-        <blockquote class="quote-card">
-          <p>"First time here for deep scar treatment and I would say highly recommended for an aesthetic clinic. Surely I will come again for another treatment."</p>
-          <cite>— Nat N. · Senawang branch</cite>
-        </blockquote>
-        <blockquote class="quote-card">
-          <p>"After just a few sessions, my acne has improved significantly. They carefully assessed my skin and recommended treatments tailored to my needs."</p>
-          <cite>— Norliyana R.</cite>
-        </blockquote>
-        <blockquote class="quote-card">
-          <p>"They explained to me well on my skin problems, and I can see the difference on my skin just 2 to 3 weeks after the first treatment."</p>
-          <cite>— Nuruul Athira B.</cite>
-        </blockquote>
+      <!-- CTA 6 — anxiety removed -->
+      <div class="section-cta center">
+        <a class="cta cta--whatsapp" href={waGeneric} target="_blank" rel="noopener">Start with step 1 — book assessment</a>
       </div>
-      <div class="reviews-grid">
-        <a class="review-card" href={`https://search.google.com/local/reviews?placeid=${branches[0].placeId}`} target="_blank" rel="noopener">
-          <p class="review-rating">4.9 ★ · 360+ reviews</p>
-          <p class="review-branch">Diana Clinic Seremban</p>
-          <p class="review-link">Read on Google →</p>
-        </a>
-        <a class="review-card" href={`https://search.google.com/local/reviews?placeid=${branches[1].placeId}`} target="_blank" rel="noopener">
-          <p class="review-rating">5.0 ★ · 180+ reviews</p>
-          <p class="review-branch">Diana Clinic Bandar Baru Bangi</p>
-          <p class="review-link">Read on Google →</p>
-        </a>
-      </div>
-      <p class="note">
-        Reviews are published independently by patients on Google. Individual experiences vary.
-      </p>
     </div>
   </section>
 
-  <!-- Results Grid -->
-  <ResultsGridCompact
-    heading="Real results from our patients"
-    items={[
-      { src: "/images/treatments/pigmentation/results/pigmentation-result-01.jpg", alt: "Before and after melasma treatment result", condition: "Melasma" },
-      { src: "/images/results/acne/acne-result-01.jpg", alt: "Before and after acne treatment result", condition: "Acne" },
-      { src: "/images/results/acne-scars/acne-scar-result-01.jpg", alt: "Before and after acne scar treatment result", condition: "Acne Scars" },
-      { src: "/images/treatments/pigmentation/results/pigmentation-result-04.jpg", alt: "Before and after pigmentation treatment result", condition: "Pigmentation" },
-      { src: "/images/results/keratosis/keratosis-result-01.jpg", alt: "Before and after keratosis removal result", condition: "Keratosis" },
-      { src: "/images/results/acne/acne-result-03.jpg", alt: "Before and after acne treatment showing improvement", condition: "Acne" },
-    ]}
-  />
-  <!-- FAQ -->
-  <section id="faq" class="faq">
+  <!-- ============================== -->
+  <!-- 10. FAQ -->
+  <!-- ============================== -->
+  <section class="faq" id="faq">
     <div class="container narrow">
       <header class="section-head">
         <p class="eyebrow">Frequently asked</p>
@@ -600,11 +467,17 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
           </details>
         ))}
       </div>
+      <!-- CTA 7 — catch cautious visitors -->
+      <div class="section-cta center">
+        <a class="cta cta--outline" href={waGeneric} target="_blank" rel="noopener">Still have questions? WhatsApp us</a>
+      </div>
     </div>
   </section>
 
-  <!-- VISIT -->
-  <section id="visit" class="visit">
+  <!-- ============================== -->
+  <!-- 11. VISIT -->
+  <!-- ============================== -->
+  <section class="visit" id="visit">
     <div class="container">
       <header class="section-head">
         <p class="eyebrow">Visit a clinic</p>
@@ -631,7 +504,7 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
                 target="_blank"
                 rel="noopener"
               >
-                Book — {b.addressLocality}
+                Book – {b.addressLocality}
               </a>
             </div>
           </article>
@@ -640,35 +513,9 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
     </div>
   </section>
 
-  <!-- FINAL CTA -->
-   <script is:inline>
-    const revealItems = document.querySelectorAll(
-      '.hero .eyebrow, .hero h1, .hero-sub, .hero-cta, .trust-strip, .hero-media, .section-head, .tile, .problem .narrow, .concern-card, .doctor-card, .how-steps li, .tech-intro, .tech-grid li, .review-card, .faq-item, .branch-card, .final-cta .narrow'
-    );
-
-    revealItems.forEach((item, index) => {
-      item.classList.add('reveal-soft');
-      item.style.setProperty('--reveal-delay', `${Math.min(index * 40, 240)}ms`);
-    });
-
-    const revealObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.12,
-        rootMargin: '0px 0px -40px 0px',
-      }
-    );
-
-    revealItems.forEach((item) => revealObserver.observe(item));
-  </script>
-
+  <!-- ============================== -->
+  <!-- 12. FINAL CTA -->
+  <!-- ============================== -->
   <section class="final-cta">
     <div class="container narrow center">
       <h2>Begin with a Clinical Assessment.</h2>
@@ -678,602 +525,420 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
       <a class="cta" href={waGeneric} target="_blank" rel="noopener">Book via WhatsApp</a>
     </div>
   </section>
-<script is:inline>
-  const heroInner = document.querySelector('.hero-inner');
 
-  function updateHeroFade() {
-    if (!heroInner) return;
+  <!-- ============================== -->
+  <!-- REVEAL ANIMATION -->
+  <!-- ============================== -->
+  <script is:inline>
+    const revealEls = document.querySelectorAll(
+      '.section-head, .concern-tile, .doctor-card, .how-steps li, .faq-item, .branch-card, .final-cta .narrow'
+    );
+    revealEls.forEach((el) => el.classList.add('reveal'));
+    const revealObs = new IntersectionObserver(
+      (entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('is-visible'); revealObs.unobserve(e.target); } }),
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+    revealEls.forEach((el) => revealObs.observe(el));
+  </script>
 
-    const fadeDistance = Math.min(window.innerHeight * 0.65, 520);
-    const progress = Math.min(window.scrollY / fadeDistance, 1);
-
-    heroInner.style.setProperty('--hero-opacity', `${1 - progress}`);
-    heroInner.style.setProperty('--hero-lift', `${progress * -18}px`);
-  }
-
-  updateHeroFade();
-  window.addEventListener('scroll', updateHeroFade, { passive: true });
-</script>
-<script is:inline>
-  const fadeSections = document.querySelectorAll(
-    '.hero, .concern-tiles, .problem, .concerns, .doctors, .how, .tech, .reviews, .faq, .visit, .final-cta'
-  );
-
-  function updateSectionFade() {
-    const viewportHeight = window.innerHeight;
-
-    fadeSections.forEach((section) => {
-      const rect = section.getBoundingClientRect();
-      const sectionCenter = rect.top + rect.height / 2;
-      const viewportCenter = viewportHeight / 2;
-      const distance = Math.abs(sectionCenter - viewportCenter);
-
-      const fadeStart = viewportHeight * 0.25;
-      const fadeEnd = viewportHeight * 0.85;
-
-      let opacity = 1 - (distance - fadeStart) / (fadeEnd - fadeStart);
-      opacity = Math.max(0.28, Math.min(1, opacity));
-
-      const lift = (1 - opacity) * 18;
-
-      section.style.setProperty('--section-opacity', opacity.toFixed(3));
-      section.style.setProperty('--section-lift', `${lift}px`);
-    });
-  }
-
-  updateSectionFade();
-  window.addEventListener('scroll', updateSectionFade, { passive: true });
-  window.addEventListener('resize', updateSectionFade);
-</script>
-
- <style >
-    /* ——— Hero ——— */
+  <!-- ============================== -->
+  <!-- STYLES — mobile-first -->
+  <!-- ============================== -->
+  <style>
+    /* ——— HERO — full-bleed photo ——— */
     .hero {
-      padding: var(--space-6) 0 var(--space-5);
-      background:
-        radial-gradient(ellipse at 80% 0%, rgba(52, 32, 63, 0.06) 0%, transparent 60%),
-        var(--color-surface);
-    }
-    .hero-inner {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: var(--space-4);
-      align-items: center;
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
     }
     @media (min-width: 880px) {
-      .hero-inner {
-        grid-template-columns: 1.15fr 1fr;
-        gap: var(--space-5);
-      }
+      .hero { min-height: 90vh; }
     }
-    .hero-text { max-width: 640px; }
-    .hero-media img {
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero-bg img {
       width: 100%;
-      height: auto;
-      aspect-ratio: 3 / 4;
+      height: 100%;
       object-fit: cover;
-      border-radius: 4px;
-      filter: saturate(0.92);
-      display: block;
+      object-position: center 30%;
+      filter: saturate(0.9);
     }
-    .trust-strip li strong {
-      font-weight: 600;
-      color: var(--color-anchor);
+    .hero-overlay {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: var(--space-5) 0 var(--space-4);
+      background: linear-gradient(to top, rgba(31, 26, 21, 0.85) 0%, rgba(31, 26, 21, 0.55) 50%, transparent 100%);
     }
-    .eyebrow {
-      font-size: 0.72rem;
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
-      color: var(--color-anchor-soft);
-      margin: 0 0 var(--space-2);
-      font-weight: 500;
+    .hero .eyebrow {
+      color: rgba(255, 247, 237, 0.7);
     }
-    h1 {
-      font-family: var(--font-display);
-      font-weight: 500;
-      font-size: clamp(2.2rem, 5vw, 3.8rem);
-      line-height: 1.08;
-      letter-spacing: -0.01em;
-      color: var(--color-anchor);
-      margin: 0 0 var(--space-3);
+    .hero h1 {
+      color: #fff7ed;
+      font-size: clamp(1.8rem, 5vw, 3.4rem);
+      max-width: 680px;
     }
     .hero-sub {
-      font-size: 1.1rem;
+      color: rgba(255, 247, 237, 0.85);
+      font-size: 1rem;
       line-height: 1.65;
-      max-width: 720px;
-      margin: 0 0 var(--space-4);
-    }
-    .hero-cta { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-4); }
-    .trust-strip {
-      list-style: none; padding: 0; margin: 0;
-      display: flex; flex-wrap: wrap; gap: var(--space-3);
-      font-size: 0.78rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--color-anchor-soft);
-      border-top: 1px solid var(--color-layer);
-      padding-top: var(--space-3);
-    }
-    /* Smooth fade animation */
-.reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  transition:
-    opacity 0.5s ease,
-    transform 0.5s ease;
-  will-change: opacity, transform;
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Mobile fix: reduce movement so it does not feel jumpy */
-@media (max-width: 720px) {
-  .reveal {
-    transform: translateY(10px);
-    transition:
-      opacity 0.45s ease,
-      transform 0.45s ease;
-  }
-}
-
-/* Respect users who disable motion */
-@media (prefers-reduced-motion: reduce) {
-  .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-}
-
-
-    /* ——— Section Scroll Fade ——— */
-.hero,
-.concern-tiles,
-.concerns,
-.doctors,
-.how,
-.tech,
-.reviews,
-.faq,
-.visit,
-.final-cta {
-  opacity: var(--section-opacity, 1);
-  transform: translateY(var(--section-lift, 0));
-  transition: opacity 0.18s linear, transform 0.18s linear;
-  will-change: opacity, transform;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero,
-  .concern-tiles,
-  .concerns,
-  .doctors,
-  .how,
-  .tech,
-  .reviews,
-  .faq,
-  .visit,
-  .final-cta {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-}
-
-    /* ——— Section heads ——— */
-    h2 {
-      font-family: var(--font-display);
-      font-weight: 500;
-      font-size: clamp(1.8rem, 3.6vw, 2.6rem);
-      line-height: 1.15;
-      letter-spacing: -0.005em;
-      color: var(--color-anchor);
+      max-width: 560px;
       margin: 0 0 var(--space-3);
     }
-    h3 {
-      font-family: var(--font-display);
-      font-weight: 500;
-      font-size: 1.4rem;
-      color: var(--color-anchor);
-      margin: 0 0 var(--space-1);
-    }
-    .section-head { margin-bottom: var(--space-4); max-width: 700px; }
-    .narrow { max-width: 760px; }
-    .center { text-align: center; }
-    .note {
-      font-size: 0.88rem;
-      color: var(--color-anchor-soft);
-      margin-top: var(--space-4);
-      max-width: 720px;
-    }
-
-    /* ——— Concern tiles ——— */
-    .concern-tiles {
-      padding: var(--space-5) 0;
-      border-bottom: 1px solid var(--color-layer);
-    }
-    .tile-grid {
-      display: grid;
-      grid-template-columns: 1fr;
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
       gap: var(--space-2);
     }
-    @media (min-width: 640px) {
-      .tile-grid { grid-template-columns: repeat(2, 1fr); }
+    .cta--ghost-light {
+      background: transparent;
+      color: #fff7ed;
+      border-color: rgba(255, 247, 237, 0.4);
     }
-    @media (min-width: 980px) {
-      .tile-grid { grid-template-columns: repeat(5, 1fr); }
+    .cta--ghost-light:hover {
+      background: rgba(255, 247, 237, 0.12);
     }
-    .tile {
+
+    /* ——— TRUST BAR ——— */
+    .trust-bar {
+      background: var(--color-anchor);
+      padding: 0.7rem 0;
+    }
+    .trust-bar-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
       display: flex;
-      flex-direction: column;
-      padding: var(--space-3);
-      background: var(--color-surface);
-      border: 1px solid var(--color-layer);
-      text-decoration: none;
-      color: inherit;
-      transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-      min-height: 180px;
-    }
-    .tile:hover {
-      border-color: var(--color-anchor);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(0,0,0,0.05);
-    }
-    .tile h3 {
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 500;
-      color: var(--color-anchor);
-      margin: 0 0 var(--space-2);
-      line-height: 1.25;
-    }
-    .tile p {
-      font-size: 0.88rem;
-      color: var(--color-anchor-soft);
-      line-height: 1.55;
-      margin: 0 0 var(--space-2);
-      flex: 1;
-    }
-    .tile-link {
-      font-size: 0.75rem;
+      justify-content: center;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+      font-size: 0.72rem;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--color-anchor);
-      margin-top: auto;
+      color: rgba(255, 247, 237, 0.7);
+    }
+    .trust-bar-list strong {
+      color: #fff7ed;
+      font-weight: 600;
     }
 
-    /* ——— Problem ——— */
-.problem {
-  background: linear-gradient(135deg, #2b1935 0%, #34203f 45%, #4a2b5a 100%);
-}
+    /* ——— SHARED: scroll rows ——— */
+    .scroll-row {
+      display: flex;
+      gap: var(--space-2);
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding: 0 var(--space-3);
+      scrollbar-width: none;
+    }
+    .scroll-row::-webkit-scrollbar { display: none; }
+    .scroll-row > * {
+      scroll-snap-align: start;
+      flex-shrink: 0;
+    }
 
-.problem h2 {
-  color: #fff7ed;
-}
+    /* ——— REVIEWS CAROUSEL ——— */
+    .reviews {
+      background: linear-gradient(135deg, #2b1935 0%, #34203f 45%, #4a2b5a 100%);
+    }
+    .reviews .eyebrow { color: #d8b47c; }
+    .reviews h2 { color: #fff7ed; }
+    .review-quote-card {
+      width: 280px;
+      background: rgba(255, 248, 239, 0.96);
+      border: 1px solid rgba(216, 180, 124, 0.35);
+      border-radius: 16px;
+      padding: var(--space-3);
+      margin: 0;
+    }
+    .review-stars {
+      font-size: 0.85rem;
+      color: #d8b47c;
+      margin: 0 0 0.5rem;
+      letter-spacing: 2px;
+    }
+    .review-text {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: #4a2f1f;
+      margin: 0 0 0.75rem;
+      font-style: italic;
+    }
+    .review-cite {
+      font-size: 0.75rem;
+      font-style: normal;
+      font-weight: 600;
+      color: #9a6a3d;
+    }
+    .branch-reviews-row {
+      display: flex;
+      gap: var(--space-2);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .review-branch-link {
+      display: inline-block;
+      background: rgba(255, 248, 239, 0.12);
+      border: 1px solid rgba(216, 180, 124, 0.3);
+      border-radius: 10px;
+      padding: 0.6rem 1.2rem;
+      color: #fff7ed;
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: background 0.2s ease;
+    }
+    .review-branch-link:hover {
+      background: rgba(255, 248, 239, 0.2);
+    }
+    .review-branch-link strong {
+      color: #d8b47c;
+    }
 
-.problem p {
-  font-size: 1.05rem;
-  max-width: 680px;
-  color: #f3e6d8;
-}
+    /* ——— CONCERN TILES ——— */
+    .concern-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-2);
+    }
+    .concern-tile {
+      background: var(--color-surface-alt);
+      border: 1px solid var(--color-layer);
+      border-radius: 8px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+    .concern-tile:hover {
+      border-color: var(--color-anchor);
+      transform: translateY(-2px);
+    }
+    .concern-tile--wide {
+      grid-column: span 2;
+    }
+    .concern-tile-img {
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+    }
+    .concern-tile--wide .concern-tile-img {
+      aspect-ratio: 16 / 7;
+    }
+    .concern-tile-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0.88);
+      transition: transform 0.3s ease;
+    }
+    .concern-tile:hover .concern-tile-img img {
+      transform: scale(1.03);
+    }
+    .concern-tile-text {
+      padding: 0.75rem 0.85rem;
+    }
+    .concern-tile-text h3 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--color-anchor);
+      margin: 0 0 0.2rem;
+    }
+    .concern-tile-text p {
+      font-size: 0.8rem;
+      color: var(--color-anchor-soft);
+      margin: 0;
+      line-height: 1.4;
+    }
 
-    /* ——— Concerns ——— */
-    .concerns-grid {
+    /* ——— STAR TREATMENTS CAROUSEL ——— */
+    .treatment-card {
+      width: 200px;
+      background: var(--color-surface-alt);
+      border: 1px solid var(--color-layer);
+      border-radius: 8px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s ease;
+    }
+    .treatment-card:hover {
+      border-color: var(--color-anchor);
+    }
+    .treatment-card-img {
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+    }
+    .treatment-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: saturate(0.88);
+    }
+    .treatment-card-text {
+      padding: 0.65rem 0.85rem;
+    }
+    .treatment-card-text h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--color-anchor);
+      margin: 0 0 0.15rem;
+    }
+    .treatment-card-text p {
+      font-size: 0.78rem;
+      color: var(--color-anchor-soft);
+      margin: 0;
+    }
+
+    /* ——— PHOTO BREAK ——— */
+    .photo-break {
+      width: 100%;
+      overflow: hidden;
+    }
+    .photo-break img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      object-position: center;
+      filter: saturate(0.88);
+      display: block;
+    }
+    @media (min-width: 880px) {
+      .photo-break img { height: 360px; }
+    }
+
+    /* ——— RESULTS CAROUSEL ——— */
+    .result-card {
+      width: 260px;
+      background: var(--color-surface-alt);
+      border: 1px solid var(--color-layer);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .result-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+    }
+    .result-card-label {
+      padding: 0.55rem 0.85rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+    }
+    .result-card-label strong {
+      color: var(--color-anchor);
+    }
+    .result-card-label span {
+      color: var(--color-anchor-soft);
+      font-size: 0.75rem;
+    }
+
+    /* ——— DOCTORS ——— */
+    .doctors {
+      background: linear-gradient(135deg, #2b1935 0%, #34203f 45%, #4a2b5a 100%);
+    }
+    .doctors .eyebrow { color: #d8b47c; }
+    .doctors h2 { color: #fff7ed; }
+    .doctors-grid {
+      display: grid;
+      gap: var(--space-3);
+      grid-template-columns: 1fr;
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    @media (min-width: 640px) {
+      .doctors-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .doctor-card {
+      text-align: center;
+      padding: var(--space-3);
+      background: rgba(255, 248, 239, 0.95);
+      border: 1px solid rgba(216, 180, 124, 0.35);
+      border-radius: 16px;
+    }
+    .doctor-portrait {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      margin: 0 auto var(--space-2);
+      background: #ead8c4;
+      border: 3px solid #3b2418;
+    }
+    @media (min-width: 640px) {
+      .doctor-portrait { width: 260px; height: 260px; }
+    }
+    .doctor-card h3 { color: #3b2418; }
+    .doctor-role {
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #9a6a3d;
+      margin: 0 0 var(--space-1);
+      font-weight: 700;
+    }
+    .doctor-practising {
+      font-size: 0.82rem;
+      color: #6b5547;
+      margin: 0 0 var(--space-2);
+      font-style: italic;
+    }
+    .doctor-focus {
+      font-size: 0.88rem;
+      margin: 0 0 var(--space-2);
+      color: #4a2f1f;
+      background: #f7eadb;
+      border: 1px solid rgba(184, 137, 85, 0.3);
+      border-left: 4px solid #b88955;
+      border-radius: 12px;
+      padding: 0.75rem 0.85rem;
+      text-align: left;
+    }
+    .doctor-focus span {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #9a6a3d;
+      margin-bottom: 0.2rem;
+      font-weight: 700;
+    }
+    .doctor-bio {
+      font-size: 0.85rem;
+      margin: 0;
+      color: #6b5547;
+    }
+
+    /* ——— HOW WE WORK ——— */
+    .how-steps {
+      list-style: none;
+      padding: 0;
+      margin: 0;
       display: grid;
       grid-template-columns: 1fr;
       gap: var(--space-3);
-    }
-    @media (min-width: 720px) {
-      .concerns-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (min-width: 1040px) {
-      .concerns-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-    .concern-card {
-      background: var(--color-surface-alt);
-      border: 1px solid var(--color-layer);
-      padding: var(--space-3);
-    }
-    .concern-card p { margin: 0; font-size: 0.96rem; }
-
-    .concern-title-link {
-  color: inherit;
-  text-decoration: none;
-}
-
-.concern-title-link:hover {
-  color: #b58a3b;
-  text-decoration: underline;
-}
-
-    .concern-articles {
-  margin-top: 1.25rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--color-layer);
-}
-
-.concern-articles-label {
-  display: block;
-  margin-bottom: 0.65rem;
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #b58a3b;
-}
-
-.concern-articles ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.concern-articles li + li {
-  margin-top: 0.55rem;
-}
-
-.concern-articles a {
-  color: inherit;
-  font-size: 0.92rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.concern-articles a:hover {
-  color: #b58a3b;
-  text-decoration: underline;
-}
-
-    /* ——— Doctors ——— */
-.doctors {
-  background: linear-gradient(135deg, #2b1935 0%, #34203f 45%, #4a2b5a 100%);
-}
-
-.doctors .section-head .eyebrow {
-  color: #d8b47c;
-}
-
-.doctors .section-head h2 {
-  color: #fff7ed;
-}
-
-.doctors-grid {
-  display: grid;
-  gap: var(--space-4);
-  grid-template-columns: 1fr;
-  max-width: 880px;
-  margin: 0 auto;
-}
-
-@media (min-width: 720px) {
-  .doctors-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.doctor-card {
-  text-align: center;
-  padding: var(--space-4) var(--space-3);
-  background: rgba(255, 248, 239, 0.95);
-  border: 1px solid rgba(216, 180, 124, 0.35);
-  border-radius: 20px;
-  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.18);
-}
-
-.doctor-portrait {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-  margin: 0 auto var(--space-3);
-  filter: saturate(0.98) contrast(1.02);
-  background: #ead8c4;
-  border: 4px solid #3b2418;
-  box-shadow: 0 14px 32px rgba(59, 36, 24, 0.22);
-}
-
-.doctor-card h3 {
-  color: #3b2418;
-}
-
-.doctor-role {
-  font-size: 0.74rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #9a6a3d;
-  margin: 0 0 var(--space-2);
-  font-weight: 700;
-}
-
-.doctor-practising {
-  font-size: 0.85rem;
-  color: #6b5547;
-  margin: 0 0 var(--space-3);
-  font-style: italic;
-}
-
-.doctor-focus {
-  font-size: 0.9rem;
-  margin: 0 0 var(--space-3);
-  color: #4a2f1f;
-  background: #f7eadb;
-  border: 1px solid rgba(184, 137, 85, 0.3);
-  border-left: 4px solid #b88955;
-  border-radius: 14px;
-  padding: 0.85rem 0.9rem;
-}
-
-.doctor-focus span {
-  display: block;
-  font-size: 0.7rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #9a6a3d;
-  margin-bottom: 0.3rem;
-  font-weight: 700;
-}
-
-.doctor-bio {
-  font-size: 0.9rem;
-  margin: 0;
-  color: #6b5547;
-}
-
-    /* ——— How ——— */
-    .how-steps {
-      list-style: none; padding: 0; margin: 0;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: var(--space-4);
     }
     @media (min-width: 880px) {
       .how-steps { grid-template-columns: repeat(3, 1fr); }
     }
     .how-step-num {
       font-family: var(--font-display);
-      font-size: 2.2rem;
+      font-size: 2rem;
       color: var(--color-whisper);
       display: block;
       margin-bottom: var(--space-1);
     }
-
-    /* ——— Tech ——— */
-    .tech-intro { max-width: 640px; margin-bottom: var(--space-4); }
-    .tech-grid {
-      list-style: none; padding: 0; margin: 0;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0;
-      border-top: 1px solid var(--color-layer);
-    }
-    @media (min-width: 720px) {
-      .tech-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    .tech-grid li {
-      padding: var(--space-3) 0;
-      border-bottom: 1px solid var(--color-layer);
-    }
-    @media (min-width: 720px) {
-      .tech-grid li:nth-child(odd) { border-right: 1px solid var(--color-layer); padding-right: var(--space-3); }
-      .tech-grid li:nth-child(even) { padding-left: var(--space-3); }
-    }
-    .tech-name {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      color: var(--color-anchor);
-      margin: 0 0 0.2rem;
-    }
-    .tech-note {
-      font-size: 0.88rem;
-      color: var(--color-anchor-soft);
-      margin: 0;
-    }
-
-    /* ——— Reviews ——— */
-.reviews {
-  background: linear-gradient(135deg, #2b1935 0%, #34203f 45%, #4a2b5a 100%);
-}
-
-.reviews .section-head .eyebrow {
-  color: #d8b47c;
-}
-
-.reviews .section-head h2 {
-  color: #fff7ed;
-}
-
-.reviews-grid {
-  display: grid;
-  gap: var(--space-3);
-  grid-template-columns: 1fr;
-}
-
-@media (min-width: 720px) {
-  .reviews-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.quotes-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-3);
-  margin-bottom: var(--space-4);
-}
-@media (min-width: 720px) {
-  .quotes-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (min-width: 1040px) {
-  .quotes-grid { grid-template-columns: repeat(3, 1fr); }
-}
-.quote-card {
-  background: rgba(255, 248, 239, 0.96);
-  border: 1px solid rgba(216, 180, 124, 0.35);
-  border-radius: 20px;
-  padding: var(--space-3);
-  margin: 0;
-}
-.quote-card p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #4a2f1f;
-  margin: 0 0 var(--space-2);
-  font-style: italic;
-}
-.quote-card cite {
-  font-size: 0.78rem;
-  font-style: normal;
-  font-weight: 600;
-  color: #9a6a3d;
-  letter-spacing: 0.04em;
-}
-
-.review-card {
-  background: rgba(255, 248, 239, 0.96);
-  border: 1px solid rgba(216, 180, 124, 0.35);
-  border-radius: 20px;
-  padding: var(--space-4);
-  text-decoration: none;
-  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.18);
-  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-}
-
-.review-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(216, 180, 124, 0.7);
-  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.24);
-}
-
-.review-rating {
-  font-family: var(--font-display);
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
-  color: #3b2418;
-  margin: 0 0 var(--space-2);
-}
-
-.review-branch {
-  font-size: 1rem;
-  color: #6b5547;
-  margin: 0 0 var(--space-3);
-}
-
-.review-link {
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #8a5a35;
-  font-weight: 700;
-  margin: 0;
-}
-
-.reviews .note {
-  color: rgba(255, 247, 237, 0.76);
-}
 
     /* ——— FAQ ——— */
     .faq-list { border-top: 1px solid var(--color-layer); }
@@ -1283,49 +948,57 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
     }
     .faq-item summary {
       font-family: var(--font-display);
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       color: var(--color-anchor);
       cursor: pointer;
       list-style: none;
-      display: flex; justify-content: space-between; align-items: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     .faq-item summary::after {
       content: '+';
       font-size: 1.4rem;
       color: var(--color-anchor-soft);
       margin-left: 1rem;
+      flex-shrink: 0;
     }
     .faq-item[open] summary::after { content: '−'; }
     .faq-item p { margin: var(--space-2) 0 0; max-width: 720px; }
 
-    /* ——— Visit ——— */
+    /* ——— VISIT ——— */
     .branch-grid {
       display: grid;
-      gap: var(--space-4);
+      gap: var(--space-3);
       grid-template-columns: 1fr;
     }
-    @media (min-width: 880px) { .branch-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 880px) {
+      .branch-grid { grid-template-columns: repeat(2, 1fr); }
+    }
     .branch-card {
       background: var(--color-surface-alt);
       border: 1px solid var(--color-layer);
+      border-radius: 8px;
+      overflow: hidden;
     }
     .branch-map {
       aspect-ratio: 16 / 10;
       background: var(--color-layer);
     }
     .branch-map iframe {
-      width: 100%; height: 100%;
+      width: 100%;
+      height: 100%;
       border: 0;
     }
     .branch-detail { padding: var(--space-3); }
-    .branch-address { margin: 0 0 var(--space-2); font-size: 0.95rem; }
+    .branch-address { margin: 0 0 var(--space-2); font-size: 0.92rem; }
     .branch-hours {
-      font-size: 0.82rem;
+      font-size: 0.8rem;
       color: var(--color-anchor-soft);
-      margin: 0 0 var(--space-3);
+      margin: 0 0 var(--space-2);
     }
 
-    /* ——— Final ——— */
+    /* ——— FINAL CTA ——— */
     .final-cta {
       background: var(--color-anchor);
       color: var(--color-surface);
@@ -1340,71 +1013,113 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
     }
     .final-cta .cta:hover { background: var(--color-layer); }
 
-    /* ——— Premium Reveal Animation ——— */
-.reveal-soft {
-  opacity: 0;
-  transform: translateY(14px);
-  filter: blur(4px);
-  transition:
-    opacity 0.2s ease,
-    transform 0.2s cubic-bezier(0.22, 1, 0.36, 1),
-    filter 0.2s ease;
-  transition-delay: var(--reveal-delay, 0ms);
-  will-change: opacity, transform, filter;
-}
-
-.reveal-soft.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-  filter: blur(0);
-}
-
-.hero-media.reveal-soft {
-  transform: translateY(18px) scale(0.985);
-}
-
-.hero-media.reveal-soft.is-visible {
-  transform: translateY(0) scale(1);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal-soft,
-  .reveal-soft.is-visible,
-  .hero-media.reveal-soft,
-  .hero-media.reveal-soft.is-visible {
-    opacity: 1;
-    transform: none;
-    filter: none;
-    transition: none;
-  }
-}
-  </style>
-  <script>
-  const revealItems = document.querySelectorAll(
-    'section, .doctor-card, .review-card, .concern-card'
-  );
-
-  revealItems.forEach((item) => {
-    item.classList.add('reveal');
-  });
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-        } else {
-          entry.target.classList.remove('is-visible');
-        }
-      });
-    },
-    {
-      threshold: 0.08,
-      rootMargin: '0px 0px -8% 0px',
+    /* ——— SHARED ELEMENTS ——— */
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--color-anchor-soft);
+      margin: 0 0 var(--space-1);
+      font-weight: 500;
     }
-  );
+    h2 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: clamp(1.6rem, 3.6vw, 2.4rem);
+      line-height: 1.15;
+      letter-spacing: -0.005em;
+      color: var(--color-anchor);
+      margin: 0 0 var(--space-2);
+    }
+    h3 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: 1.3rem;
+      color: var(--color-anchor);
+      margin: 0 0 var(--space-1);
+    }
+    .section-head {
+      margin-bottom: var(--space-3);
+      max-width: 700px;
+    }
+    .narrow { max-width: 760px; }
+    .center { text-align: center; }
+    .note {
+      font-size: 0.82rem;
+      color: var(--color-anchor-soft);
+      max-width: 720px;
+    }
+    .note--top { margin: 0 0 var(--space-2); }
 
-  revealItems.forEach((item) => observer.observe(item));
-</script>
+    /* ——— CTA VARIANTS ——— */
+    .cta--whatsapp {
+      background: #25D366;
+      color: #fff;
+      border-color: #25D366;
+    }
+    .cta--whatsapp:hover {
+      background: #1fba59;
+    }
+    .cta--outline {
+      background: transparent;
+      color: var(--color-anchor);
+      border-color: var(--color-anchor);
+    }
+    .cta--outline:hover {
+      background: var(--color-layer);
+    }
+    .cta--text {
+      display: inline-block;
+      background: transparent;
+      border: none;
+      color: var(--color-anchor);
+      text-decoration: none;
+      padding: 0.5rem 0;
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+    .cta--text:hover {
+      color: var(--color-anchor-soft);
+    }
 
+    /* ——— SECTION CTA SPACING ——— */
+    .section-cta {
+      margin-top: var(--space-3);
+      padding-bottom: 0;
+    }
+    .section-cta .cta + .cta {
+      margin-left: var(--space-2);
+    }
+    .section-cta.center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* ——— SECTION RHYTHM ——— */
+    section {
+      padding: var(--space-5) 0;
+    }
+    section + section {
+      border-top: 1px solid var(--color-layer);
+    }
+    .reviews + .concerns { border-top: none; }
+    .photo-break + .results { border-top: none; }
+    .trust-bar + .reviews { border-top: none; }
+
+    /* ——— REVEAL ANIMATION ——— */
+    .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
 </BaseLayout>
