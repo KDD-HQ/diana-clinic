@@ -159,7 +159,7 @@ Acne scar treatment begins with a proper assessment â€” scar type, density,
 
 If you would like a personalised assessment, you can reach the branch closest to you:
 
-* Bandar Baru Bangi: [https://wa.me/601111303774?text=Hi%20,%20i'm%20interested%20with](https://wa.me/601111303774?text=Hi%20,%20i'm%20interested%20with)  
-* Senawang: [https://wa.me/60182683774?text=Hi%20,%20i'm%20interested%20with](https://wa.me/60182683774?text=Hi%20,%20i'm%20interested%20with)
+* Bandar Baru Bangi: [WhatsApp Us](https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A)
+* Senawang: [WhatsApp Us](https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A)
 
 *Educational use only. Not a substitute for clinical consultation. Â© Klinik Dr Diana.*

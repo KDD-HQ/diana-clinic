@@ -37,13 +37,8 @@ const branches = [
   }
 ];
 
-const waBase = 'https://wa.me/60183902910';
-const waGeneric = `${waBase}?text=${encodeURIComponent(
-  "Hi Diana Clinic, I'd like to book a Clinical Assessment, and my concern is..."
-)}`;
-const waUnsure = `${waBase}?text=${encodeURIComponent(
-  "Hi Diana Clinic, I'm not sure what treatment I need — can I describe my skin concern?"
-)}`;
+const waGeneric = 'https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A';
+const waUnsure = waGeneric;
 
 // — Concerns (simplified for homepage tiles — full article lists live on pillar pages) —
 const concerns = [
@@ -500,7 +495,7 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
               <p class="branch-hours">{b.hoursReadable}</p>
               <a
                 class="cta"
-                href={`${waBase}?text=${encodeURIComponent(b.waMessage)}`}
+                href={waGeneric}
                 target="_blank"
                 rel="noopener"
               >

@@ -1,0 +1,799 @@
+diff --git a/package-lock.json b/package-lock.json
+index 421d4ea..f8c6d25 100644
+--- a/package-lock.json
++++ b/package-lock.json
+@@ -936,9 +936,6 @@
+         "arm"
+       ],
+       "dev": true,
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "LGPL-3.0-or-later",
+       "optional": true,
+       "os": [
+@@ -956,9 +953,6 @@
+         "arm64"
+       ],
+       "dev": true,
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "LGPL-3.0-or-later",
+       "optional": true,
+       "os": [
+@@ -976,9 +970,6 @@
+         "ppc64"
+       ],
+       "dev": true,
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "LGPL-3.0-or-later",
+       "optional": true,
+       "os": [
+@@ -996,9 +987,6 @@
+         "riscv64"
+       ],
+       "dev": true,
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "LGPL-3.0-or-later",
+       "optional": true,
+       "os": [
+@@ -1016,9 +1004,6 @@
+         "s390x"
+       ],
+       "dev": true,
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "LGPL-3.0-or-later",
+       "optional": true,
+       "os": [
+@@ -1036,9 +1021,6 @@
+         "x64"
+       ],
+       "dev": true,
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "LGPL-3.0-or-later",
+       "optional": true,
+       "os": [
+@@ -1056,9 +1038,6 @@
+         "arm64"
+       ],
+       "dev": true,
+-      "libc": [
+-        "musl"
+-      ],
+       "license": "LGPL-3.0-or-later",
+       "optional": true,
+       "os": [
+@@ -1076,9 +1055,6 @@
+         "x64"
+       ],
+       "dev": true,
+-      "libc": [
+-        "musl"
+-      ],
+       "license": "LGPL-3.0-or-later",
+       "optional": true,
+       "os": [
+@@ -1096,9 +1072,6 @@
+         "arm"
+       ],
+       "dev": true,
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "Apache-2.0",
+       "optional": true,
+       "os": [
+@@ -1122,9 +1095,6 @@
+         "arm64"
+       ],
+       "dev": true,
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "Apache-2.0",
+       "optional": true,
+       "os": [
+@@ -1148,9 +1118,6 @@
+         "ppc64"
+       ],
+       "dev": true,
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "Apache-2.0",
+       "optional": true,
+       "os": [
+@@ -1174,9 +1141,6 @@
+         "riscv64"
+       ],
+       "dev": true,
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "Apache-2.0",
+       "optional": true,
+       "os": [
+@@ -1200,9 +1164,6 @@
+         "s390x"
+       ],
+       "dev": true,
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "Apache-2.0",
+       "optional": true,
+       "os": [
+@@ -1226,9 +1187,6 @@
+         "x64"
+       ],
+       "dev": true,
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "Apache-2.0",
+       "optional": true,
+       "os": [
+@@ -1252,9 +1210,6 @@
+         "arm64"
+       ],
+       "dev": true,
+-      "libc": [
+-        "musl"
+-      ],
+       "license": "Apache-2.0",
+       "optional": true,
+       "os": [
+@@ -1278,9 +1233,6 @@
+         "x64"
+       ],
+       "dev": true,
+-      "libc": [
+-        "musl"
+-      ],
+       "license": "Apache-2.0",
+       "optional": true,
+       "os": [
+@@ -1665,9 +1617,6 @@
+       "cpu": [
+         "arm"
+       ],
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -1681,9 +1630,6 @@
+       "cpu": [
+         "arm"
+       ],
+-      "libc": [
+-        "musl"
+-      ],
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -1697,9 +1643,6 @@
+       "cpu": [
+         "arm64"
+       ],
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -1713,9 +1656,6 @@
+       "cpu": [
+         "arm64"
+       ],
+-      "libc": [
+-        "musl"
+-      ],
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -1729,9 +1669,6 @@
+       "cpu": [
+         "loong64"
+       ],
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -1745,9 +1682,6 @@
+       "cpu": [
+         "loong64"
+       ],
+-      "libc": [
+-        "musl"
+-      ],
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -1761,9 +1695,6 @@
+       "cpu": [
+         "ppc64"
+       ],
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -1777,9 +1708,6 @@
+       "cpu": [
+         "ppc64"
+       ],
+-      "libc": [
+-        "musl"
+-      ],
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -1793,9 +1721,6 @@
+       "cpu": [
+         "riscv64"
+       ],
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -1809,9 +1734,6 @@
+       "cpu": [
+         "riscv64"
+       ],
+-      "libc": [
+-        "musl"
+-      ],
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -1825,9 +1747,6 @@
+       "cpu": [
+         "s390x"
+       ],
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -1841,9 +1760,6 @@
+       "cpu": [
+         "x64"
+       ],
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -1857,9 +1773,6 @@
+       "cpu": [
+         "x64"
+       ],
+-      "libc": [
+-        "musl"
+-      ],
+       "license": "MIT",
+       "optional": true,
+       "os": [
+@@ -2555,9 +2468,6 @@
+       "cpu": [
+         "arm"
+       ],
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "LGPL-3.0-or-later",
+       "optional": true,
+       "os": [
+@@ -2574,9 +2484,6 @@
+       "cpu": [
+         "arm64"
+       ],
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "LGPL-3.0-or-later",
+       "optional": true,
+       "os": [
+@@ -2593,9 +2500,6 @@
+       "cpu": [
+         "s390x"
+       ],
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "LGPL-3.0-or-later",
+       "optional": true,
+       "os": [
+@@ -2612,9 +2516,6 @@
+       "cpu": [
+         "x64"
+       ],
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "LGPL-3.0-or-later",
+       "optional": true,
+       "os": [
+@@ -2631,9 +2532,6 @@
+       "cpu": [
+         "arm64"
+       ],
+-      "libc": [
+-        "musl"
+-      ],
+       "license": "LGPL-3.0-or-later",
+       "optional": true,
+       "os": [
+@@ -2650,9 +2548,6 @@
+       "cpu": [
+         "x64"
+       ],
+-      "libc": [
+-        "musl"
+-      ],
+       "license": "LGPL-3.0-or-later",
+       "optional": true,
+       "os": [
+@@ -2669,9 +2564,6 @@
+       "cpu": [
+         "arm"
+       ],
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "Apache-2.0",
+       "optional": true,
+       "os": [
+@@ -2694,9 +2586,6 @@
+       "cpu": [
+         "arm64"
+       ],
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "Apache-2.0",
+       "optional": true,
+       "os": [
+@@ -2719,9 +2608,6 @@
+       "cpu": [
+         "s390x"
+       ],
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "Apache-2.0",
+       "optional": true,
+       "os": [
+@@ -2744,9 +2630,6 @@
+       "cpu": [
+         "x64"
+       ],
+-      "libc": [
+-        "glibc"
+-      ],
+       "license": "Apache-2.0",
+       "optional": true,
+       "os": [
+@@ -2769,9 +2652,6 @@
+       "cpu": [
+         "arm64"
+       ],
+-      "libc": [
+-        "musl"
+-      ],
+       "license": "Apache-2.0",
+       "optional": true,
+       "os": [
+@@ -2794,9 +2674,6 @@
+       "cpu": [
+         "x64"
+       ],
+-      "libc": [
+-        "musl"
+-      ],
+       "license": "Apache-2.0",
+       "optional": true,
+       "os": [
+diff --git a/src/content/blog/acne-scar-treatment-options-klinik-dr-diana.md b/src/content/blog/acne-scar-treatment-options-klinik-dr-diana.md
+index 4013e45..37b8036 100644
+--- a/src/content/blog/acne-scar-treatment-options-klinik-dr-diana.md
++++ b/src/content/blog/acne-scar-treatment-options-klinik-dr-diana.md
+@@ -159,7 +159,7 @@ Acne scar treatment begins with a proper assessment â€” scar type, density,
+ 
+ If you would like a personalised assessment, you can reach the branch closest to you:
+ 
+-* Bandar Baru Bangi: [https://wa.me/601111303774?text=Hi%20,%20i'm%20interested%20with](https://wa.me/601111303774?text=Hi%20,%20i'm%20interested%20with)  
+-* Senawang: [https://wa.me/60182683774?text=Hi%20,%20i'm%20interested%20with](https://wa.me/60182683774?text=Hi%20,%20i'm%20interested%20with)
++* Bandar Baru Bangi: [WhatsApp Us](https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A)
++* Senawang: [WhatsApp Us](https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A)
+ 
+ *Educational use only. Not a substitute for clinical consultation. Â© Klinik Dr Diana.*
+diff --git a/src/content/treatments/acne.mdx b/src/content/treatments/acne.mdx
+index 21d59b9..be1688c 100644
+--- a/src/content/treatments/acne.mdx
++++ b/src/content/treatments/acne.mdx
+@@ -166,7 +166,7 @@ LED blue light therapy targets *Cutibacterium acnes* bacteria on the skin surfac
+ 
+ <div class="cta-box">
+   <p>Not sure which treatment is right for your acne?</p>
+-  <a href="https://wa.me/60183902910?text=Hi%20KDD%2C%20I%27d%20like%20to%20book%20an%20acne%20consultation" class="btn-wa" target="_blank" rel="noopener">Book a Consultation</a>
++  <a href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" class="btn-wa" target="_blank" rel="noopener">Book a Consultation</a>
+ </div>
+ 
+ 
+diff --git a/src/content/treatments/dark-eye-circle-treatment.mdx b/src/content/treatments/dark-eye-circle-treatment.mdx
+index cc6065c..a1ba1f8 100644
+--- a/src/content/treatments/dark-eye-circle-treatment.mdx
++++ b/src/content/treatments/dark-eye-circle-treatment.mdx
+@@ -89,7 +89,7 @@ This is why dark circle treatment should not begin with choosing a treatment fro
+ 
+ <div class="cta-box">
+ <p>Unsure whether your dark circles are pigment, hollow shadow, thin skin or a mixed type? Book an under-eye assessment at Klinik Dr Diana.</p>
+-<a href="https://wa.me/60183902910?text=Hi%20KDD%2C%20I%27d%20like%20to%20ask%20about%20dark%20eye%20circle%20treatment" class="btn btn-wa">WhatsApp Us</a>
++<a href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" class="btn btn-wa">WhatsApp Us</a>
+ </div>
+ 
+ ## What you need to know
+@@ -387,7 +387,7 @@ For patients in Bangi, Kajang, Putrajaya, Senawang, Seremban and nearby areas, K
+ 
+ <div class="cta-box">
+ <p>Ask Klinik Dr Diana about dark eye circle assessment, treatment suitability and current pricing.</p>
+-<a href="https://wa.me/60183902910?text=Hi%20KDD%2C%20I%27d%20like%20to%20ask%20about%20dark%20eye%20circle%20treatment" class="btn btn-wa">WhatsApp Us</a>
++<a href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" class="btn btn-wa">WhatsApp Us</a>
+ </div>
+ 
+ ## Frequently asked questions about dark eye circle treatment
+diff --git a/src/content/treatments/deep-scar-treatment.mdx b/src/content/treatments/deep-scar-treatment.mdx
+index e560709..0c7a0e4 100644
+--- a/src/content/treatments/deep-scar-treatment.mdx
++++ b/src/content/treatments/deep-scar-treatment.mdx
+@@ -77,7 +77,7 @@ This page explains how deep acne scars are classified, what treatment options ar
+ 
+ <div class="cta-box">
+ <p>Book a deep scar assessment with Dr Diana or Dr Effendy.</p>
+-<a href="https://wa.me/60183902910?text=Hi%20KDD%2C%20I'd%20like%20to%20book%20a%20deep%20scar%20assessment" class="btn btn-wa">WhatsApp Us</a>
++<a href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" class="btn btn-wa">WhatsApp Us</a>
+ </div>
+ 
+ ---
+@@ -230,7 +230,7 @@ At Klinik Dr Diana, treatment plans are designed after mapping the scar types pr
+ 
+ <div class="cta-box">
+ <p>Start with a scar assessment. The doctor will map your scar types and discuss a treatment plan designed for your skin.</p>
+-<a href="https://wa.me/60183902910?text=Hi%20KDD%2C%20I'd%20like%20to%20book%20a%20deep%20scar%20assessment" class="btn btn-wa">Book a Scar Assessment</a>
++<a href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" class="btn btn-wa">Book a Scar Assessment</a>
+ </div>
+ 
+ ---
+diff --git a/src/content/treatments/hyalual-electri.mdx b/src/content/treatments/hyalual-electri.mdx
+index b762fd4..2703802 100644
+--- a/src/content/treatments/hyalual-electri.mdx
++++ b/src/content/treatments/hyalual-electri.mdx
+@@ -84,7 +84,7 @@ At Klinik Dr Diana, Electri is considered only after checking your concern prope
+ 
+ <div class="cta-box">
+ <p>Book a consultation at Klinik Dr Diana to check whether Hyalual Electri suits your hydration, glow or under-eye skin-quality concern.</p>
+-<a href="https://wa.me/601111303774?text=Hi%20KDD%2C%20I%27d%20like%20to%20ask%20about%20Hyalual%20Electri%20treatment" class="btn btn-wa">WhatsApp Us</a>
++<a href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" class="btn btn-wa">WhatsApp Us</a>
+ </div>
+ 
+ ## What you need to know
+@@ -378,7 +378,7 @@ For patients in Bandar Baru Bangi, Senawang, Seremban, Putrajaya, Kajang and nea
+ 
+ <div class="cta-box">
+ <p>Not sure whether your skin needs Hyalual Electri, filler, laser, peel or another booster? A consultation can help identify the right starting point.</p>
+-<a href="https://wa.me/601111303774?text=Hi%20KDD%2C%20I%27d%20like%20to%20book%20a%20Hyalual%20Electri%20consultation" class="btn btn-wa">Book an Assessment</a>
++<a href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" class="btn btn-wa">Book an Assessment</a>
+ </div>
+ 
+ ## How much does Hyalual Electri cost?
+@@ -389,7 +389,7 @@ For patients in Bandar Baru Bangi, Senawang, Seremban, Putrajaya, Kajang and nea
+ 
+ <div class="cta-box">
+ <p>Ask Klinik Dr Diana about Hyalual Electri suitability, pricing and branch availability.</p>
+-<a href="https://wa.me/601111303774?text=Hi%20KDD%2C%20I%27d%20like%20to%20ask%20about%20Hyalual%20Electri%20treatment" class="btn btn-wa">WhatsApp Us</a>
++<a href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" class="btn btn-wa">WhatsApp Us</a>
+ </div>
+ 
+ ## References
+diff --git a/src/content/treatments/juvelook-biostimulator.mdx b/src/content/treatments/juvelook-biostimulator.mdx
+index 92fd334..6634c5b 100644
+--- a/src/content/treatments/juvelook-biostimulator.mdx
++++ b/src/content/treatments/juvelook-biostimulator.mdx
+@@ -293,7 +293,7 @@ Klinik Dr Diana provides doctor-supervised aesthetic treatments in Bandar Baru B
+ 
+ A consultation helps determine whether Juvelook, another skin booster, Radiesse, Profhilo, Rejuran, laser, acne-scar treatment or a combination plan is more suitable for your concern.
+ 
+-<a class="cta" href="https://wa.me/60183902910?text=Hi%20Klinik%20Dr%20Diana%2C%20I%20would%20like%20to%20ask%20about%20Juvelook%20Biostimulator%20treatment." target="_blank" rel="noopener">
++<a class="cta" href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" target="_blank" rel="noopener">
+   Ask about Juvelook treatment
+ </a>
+ 
+diff --git a/src/content/treatments/lhala-peel.mdx b/src/content/treatments/lhala-peel.mdx
+index 761d232..b7409f8 100644
+--- a/src/content/treatments/lhala-peel.mdx
++++ b/src/content/treatments/lhala-peel.mdx
+@@ -78,7 +78,7 @@ At Klinik Dr Diana, LHALA Peel is considered as part of an assessment-first skin
+ 
+ <div class="cta-box">
+ <p>Book a consultation at Klinik Dr Diana to check whether LHALA Peel is suitable for your skin.</p>
+-<a href="https://wa.me/60123456789?text=Hi%20KDD%2C%20I%27d%20like%20to%20ask%20about%20LHALA%20Peel%20treatment" class="btn btn-wa">WhatsApp Us</a>
++<a href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" class="btn btn-wa">WhatsApp Us</a>
+ </div>
+ 
+ ## Why LHALA Peel is used for glow, pores and texture
+@@ -324,7 +324,7 @@ For patients in Bandar Baru Bangi, Senawang, Seremban and nearby areas, Klinik D
+ 
+ <div class="cta-box">
+ <p>Ask Klinik Dr Diana about LHALA Peel suitability, pricing and branch availability.</p>
+-<a href="https://wa.me/60123456789?text=Hi%20KDD%2C%20I%27d%20like%20to%20ask%20about%20LHALA%20Peel%20treatment" class="btn btn-wa">WhatsApp Us</a>
++<a href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" class="btn btn-wa">WhatsApp Us</a>
+ </div>
+ 
+ ## Frequently asked questions about LHALA Peel
+diff --git a/src/content/treatments/liftera-v-hifu.mdx b/src/content/treatments/liftera-v-hifu.mdx
+index b0e3570..ab1a2ab 100644
+--- a/src/content/treatments/liftera-v-hifu.mdx
++++ b/src/content/treatments/liftera-v-hifu.mdx
+@@ -97,7 +97,7 @@ At Klinik Dr Diana, Liftera-V is considered only after assessing whether your co
+ 
+ <div class="cta-box">
+ <p>Book a consultation at Klinik Dr Diana to check whether Liftera-V HIFU matches your facial anatomy and lifting goals.</p>
+-<a href="https://wa.me/60123456789?text=Hi%20KDD%2C%20I%27d%20like%20to%20ask%20about%20Liftera-V%20HIFU%20treatment" class="btn btn-wa">WhatsApp Us</a>
++<a href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" class="btn btn-wa">WhatsApp Us</a>
+ </div>
+ 
+ ## Why is Liftera-V used as a lifting treatment?
+@@ -384,7 +384,7 @@ For patients in Bandar Baru Bangi, Senawang, Seremban and nearby areas, the cons
+ 
+ <div class="cta-box">
+ <p>Not sure whether your concern is skin laxity, facial fat or volume loss? A facial assessment can help identify the cause before you choose a lifting treatment.</p>
+-<a href="https://wa.me/60123456789?text=Hi%20KDD%2C%20I%27d%20like%20to%20book%20a%20Liftera-V%20HIFU%20consultation" class="btn btn-wa">Book an Assessment</a>
++<a href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" class="btn btn-wa">Book an Assessment</a>
+ </div>
+ 
+ ## How much does Liftera-V HIFU cost?
+@@ -395,7 +395,7 @@ For patients in Bandar Baru Bangi, Senawang, Seremban and nearby areas, the cons
+ 
+ <div class="cta-box">
+ <p>Ask Klinik Dr Diana about Liftera-V HIFU suitability, pricing and branch availability.</p>
+-<a href="https://wa.me/60123456789?text=Hi%20KDD%2C%20I%27d%20like%20to%20ask%20about%20Liftera-V%20HIFU%20treatment" class="btn btn-wa">WhatsApp Us</a>
++<a href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" class="btn btn-wa">WhatsApp Us</a>
+ </div>
+ 
+ ## References
+diff --git a/src/content/treatments/oxygeneo-glam.mdx b/src/content/treatments/oxygeneo-glam.mdx
+index b8194d6..cef2d51 100644
+--- a/src/content/treatments/oxygeneo-glam.mdx
++++ b/src/content/treatments/oxygeneo-glam.mdx
+@@ -68,7 +68,7 @@ At Klinik Dr Diana, OxyGeneo Glam is our flagship glow-and-firming protocol —
+ 
+ <div class="cta-box">
+ <p>Book a consultation or treatment session at Klinik Dr Diana.</p>
+-<a href="https://wa.me/60123456789?text=Hi%20KDD%2C%20I%27d%20like%20to%20book%20OxyGeneo%20Glam" class="btn btn-wa">WhatsApp Us</a>
++<a href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" class="btn btn-wa">WhatsApp Us</a>
+ </div>
+ 
+ <aside class="press-block">
+diff --git a/src/content/treatments/pigmentation.mdx b/src/content/treatments/pigmentation.mdx
+index d3a3c8d..b235cc4 100644
+--- a/src/content/treatments/pigmentation.mdx
++++ b/src/content/treatments/pigmentation.mdx
+@@ -89,7 +89,7 @@ Because each of these causes produces pigmentation that looks different and sits
+ 
+ <div class="cta-box">
+ <p>Not sure what type of pigmentation you have? A doctor can assess it during consultation.</p>
+-<a href="https://wa.me/60183902910?text=Hi%20KDD%2C%20I%27d%20like%20to%20ask%20about%20pigmentation%20treatment" class="btn btn-wa">WhatsApp Us</a>
++<a href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" class="btn btn-wa">WhatsApp Us</a>
+ </div>
+ 
+ ## What are the different types of pigmentation?
+diff --git a/src/content/treatments/plenhyage-strong-xl.mdx b/src/content/treatments/plenhyage-strong-xl.mdx
+index 081083b..050e1d7 100644
+--- a/src/content/treatments/plenhyage-strong-xl.mdx
++++ b/src/content/treatments/plenhyage-strong-xl.mdx
+@@ -88,7 +88,7 @@ At Klinik Dr Diana, Plenhyage Strong XL is not treated as a one-size-fits-all in
+ 
+ <div class="cta-box">
+ <p>Book a consultation at Klinik Dr Diana to check whether Plenhyage Strong XL suits your skin repair, hydration or firmness concern.</p>
+-<a href="https://wa.me/60183902910?text=Hi%20KDD%2C%20I%27d%20like%20to%20ask%20about%20Plenhyage%20Strong%20XL%20treatment" class="btn btn-wa">WhatsApp Us</a>
++<a href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" class="btn btn-wa">WhatsApp Us</a>
+ </div>
+ 
+ ## What you need to know
+@@ -342,7 +342,7 @@ For patients in Bandar Baru Bangi, Senawang, Seremban and nearby areas, Klinik D
+ 
+ <div class="cta-box">
+ <p>Ask Klinik Dr Diana about Plenhyage Strong XL suitability, pricing and branch availability.</p>
+-<a href="https://wa.me/60183902910?text=Hi%20KDD%2C%20I%27d%20like%20to%20ask%20about%20Plenhyage%20Strong%20XL%20treatment" class="btn btn-wa">WhatsApp Us</a>
++<a href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" class="btn btn-wa">WhatsApp Us</a>
+ </div>
+ 
+ ## Frequently asked questions about Plenhyage Strong XL
+diff --git a/src/content/treatments/profhilo-structura-fat-stimulator.mdx b/src/content/treatments/profhilo-structura-fat-stimulator.mdx
+index 96adbfb..c71e01a 100644
+--- a/src/content/treatments/profhilo-structura-fat-stimulator.mdx
++++ b/src/content/treatments/profhilo-structura-fat-stimulator.mdx
+@@ -83,7 +83,7 @@ At Klinik Dr Diana, Profhilo Structura is not recommended based on trend alone.
+ 
+ <div class="cta-box">
+ <p>Book a consultation at Klinik Dr Diana to check whether Profhilo Structura suits your facial structure, firmness or ageing concern.</p>
+-<a href="https://wa.me/60183902910?text=Hi%20KDD%2C%20I%27d%20like%20to%20ask%20about%20Profhilo%20Structura%20Fat%20Stimulator%20treatment" class="btn btn-wa">WhatsApp Us</a>
++<a href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" class="btn btn-wa">WhatsApp Us</a>
+ </div>
+ 
+ ## What you need to know
+@@ -407,7 +407,7 @@ For patients in Bandar Baru Bangi, Senawang, Seremban and nearby areas, Klinik D
+ 
+ <div class="cta-box">
+ <p>Ask Klinik Dr Diana about Profhilo Structura suitability, pricing and branch availability.</p>
+-<a href="https://wa.me/60183902910?text=Hi%20KDD%2C%20I%27d%20like%20to%20ask%20about%20Profhilo%20Structura%20Fat%20Stimulator%20treatment" class="btn btn-wa">WhatsApp Us</a>
++<a href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" class="btn btn-wa">WhatsApp Us</a>
+ </div>
+ 
+ ## Frequently asked questions about Profhilo Structura
+diff --git a/src/content/treatments/radiesse-biostimulator.mdx b/src/content/treatments/radiesse-biostimulator.mdx
+index 936eb16..dbf304d 100644
+--- a/src/content/treatments/radiesse-biostimulator.mdx
++++ b/src/content/treatments/radiesse-biostimulator.mdx
+@@ -84,7 +84,7 @@ At Klinik Dr Diana, the first step is not choosing the product name. The first s
+ 
+ <div class="cta-box">
+ <p>Book a consultation at Klinik Dr Diana to check whether Radiesse is suitable for your facial contour, firmness or skin-quality goals.</p>
+-<a href="https://wa.me/601111303774?text=Hi%20KDD%2C%20I%27d%20like%20to%20ask%20about%20Radiesse%20biostimulator%20treatment" class="btn btn-wa">WhatsApp Us</a>
++<a href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" class="btn btn-wa">WhatsApp Us</a>
+ </div>
+ 
+ ## What you need to know
+@@ -401,7 +401,7 @@ For patients in Bandar Baru Bangi, Senawang, Seremban, Putrajaya, Kajang and nea
+ 
+ <div class="cta-box">
+ <p>Not sure whether you need Radiesse, HA filler, skin booster, HIFU or another treatment? A consultation can help identify the right starting point.</p>
+-<a href="https://wa.me/601111303774?text=Hi%20KDD%2C%20I%27d%20like%20to%20book%20a%20Radiesse%20biostimulator%20consultation" class="btn btn-wa">Book an Assessment</a>
++<a href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" class="btn btn-wa">Book an Assessment</a>
+ </div>
+ 
+ ## How much does Radiesse cost?
+@@ -412,7 +412,7 @@ For patients in Bandar Baru Bangi, Senawang, Seremban, Putrajaya, Kajang and nea
+ 
+ <div class="cta-box">
+ <p>Ask Klinik Dr Diana about Radiesse suitability, pricing and branch availability.</p>
+-<a href="https://wa.me/601111303774?text=Hi%20KDD%2C%20I%27d%20like%20to%20ask%20about%20Radiesse%20biostimulator%20treatment" class="btn btn-wa">WhatsApp Us</a>
++<a href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" class="btn btn-wa">WhatsApp Us</a>
+ </div>
+ 
+ ## References
+diff --git a/src/layouts/BaseLayout.astro b/src/layouts/BaseLayout.astro
+index 76ca553..9859e29 100644
+--- a/src/layouts/BaseLayout.astro
++++ b/src/layouts/BaseLayout.astro
+@@ -101,7 +101,7 @@ const siteSchema = {
+   <li><a href="/blog">Blog</a></li>
+         
+           <a class="cta cta--compact"
+-          href="https://wa.me/60183902910?text=Hi%20Diana%20Clinic%2C%20I'd%20like%20to%20book%20a%20Clinical%20Assessment%2C%20and%20my%20concern%20is..."
++          href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A"
+           target="_blank"
+           rel="noopener"
+         >
+@@ -159,7 +159,7 @@ const siteSchema = {
+     <!-- Sticky WhatsApp -->
+     
+       <a class="sticky-wa"
+-      href="https://wa.me/60183902910?text=Hi%20Diana%20Clinic%2C%20I'd%20like%20to%20book%20a%20Clinical%20Assessment%2C%20and%20my%20concern%20is..."
++      href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A"
+       target="_blank"
+       rel="noopener"
+       aria-label="Book a Clinical Assessment via WhatsApp"
+diff --git a/src/layouts/ResultsLayout.astro b/src/layouts/ResultsLayout.astro
+index c6efb40..01bed73 100644
+--- a/src/layouts/ResultsLayout.astro
++++ b/src/layouts/ResultsLayout.astro
+@@ -170,7 +170,7 @@ const faqSchema = faqs.length > 0 ? {
+       </p>
+       <div class="results-cta__buttons">
+         <a
+-          href="https://wa.me/60183902910?text=Hi%2C%20I%20saw%20your%20results%20page%20and%20would%20like%20to%20book%20a%20consultation."
++          href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A"
+           class="btn btn--primary"
+           target="_blank"
+           rel="noopener noreferrer"
+@@ -178,7 +178,7 @@ const faqSchema = faqs.length > 0 ? {
+           WhatsApp Us — Bangi
+         </a>
+         <a
+-          href="https://wa.me/60183902910?text=Hi%2C%20I%20saw%20your%20results%20page%20and%20would%20like%20to%20book%20a%20consultation%20at%20Senawang."
++          href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A"
+           class="btn btn--secondary"
+           target="_blank"
+           rel="noopener noreferrer"
+diff --git a/src/layouts/TreatmentLayout.astro b/src/layouts/TreatmentLayout.astro
+index 62a2baf..f7ac7b1 100644
+--- a/src/layouts/TreatmentLayout.astro
++++ b/src/layouts/TreatmentLayout.astro
+@@ -49,11 +49,7 @@ const canonical = `${SITE}/treatments/${slug}`;
+ const heroImageUrl = `${SITE}${data.heroImage}`;
+ const langTag = data.lang === 'ms' ? 'ms-MY' : 'en-MY';
+ 
+-const ctaMessage =
+-  data.ctaWhatsappMessage || `Hi KDD, I'd like to enquire about ${data.title}`;
+-const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+-  ctaMessage
+-)}`;
++const whatsappUrl = 'https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A';
+ 
+ const formatISODate = (d: Date | string) =>
+   d instanceof Date ? d.toISOString().split('T')[0] : d;
+diff --git a/src/pages/blog/[...slug].astro b/src/pages/blog/[...slug].astro
+index ec07996..7c42091 100644
+--- a/src/pages/blog/[...slug].astro
++++ b/src/pages/blog/[...slug].astro
+@@ -57,7 +57,7 @@ const { Content } = await post.render();
+ 
+       <footer class="post-footer">
+         <p class="disclaimer">This article is for informational purposes only and does not constitute medical advice. Individual skin concerns vary — a clinical assessment by a qualified doctor is recommended before starting any treatment.</p>
+-        <a href="https://wa.me/60183902910?text=Hi%20Diana%20Clinic%2C%20I%20read%20your%20article%20and%20would%20like%20to%20book%20a%20Clinical%20Assessment..." class="cta" target="_blank" rel="noopener">Book a Clinical Assessment →</a>
++        <a href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A" class="cta" target="_blank" rel="noopener">Book a Clinical Assessment →</a>
+         <a href="/blog" class="back">← Back to all articles</a>
+       </footer>
+     </div>
+diff --git a/src/pages/index.astro b/src/pages/index.astro
+index cbaf321..94514ee 100644
+--- a/src/pages/index.astro
++++ b/src/pages/index.astro
+@@ -37,13 +37,8 @@ const branches = [
+   }
+ ];
+ 
+-const waBase = 'https://wa.me/60183902910';
+-const waGeneric = `${waBase}?text=${encodeURIComponent(
+-  "Hi Diana Clinic, I'd like to book a Clinical Assessment, and my concern is..."
+-)}`;
+-const waUnsure = `${waBase}?text=${encodeURIComponent(
+-  "Hi Diana Clinic, I'm not sure what treatment I need — can I describe my skin concern?"
+-)}`;
++const waGeneric = 'https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A';
++const waUnsure = waGeneric;
+ 
+ // — Concerns (simplified for homepage tiles — full article lists live on pillar pages) —
+ const concerns = [
+@@ -500,7 +495,7 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
+               <p class="branch-hours">{b.hoursReadable}</p>
+               <a
+                 class="cta"
+-                href={`${waBase}?text=${encodeURIComponent(b.waMessage)}`}
++                href={waGeneric}
+                 target="_blank"
+                 rel="noopener"
+               >
+diff --git a/src/pages/results/index.astro b/src/pages/results/index.astro
+index 5b208c3..49e52b6 100644
+--- a/src/pages/results/index.astro
++++ b/src/pages/results/index.astro
+@@ -153,7 +153,7 @@ const collectionPageSchema = {
+       <h2>Want to see what's possible for your skin?</h2>
+       <p>Every treatment journey begins with an honest assessment from our doctors.</p>
+       <a
+-        href="https://wa.me/60183902910?text=Hi%2C%20I%20saw%20your%20results%20page%20and%20would%20like%20to%20book%20a%20consultation."
++        href="https://api.whatsapp.com/send?phone=60183902910&text=Hi%20Klinik%20Dr%20Diana%0A%0A%5BChannel%3A%20WEB%5D%0A%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A"
+         class="results-hub__cta-btn"
+         target="_blank"
+         rel="noopener noreferrer"
