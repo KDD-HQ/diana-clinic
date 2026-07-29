@@ -69,7 +69,7 @@ const siteSchema = {
 
     <!-- Favicon (replace once SVG mark is finalised) -->
     <link rel="icon" type="image/png" href="/favicon.png" />
-<link rel="apple-touch-icon" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
 
     <!-- Global structured data -->
     <script type="application/ld+json" set:html={JSON.stringify(orgSchema)} />
@@ -86,26 +86,104 @@ const siteSchema = {
       <div class="container header-inner">
         <a href="/" class="wordmark" aria-label="Dr Diana Clinic, home">
           <span class="wordmark-primary">Dr Diana Clinic</span>
-         
         </a>
-        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" onclick="this.setAttribute('aria-expanded', this.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'); document.querySelector('.nav-list').classList.toggle('open')">☰</button>
-        <nav aria-label="Primary">
+
+        <button
+          class="menu-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          onclick="const e=this.getAttribute('aria-expanded')==='true';this.setAttribute('aria-expanded',(!e).toString());document.getElementById('primary-nav').classList.toggle('open')"
+        >☰</button>
+
+        <nav aria-label="Primary" id="primary-nav">
           <ul class="nav-list">
-  <li><a href="/">Home</a></li>
-  <li><a href="/#concerns">Concerns</a></li>
-  <li><a href="/treatments">Treatments</a></li>
-  <li><a href="/#doctors">Doctors</a></li>
-  <li><a href="/#how">How we work</a></li>
-  <li><a href="/#faq">FAQ</a></li>
-  <li><a href="/results">Results</a></li>
-  <li><a href="/#visit">Visit</a></li>
-  <li><a href="/blog">Blog</a></li>
-        
-          <a class="cta cta--compact"
-          href="https://api.whatsapp.com/send?phone=60183902910&text=%5BWEB%5D%20Hi%20Klinik%20Dr%20Diana.%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A"
-          target="_blank"
-          rel="noopener"
-        >
+            <li><a href="/">Home</a></li>
+            <li><a href="/#concerns">Concerns</a></li>
+
+            <li class="has-dropdown">
+              <a href="/treatments" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+                Treatments <span class="chevron" aria-hidden="true">▾</span>
+              </a>
+              <div class="dropdown-panel dropdown-panel--mega" role="menu">
+                <div class="dropdown-grid">
+                  <div class="dropdown-col">
+                    <p class="dropdown-heading">Pigmentation</p>
+                    <ul>
+                      <li><a href="/treatments/pigmentation">Pigmentation &amp; Melasma</a></li>
+                      <li><a href="/treatments/lhala-peel">Lhala Peel</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown-col">
+                    <p class="dropdown-heading">Acne &amp; Scars</p>
+                    <ul>
+                      <li><a href="/treatments/acne">Acne Treatment</a></li>
+                      <li><a href="/treatments/deep-scar-treatment">Deep Acne Scar Treatment</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown-col">
+                    <p class="dropdown-heading">Anti-Aging &amp; Lifting</p>
+                    <ul>
+                      <li><a href="/treatments/radiesse-biostimulator">Radiesse Biostimulator</a></li>
+                      <li><a href="/treatments/novuma-biostimulator">Novuma Biostimulator</a></li>
+                      <li><a href="/treatments/liftera-v-hifu">Liftera V HIFU</a></li>
+                      <li><a href="/treatments/profhilo-structura-fat-stimulator">Profhilo Structura</a></li>
+                    </ul>
+                  </div>
+                  <div class="dropdown-col">
+                    <p class="dropdown-heading">Skin Quality &amp; Rejuvenation</p>
+                    <ul>
+                      <li><a href="/treatments/juvelook-biostimulator">Juvelook Biostimulator</a></li>
+                      <li><a href="/treatments/plenhyage-strong-xl">Plenhyage Strong XL</a></li>
+                      <li><a href="/treatments/hyalual-electri">Hyalual Electri</a></li>
+                      <li><a href="/treatments/oxygeneo-glam">Oxygeneo Glam</a></li>
+                      <li><a href="/treatments/dark-eye-circle-treatment">Dark Eye Circle Treatment</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="dropdown-footer">
+                  <a href="/treatments" class="dropdown-view-all">View all treatments →</a>
+                </div>
+              </div>
+            </li>
+
+            <li><a href="/#doctors">Doctors</a></li>
+            <li><a href="/#how">How we work</a></li>
+            <li><a href="/#faq">FAQ</a></li>
+
+            <li class="has-dropdown">
+              <a href="/results" class="dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+                Results <span class="chevron" aria-hidden="true">▾</span>
+              </a>
+              <div class="dropdown-panel" role="menu">
+                <ul class="dropdown-simple">
+                  <li><a href="/results">All Results</a></li>
+                  <li><a href="/results/pigmentation">Pigmentation Results</a></li>
+                  <li><a href="/results/acne">Acne Results</a></li>
+                  <li><a href="/results/acne-scars">Acne Scar Results</a></li>
+<li><a href="/results/keratosis">Keratosis Results</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li><a href="/#visit">Visit</a></li>
+            <li><a href="/blog">Blog</a></li>
+
+            <li class="nav-cta-mobile">
+              <a class="cta cta--compact"
+                 href="https://api.whatsapp.com/send?phone=60183902910&text=%5BWEB%5D%20Hi%20Klinik%20Dr%20Diana.%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A"
+                 target="_blank"
+                 rel="noopener">
+                Book Assessment
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <a class="cta cta--compact nav-cta-desktop"
+           href="https://api.whatsapp.com/send?phone=60183902910&text=%5BWEB%5D%20Hi%20Klinik%20Dr%20Diana.%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A"
+           target="_blank"
+           rel="noopener">
           Book Assessment
         </a>
       </div>
@@ -158,15 +236,54 @@ const siteSchema = {
     </footer>
 
     <!-- Sticky WhatsApp -->
-    
-      <a class="sticky-wa"
-      href="https://api.whatsapp.com/send?phone=60183902910&text=%5BWEB%5D%20Hi%20Klinik%20Dr%20Diana.%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A"
-      target="_blank"
-      rel="noopener"
-      aria-label="Book a Clinical Assessment via WhatsApp"
-    >
+    <a class="sticky-wa"
+       href="https://api.whatsapp.com/send?phone=60183902910&text=%5BWEB%5D%20Hi%20Klinik%20Dr%20Diana.%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A"
+       target="_blank"
+       rel="noopener"
+       aria-label="Book a Clinical Assessment via WhatsApp">
       <span>WhatsApp</span>
     </a>
+
+    <!-- Mobile dropdown accordion behavior -->
+    <script is:inline>
+      (function () {
+        const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+
+        // Toggle dropdown on tap (mobile only); allow normal navigation on desktop
+        document.querySelectorAll('.has-dropdown > .dropdown-trigger').forEach((trigger) => {
+          trigger.addEventListener('click', (e) => {
+            if (isMobile()) {
+              e.preventDefault();
+              const parent = trigger.parentElement;
+              const wasOpen = parent.classList.contains('is-open');
+              // Close any other open dropdowns
+              document.querySelectorAll('.has-dropdown.is-open').forEach((el) => el.classList.remove('is-open'));
+              if (!wasOpen) parent.classList.add('is-open');
+              trigger.setAttribute('aria-expanded', (!wasOpen).toString());
+            }
+          });
+        });
+
+        // Close mobile menu when any real link is tapped
+        document.querySelectorAll('.nav-list a').forEach((link) => {
+          link.addEventListener('click', () => {
+            if (isMobile() && !link.classList.contains('dropdown-trigger')) {
+              const nav = document.getElementById('primary-nav');
+              const toggle = document.querySelector('.menu-toggle');
+              nav?.classList.remove('open');
+              toggle?.setAttribute('aria-expanded', 'false');
+            }
+          });
+        });
+
+        // Close dropdowns when clicking outside (desktop safety)
+        document.addEventListener('click', (e) => {
+          if (!e.target.closest('.has-dropdown')) {
+            document.querySelectorAll('.has-dropdown.is-open').forEach((el) => el.classList.remove('is-open'));
+          }
+        });
+      })();
+    </script>
 
     <style is:global>
       :root {
@@ -269,45 +386,196 @@ const siteSchema = {
         padding: 0;
         margin: 0;
         font-size: 0.92rem;
-      }/* Hamburger menu - mobile */
-  .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: var(--color-anchor);
-    padding: 0.25rem 0.5rem;
-    line-height: 1;
-  }
+        align-items: center;
+      }
 
-  @media (max-width: 768px) {
-    .menu-toggle { display: block; }
-    .nav-list {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      flex-direction: column;
-      background: rgba(242, 235, 221, 0.98);
-      backdrop-filter: blur(10px);
-      padding: 1rem 1.5rem;
-      gap: 1rem;
-      border-bottom: 1px solid var(--color-layer);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    }
-    .nav-list.open { display: flex; }
-    .site-header { position: relative; }
-    .cta--compact { display: none; }
-  }
+      /* Hamburger menu - mobile */
+      .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: var(--color-anchor);
+        padding: 0.25rem 0.5rem;
+        line-height: 1;
+      }
 
-  @media (min-width: 769px) {
-    .nav-list { display: flex; }
-  }
       .nav-list a { text-decoration: none; color: var(--color-ink); }
       .nav-list a:hover { color: var(--color-anchor); }
-      @media (min-width: 880px) {
+
+      /* =========================================
+         DROPDOWNS
+         ========================================= */
+      .has-dropdown { position: relative; }
+
+      .dropdown-trigger {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        cursor: pointer;
+      }
+      .chevron {
+        font-size: 0.7em;
+        transition: transform 0.2s ease;
+        display: inline-block;
+      }
+
+      .dropdown-panel {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: rgba(242, 235, 221, 0.98);
+        backdrop-filter: blur(12px);
+        border: 1px solid var(--color-layer);
+        border-top: 2px solid var(--color-anchor);
+        padding: var(--space-3);
+        min-width: 240px;
+        box-shadow: 0 12px 32px rgba(31, 26, 21, 0.12);
+        z-index: 51;
+      }
+
+      .dropdown-panel--mega {
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: min(880px, 92vw);
+        padding: var(--space-4) var(--space-4) var(--space-3);
+      }
+
+      /* Show dropdown on hover, keyboard focus, or JS-added .is-open */
+      .has-dropdown:hover > .dropdown-panel,
+      .has-dropdown:focus-within > .dropdown-panel,
+      .has-dropdown.is-open > .dropdown-panel {
+        display: block;
+      }
+      .has-dropdown:hover .chevron,
+      .has-dropdown:focus-within .chevron,
+      .has-dropdown.is-open .chevron {
+        transform: rotate(180deg);
+      }
+
+      .dropdown-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--space-3);
+      }
+      .dropdown-col ul,
+      .dropdown-simple {
+        list-style: none;
+        padding: 0;
+        margin: 0.5rem 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      .dropdown-heading {
+        font-family: var(--font-body);
+        font-size: 0.68rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--color-anchor-soft);
+        margin: 0;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid var(--color-layer);
+        font-weight: 500;
+      }
+      .dropdown-col a,
+      .dropdown-simple a {
+        font-size: 0.88rem;
+        color: var(--color-ink);
+        text-decoration: none;
+        line-height: 1.4;
+        transition: color 0.15s ease;
+      }
+      .dropdown-col a:hover,
+      .dropdown-simple a:hover {
+        color: var(--color-anchor);
+      }
+      .dropdown-footer {
+        margin-top: var(--space-3);
+        padding-top: var(--space-2);
+        border-top: 1px solid var(--color-layer);
+        text-align: right;
+      }
+      .dropdown-view-all {
+        font-size: 0.82rem;
+        color: var(--color-anchor);
+        text-decoration: none;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+      }
+      .dropdown-view-all:hover { text-decoration: underline; }
+
+      .nav-cta-mobile { display: none; }
+
+      /* =========================================
+         MOBILE (≤768px)
+         ========================================= */
+      @media (max-width: 768px) {
+        .menu-toggle { display: block; }
+        .nav-list {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          flex-direction: column;
+          align-items: stretch;
+          background: rgba(242, 235, 221, 0.98);
+          backdrop-filter: blur(10px);
+          padding: 1rem 1.5rem 1.5rem;
+          gap: 1rem;
+          border-bottom: 1px solid var(--color-layer);
+          box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+          max-height: calc(100vh - 60px);
+          overflow-y: auto;
+        }
+        .nav-list.open { display: flex; }
+        .site-header { position: relative; }
+        .nav-cta-desktop { display: none; }
+
+        /* Mobile dropdown = inline accordion, not floating panel */
+        .dropdown-panel,
+        .dropdown-panel--mega {
+          position: static;
+          transform: none;
+          left: auto;
+          min-width: 0;
+          width: 100%;
+          background: transparent;
+          backdrop-filter: none;
+          border: none;
+          border-top: 1px solid var(--color-layer);
+          box-shadow: none;
+          padding: 0.75rem 0 0.5rem 1rem;
+          margin-top: 0.5rem;
+        }
+        .dropdown-grid {
+          grid-template-columns: 1fr;
+          gap: var(--space-2);
+        }
+        .dropdown-heading {
+          margin-top: 0.5rem;
+        }
+        .dropdown-col:first-child .dropdown-heading { margin-top: 0; }
+        .dropdown-footer {
+          text-align: left;
+          margin-top: var(--space-2);
+          padding-top: var(--space-1);
+        }
+
+        .nav-cta-mobile {
+          display: block;
+          margin-top: 0.75rem;
+        }
+        .nav-cta-mobile .cta {
+          display: block;
+          text-align: center;
+        }
+      }
+
+      @media (min-width: 769px) {
         .nav-list { display: flex; }
       }
 
