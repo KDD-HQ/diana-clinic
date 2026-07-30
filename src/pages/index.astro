@@ -37,7 +37,8 @@ const branches = [
   }
 ];
 
-const waGeneric = 'https://api.whatsapp.com/send?phone=60183902910&text=%5BWEB%5D%20Hi%20Klinik%20Dr%20Diana.%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A';
+import { waLink } from '../config/whatsapp-cta';
+const waGeneric = waLink('home');
 const waUnsure = waGeneric;
 
 // — Concerns (simplified for homepage tiles — full article lists live on pillar pages) —

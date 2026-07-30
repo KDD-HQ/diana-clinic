@@ -6,6 +6,7 @@
 // ============================================================
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { waLinkForPath } from '../../config/whatsapp-cta';
 
 const siteUrl = 'https://drdianaclinic.com';
 
@@ -153,7 +154,7 @@ const collectionPageSchema = {
       <h2>Want to see what's possible for your skin?</h2>
       <p>Every treatment journey begins with an honest assessment from our doctors.</p>
       <a
-        href="https://api.whatsapp.com/send?phone=60183902910&text=%5BWEB%5D%20Hi%20Klinik%20Dr%20Diana.%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A"
+        href={waLinkForPath(Astro.url.pathname)}
         class="results-hub__cta-btn"
         target="_blank"
         rel="noopener noreferrer"

@@ -8,6 +8,10 @@ const {
 
 const site = Astro.site?.toString().replace(/\/$/, '') ?? '';
 
+// Auto-tagged WhatsApp CTA — resolves the correct pre-fill from the URL path
+import { waLinkForPath } from '../config/whatsapp-cta';
+const waHref = waLinkForPath(Astro.url.pathname);
+
 // Global JSON-LD — Organization + WebSite (rendered on every page)
 const orgSchema = {
   '@context': 'https://schema.org',
@@ -171,7 +175,7 @@ const siteSchema = {
 
             <li class="nav-cta-mobile">
               <a class="cta cta--compact"
-                 href="https://api.whatsapp.com/send?phone=60183902910&text=%5BWEB%5D%20Hi%20Klinik%20Dr%20Diana.%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A"
+                 href={waHref}
                  target="_blank"
                  rel="noopener">
                 Book Assessment
@@ -181,7 +185,7 @@ const siteSchema = {
         </nav>
 
         <a class="cta cta--compact nav-cta-desktop"
-           href="https://api.whatsapp.com/send?phone=60183902910&text=%5BWEB%5D%20Hi%20Klinik%20Dr%20Diana.%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A"
+           href={waHref}
            target="_blank"
            rel="noopener">
           Book Assessment
@@ -237,7 +241,7 @@ const siteSchema = {
 
     <!-- Sticky WhatsApp -->
     <a class="sticky-wa"
-       href="https://api.whatsapp.com/send?phone=60183902910&text=%5BWEB%5D%20Hi%20Klinik%20Dr%20Diana.%0ASaya%20ingin%20bertanya%20mengenai%20%2F%20I%20want%20to%20ask%20regarding%3A"
+       href={waHref}
        target="_blank"
        rel="noopener"
        aria-label="Book a Clinical Assessment via WhatsApp">
