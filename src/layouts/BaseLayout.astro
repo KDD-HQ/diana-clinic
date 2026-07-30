@@ -93,7 +93,7 @@ const siteSchema = {
           aria-label="Open menu"
           aria-expanded="false"
           aria-controls="primary-nav"
-          onclick="const e=this.getAttribute('aria-expanded')==='true';this.setAttribute('aria-expanded',(!e).toString());document.getElementById('primary-nav').classList.toggle('open')"
+          onclick="const e=this.getAttribute('aria-expanded')==='true';this.setAttribute('aria-expanded',(!e).toString());document.querySelector('.nav-list').classList.toggle('open')"
         >☰</button>
 
         <nav aria-label="Primary" id="primary-nav">
@@ -268,7 +268,7 @@ const siteSchema = {
         document.querySelectorAll('.nav-list a').forEach((link) => {
           link.addEventListener('click', () => {
             if (isMobile() && !link.classList.contains('dropdown-trigger')) {
-              const nav = document.getElementById('primary-nav');
+              const nav = document.querySelector('.nav-list');
               const toggle = document.querySelector('.menu-toggle');
               nav?.classList.remove('open');
               toggle?.setAttribute('aria-expanded', 'false');
