@@ -292,4 +292,17 @@ const faqs = [
       grid-template-columns: 1fr;
     }
   }
+  .results-gallery__item img { cursor: zoom-in; }
+  .lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+  }
+  .lightbox-overlay.open { display: flex; }
+  .lightbox-overlay img { max-width: 92%; max-height: 92%; border-radius: 8px; }
 </style>

@@ -194,6 +194,25 @@ const faqSchema = faqs.length > 0 ? {
       </p>
     </section>
   </main>
+   <div class="lightbox-overlay" id="lightbox-overlay">
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.results-gallery__item img').forEach((img) => {
+        img.addEventListener('click', () => {
+          const overlay = document.getElementById('lightbox-overlay');
+          const overlayImg = document.getElementById('lightbox-img');
+          overlayImg.src = img.src;
+          overlay.classList.add('open');
+        });
+      });
+      document.getElementById('lightbox-overlay')?.addEventListener('click', function () {
+        this.classList.remove('open');
+      });
+    });
+  </script>
 </BaseLayout>
 
 <style>
@@ -331,4 +350,16 @@ const faqSchema = faqs.length > 0 ? {
       align-items: center;
     }
   }
+  .lightbox-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+}
+.lightbox-overlay.open { display: flex; }
+.lightbox-overlay img { max-width: 92%; max-height: 92%; border-radius: 8px; }
 </style>
