@@ -3,6 +3,7 @@
     { "source": "/pages/:path*", "destination": "/", "permanent": true },
     { "source": "/blogs/:path*", "destination": "/", "permanent": true },
     { "source": "/collections/:path*", "destination": "/", "permanent": true },
-    { "source": "/products/:path*", "destination": "/", "permanent": true }
+    { "source": "/products/:path*", "destination": "/", "permanent": true },
+    { "source": "/results/keratosis", "destination": "/results/skin-growths-lesions", "permanent": true }
   ]
 }

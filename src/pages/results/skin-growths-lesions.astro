@@ -11,52 +11,62 @@ const galleryItems = [
 
 const faqs = [
   {
-    q: "How is keratosis removed?",
-    a: "Keratosis is typically removed using ablative methods such as CO2 laser, electrocautery, or cryotherapy depending on the type, size, and location. Dr Diana assesses each lesion individually to determine the most appropriate removal method with minimal scarring risk."
+    q: "What counts as a skin growth or lesion?",
+    a: "Skin growths and lesions covered at Klinik Dr Diana include moles, cysts, seborrheic keratosis, xanthelasma, and syringoma. These are common, typically benign (non-cancerous) skin changes that many patients choose to have assessed or removed for cosmetic or comfort reasons."
+  },
+  {
+    q: "How are these growths and lesions removed?",
+    a: "Removal method depends on the type, size, depth, and location of the lesion. Options assessed by Dr Diana Abd Razak include CO2 laser, electrocautery, cryotherapy, or minor excision. Xanthelasma and syringoma, which sit closer to the eye area, require particularly careful technique selection."
   },
   {
     q: "Are these real before and after photos from your clinic?",
     a: "Yes. Every photo on this page is from a real patient treated at Klinik Dr Diana. All photos are shown with written patient consent. We do not use stock images or digitally alter results."
   },
   {
-    q: "What is the difference between keratosis and syringoma?",
-    a: "Seborrheic keratosis is a common benign skin growth that appears as a waxy, raised lesion, often brown or black. Syringoma is a benign sweat duct tumour that typically appears as small, skin-coloured bumps around the eyes. Both are non-cancerous but can be removed for cosmetic reasons."
+    q: "What is the difference between a mole, cyst, keratosis, xanthelasma, and syringoma?",
+    a: "A mole (nevus) is a cluster of pigment-producing cells, usually flat or slightly raised. A cyst is a fluid- or keratin-filled sac under the skin. Seborrheic keratosis is a waxy, raised growth, often brown or black. Xanthelasma is a yellowish cholesterol deposit around the eyelids. Syringoma is a benign sweat duct growth appearing as small, skin-coloured bumps, also usually around the eyes. All are individually assessed, as appearance alone does not confirm the diagnosis."
   },
   {
-    q: "Is there downtime after keratosis removal?",
-    a: "Downtime is minimal for most keratosis removals. The treated area may have mild redness and a small scab that heals within 5–10 days. Sun protection is essential during the healing period to prevent post-inflammatory pigmentation."
+    q: "Is there downtime after removal?",
+    a: "Downtime is generally minimal but varies by lesion type and method used. Most treated areas show mild redness and a small scab that heals within 5–10 days. Sun protection during healing is important to reduce the risk of post-inflammatory pigmentation."
   },
   {
-    q: "Can keratosis or syringoma come back after removal?",
-    a: "Treated lesions typically do not recur in the same spot. However, new keratosis or syringoma lesions can develop in other areas over time as they are related to aging, genetics, and skin type. Periodic follow-up allows early treatment of any new lesions."
+    q: "Can a mole, cyst, or other lesion be cancerous?",
+    a: "Most moles, cysts, and similar growths are benign, but any lesion that changes in size, shape, colour, or texture should be assessed by a doctor before removal. Dr Diana evaluates each lesion clinically and will refer for biopsy or specialist review if there is any concern."
+  },
+  {
+    q: "Can these growths or lesions come back after removal?",
+    a: "Treated lesions typically do not recur in the same spot. However, new moles, cysts, keratosis, xanthelasma, or syringoma can develop in other areas over time, as these are related to aging, genetics, sun exposure, and individual skin type. Periodic follow-up allows early assessment of any new growths."
   },
 ];
 ---
 
 <ResultsLayout
-  title="Keratosis & Syringoma Removal Results — Klinik Dr Diana"
-  description="Real before and after photos of keratosis and syringoma removal at Klinik Dr Diana, Bangi and Senawang. Results from CO2 laser and ablative treatments."
-  condition="Keratosis"
-  conditionBM="Keratosis"
-  slug="keratosis"
+  title="Skin Growths & Lesions Removal Results — Klinik Dr Diana"
+  description="Real before and after photos of mole, cyst, keratosis, xanthelasma & syringoma removal at Klinik Dr Diana, Bangi and Senawang. Results from CO2 laser and ablative treatments."
+  condition="Skin Growths & Lesions"
+  conditionBM="Ketumbuhan & Lesi Kulit"
+  slug="skin-growths-lesions"
   heroImage={galleryItems[0].src}
   faqs={faqs}
 >
 
   <header class="results-intro">
-    <h1>Keratosis and syringoma removal results</h1>
+    <h1>Skin growths &amp; lesions removal results</h1>
     <p class="results-intro__answer">
-      These are real before and after photos from patients treated for keratosis and syringoma
-      at Klinik Dr Diana. Treatment method is selected based on lesion type, size, location,
-      and skin type, assessed individually by Dr Diana Abd Razak.
+      These are real before and after photos from patients treated for common skin growths and
+      lesions — including moles, cysts, keratosis, xanthelasma, and syringoma — at Klinik Dr
+      Diana. Treatment method is selected based on lesion type, size, location, and skin type,
+      assessed individually by Dr Diana Abd Razak.
     </p>
     <p class="results-intro__note">
-      Rawatan keratosis dan syringoma di Klinik Dr Diana menggunakan kaedah yang disesuaikan
-      mengikut jenis, saiz, dan lokasi lesi kulit pesakit.
+      Rawatan ketumbuhan dan lesi kulit (tahi lalat, sista, keratosis, xanthelasma &amp;
+      syringoma) di Klinik Dr Diana menggunakan kaedah yang disesuaikan mengikut jenis, saiz,
+      dan lokasi lesi kulit pesakit.
     </p>
   </header>
 
-  <section class="results-gallery" aria-label="Before and after keratosis and syringoma photos">
+  <section class="results-gallery" aria-label="Before and after skin growth and lesion removal photos">
     <div class="results-gallery__grid">
       {galleryItems.map((item) => (
         <figure class="results-gallery__item">
@@ -70,23 +80,25 @@ const faqs = [
   <section class="results-context" aria-label="About these results">
     <h2>How were these results achieved?</h2>
     <p>
-      Keratosis and syringoma removal at Klinik Dr Diana is performed using targeted ablative
-      methods. Dr Diana Abd Razak assesses each lesion to determine whether CO2 laser,
-      electrocautery, or other removal methods are most appropriate for the specific case.
+      Removal of moles, cysts, keratosis, xanthelasma, and syringoma at Klinik Dr Diana begins
+      with an individual assessment by Dr Diana Abd Razak to confirm the lesion type and rule
+      out anything requiring further medical review. Treatment options include CO2 laser,
+      electrocautery, cryotherapy, or minor excision, chosen based on the specific case.
     </p>
     <p>
       The goal is complete removal with minimal scarring. Post-treatment care includes wound
-      care instructions and sun protection to ensure optimal healing and prevent
+      care instructions and sun protection to support healing and reduce the risk of
       post-inflammatory hyperpigmentation.
     </p>
     <p>
       Results vary depending on lesion type, size, depth, and individual healing response.
-      Most patients see full healing within 1–2 weeks after treatment.
+      Most patients see full healing within 1–2 weeks after treatment. Individual assessment is
+      required before any treatment is recommended.
     </p>
   </section>
 
   <section class="results-faq" aria-label="Frequently asked questions">
-    <h2>Frequently asked questions about keratosis and syringoma removal</h2>
+    <h2>Frequently asked questions about skin growth &amp; lesion removal</h2>
     {faqs.map((faq) => (
       <details class="results-faq__item">
         <summary>{faq.q}</summary>
