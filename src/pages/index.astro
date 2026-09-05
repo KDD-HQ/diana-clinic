@@ -69,14 +69,16 @@ const concerns = [
     title: 'Aging Skin',
     short: 'Lines · laxity · tone · firmness',
     href: '#how',
-    img: '/images/concerns/aging-skin.jpg'
+      img: '/images/concerns/aging-skin.webp',
+    alt: 'Illustration comparing younger and older facial skin, showing fine lines, pigmentation and loss of firmness that develop with age'
   },
   {
     id: 'skin-booster',
     title: 'Skin Booster & Glow',
     short: 'Hydration · radiance · texture',
     href: '/blog/skin-booster-what-is-skin-booster/',
-    img: '/images/concerns/skin-booster.jpg'
+    img: '/images/concerns/skin-booster.webp',
+    alt: 'Close-up of hydrated facial skin showing natural pore texture and light reflection across the cheek'
   }
 ];
 
@@ -294,7 +296,7 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
       <div class="concern-grid">
         {concerns.map((c) => (
           <a href={c.href} class={`concern-tile ${c.id === 'skin-booster' ? 'concern-tile--wide' : ''}`}>
-            <div class="concern-tile-img">
+              <img src={c.img} alt={c.alt || `${c.title} — ${c.short}`} width="400" height="300" loading="lazy" />
               <img src={c.img} alt={`${c.title} treatment concern`} width="400" height="300" loading="lazy" />
             </div>
             <div class="concern-tile-text">
