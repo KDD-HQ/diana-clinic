@@ -296,8 +296,8 @@ const mapsKey = 'AIzaSyClcnvpRUzyDoMWvbwonutjXNO3mpOWquE';
       <div class="concern-grid">
         {concerns.map((c) => (
           <a href={c.href} class={`concern-tile ${c.id === 'skin-booster' ? 'concern-tile--wide' : ''}`}>
+            <div class="concern-tile-img">
               <img src={c.img} alt={c.alt || `${c.title} — ${c.short}`} width="400" height="300" loading="lazy" />
-              <img src={c.img} alt={`${c.title} treatment concern`} width="400" height="300" loading="lazy" />
             </div>
             <div class="concern-tile-text">
               <h3>{c.title}</h3>
