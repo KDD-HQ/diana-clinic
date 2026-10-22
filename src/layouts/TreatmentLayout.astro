@@ -96,7 +96,8 @@ const medicalProcedureSchema = {
   '@type': 'MedicalProcedure',
   name: data.title,
   alternateName: data.alternateNames,
-  procedureType: 'https://schema.org/NoninvasiveProcedure',
+  // Injectables can set `procedureType: "https://schema.org/PercutaneousProcedure"` in frontmatter
+  procedureType: data.procedureType ?? 'https://schema.org/NoninvasiveProcedure',
   bodyLocation: 'Face',
   howPerformed: data.howPerformed,
   ...(data.preparation && { preparation: data.preparation }),

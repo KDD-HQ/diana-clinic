@@ -72,7 +72,7 @@ const BRAND_SLUGS = [
   "rejuran", "profhilo", "skinvive", "radiesse", "juvelook", "sculptra",
   "plenhyage", "nctf", "revok50", "sunekos", "exosome", "asce",
   "picoplus", "picolo", "liftera", "oxygeneo", "mounjaro",
-  "subcision", "tcacross", "hifu",
+  "subcision", "tcacross", "hifu", "hilowave",
 ];
 
 // Filler words stripped when generating a slug tag.
