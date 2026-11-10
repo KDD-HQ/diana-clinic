@@ -34,6 +34,22 @@ const relatedBlogs = relatedBlogSlugs
   .map((blogSlug) => allBlogPosts.find((post) => post.slug === blogSlug))
   .filter((post): post is BlogPost => Boolean(post));
 
+// -- Related treatments (from frontmatter `relatedTreatments`) --
+const allTreatments = await getCollection('treatments', ({ data }) => !data.draft);
+
+type TreatmentEntry = (typeof allTreatments)[number];
+
+const relatedTreatmentSlugs =
+  ((data as { relatedTreatments?: string[] }).relatedTreatments ?? []);
+
+const relatedTreatments = relatedTreatmentSlugs
+  .filter((treatmentSlug) => treatmentSlug !== slug)
+  .map((treatmentSlug) => allTreatments.find((t) => t.slug === treatmentSlug))
+  .filter((t): t is TreatmentEntry => Boolean(t));
+
+const shortTreatmentName = (title: string) =>
+  title.split('|')[0].replace(/\s+in Malaysia\s*$/i, '').trim();
+
 const formatBlogDate = (date: Date) =>
   date.toLocaleDateString('en-MY', {
     year: 'numeric',
@@ -265,6 +281,44 @@ const physicianSchema = {
       ))}
     </div>
   </>
+)}
+<!-- Related treatments -->
+{relatedTreatments.length > 0 && (
+  <section class="tx-related-blogs tx-related-treatments" aria-labelledby="related-treatments-title">
+    <p class="tx-section-label">Related treatments</p>
+
+    <h2 id="related-treatments-title">
+      What other treatments might your doctor discuss?
+    </h2>
+
+    <p class="tx-related-intro">
+      These treatments are often discussed alongside this one. Your doctor will advise which option, if any, suits your skin after an in-person assessment.
+    </p>
+
+    <div class="tx-related-blog-grid">
+      {relatedTreatments.map((t: TreatmentEntry) => (
+        <a href={`/treatments/${t.slug}`} class="tx-related-blog-card">
+          {t.data.heroImage && (
+            <img
+              src={t.data.heroImage}
+              alt={t.data.heroImageAlt ?? shortTreatmentName(t.data.title)}
+              loading="lazy"
+              width="800"
+              height="450"
+            />
+          )}
+
+          <div class="tx-related-blog-body">
+            <h3>{shortTreatmentName(t.data.title)}</h3>
+
+            <p>{t.data.description}</p>
+
+            <span>View treatment →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
 )}
 <!-- Related blog posts -->
 {relatedBlogs.length > 0 && (
@@ -744,6 +798,14 @@ const physicianSchema = {
     aspect-ratio: 16 / 9;
   }
 }
+  /* Related treatments: reuses blog card styles, clamps long descriptions */
+  .tx-related-treatments .tx-related-blog-body p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
   /* Author / E-E-A-T box */
   .tx-author {
     margin-top: var(--space-5);
